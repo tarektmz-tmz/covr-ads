@@ -1,2 +1,4 @@
 images/
 __pycache__/
+creative/pages/
+node_modules/

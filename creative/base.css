@@ -1,0 +1,45 @@
+@import url(fonts.css);
+
+:root {
+  --cream: #f3ede3;
+  --paper: #faf7f2;
+  --ink: #161412;
+  --tan: #9b6b3e;
+  --tan-light: #c49a6c;
+  --stone: #8c857c;
+  --char: #2a2724;
+  --rule: rgba(22, 20, 18, .14);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1350px; overflow: hidden; }
+body { background: var(--cream); color: var(--ink); font-family: Inter, sans-serif; position: relative; -webkit-font-smoothing: antialiased; }
+body.story, body.story html { height: 1920px; }
+
+.abs { position: absolute; }
+.fill { position: absolute; inset: 0; }
+.photo { position: absolute; overflow: hidden; }
+.photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Typography */
+.logo { font-family: 'Instrument Serif', serif; letter-spacing: .42em; font-size: 46px; line-height: 1; }
+.kicker { font-family: Inter; font-weight: 500; font-size: 20px; letter-spacing: .32em; text-transform: uppercase; }
+.mega { font-family: Montserrat; font-weight: 900; line-height: .92; letter-spacing: -.035em; text-transform: uppercase; }
+.serif { font-family: 'Instrument Serif', serif; font-weight: 400; letter-spacing: -.01em; }
+.serif i, .serif em { font-style: italic; }
+.body { font-size: 27px; line-height: 1.42; font-weight: 400; }
+.h3 { font-family: Montserrat; font-weight: 700; font-size: 30px; line-height: 1.15; letter-spacing: -.01em; }
+.tan { color: var(--tan); }
+
+/* Detail circle */
+.circle { position: absolute; border-radius: 50%; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,.18); border: 6px solid var(--paper); }
+.circle img { position: absolute; max-width: none; }
+
+/* Pill / button */
+.btn { display: inline-flex; align-items: center; gap: 14px; background: var(--ink); color: var(--paper); font-family: Montserrat; font-weight: 700; font-size: 24px; letter-spacing: .14em; text-transform: uppercase; padding: 24px 40px; border-radius: 999px; }
+.chip { display: inline-block; border: 1.5px solid currentColor; border-radius: 999px; padding: 10px 22px; font-size: 21px; font-weight: 500; letter-spacing: .04em; }
+
+.mark { width: 54px; height: 54px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; flex: none; }
+.mark.no { background: #5b5752; color: #fff; }
+.mark.yes { background: var(--tan); color: #fff; }
+.mark svg { width: 24px; height: 24px; }
