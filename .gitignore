@@ -2,3 +2,6 @@ images/
 __pycache__/
 creative/pages/
 node_modules/
+# AI scenes: download full-size from Canva into media/gen/ (see ads/SCENES.md)
+media/gen/
+ads/scenes/

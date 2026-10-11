@@ -11,7 +11,7 @@ const PAGES = path.join(__dirname, 'pages');
 const OUT = path.join(ROOT, 'ads', 'creative');
 const ads = [...require('./ads.js'), ...require('./ads2.js')];
 // Campaign ads (ads3.js) render in both Meta sizes, plus any headline variations.
-for (const c of require('./ads3.js')) {
+for (const c of [...require('./ads3.js'), ...require('./ads4.js')]) {
   for (const [label, h] of [['4x5', 1350], ['9x16', 1920]]) {
     ads.push({ ...c, id: `${c.id}_${label}`, size: [1080, h], html: c.render(h) });
   }
