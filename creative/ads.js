@@ -7,6 +7,7 @@ const src = n => `../../media/${n}`;
 // zoom = photo width as a multiple of the box width.
 function crop(n, cx, cy, zoom, w, h) {
   const [W, H] = SIZES[n];
+  zoom = Math.max(zoom, 1, (h * W) / (H * w)); // always cover the box, never leave gaps
   const iw = w * zoom, ih = iw * H / W;
   const left = Math.min(0, Math.max(w - iw, w / 2 - cx * iw));
   const top = Math.min(0, Math.max(h - ih, h / 2 - cy * ih));
