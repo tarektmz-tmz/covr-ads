@@ -10,7 +10,7 @@ Usage:
       --end 'Total Black|Handmade padel racket cover · $199' \
       --name total-black-video
 
-Each --slide is "photo|text" (text optional). Optional: --format portrait (1080x1350 feed)
+Each --slide is "photo|text" (text optional). Optional: --style band (cream text band, best for light studio photos), --format portrait (1080x1350 feed)
 instead of the default story (1080x1920 Stories/Reels), --seconds 3 per slide, --music song.mp3.
 Output: ads/<name>_<format>.mp4
 """
@@ -20,7 +20,7 @@ import subprocess
 
 from PIL import Image, ImageDraw, ImageOps
 
-from make_ads import CREAM, load_font, wrap
+from make_ads import CREAM, INK, load_font, wrap
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 FORMATS = {"story": (1080, 1920), "portrait": (1080, 1350), "square": (1080, 1080)}
@@ -54,6 +54,24 @@ def text_layer(size, text, font_path, big=True):
     return layer
 
 
+def band_layer(size, band, text, font_path):
+    """Cream band at the bottom with dark slide text and the COVR wordmark."""
+    w, h = size
+    layer = Image.new("RGBA", size, (0, 0, 0, 0))
+    d = ImageDraw.Draw(layer)
+    d.rectangle((0, h - band, w, h), fill=CREAM)
+    logo = load_font(font_path, 40)
+    d.text((w - 72 - d.textlength("COVR", font=logo), h - band + 64), "COVR", font=logo, fill=INK)
+    if text:
+        font = load_font(font_path, 66)
+        line_h = d.textbbox((0, 0), "Ag", font=font)[3] + 14
+        y = h - band + 56
+        for line in wrap(d, text, font, w - 144 - 150):
+            d.text((72, y), line, font=font, fill=INK)
+            y += line_h
+    return layer
+
+
 def end_card(size, headline, sub, font_path):
     w, h = size
     img = Image.new("RGB", size, (17, 17, 17))
@@ -78,6 +96,8 @@ def main():
     ap.add_argument("--music", default=None)
     ap.add_argument("--font", default=None)
     ap.add_argument("--name", default="covr-video")
+    ap.add_argument("--style", choices=["overlay", "band"], default="overlay",
+                    help="band: text on a cream band under the photo (best for light studio shots)")
     a = ap.parse_args()
 
     size = FORMATS[a.format]
@@ -88,16 +108,25 @@ def main():
     slides = []
     for spec in a.slide:
         photo_path, _, text = spec.partition("|")
+        band = (480 if size[1] == 1920 else 260) if a.style == "band" else 0  # story band includes reply-bar space
+        area = (size[0], size[1] - band)
         big = ImageOps.fit(ImageOps.exif_transpose(Image.open(photo_path)).convert("RGB"),
-                           (int(size[0] * (1 + ZOOM)), int(size[1] * (1 + ZOOM))), Image.LANCZOS)
-        overlay = text_layer(size, text.strip(), a.font)
+                           (int(area[0] * (1 + ZOOM)), int(area[1] * (1 + ZOOM))), Image.LANCZOS)
+        if band:
+            overlay = band_layer(size, band, text.strip(), a.font)
+        else:
+            overlay = text_layer(size, text.strip(), a.font)
 
-        def frame(t, big=big, overlay=overlay):
+        def frame(t, big=big, overlay=overlay, area=area, band=band):
             z = 1 + ZOOM * (1 - t)  # crop shrinks over time = zoom in
             cw, ch = int(big.width / z), int(big.height / z)
             x, y = (big.width - cw) // 2, (big.height - ch) // 2
-            img = big.crop((x, y, x + cw, y + ch)).resize(size, Image.BILINEAR)
-            img = Image.composite(black, img, shade)
+            photo = big.crop((x, y, x + cw, y + ch)).resize(area, Image.BILINEAR)
+            if band:
+                img = Image.new("RGB", size, CREAM)
+                img.paste(photo, (0, 0))
+            else:
+                img = Image.composite(black, photo, shade)
             img.paste(overlay, (0, 0), overlay)
             return img
 

@@ -12,7 +12,8 @@ Output: ads/<name>_square.jpg (1080x1080, feed)
         ads/<name>_portrait.jpg (1080x1350, feed - best for mobile)
         ads/<name>_story.jpg (1080x1920, stories/reels)
 
-Optional: --focus 0.3 moves the crop up (0 = top, 0.5 = centre, 1 = bottom).
+Optional: --style band puts the text on a cream band under the photo (best for light studio shots).
+          --focus 0.3 moves the crop up (0 = top, 0.5 = centre, 1 = bottom).
           --font path/to/your-brand-font.ttf
 """
 import argparse
@@ -23,6 +24,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SIZES = {"square": (1080, 1080), "portrait": (1080, 1350), "story": (1080, 1920)}
 CREAM = (245, 240, 230)
+INK = (17, 17, 17)
 
 FONT_CANDIDATES = [
     "/System/Library/Fonts/Supplemental/Didot.ttc",  # macOS
@@ -51,8 +53,41 @@ def wrap(draw, text, font, max_w):
     return lines + [line] if line else lines
 
 
-def make(photo, size, headline, sub, cta, font_path, focus):
+def text_blocks(draw, w, margin, headline, sub, cta, font_path, reserve=0):
+    f_head = load_font(font_path, 64 if w == 1080 else 70)
+    f_small = load_font(font_path, 34)
+    blocks = []
+    if headline:
+        lines = wrap(draw, headline, f_head, w - 2 * margin - reserve)
+        blocks += [(line, f_head, 30 if i == len(lines) - 1 else 12) for i, line in enumerate(lines)]
+    if sub:
+        blocks.append((sub, f_small, 18))
+    if cta:
+        blocks.append((cta.upper(), f_small, 0))
+    return [(t, f, draw.textbbox((0, 0), t, font=f)[3] + gap) for t, f, gap in blocks]
+
+
+def make(photo, size, headline, sub, cta, font_path, focus, style="overlay"):
     w, h = size
+    margin = 72
+    safe = 220 if h == 1920 else 0  # keep clear of the Stories reply bar
+
+    if style == "band":
+        # Clean photo on top, cream band with dark text below. Best for light studio shots.
+        probe = ImageDraw.Draw(Image.new("RGB", (1, 1)))
+        blocks = text_blocks(probe, w, margin, headline, sub, cta, font_path, reserve=150)  # room for the logo
+        band = sum(bh for _, _, bh in blocks) + 2 * 64 + safe
+        img = Image.new("RGB", size, CREAM)
+        img.paste(ImageOps.fit(photo, (w, h - band), Image.LANCZOS, centering=(0.5, focus)).convert("RGB"), (0, 0))
+        draw = ImageDraw.Draw(img)
+        y = h - band + 64
+        for text, font, bh in blocks:
+            draw.text((margin, y), text, font=font, fill=INK)
+            y += bh
+        logo = load_font(font_path, 40)
+        draw.text((w - margin - draw.textlength("COVR", font=logo), h - band + 64), "COVR", font=logo, fill=INK)
+        return img
+
     img = ImageOps.fit(photo, size, Image.LANCZOS, centering=(0.5, focus)).convert("RGB")
 
     # Dark gradient at the bottom so text stays readable on any photo.
@@ -63,22 +98,9 @@ def make(photo, size, headline, sub, cta, font_path, focus):
     img = Image.composite(Image.new("RGB", size, (0, 0, 0)), img, shade.resize(size))
 
     draw = ImageDraw.Draw(img)
-    margin = 72
-    bottom = h - (220 if h == 1920 else 80)  # keep clear of the Stories reply bar
-
-    f_head = load_font(font_path, 64 if w == h else 70)
-    f_small = load_font(font_path, 34)
-    blocks = []
-    if headline:
-        blocks += [(line, f_head, 12) for line in wrap(draw, headline, f_head, w - 2 * margin)]
-    if sub:
-        blocks.append((sub, f_small, 18))
-    if cta:
-        blocks.append((cta.upper(), f_small, 0))
-
-    heights = [draw.textbbox((0, 0), t, font=f)[3] + gap for t, f, gap in blocks]
-    y = bottom - sum(heights)
-    for (text, font, _), bh in zip(blocks, heights):
+    blocks = text_blocks(draw, w, margin, headline, sub, cta, font_path)
+    y = h - safe - 80 - sum(bh for _, _, bh in blocks)
+    for text, font, bh in blocks:
         draw.text((margin, y), text, font=font, fill=CREAM)
         y += bh
 
@@ -96,6 +118,8 @@ def main():
     ap.add_argument("--name", default=None)
     ap.add_argument("--font", default=None)
     ap.add_argument("--focus", type=float, default=0.5)
+    ap.add_argument("--style", choices=["overlay", "band"], default="overlay",
+                    help="overlay: text on the photo (dark photos). band: text on a cream band below (light studio photos)")
     a = ap.parse_args()
 
     photo = ImageOps.exif_transpose(Image.open(a.photo))
@@ -104,7 +128,7 @@ def main():
     out.mkdir(exist_ok=True)
     for label, size in SIZES.items():
         path = out / f"{name}_{label}.jpg"
-        make(photo, size, a.headline, a.sub, a.cta, a.font, a.focus).save(path, quality=92)
+        make(photo, size, a.headline, a.sub, a.cta, a.font, a.focus, a.style).save(path, quality=92)
         print("saved", path.relative_to(ROOT))
 
 
