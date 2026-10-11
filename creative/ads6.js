@@ -252,4 +252,5 @@ add({
     <div class="abs" style="left:0;right:0;bottom:80px;display:flex;justify-content:center">${btn('Claim your perk', 'background:#e3c08f;color:#14110e')}</div>`,
 });
 
+ads.OFFER = OFFER;
 module.exports = ads;
