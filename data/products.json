@@ -1,0 +1,395 @@
+{
+  "brand": "COVR",
+  "site": "https://www.padelcovr.com",
+  "currency": "USD",
+  "cover_features": [
+    "Fits most standard padel rackets",
+    "Waterproof, wipe-clean lining",
+    "Front zip pocket for phone, keys and cards",
+    "Adjustable shoulder strap and carry handle",
+    "D-ring attachment for a COVR ball pouch"
+  ],
+  "cover_dimensions": "39 cm high x 29 cm wide, 36 cm curved zip opening",
+  "source": "Shopify Admin API, active products, pulled 2026-10-11",
+  "products": [
+    {
+      "title": "Navy",
+      "handle": "blue-padel-racket-cover",
+      "url": "https://www.padelcovr.com/products/blue-padel-racket-cover",
+      "price_usd": 199,
+      "stock": 4,
+      "lead": "Deep navy cotton canvas finished with cream leather and gold hardware. A classic pairing that protects your racket and settles quietly into everyday use.",
+      "body": "Navy cotton canvas",
+      "trim": "Cream leather",
+      "hardware": "Gold",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/1.jpg?v=1788065297",
+          "alt": "Navy cover, front view (packshot)"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/KEV0494.jpg?v=1759208610",
+          "alt": "Navy cover with racket on a green chair by the court"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/KEV0048.jpg?v=1759385998",
+          "alt": "Player carrying navy cover on her back beside the net"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/KEV0147.jpg?v=1759386001",
+          "alt": "Navy cover on a wooden courtside chair"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/KEV0504.jpg?v=1759386000",
+          "alt": "Navy cover on a player's lap, close-up"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/IMG_5961_JPG.jpg?v=1770967050",
+          "alt": "Two players at a stone wall with a baby pink COVR cover and a dark one"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/IMG_6008_JPG.jpg?v=1770967051",
+          "alt": "Two players holding COVR covers in black and baby pink"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/IMG_6009_JPG.jpg?v=1770967049",
+          "alt": "Two players sitting with COVR covers in baby pink and black"
+        }
+      ]
+    },
+    {
+      "title": "Mocha",
+      "handle": "brown-padel-racket-cover",
+      "url": "https://www.padelcovr.com/products/brown-padel-racket-cover",
+      "price_usd": 199,
+      "stock": 0,
+      "lead": "Walnut cotton canvas finished with crème leather and darkened hardware. Warm and low in contrast, so the marks it gathers read as character rather than wear.",
+      "body": "Walnut cotton canvas",
+      "trim": "Crème leather",
+      "hardware": "Gold",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/3.jpg?v=1788065297",
+          "alt": "Mocha cover, dark zip, front view (packshot)"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/2.jpg?v=1788065297",
+          "alt": "Mocha cover, gold zip, front view (packshot)"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/KEV0486.jpg?v=1759209105",
+          "alt": "Mocha cover with racket on a green courtside chair"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/KEV0369.jpg?v=1759385697",
+          "alt": "Two players courtside with natural and mocha covers"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/KEV0137.jpg?v=1759385699",
+          "alt": "Player holding mocha cover by its handle"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/KEV0199.jpg?v=1759385703",
+          "alt": "Hands taking a racket out of a mocha cover"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/KEV0445.jpg?v=1759385700",
+          "alt": "Mocha cover with racket and strap on a green chair"
+        }
+      ]
+    },
+    {
+      "title": "Latte",
+      "handle": "natural-canvas-dark-brown-leather-padel-racket-cover",
+      "url": "https://www.padelcovr.com/products/natural-canvas-dark-brown-leather-padel-racket-cover",
+      "price_usd": 199,
+      "stock": 5,
+      "lead": "Undyed natural canvas finished with dark brown leather and gold hardware. The strongest contrast in the range, and the pairing that ages most visibly.",
+      "body": "Undyed cotton canvas",
+      "trim": "Dark brown leather",
+      "hardware": "Gold",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/4.jpg?v=1788065297",
+          "alt": "Latte cover, front view (packshot)"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/KEV0489.jpg?v=1759209349",
+          "alt": "Latte cover with racket on a green chair"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/KEV0076.jpg?v=1759385248",
+          "alt": "Player seated courtside holding latte cover"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/KEV0093.jpg?v=1759385251",
+          "alt": "Close-up: leather collar and monogram lining"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/KEV0100.jpg?v=1759385251",
+          "alt": "Close-up: leather zip pull and embroidered crest"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/KEV0171.jpg?v=1759385252",
+          "alt": "Player holding latte cover at the net"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/KEV0295.jpg?v=1759385253",
+          "alt": "Latte cover unboxed with thank-you card"
+        }
+      ]
+    },
+    {
+      "title": "Ginger",
+      "handle": "natural-canvas-light-brown-leather-padel-racket-cover",
+      "url": "https://www.padelcovr.com/products/natural-canvas-light-brown-leather-padel-racket-cover",
+      "price_usd": 199,
+      "stock": 7,
+      "lead": "Undyed natural canvas finished with tan leather and brass hardware. The quietest cover in the range, and the one that wears in most gracefully.",
+      "body": "Undyed cotton canvas",
+      "trim": "Tan leather",
+      "hardware": "Gold",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/5.jpg?v=1788065297",
+          "alt": "Ginger cover, front view (packshot)"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/KEV0493.jpg?v=1759209450",
+          "alt": "Ginger cover with racket on a green chair"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/KEV0154.jpg?v=1759385097",
+          "alt": "Ginger cover on the court with two balls"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/KEV0037.jpg?v=1759385097",
+          "alt": "Player seated courtside with ginger cover"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/KEV0056.jpg?v=1759385097",
+          "alt": "Player carrying ginger cover on her back"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/KEV0222.jpg?v=1759385097",
+          "alt": "Player carrying ginger cover on its strap"
+        }
+      ]
+    },
+    {
+      "title": "Total Black",
+      "handle": "natural-canvas-total-black-leather-padel-racket-cover",
+      "url": "https://www.padelcovr.com/products/natural-canvas-total-black-leather-padel-racket-cover",
+      "price_usd": 199,
+      "stock": 1,
+      "lead": "Black cotton canvas finished with black leather and blackened hardware, down to the crest embossed into the panel. Understated to the point that nothing catches the light.",
+      "body": "Black cotton canvas",
+      "trim": "Black leather",
+      "hardware": "Black or Gold",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/7.jpg?v=1788065298",
+          "alt": "Total Black cover, black zip (packshot)"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/6.jpg?v=1788065297",
+          "alt": "Total Black cover, gold zip (packshot)"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/307_20251111_131210_0000_1.png?v=1766997675",
+          "alt": "Total Black cover lying on a padel court"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/20251111131525217.jpg?v=1762840736",
+          "alt": "Player holding a Total Black cover"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/KEEPMECLOSER_20251111_131342_0000.png?v=1762840736",
+          "alt": "Total Black cover with cream webbing strap, close-up"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/IMG_5961_JPG.jpg?v=1770967050",
+          "alt": "Two players at a stone wall with a baby pink COVR cover and a dark one"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/IMG_6008_JPG.jpg?v=1770967051",
+          "alt": "Two players holding COVR covers in black and baby pink"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/IMG_6009_JPG.jpg?v=1770967049",
+          "alt": "Two players sitting with COVR covers in baby pink and black"
+        }
+      ]
+    },
+    {
+      "title": "Baby Pink",
+      "handle": "natural-canvas-baby-pink-leather-padel-racket-cover",
+      "url": "https://www.padelcovr.com/products/natural-canvas-baby-pink-leather-padel-racket-cover",
+      "price_usd": 199,
+      "stock": 2,
+      "lead": "Blush cotton twill finished with white leather and brass hardware. The lightest cover in the range, made to be carried as easily off court as on.",
+      "body": "Blush cotton twill",
+      "trim": "White leather",
+      "hardware": "Gold",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/8.jpg?v=1788065297",
+          "alt": "Baby Pink cover, front view (packshot)"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/IMG_4346.jpg?v=1770006249",
+          "alt": "Baby Pink cover with shoulder strap"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/IMG_4348.png?v=1770006251",
+          "alt": "Back of Baby Pink cover with strap"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/IMG_4343_JPG.jpg?v=1770006250",
+          "alt": "Player wearing Baby Pink cover on her back"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/IMG_5961_JPG.jpg?v=1770967050",
+          "alt": "Two players at a stone wall with a baby pink COVR cover and a dark one"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/IMG_6008_JPG.jpg?v=1770967051",
+          "alt": "Two players holding COVR covers in black and baby pink"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/IMG_6009_JPG.jpg?v=1770967049",
+          "alt": "Two players sitting with COVR covers in baby pink and black"
+        }
+      ]
+    },
+    {
+      "title": "Sky Denim",
+      "handle": "natural-canvas-sky-denim-leather-padel-racket-cover",
+      "url": "https://www.padelcovr.com/products/natural-canvas-sky-denim-leather-padel-racket-cover",
+      "price_usd": 199,
+      "stock": 3,
+      "lead": "Pale sky-blue denim finished with natural leather and brass hardware. Designed to protect your racket while becoming softer and more personal with use.",
+      "body": "Sky-blue cotton denim",
+      "trim": "Natural leather",
+      "hardware": "Gold",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/9_b1ecc716-1ab9-4428-8a2a-61ca3d4da595.jpg?v=1788066138",
+          "alt": "Sky Denim cover, front view (packshot)"
+        }
+      ]
+    },
+    {
+      "title": "Vanilla Cream",
+      "handle": "natural-canvas-vanilla-cream-leather-padel-racket-cover",
+      "url": "https://www.padelcovr.com/products/natural-canvas-vanilla-cream-leather-padel-racket-cover",
+      "price_usd": 199,
+      "stock": 1,
+      "lead": "Vanilla cotton twill finished with cream leather and gold hardware. Tonal throughout, so the embossed crest reads as texture rather than branding.",
+      "body": "Vanilla cotton twill",
+      "trim": "Cream leather",
+      "hardware": "Gold",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/10_1d655e19-6927-44b9-938a-4cedb48a8b21.jpg?v=1788066695",
+          "alt": "Vanilla Cream cover, front view (packshot)"
+        }
+      ]
+    },
+    {
+      "title": "Ash",
+      "handle": "natural-canvas-ash-denim-leather-padel-racket-cover",
+      "url": "https://www.padelcovr.com/products/natural-canvas-ash-denim-leather-padel-racket-cover",
+      "price_usd": 199,
+      "stock": 2,
+      "lead": "Ash grey denim finished with black leather and darkened hardware. Restrained by design, and made to disappear into everything else you carry.",
+      "body": "Ash grey cotton denim",
+      "trim": "Black leather",
+      "hardware": "Darkened",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/11_35dc6dfa-a496-4504-a32b-6193a4461011.jpg?v=1788066667",
+          "alt": "Ash cover, front view (packshot)"
+        }
+      ]
+    },
+    {
+      "title": "Coffee",
+      "handle": "natural-canvas-coffee-leather-padel-racket-cover-copy",
+      "url": "https://www.padelcovr.com/products/natural-canvas-coffee-leather-padel-racket-cover-copy",
+      "price_usd": 199,
+      "stock": 1,
+      "lead": "Coffee cotton twill with black leather and black hardware.",
+      "body": "Coffee cotton twill",
+      "trim": "Black leather",
+      "hardware": "Darkened",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/12_49d2f376-ea25-4bd6-8355-14bb0d2f4bb5.jpg?v=1788066562",
+          "alt": "Coffee cover, front view (packshot)"
+        }
+      ]
+    },
+    {
+      "title": "Ball Pouch",
+      "handle": "covr-ball-pouch",
+      "url": "https://www.padelcovr.com/products/covr-ball-pouch",
+      "price_usd": 29,
+      "stock": 0,
+      "lead": "A clip-on pouch that holds three padel balls. Zip closure. Clips to the D-ring on any COVR cover, or to a bag strap.",
+      "body": null,
+      "trim": null,
+      "hardware": null,
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/IMG_8253_JPG.jpg?v=1789286923",
+          "alt": "Ball pouches in several colourways with padel balls"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/20.png?v=1789286922",
+          "alt": "Navy ball pouch on white"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/21.png?v=1789286922",
+          "alt": "Black ball pouch on white"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/19.png?v=1789286922",
+          "alt": "Total Black ball pouch on white"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/16.png?v=1789286922",
+          "alt": "Coffee ball pouch on white"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/18.png?v=1789286922",
+          "alt": "Mocha ball pouch on white"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/22.png?v=1789286922",
+          "alt": "Brown ball pouch on white"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/17.png?v=1789286922",
+          "alt": "Vanilla Cream ball pouch on white"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/23.png?v=1789286922",
+          "alt": "Ginger ball pouch on white"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/15.png?v=1789286922",
+          "alt": "Ash ball pouch on white"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/14.png?v=1789286922",
+          "alt": "Sky Denim ball pouch on white"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0684/7175/0746/files/covr-ball-pouch-baby-pink.png?v=1790317148",
+          "alt": "Baby Pink ball pouch on white"
+        }
+      ]
+    }
+  ]
+}
