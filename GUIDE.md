@@ -11,6 +11,7 @@ This repo already has everything from your store: `data/products.json` lists all
 |---|---|---|
 | **Git** | to download this repo | https://git-scm.com/downloads |
 | **Python 3** | runs the scripts | https://www.python.org/downloads (Windows: tick **"Add Python to PATH"**) |
+| **ffmpeg** | builds the video ads | Mac: `brew install ffmpeg` · Windows: `winget install ffmpeg` |
 | **Claude Code** | lets you ask for ads in plain English | https://claude.ai/code → install for Mac/Windows, or in a terminal: `npm install -g @anthropic-ai/claude-code` |
 
 Check they work: open **Terminal** (Mac) or **PowerShell** (Windows) and type:
@@ -74,6 +75,42 @@ python3 scripts/make_ads.py images/total-black/01_7.jpg --headline "Black leathe
 
 ---
 
+## Part 2b: Make video ads
+
+Video usually gets cheaper clicks than still images on Reels and Stories. `make_video.py` turns 3–5 photos into a 12–15 second ad with a slow zoom on each photo, smooth crossfades, your text, and a black "COVR · Shop now" end card.
+
+```bash
+python3 scripts/make_video.py --slide 'images/total-black/04_20251111131525217.jpg|All black.' --slide 'images/total-black/05_KEEPMECLOSER_20251111_131342_0000.png|Black leather. Black hardware.' --slide 'images/total-black/07_IMG_6008_JPG.jpg|Built for real play.' --end 'Total Black|Handmade padel racket cover · $199' --name total-black-video
+```
+→ `ads/total-black-video_story.mp4` (1080×1920, for Reels & Stories)
+
+- Add `--format portrait` for a 1080×1350 feed version.
+- Add `--music song.mp3` to add music. Use royalty-free music, or leave it silent and pick a track from Meta's sound library when you upload.
+- `--seconds 2.5` makes each photo shorter (punchier).
+
+More ready-made videos:
+```bash
+# Ginger: lifestyle story
+python3 scripts/make_video.py --slide 'images/ginger/05_KEV0056.jpg|Carried to every match.' --slide 'images/ginger/03_KEV0154.jpg|Natural canvas. Tan leather.' --slide 'images/ginger/04_KEV0037.jpg|Wears in, never out.' --end 'Ginger|Handmade padel racket cover · $199' --name ginger-video
+# Craft / detail video (Latte)
+python3 scripts/make_video.py --slide 'images/latte/05_KEV0100.jpg|Leather zip pull.' --slide 'images/latte/04_KEV0093.jpg|Monogram lining.' --slide 'images/latte/07_KEV0295.jpg|Handmade. Boxed. Yours.' --end 'Latte|Waterproof lining · front zip pocket · $199' --name latte-craft
+```
+(Check the exact file names in your `images/` folders. Claude Code can do that for you.)
+
+### Other apps for video ads
+| App | Best for | Cost |
+|---|---|---|
+| **This script** | fast, on-brand photo videos, unlimited | free |
+| **Canva** (connected) | open any design → *Animate* / *Magic Animate*; or make a video in the Canva editor with your uploaded photos | free / Pro |
+| **CapCut** | trending Reels templates, auto-captions, beat-synced cuts. Best if you film yourself on court | free |
+| **Meta Advantage+ creative** | in Ads Manager, turn on "Image animation" / "Add music": Meta animates your images automatically | free |
+| **Runway / Kling / Google Veo** | AI **image-to-video**: upload a lifestyle photo and get 5–10s of real motion (player walking, wind in hair) | paid |
+| **Creatify / Arcads** | AI UGC "influencer" videos made from your product URL | paid |
+
+Best results: **film 10–20 seconds on your phone** (player zipping the cover, swinging it onto a shoulder, pulling out the racket at the court). Real footage beats any template. Put the clips in a folder and ask Claude Code to cut them into an ad with ffmpeg.
+
+---
+
 ## Part 3: Use Claude Code to do it for you (the easy way)
 
 1. In the `covr-ads` folder, type `claude` and press Enter.
@@ -108,7 +145,7 @@ Make a carousel: one square image per colour, same headline style, in the order 
 | Connector | What it does for you |
 |---|---|
 | **Shopify** (already connected) | Reads products, stock, sales. Ask "which colour sold best last 30 days?" to choose what to advertise. |
-| **Canva** (already connected) | Makes polished designs from your photos and brand kit, resizes to every Meta format, exports PNG. Best when you want more design than the script gives. |
+| **Canva** (already connected) | Examples already made in your Canva: *Elegant Ad: Close-Up of Total Black Cover*, *Instagram/Facebook Story Ad Design*, *Luxury Ad for COVR Padel Rackets*. Makes polished designs from your photos and brand kit, resizes to every Meta format, exports PNG. Best when you want more design than the script gives. |
 | **Meta Ads / Facebook** (search the connector list) | If available for your account: read campaign results so Claude can tell you which ad wins. |
 | **Google Drive** | Store the final ad folder to share with a designer or ad manager. |
 
