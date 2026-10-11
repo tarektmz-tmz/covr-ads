@@ -329,4 +329,5 @@ ads.push({
       <div class="kicker" style="font-size:18px">Boxed · Dust bag · $199</div>${logo('position:static;color:#fff')}</div>`,
 });
 
+ads.helpers = { crop, frame, circle, X, V, ARROW, logo, src };
 module.exports = ads;

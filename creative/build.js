@@ -1,4 +1,4 @@
-// Renders every ad in ads.js to ads/creative/<id>.png with a real browser.
+// Renders every ad in ads.js + ads2.js to ads/creative/<id>.png with a real browser.
 // Usage:  npm install playwright && npx playwright install chromium   (first time only)
 //         node creative/build.js            -> all ads
 //         node creative/build.js m1-compare -> one ad
@@ -9,7 +9,7 @@ const { chromium } = require('playwright');
 const ROOT = path.resolve(__dirname, '..');
 const PAGES = path.join(__dirname, 'pages');
 const OUT = path.join(ROOT, 'ads', 'creative');
-const ads = require('./ads.js');
+const ads = [...require('./ads.js'), ...require('./ads2.js')];
 
 (async () => {
   fs.mkdirSync(PAGES, { recursive: true });
