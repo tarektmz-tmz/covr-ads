@@ -1,0 +1,430 @@
+
+
+<script
+  src="{{ 'results-list.js' | asset_url }}"
+  type="module"
+  fetchpriority="low"
+></script>
+
+{% javascript %}
+  const url = new URL(window.location.href);
+  if (url.hash) {
+    document.addEventListener(
+      'DOMContentLoaded',
+      () => {
+        const card = document.getElementById(url.hash.slice(1));
+        if (card) {
+          card.scrollIntoView({ behavior: 'instant' });
+        }
+      },
+      { once: true }
+    );
+  }
+{% endjavascript %}
+
+{% comment %} We always render this full-width, as the child blocks have width: page/full settings {% endcomment %}
+{% liquid
+  if section.settings.background_color != blank
+    render 'contrast-override', background_color: section.settings.background_color, section_id: section.id
+  endif
+%}
+
+{% render 'collection-wrapper-styles' %}
+
+<div
+  class="section-background{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
+></div>
+{% # theme-check-disable-next-line UnknownFilter %}
+<collection-component view-event-payload="{{ collection | standard_event_data: 'view' | escape }}">
+  <results-list
+    class="section product-grid-container covr-collection covr-collection--{{ collection.handle }}{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
+    style="--padding-block-start: {{ section.settings.padding-block-start }}px; --padding-block-end: {{ section.settings.padding-block-end }}px;"
+    section-id="{{ section.id }}"
+    infinite-scroll="{{ section.settings.enable_infinite_scroll }}"
+  >
+    {% render 'skip-to-content-link', href: '#ResultsList', text: 'accessibility.skip_to_results_list' %}
+
+    <div
+      class="collection-wrapper grid gap-style{% if section.settings.product_grid_width == 'full-width' %} collection-wrapper--grid-full-width{% endif %}"
+    >
+      {% content_for 'block',
+        type: 'filters',
+        id: 'filters',
+        results: collection,
+        results_size: collection.products_count
+      %}
+
+      {% assign products_per_page = 24 %}
+
+      {% if section.settings.enable_infinite_scroll == false %}
+        {% assign products_per_page = section.settings.products_per_page %}
+      {% endif %}
+
+      {% paginate collection.products by products_per_page %}
+        {%- comment -%}
+          COVR "pairs + photo" layout (Padel Racket Covers only): each row is two
+          matching covers plus one lifestyle photo from Settings > Files, and the
+          photo side alternates. Used on page 1 with no filters and the default
+          sort; otherwise the normal grid renders. Covers not listed in
+          pair_rows are appended after the pairs.
+          Row format: handle-a,handle-b,file-name,object-position
+        {%- endcomment -%}
+        {%- liquid
+          assign covr_pairs = false
+          if collection.handle == 'padel-racket-covers' and paginate.current_page == 1
+            assign covr_pairs = true
+            for f in collection.filters
+              if f.active_values.size > 0 or f.min_value.value != nil or f.max_value.value != nil
+                assign covr_pairs = false
+              endif
+            endfor
+            if collection.sort_by != blank and collection.sort_by != collection.default_sort_by
+              assign covr_pairs = false
+            endif
+          endif
+        -%}
+
+        {% capture children %}
+          {%- if covr_pairs -%}
+            {%- liquid
+              assign pair_rows = 'natural-canvas-total-black-leather-padel-racket-cover,natural-canvas-ash-denim-leather-padel-racket-cover,covr-pairs-1.jpg,50% 62%;natural-canvas-dark-brown-leather-padel-racket-cover,natural-canvas-light-brown-leather-padel-racket-cover,covr-pairs-2.jpg,50% 80%;natural-canvas-coffee-leather-padel-racket-cover-copy,brown-padel-racket-cover,covr-pairs-3.jpg,50% 72%;blue-padel-racket-cover,natural-canvas-vanilla-cream-leather-padel-racket-cover,covr-pairs-4.jpg,50% 45%;natural-canvas-baby-pink-leather-padel-racket-cover,natural-canvas-sky-denim-leather-padel-racket-cover,covr-pairs-5.jpg,50% 62%' | split: ';'
+              assign used = ','
+            -%}
+            {%- for row in pair_rows -%}
+              {%- liquid
+                assign parts = row | split: ','
+                assign flip = forloop.index0 | modulo: 2
+                assign photo = images[parts[2]]
+                assign photo_style = 'object-position: ' | append: parts[3]
+              -%}
+              {%- capture photo_img -%}
+                {%- if photo != blank -%}
+                  {{ photo | image_url: width: 2000 | image_tag: widths: '600, 900, 1200, 1600, 2000', sizes: '(min-width: 750px) 50vw, 100vw', loading: 'lazy', alt: photo.alt, style: photo_style }}
+                {%- endif -%}
+              {%- endcapture -%}
+              {%- comment -%} Flipped rows: photo first on desktop, but always after the pair on mobile {%- endcomment -%}
+              {%- if flip == 1 -%}<li class="covr-pair-photo covr-pair-photo--desktop">{{ photo_img }}</li>{%- endif -%}
+              {%- for h in parts limit: 2 -%}
+                {%- for product in collection.products -%}
+                  {%- if product.handle == h -%}
+                    {%- assign used = used | append: product.handle | append: ',' -%}
+                    <li
+                      id="{{ section.id }}-{{ product.id }}"
+                      class="product-grid__item product-grid__item--{{ forloop.index0 }}"
+                      data-page="{{ paginate.current_page }}"
+                      data-product-id="{{ product.id }}"
+                      ref="cards[]"
+                    >
+                      {% content_for 'block',
+                        type: '_product-card',
+                        id: 'product-card',
+                        closest.product: product,
+                        product_view_context: 'collection'
+                      %}
+                    </li>
+                  {%- endif -%}
+                {%- endfor -%}
+              {%- endfor -%}
+              <li class="covr-pair-photo{% if flip == 1 %} covr-pair-photo--mobile{% endif %}">{{ photo_img }}</li>
+            {%- endfor -%}
+            {%- for product in collection.products -%}
+              {%- assign key = ',' | append: product.handle | append: ',' -%}
+              {%- unless used contains key -%}
+                <li
+                  id="{{ section.id }}-{{ product.id }}"
+                  class="product-grid__item product-grid__item--{{ forloop.index0 }}"
+                  data-page="{{ paginate.current_page }}"
+                  data-product-id="{{ product.id }}"
+                  ref="cards[]"
+                >
+                  {% content_for 'block',
+                    type: '_product-card',
+                    id: 'product-card',
+                    closest.product: product,
+                    product_view_context: 'collection'
+                  %}
+                </li>
+              {%- endunless -%}
+            {%- endfor -%}
+          {%- else -%}
+            {% for product in collection.products %}
+              <li
+                id="{{ section.id }}-{{ product.id }}"
+                class="product-grid__item product-grid__item--{{ forloop.index0 }}"
+                data-page="{{ paginate.current_page }}"
+                data-product-id="{{ product.id }}"
+                ref="cards[]"
+              >
+                {% content_for 'block',
+                  type: '_product-card',
+                  id: 'product-card',
+                  closest.product: product,
+                  product_view_context: 'collection'
+                %}
+              </li>
+            {% endfor %}
+          {%- endif -%}
+        {% endcapture %}
+
+        {%- if covr_pairs -%}
+          <style>
+            .product-grid--{{ section.id }} .covr-pair-photo {
+              position: relative;
+              grid-column: 1 / -1;
+              aspect-ratio: 4 / 3;
+              overflow: hidden;
+              list-style: none;
+              background: rgb(var(--color-foreground-rgb) / 0.06);
+            }
+            .product-grid--{{ section.id }} .covr-pair-photo img {
+              position: absolute;
+              inset: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+            .product-grid--{{ section.id }}:is([product-grid-view='zoom-out'], [product-grid-view='mobile-single']) .covr-pair-photo {
+              display: none;
+            }
+            .product-grid--{{ section.id }} .covr-pair-photo--desktop {
+              display: none;
+            }
+            @media screen and (min-width: 750px) {
+              .product-grid--{{ section.id }}[product-grid-view='default'] .covr-pair-photo--desktop {
+                display: block;
+              }
+              .product-grid--{{ section.id }} .covr-pair-photo--mobile {
+                display: none;
+              }
+            }
+            @media screen and (min-width: 750px) {
+              .product-grid.product-grid--{{ section.id }}[product-grid-view='default'] {
+                --product-grid-columns-desktop: repeat(4, minmax(0, 1fr));
+              }
+              .product-grid--{{ section.id }}[product-grid-view='default'] .covr-pair-photo {
+                grid-column: span 2;
+                aspect-ratio: auto;
+                min-height: 100%;
+              }
+            }
+          </style>
+        {%- endif -%}
+
+        {% render 'product-grid',
+          section: section,
+          children: children,
+          products: collection.products,
+          paginate: paginate,
+          enable_infinite_scroll: section.settings.enable_infinite_scroll
+        %}
+      {% endpaginate %}
+    </div>
+  </results-list>
+</collection-component>
+
+{%- comment -%}
+  COVR: descriptive copy retained from the collection record, moved below the
+  grid so the first product row is reachable sooner. Scoped to the racket-cover
+  collection; every other collection renders nothing here.
+
+  Deliberately omitted from the original description, because none of it is
+  currently substantiated or true:
+    - "water-resistant interior lining"  (unverified claim)
+    - "optional personalisation on selected designs"  (the personalisation
+      product is draft and returns 404)
+    - "Shipped worldwide, including the UK, USA, Europe, ..."  (delivery claim)
+  The shared collection record is unchanged; this only controls what the theme
+  renders.
+{%- endcomment -%}
+{%- if collection.handle == 'padel-racket-covers' -%}
+  <div class="section covr-collection-note">
+    <div class="covr-collection-note__inner">
+      <p>
+        Protect your racket without carrying a bulky sports bag. Each COVR cover
+        is cut and stitched by hand in Bali, with genuine leather trim.
+      </p>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:names.collection_container",
+  "enabled_on": {
+    "templates": ["collection"]
+  },
+  "settings": [
+    {
+      "type": "select",
+      "id": "layout_type",
+      "label": "t:settings.type",
+      "options": [
+        {
+          "value": "grid",
+          "label": "t:options.grid"
+        },
+        {
+          "value": "organic",
+          "label": "t:options.editorial"
+        }
+      ],
+      "default": "grid"
+    },
+    {
+      "type": "select",
+      "id": "product_card_size",
+      "label": "t:settings.card_size",
+      "options": [
+        {
+          "value": "small",
+          "label": "t:options.small"
+        },
+        {
+          "value": "medium",
+          "label": "t:options.medium"
+        },
+        {
+          "value": "large",
+          "label": "t:options.large"
+        },
+        {
+          "value": "extra-large",
+          "label": "t:options.extra_large"
+        }
+      ],
+      "default": "medium",
+      "visible_if": "{{ section.settings.layout_type == 'grid' }}"
+    },
+    {
+      "type": "select",
+      "id": "mobile_product_card_size",
+      "label": "t:settings.mobile_card_size",
+      "options": [
+        {
+          "value": "small",
+          "label": "t:options.small"
+        },
+        {
+          "value": "large",
+          "label": "t:options.large"
+        }
+      ],
+      "default": "small"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_infinite_scroll",
+      "label": "t:settings.auto_load_products",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "label": "t:settings.products_per_page",
+      "min": 8,
+      "max": 36,
+      "step": 4,
+      "default": 24,
+      "visible_if": "{{ section.settings.enable_infinite_scroll == false }}"
+    },
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "select",
+      "id": "product_grid_width",
+      "label": "t:settings.width",
+      "options": [
+        {
+          "value": "centered",
+          "label": "t:options.page"
+        },
+        {
+          "value": "full-width",
+          "label": "t:options.full"
+        }
+      ],
+      "default": "centered"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width_on_mobile",
+      "label": "t:settings.full_width_on_mobile",
+      "default": true,
+      "visible_if": "{{ section.settings.product_grid_width != 'full-width' }}"
+    },
+    {
+      "type": "range",
+      "id": "columns_gap_horizontal",
+      "label": "t:settings.horizontal_gap",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "columns_gap_vertical",
+      "label": "t:settings.vertical_gap",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left_padding",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right_padding",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:content.section_layout"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "placeholder": "t:settings.default"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top_padding",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom_padding",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 8
+    }
+  ],
+  "presets": []
+}
+{% endschema %}
