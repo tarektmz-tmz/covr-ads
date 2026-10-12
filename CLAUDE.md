@@ -20,4 +20,6 @@ Palette: cream (#F5F0E6) text on photos, black, natural canvas tones.
 ## Pricing & promos (set Oct 2026)
 - Every cover: **$249** full price.
 - Promos: **20% off** or a **$50 voucher** (both ≈ $199). Edit `OFFER` in `creative/ads6.js` (was/now/pct/voucher/code/when); all promo ads read it.
-- Promo code name is still a placeholder (COVR20) until the real code exists in Shopify.
+- **Live now:** Shopify prices set to $249 on all 10 active covers (12 Oct 2026). Code **COV20** = 20% off covers only ($199.20), all customers, 12 Oct → 26 Oct 2026 (HKT). Pouch excluded.
+- **Next (after 26 Oct):** $50 voucher shown as a store pop-up ("Claim your $50 now"), used at checkout. Not created yet; confirm $50 fixed amount (not 50%) before building it.
+- Ads that say "48 hours" / countdowns are only valid near the real end date.

@@ -1,7 +1,7 @@
 // Round 5: hooks + promo mix. 15 ads, 1080x1350.
 // ⚠️ OFFER below must match a real discount in Shopify before any of these run. Change it here, re-render, done.
 // Prices from Oct 2026: every cover $249. Promo = 20% off OR a $50 voucher (both land at ~$199).
-const OFFER = { pct: '20%', voucher: '$50 OFF', code: 'COVR20', was: '$249', now: '$199', when: 'This week only', hours: '48' };
+const OFFER = { pct: '20%', voucher: '$50 OFF', code: 'COV20', was: '$249', now: '$199', when: 'Ends 26 Oct', hours: '48' };
 
 const { crop, frame, ARROW } = require('./ads.js').helpers;
 const SIZES = require('./media-sizes.json');
