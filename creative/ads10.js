@@ -42,4 +42,18 @@ add({
     ${frame('latte-unboxing-hands.jpg', 0.5, 0.45, 1.0, 64, 600, 952, 680, 'border-radius:24px;box-shadow:0 30px 60px rgba(60,40,20,.22)').html}
     <div class="logo abs" style="left:0;right:0;bottom:22px;text-align:center;color:#9b6b3e;font-size:30px">COVR</div>`,
 });
+
+/* B variants — same soft-fade treatment, other photos. */
+for (const [id, n, cx, cy, z] of [
+  ['dyk-b2-bench', 'latte-bench-clean.jpg', 0.5, 0.62, 1.0],
+  ['dyk-b3-card', 'latte-thankyou-card.jpg', 0.5, 0.4, 1.3],
+  ['dyk-b4-unboxing', 'IMG_8776.jpg', 0.47, 0.42, 1.15],
+]) add({
+  id, format: 'Soft fade',
+  html: `
+    ${frame(n, cx, cy, z, 0, 0, 1080, 1350).html}
+    <div class="fill" style="background:linear-gradient(180deg,rgba(36,26,20,.94) 0%,rgba(36,26,20,.86) 30%,rgba(36,26,20,.45) 48%,rgba(36,26,20,0) 66%)"></div>
+    <div class="abs" style="left:64px;right:64px;top:64px">${text('#fff', '#f0d2a8', 'rgba(255,255,255,.82)')}</div>
+    <div class="logo abs" style="right:56px;bottom:50px;color:#fff;font-size:38px;text-shadow:0 2px 10px rgba(0,0,0,.4)">COVR</div>`,
+});
 module.exports = ads;
