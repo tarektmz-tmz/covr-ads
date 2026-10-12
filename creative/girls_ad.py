@@ -8,10 +8,11 @@ P = lambda *a: os.path.join(ROOT, *a)
 ROSE = (212, 92, 126); INK = (58, 38, 46)
 F9 = P('creative/fonts/Montserrat-900.ttf'); F6 = P('creative/fonts/Inter-600.ttf') if os.path.exists(P('creative/fonts/Inter-600.ttf')) else P('creative/fonts/Inter-500.ttf'); F4 = P('creative/fonts/Inter-400.ttf')
 
-def enhance(im):
+def enhance(im, wall_box=(150, 700, 100, 700), shift=True):
     a = np.asarray(im).astype(np.float32) / 255
     # white balance: make the plaster wall a clean, slightly blush white
-    wall = a[150:700, 100:700].reshape(-1, 3).mean(0)
+    y0, y1, x0, x1 = wall_box
+    wall = a[y0:y1, x0:x1].reshape(-1, 3).mean(0)
     a = a * (np.array([0.93, 0.90, 0.90]) / wall)
     # exposure + soft S-curve
     a = np.clip(a, 0, 1) ** 0.94
@@ -25,6 +26,9 @@ def enhance(im):
     a = a * (1 - 0.16 * neutral) + np.array([0.99, 0.86, 0.89]) * l * 1.04 * 0.16 * neutral
     a = np.clip(a, 0, 1)
     # coral -> true Baby Pink: rotate warm reds toward rose, soften saturation a little
+    if not shift:
+        out = Image.fromarray((a * 255).astype(np.uint8))
+        return finish(out)
     import colorsys
     hsv = np.asarray(Image.fromarray((a * 255).astype(np.uint8)).convert('HSV')).astype(np.float32)
     h, s_, v = hsv[..., 0], hsv[..., 1], hsv[..., 2]
@@ -35,6 +39,9 @@ def enhance(im):
     s2 = s_ * (1 - 0.12 * w); v2 = np.minimum(255, v * (1 + 0.04 * w))
     a = np.asarray(Image.fromarray(np.stack([h2, s2, v2], -1).astype(np.uint8), 'HSV').convert('RGB')).astype(np.float32) / 255
     out = Image.fromarray((a * 255).astype(np.uint8))
+    return finish(out)
+
+def finish(out):
     # clarity + crisp detail
     out = out.filter(ImageFilter.UnsharpMask(radius=6, percent=25, threshold=2))
     out = out.filter(ImageFilter.UnsharpMask(radius=1.2, percent=55, threshold=2))
@@ -50,20 +57,25 @@ def italic_text(txt, font, fill, shear=0.18):
     lay = Image.new('RGBA', (w, h), (0, 0, 0, 0)); ImageDraw.Draw(lay).text((20, 0), txt, font=font, fill=fill)
     return lay.transform((w + int(h * shear), h), Image.AFFINE, (1, shear, -h * shear, 0, 1, 0), Image.BICUBIC)
 
-def build(W, H, crop_box, head_y, pill_y, name):
-    src = ImageOps.exif_transpose(Image.open(P('media/IMG_0628.JPG'))).convert('RGB')
-    img = enhance(src.crop(crop_box)).resize((W, H), Image.LANCZOS).convert('RGBA')
+def build(W, H, crop_box, head_y, pill_y, name, src='media/IMG_0628.JPG', sub="We're running out of Baby Pink & Sky Denim...", wall=(150, 700, 100, 700), shift=True, wash=170):
+    src = ImageOps.exif_transpose(Image.open(P(src))).convert('RGB')
+    img = enhance(src.crop(crop_box), wall, shift).resize((W, H), Image.LANCZOS).convert('RGBA')
     # soft blush wash at the top for the headline
     g = np.zeros((H, W, 4), np.uint8); t = np.clip(1 - np.arange(H) / (head_y + 330), 0, 1) ** 1.6
-    g[..., 0], g[..., 1], g[..., 2] = 253, 240, 243; g[..., 3] = (t * 170)[:, None].astype(np.uint8)
+    g[..., 0], g[..., 1], g[..., 2] = 253, 240, 243
+    if wash > 200:
+        yy = np.arange(H); t = np.clip(1 - (yy - (head_y + 175)) / 190, 0, 1) ** 1.3
+    g[..., 3] = (np.minimum(1, t * 1.25) * wash)[:, None].astype(np.uint8)
     img = Image.alpha_composite(img, Image.fromarray(g, 'RGBA'))
     d = ImageDraw.Draw(img)
     head = italic_text('SORRY, PADEL GIRLS', ImageFont.truetype(F9, 80), ROSE + (255,))
     sh = italic_text('SORRY, PADEL GIRLS', ImageFont.truetype(F9, 80), (255, 255, 255, 200)).filter(ImageFilter.GaussianBlur(6))
     x = (W - head.width) // 2
     img.alpha_composite(sh, (x, head_y + 3)); img.alpha_composite(head, (x, head_y))
-    f = ImageFont.truetype(F6, 42); s = "We're running out of Baby Pink & Sky Denim..."
+    f = ImageFont.truetype(F6, 42); s = sub
     w = d.textlength(s, font=f); d.text(((W - w) / 2, head_y + 112), s, font=f, fill=INK)
+    if pill_y is None:
+        out = P('ads/girls', name); img.convert('RGB').save(out, quality=95); print(out); return
     # pill: Only 2 Baby Pink & 3 Sky Denim left.
     fb = ImageFont.truetype(F6, 38); fr = ImageFont.truetype(F4, 38)
     parts = [('Only ', fr), ('2 Baby Pink', fb), (' & ', fr), ('3 Sky Denim', fb), (' left.', fr)]
@@ -84,3 +96,6 @@ if __name__ == '__main__':
     # source is 1536x2730
     build(1080, 1350, (0, 520, 1536, 2440), 70, 1210, 'sorry-padel-girls-pink-blue-4x5.jpg')
     build(1080, 1920, (0, 0, 1536, 2730), 260, 1560, 'sorry-padel-girls-pink-blue-9x16.jpg')
+    bp = dict(src='media/baby-pink-dress-hold.jpg', sub="We're running out of Baby Pink...", wall=(40, 400, 30, 300), shift=False, wash=235)
+    build(1080, 1350, (0, 250, 1125, 1656), 70, None, 'sorry-padel-girls-baby-pink-4x5.jpg', **bp)
+    build(1080, 1920, (0, 0, 1125, 2000), 250, None, 'sorry-padel-girls-baby-pink-9x16.jpg', **bp)
