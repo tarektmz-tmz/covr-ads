@@ -18,14 +18,14 @@ const add = a => ads.push({ outDir: 'phone', scale: 2, stage: 'TOFU', ...a });
 /* V1 — Side-by-side cards, with the "why" spelled out under each */
 add({
   id: 'ph1-two-cards', format: 'Analogy cards',
-  css: `body{background:#efe9df}.card{position:absolute;top:330px;width:465px;height:720px;border-radius:30px;background:#fff;box-shadow:0 20px 50px rgba(0,0,0,.08);overflow:hidden}
+  css: `body{background:#efe9df}.card{position:absolute;top:370px;width:465px;height:690px;border-radius:30px;background:#fff;box-shadow:0 20px 50px rgba(0,0,0,.08);overflow:hidden}
         .cap{position:absolute;left:0;right:0;bottom:30px;text-align:center}.cap b{display:block;font-family:Montserrat;font-weight:800;font-size:34px}.cap span{font-size:22px;color:#6f6a62}`,
   html: `
     <div class="abs" style="left:56px;right:56px;top:56px"><div class="mega" style="font-size:72px">You wouldn’t leave</div><div class="mega" style="font-size:72px">your phone <span class="tan">unprotected.</span></div>
-      <div style="font-size:30px;color:#4a4540;margin-top:14px">So why does your racket ride loose in the car boot?</div></div>
-    <div class="card" style="left:56px">${phone(140, 70, 420)}
+      <div style="font-family:Montserrat;font-weight:800;font-size:44px;color:#b5452e;margin-top:18px">So why leave your racket uncovered?</div></div>
+    <div class="card" style="left:56px">${phone(130, 60, 420)}
       <div class="cap"><b>Phone: in a case</b><span>Screen protector too. Obviously.</span></div></div>
-    <div class="card" style="left:559px">${cut('latte-bench', 115, 30, 520)}
+    <div class="card" style="left:559px">${cut('pack-latte', 95, 50, 480)}
       <div class="cap"><b>Racket: in a COVR</b><span>Cotton, leather, waterproof lining.</span></div></div>
     <div class="abs" style="left:56px;right:56px;top:1080px">${chips()}</div>
     <div class="abs" style="left:0;right:0;bottom:54px;display:flex;justify-content:center;align-items:center;gap:28px">
