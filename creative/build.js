@@ -9,7 +9,7 @@ const { chromium } = require('playwright');
 const ROOT = path.resolve(__dirname, '..');
 const PAGES = path.join(__dirname, 'pages');
 const OUT = path.join(ROOT, 'ads', 'creative');
-const ads = [...require('./ads.js'), ...require('./ads2.js'), ...require('./ads5.js'), ...require('./ads6.js'), ...require('./ads7.js'), ...require('./ads8.js'), ...require('./ads9.js'), ...require('./ads10.js')];
+const ads = [...require('./ads.js'), ...require('./ads2.js'), ...require('./ads5.js'), ...require('./ads6.js'), ...require('./ads7.js'), ...require('./ads8.js'), ...require('./ads9.js'), ...require('./ads10.js'), ...require('./ads11.js')];
 // Campaign ads (ads3.js) render in both Meta sizes, plus any headline variations.
 for (const c of [...require('./ads3.js'), ...require('./ads4.js')]) {
   for (const [label, h] of [['4x5', 1350], ['9x16', 1920]]) {
