@@ -23,9 +23,10 @@ add({
   html: `
     <div class="abs" style="left:56px;right:56px;top:56px"><div class="mega" style="font-size:72px">You wouldn’t leave</div><div class="mega" style="font-size:72px">your phone <span class="tan">unprotected.</span></div>
       <div style="font-family:Montserrat;font-weight:800;font-size:44px;color:#b5452e;margin-top:18px">So why leave your racket uncovered?</div></div>
-    <div class="card" style="left:56px">${phone(130, 60, 420)}
+    <div class="card" style="left:56px">${phone(151, 140, 330)}
       <div class="cap"><b>Phone: in a case</b><span>Screen protector too. Obviously.</span></div></div>
-    <div class="card" style="left:559px">${cut('pack-latte', 95, 50, 480)}
+    <div class="card" style="left:559px">
+      ${cut('latte-arch', (465 - 400 * SIZES['cut/latte-arch.png'][0] / SIZES['cut/latte-arch.png'][1]) / 2, 105, 400)}
       <div class="cap"><b>Racket: in a COVR</b><span>Cotton, leather, waterproof lining.</span></div></div>
     <div class="abs" style="left:56px;right:56px;top:1080px">${chips()}</div>
     <div class="abs" style="left:0;right:0;bottom:54px;display:flex;justify-content:center;align-items:center;gap:28px">
