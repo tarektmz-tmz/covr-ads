@@ -9,6 +9,39 @@ P = lambda *a: os.path.join(ROOT, *a)
 def blur(a, r):
     return np.asarray(Image.fromarray((np.clip(a, 0, 1) * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(r))).astype(np.float32) / 255
 
+def white_box(im):
+    """Recolour the black gift box white (keeps its shading); gold COVR becomes dark lettering."""
+    from scipy import ndimage as nd
+    a = np.asarray(im).astype(np.float32)
+    L = a @ np.array([0.299, 0.587, 0.114])
+    dark = L < 80
+    dark[:1100] = False; dark[2200:] = False; dark[:, 1150:] = False
+    lab, n = nd.label(dark); sz = nd.sum(dark, lab, range(1, n + 1))
+    box = np.isin(lab, [i + 1 for i, v in enumerate(sz) if v > 20000])
+    box = nd.binary_fill_holes(nd.binary_closing(box, iterations=4))
+    # pick up thin dark edges/corners left next to the box
+    near = nd.binary_dilation(box, iterations=26)
+    box |= near & (L < 105)
+    box = nd.binary_fill_holes(nd.binary_closing(box, iterations=3))
+    # smooth the outline so edges stay crisp and straight, not torn
+    box = blur(box.astype(np.float32), 2.5) > 0.5
+    r, b = a[..., 0], a[..., 2]
+    gold = box & ((r - b) > 35) & (L > 70)
+    gold_s = np.clip(((r - b) - 30) / 30, 0, 1) * np.clip((L - 60) / 50, 0, 1) * box
+    lo, hi = np.percentile(L[box & ~gold], [5, 97])
+    norm = np.clip((L - lo) / (hi - lo), 0, 1)
+    white = np.array([242, 240, 236], np.float32)
+    nb = white * (0.78 + 0.24 * norm)[..., None]
+    ink = np.array([46, 40, 38], np.float32)
+    nb = nb * (1 - gold_s[..., None]) + ink * gold_s[..., None]
+    alpha = blur(box.astype(np.float32), 1.0)[..., None]
+    # soft contact shadow on the floor so the white box stands out
+    sh = np.roll(box, 18, axis=0).astype(np.float32)
+    sh = blur(sh, 22) * (1 - box)
+    a = a * (1 - 0.30 * sh[..., None])
+    out = a * (1 - alpha) + nb * alpha
+    return Image.fromarray(np.clip(out, 0, 255).astype(np.uint8))
+
 def grade(im):
     a = np.asarray(im).astype(np.float32) / 255
     H, W = a.shape[:2]
@@ -50,11 +83,15 @@ def grade(im):
     b = np.asarray(out).astype(np.float32)
     glow = np.asarray(Image.fromarray(np.clip((b - 205) * 3, 0, 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(30))).astype(np.float32)
     b = b + glow * np.array([0.10, 0.08, 0.05])
+    hl = np.clip((b.mean(2, keepdims=True) - 170) / 85, 0, 1)
+    b = b * (1 - 0.10 * hl) + np.array([236, 228, 214]) * 0.10 * hl
+    b = b * np.array([0.965, 0.95, 0.925])
     b += np.random.default_rng(1).normal(0, 2.2, b.shape[:2])[..., None]
     return Image.fromarray(np.clip(b, 0, 255).astype(np.uint8))
 
 if __name__ == '__main__':
     src = ImageOps.exif_transpose(Image.open(P('media/IMG_0628.JPG'))).convert('RGB')  # 1536x2730
+    src = white_box(src)
     g = grade(src)
     os.makedirs(P('ads/girls'), exist_ok=True)
     g.crop((240, 520, 1380, 2547)).resize((1080, 1920), Image.LANCZOS).save(P('ads/girls/giftbox-natural-light-9x16.jpg'), quality=95)
