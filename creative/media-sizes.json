@@ -95,6 +95,26 @@
 1129,
 874
 ],
+"cut/pack-ash.png": [
+1231,
+1609
+],
+"cut/pack-coffee.png": [
+1240,
+1622
+],
+"cut/pack-latte.png": [
+1164,
+1587
+],
+"cut/pack-mocha.png": [
+1197,
+1656
+],
+"cut/pack-navy.png": [
+1201,
+1653
+],
 "gen/gen-borrow-hands.jpg": [
 1136,
 1408
@@ -158,6 +178,26 @@
 "mocha-zip-bench.jpg": [
 1320,
 1653
+],
+"packshots/ash.jpg": [
+2000,
+2000
+],
+"packshots/coffee.jpg": [
+2000,
+2000
+],
+"packshots/latte.jpg": [
+2000,
+2000
+],
+"packshots/mocha.jpg": [
+2000,
+2000
+],
+"packshots/navy.jpg": [
+2000,
+2000
 ],
 "web-cream-arch.png": [
 258,
