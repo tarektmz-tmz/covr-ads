@@ -193,7 +193,7 @@ ads.push({
           <div class="abs" style="${right ? `left:${cx - 50}px;width:230px` : `left:${cx}px;width:250px`};top:${cy + 196}px;${right ? 'text-align:left' : ''}">
             <div class="h3" style="font-size:24px">${l}</div><div style="font-size:20px;line-height:1.35;color:#4a4540;margin-top:4px">${t}</div></div>`;
       }).join('')}
-      <div class="abs" style="left:0;right:0;bottom:22px;text-align:center" class="kicker"><span class="kicker" style="font-size:17px">Waterproof, wipe-clean lining · $199</span></div>`,
+      <div class="abs" style="left:0;right:0;bottom:22px;text-align:center" class="kicker"><span class="kicker" style="font-size:17px">Waterproof, wipe-clean lining · $249</span></div>`,
   });
 }
 
@@ -272,7 +272,7 @@ ads.push({
     id: 'b1-pick-your-covr', stage: 'BOFU', format: 'Product image',
     html: `
       <div class="serif abs" style="left:72px;top:58px;font-size:118px;line-height:1">Pick your <em class="tan">COVR.</em></div>
-      <div class="abs" style="left:76px;top:200px;font-size:27px;color:#4a4540">Ten colours. One standard. Handmade, $199.</div>
+      <div class="abs" style="left:76px;top:200px;font-size:27px;color:#4a4540">Ten colours. One standard. Handmade, $249.</div>
       ${tiles.map(([name, n, cx, cy, z], i) => {
         const x = 60 + (i % 2) * 490, y = 280 + Math.floor(i / 2) * 470;
         return `${frame(n, cx, cy, z, x, y, 470, 450, 'border-radius:22px').html}
@@ -301,7 +301,7 @@ ads.push({
     </div>
     <div class="card" style="left:570px;background:var(--ink);color:var(--paper)">
       <div class="logo" style="font-size:30px">COVR</div>
-      <div style="font-family:Montserrat;font-weight:900;font-size:76px;margin:12px 0 30px;color:var(--tan-light)">$199</div>
+      <div style="font-family:Montserrat;font-weight:900;font-size:76px;margin:12px 0 30px;color:var(--tan-light)">$249</div>
       ${['Cotton canvas & leather', 'Waterproof lining', 'Front zip pocket', 'Strap, handle & D-ring'].map(t => `<div class="li">${V}${t}</div>`).join('')}
     </div>
     ${circle('IMG_0583.JPG', 0.5, 0.63, 2.6, 190, 830, 410)}
@@ -327,7 +327,7 @@ ads.push({
     <div class="abs" style="left:0;right:0;top:330px;height:160px;background:linear-gradient(var(--char),transparent)"></div>
     <div class="serif abs" style="left:72px;top:64px;font-size:112px;line-height:.95">For the player<br><em style="color:var(--tan-light)">who has everything.</em></div>
     <div class="abs" style="left:72px;bottom:64px;right:72px;display:flex;justify-content:space-between;align-items:center">
-      <div class="kicker" style="font-size:18px">Boxed · Dust bag · $199</div>${logo('position:static;color:#fff')}</div>`,
+      <div class="kicker" style="font-size:18px">Boxed · Dust bag · $249</div>${logo('position:static;color:#fff')}</div>`,
 });
 
 ads.helpers = { crop, frame, circle, X, V, ARROW, logo, src };

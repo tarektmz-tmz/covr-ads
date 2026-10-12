@@ -195,7 +195,7 @@ add({
         ${lines(hl, 'mega', 70, [null, 'var(--tan)'])}
         <div style="font-size:28px;color:#4a4540;margin-top:20px">Protect your racket. Elevate your everyday carry.</div></div>
       <div class="abs" style="left:64px;right:64px;bottom:${s.bottom}px;display:flex;justify-content:space-between;align-items:center">
-        <div><div class="kicker" style="font-size:17px;color:var(--stone)">Latte · from</div><div style="font-family:Montserrat;font-weight:900;font-size:54px">$199</div></div>
+        <div><div class="kicker" style="font-size:17px;color:var(--stone)">Latte · from</div><div style="font-family:Montserrat;font-weight:900;font-size:54px">$249</div></div>
         ${cta('Shop COVR')}</div>`;
   },
 });

@@ -19,7 +19,7 @@ const ads = [];
       <div class="abs" style="left:64px;right:64px;bottom:60px;display:flex;justify-content:space-between;align-items:flex-end;color:#fff">
         <div><div class="serif" style="font-size:64px;line-height:1">Off court. <em>On brand.</em></div>
         <div class="kicker" style="font-size:17px;margin-top:14px">Latte · Handmade padel racket cover</div></div>
-        <div style="font-family:Montserrat;font-weight:800;font-size:44px">$199</div>
+        <div style="font-family:Montserrat;font-weight:800;font-size:44px">$249</div>
       </div>`,
   });
 }
@@ -52,7 +52,7 @@ const ads = [];
       ${notes.map(([t, x, y, r]) => `<div class="hand" style="left:${x}px;top:${y - 60}px;font-size:58px;transform:rotate(${r}deg)">${t}</div>`).join('')}
       <div class="abs" style="left:56px;top:56px;background:#fffdf7;padding:18px 30px;border-radius:6px;transform:rotate(-2deg);box-shadow:0 8px 24px rgba(0,0,0,.18)">
         <div class="hand" style="position:static;font-size:66px;color:var(--ink);text-shadow:none">ok, but look at the details</div></div>
-      <div class="abs" style="right:56px;bottom:60px;background:var(--ink);color:#fff;border-radius:999px;padding:16px 30px;font-weight:600;font-size:24px">Latte · $199</div>`,
+      <div class="abs" style="right:56px;bottom:60px;background:var(--ink);color:#fff;border-radius:999px;padding:16px 30px;font-weight:600;font-size:24px">Latte · $249</div>`,
   });
 }
 
@@ -121,7 +121,7 @@ ads.push({
       <div style="flex:1">
         <div style="font-size:23px;color:#4d5156">padelcovr.com › padel-racket-covers</div>
         <div style="font-size:40px;color:#1a0dab;margin:10px 0 14px;line-height:1.15">COVR — Handmade padel racket covers</div>
-        <div style="font-size:25px;line-height:1.45;color:#4d5156">Cotton canvas, genuine leather and metal hardware. Waterproof lining, front zip pocket, adjustable strap. Ten colours. $199.</div>
+        <div style="font-size:25px;line-height:1.45;color:#4d5156">Cotton canvas, genuine leather and metal hardware. Waterproof lining, front zip pocket, adjustable strap. Ten colours. $249.</div>
       </div>
       <div style="width:250px;height:300px;border-radius:18px;overflow:hidden;position:relative;flex:none">${crop('latte-unboxing-hands.jpg', 0.55, 0.45, 1.6, 250, 300).img}</div>
     </div>
@@ -148,7 +148,7 @@ ads.push({
         <div style="font-size:27px;font-weight:700;margin-bottom:8px">1 × PADEL RACKET COVER</div>
         ${items.map(t => `<div class="it"><span>${t}</span><span></span><span>INCL</span></div>`).join('')}
         <div class="dash"></div>
-        <div style="display:flex;justify-content:space-between;font-weight:700;font-size:52px">TOTAL<span>$199.00</span></div>
+        <div style="display:flex;justify-content:space-between;font-weight:700;font-size:52px">TOTAL<span>$249.00</span></div>
         <div class="dash"></div>
         <div style="text-align:center;font-size:30px;margin-top:6px">Cheap covers cost twice.</div>
         <div style="height:80px;margin:30px 40px 0;background:repeating-linear-gradient(90deg,#1d1b18 0 4px,transparent 4px 7px,#1d1b18 7px 9px,transparent 9px 15px,#1d1b18 15px 20px,transparent 20px 23px)"></div>
@@ -165,7 +165,7 @@ ads.push({
       <div class="abs" style="left:170px;top:-26px;width:200px;height:56px;background:rgba(255,255,255,.55);transform:rotate(-5deg)"></div>
       Dear racket,<br>sorry about<br>the car boot.<br>You’ll like it here.<div style="text-align:right;margin-top:10px">— me</div></div>
     <div class="abs" style="left:0;right:0;bottom:0;height:300px;background:linear-gradient(transparent,rgba(20,14,10,.6))"></div>
-    <div class="abs" style="left:64px;bottom:62px;color:#fff">${logo('position:static;color:#fff')}<div class="kicker" style="font-size:17px;margin-top:14px">Handmade padel racket covers · $199</div></div>`,
+    <div class="abs" style="left:64px;bottom:62px;color:#fff">${logo('position:static;color:#fff')}<div class="kicker" style="font-size:17px;margin-top:14px">Handmade padel racket covers · $249</div></div>`,
 });
 
 /* 8. Magazine cover. */
@@ -176,7 +176,7 @@ ads.push({
     <div class="abs serif" style="left:0;right:0;top:-12px;text-align:center;font-size:300px;line-height:1;letter-spacing:.06em;color:var(--ink)">COVR</div>
     <div class="abs kicker" style="left:0;right:0;top:300px;text-align:center;font-size:18px">The Padel Issue · No. 01</div>
     <div class="abs" style="right:52px;top:400px;width:160px;height:160px;border-radius:50%;background:var(--tan);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(8deg)">
-      <div style="font-size:18px;letter-spacing:.2em">ONLY</div><div style="font-family:Montserrat;font-weight:900;font-size:50px">$199</div></div>
+      <div style="font-size:18px;letter-spacing:.2em">ONLY</div><div style="font-family:Montserrat;font-weight:900;font-size:50px">$249</div></div>
     <div class="abs" style="left:0;right:0;bottom:0;height:420px;background:linear-gradient(transparent,rgba(20,14,10,.7))"></div>
     <div class="abs" style="left:56px;bottom:60px;color:#fff;width:640px">
       <div class="kicker" style="font-size:17px;color:var(--tan-light)">Cover story</div>
@@ -213,7 +213,7 @@ ads.push({
       </div>
       <div style="width:250px;flex:none;border-left:4px dashed #cfc6b8;padding:46px 28px;display:flex;flex-direction:column;align-items:center;gap:30px">
         <div style="position:relative;width:190px;height:190px">${circle('latte-unboxing-hands.jpg', 0.74, 0.5, 3.0, 190, 0, 0, 'border-color:#e6dccd')}</div>
-        <div style="text-align:center"><div class="lbl">Fare</div><div class="val" style="font-size:48px">$199</div></div>
+        <div style="text-align:center"><div class="lbl">Fare</div><div class="val" style="font-size:48px">$249</div></div>
         <div style="width:150px;height:200px;background:repeating-linear-gradient(0deg,#161412 0 4px,transparent 4px 7px,#161412 7px 9px,transparent 9px 14px)"></div>
       </div>
     </div>

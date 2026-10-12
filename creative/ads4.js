@@ -39,7 +39,7 @@ add({
       ${aiTag(H, s, `top:${band + 18}px`)}
       <div class="abs" style="left:0;right:0;bottom:0;height:${bh}px;background:var(--ink);color:var(--paper);display:flex;align-items:${H === 1920 ? 'flex-start' : 'center'};padding:${H === 1920 ? 50 : 0}px 56px 0;gap:30px">
         <div style="width:130px;height:130px;border-radius:50%;overflow:hidden;position:relative;flex:none;border:4px solid var(--paper)">${crop('latte-unboxing-hands.jpg', 0.74, 0.58, 3.0, 130, 130).img}</div>
-        <div style="flex:1"><div class="logo" style="font-size:36px">COVR</div><div style="font-size:23px;opacity:.8;margin-top:8px">Cotton & leather racket covers · $199</div></div>
+        <div style="flex:1"><div class="logo" style="font-size:36px">COVR</div><div style="font-size:23px;opacity:.8;margin-top:8px">Cotton & leather racket covers · $249</div></div>
         ${cta('Protect yours', 'background:var(--paper);color:var(--ink);flex:none')}</div>`;
   },
 });
@@ -105,7 +105,7 @@ add({
         <ellipse cx="${cx}" cy="${cy}" rx="150" ry="140" fill="none" stroke="${RED}" stroke-width="7" transform="rotate(-10 ${cx} ${cy})"/>
         ${arrow(cx + 220, cy + 300, cx + 90, cy + 140, -.25)}
         ${arrow(bx + 140, by + 330, bx + 40, by + 140, .25)}</svg>
-      <div class="abs" style="left:${cx + 120}px;top:${cy + 300}px;font-family:Caveat;font-weight:700;font-size:58px;color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.7);line-height:.95">her.<br>COVR, $199</div>
+      <div class="abs" style="left:${cx + 120}px;top:${cy + 300}px;font-family:Caveat;font-weight:700;font-size:58px;color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.7);line-height:.95">her.<br>COVR, $249</div>
       <div class="abs" style="left:${bx + 40}px;top:${by + 340}px;font-family:Caveat;font-weight:700;font-size:50px;color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.7)">thin nylon bag</div>
       ${aiTag(H, s, `top:auto;bottom:${s.bottom + 100}px`)}
       <div class="abs" style="left:56px;bottom:${s.bottom}px">${cta('See the difference', 'background:var(--paper);color:var(--ink)')}</div>`;

@@ -1,6 +1,6 @@
 # COVR ad workspace
 
-Brand: COVR (padelcovr.com). Handmade padel racket covers, $199, plus a $29 clip-on ball pouch.
+Brand: COVR (padelcovr.com). Handmade padel racket covers, $249 (price from Oct 2026), plus a $29 clip-on ball pouch.
 Voice: calm, understated, premium. Short declarative lines ("All black. No compromise."). No hype, no emojis, no ALL-CAPS shouting.
 Palette: cream (#F5F0E6) text on photos, black, natural canvas tones.
 
@@ -16,3 +16,8 @@ Palette: cream (#F5F0E6) text on photos, black, natural canvas tones.
 - Ads are grouped TOFU (t*), MOFU (m*), BOFU (b*). Helpers: `frame()` crops a photo region into a box, `circle()` makes detail close-ups.
 - Fonts: Montserrat (bold billboard type), Instrument Serif (editorial), Inter (body) in `creative/fonts/`. Colours in `creative/base.css`.
 - Facts must come from products.json or padelcovr.com. No invented reviews, offers, countdowns or certifications. See `creative/VIDEO-SHOTS.md` for formats that need real footage.
+
+## Pricing & promos (set Oct 2026)
+- Every cover: **$249** full price.
+- Promos: **20% off** or a **$50 voucher** (both ≈ $199). Edit `OFFER` in `creative/ads6.js` (was/now/pct/voucher/code/when); all promo ads read it.
+- Promo code name is still a placeholder (COVR20) until the real code exists in Shopify.

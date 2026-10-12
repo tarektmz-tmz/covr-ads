@@ -34,7 +34,7 @@ const add = a => ads.push({ outDir: 'inspired', ...a });
       <svg class="fill" width="1080" height="1350" style="position:absolute">${tags.map(([fx, fy, , tx, ty]) => { const [x, y] = p.at(fx, fy); return `<line x1="${x}" y1="${y}" x2="${tx + 100}" y2="${ty + 24}" stroke="#6b4a2e" stroke-width="2"/><circle cx="${x}" cy="${y}" r="7" fill="#fff" stroke="#6b4a2e" stroke-width="3"/>`; }).join('')}</svg>
       ${tags.map(([, , t, tx, ty]) => `<div class="abs" style="left:${tx}px;top:${ty}px;background:#fffdf8;border:1.5px solid #e2d3bd;border-radius:10px;padding:10px 18px;font-weight:600;font-size:23px;color:#3a2a20;box-shadow:0 6px 16px rgba(0,0,0,.08)">${t}</div>`).join('')}
       <div class="abs" style="right:70px;top:1060px;width:200px;height:200px;background:#c4532f;clip-path:polygon(50% 0,61% 13%,77% 7%,79% 24%,95% 27%,89% 42%,100% 55%,86% 64%,90% 81%,73% 81%,65% 96%,50% 87%,35% 96%,27% 81%,10% 81%,14% 64%,0 55%,11% 42%,5% 27%,21% 24%,23% 7%,39% 13%);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;transform:rotate(8deg)">
-        <div style="font-size:17px;letter-spacing:.18em;font-weight:600">HANDMADE</div><div style="font-family:Montserrat;font-weight:900;font-size:54px;line-height:1">$199</div></div>
+        <div style="font-size:17px;letter-spacing:.18em;font-weight:600">HANDMADE</div><div style="font-family:Montserrat;font-weight:900;font-size:54px;line-height:1">$249</div></div>
       <div class="abs kicker" style="left:0;right:0;bottom:56px;text-align:center;font-size:18px;color:#6b4a2e">Coffee · Padel racket cover</div>`,
   });
 }
@@ -108,7 +108,7 @@ add({
     <div class="abs" style="left:190px;top:950px;width:700px;height:120px;border-radius:50%;background:radial-gradient(ellipse at 50% 40%,#fbf4e8,#e8d9c2)"></div>
     ${cut('coffee', 170, 600, 740, -14, '0 30px 30px rgba(60,40,20,.35)').html}
     ${ball(800, 905, 92, 20)}${ball(720, 940, 80, -30)}
-    <div class="abs kicker" style="left:0;right:0;bottom:60px;text-align:center;font-size:19px;color:#3a2a20">Cotton twill · Black leather · Waterproof lining · $199</div>`,
+    <div class="abs kicker" style="left:0;right:0;bottom:60px;text-align:center;font-size:19px;color:#3a2a20">Cotton twill · Black leather · Waterproof lining · $249</div>`,
 });
 
 /* I6 — "Ja, das ist teuer." → "Yes, it's expensive." Price objection head-on */
@@ -123,7 +123,7 @@ add({
       <div style="margin-top:22px">Without them, it wouldn’t be COVR.</div>
     </div>
     ${cut('mocha', 560, 640, 700, -60).html}
-    <div class="abs mega" style="left:60px;bottom:64px;font-size:84px;color:#b5452e">That’s why<br>it’s $199.</div>`,
+    <div class="abs mega" style="left:60px;bottom:64px;font-size:84px;color:#b5452e">That’s why<br>it’s $249.</div>`,
 });
 
 /* I7 — Dark "x-ray" glow (Peakflex) */
@@ -181,7 +181,7 @@ add({
   html: `
     <div class="abs kicker" style="left:0;right:0;top:90px;text-align:center;font-size:22px;color:#6b4a2e">The Coffee edition</div>
     <div class="serif abs" style="left:0;right:0;top:140px;text-align:center;font-size:128px;line-height:.95;color:#4a2e1e">Freshly<br><em>dropped.</em></div>
-    <div class="abs" style="left:0;right:0;top:420px;display:flex;justify-content:center"><span style="border:2px solid #4a2e1e;border-radius:999px;padding:12px 32px;font-size:26px;color:#4a2e1e">Coffee twill · black leather · $199</span></div>
+    <div class="abs" style="left:0;right:0;top:420px;display:flex;justify-content:center"><span style="border:2px solid #4a2e1e;border-radius:999px;padding:12px 32px;font-size:26px;color:#4a2e1e">Coffee twill · black leather · $249</span></div>
     ${cut('coffee', 120, 560, 840, -6).html}
     ${ball(60, 1150, 120, 15)}${ball(900, 520, 100, -25)}${ball(940, 1180, 76, 40)}
     <div class="abs" style="left:0;right:0;bottom:60px;display:flex;justify-content:center"><span class="btn">Shop the drop ${ARROW}</span></div>`,
