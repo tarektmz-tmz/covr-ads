@@ -1,5 +1,6 @@
 <!-- COVR · COV20 scratch-card pop-up. Paste into a "Custom Liquid" section in the theme footer.
-     Shows 3 seconds after every page load. Visitor scratches (mouse or finger) to reveal the code.
+     Shows 3 seconds after someone opens the site, once per visit (not again while they browse pages;
+     shows again when they close the tab/browser and come back). Visitor scratches (mouse or finger) to reveal the code.
      Ends automatically after 26 Oct 2026 (HKT). -->
 <div id="covr-pop" class="covr-pop" aria-hidden="true">
   <div class="covr-pop__card" role="dialog" aria-modal="true" aria-labelledby="covr-pop-title">
@@ -53,6 +54,8 @@
   (function () {
     var END = new Date('2026-10-26T15:59:59Z');            // same end as the COV20 code
     if (new Date() > END) return;
+    var KEY = 'covr_cov20_popup_seen';                   // sessionStorage: cleared when the tab closes
+    try { if (sessionStorage.getItem(KEY)) return; } catch (e) {}
     var pop = document.getElementById('covr-pop');
     if (!pop) return;
     var foil = pop.querySelector('.covr-pop__foil');
@@ -96,7 +99,9 @@
     foil.addEventListener('pointermove', function (e) { if (drawing && !done) scratch(pos(e)); });
     ['pointerup', 'pointercancel', 'pointerleave'].forEach(function (t) { foil.addEventListener(t, function () { drawing = false; last = null; }); });
 
-    function open() { pop.classList.add('is-open'); pop.setAttribute('aria-hidden', 'false'); paintFoil(); }
+    function open() {
+      try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+      pop.classList.add('is-open'); pop.setAttribute('aria-hidden', 'false'); paintFoil(); }
     function close() { pop.classList.remove('is-open'); pop.setAttribute('aria-hidden', 'true'); }
 
     setTimeout(open, 3000);
