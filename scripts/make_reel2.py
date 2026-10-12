@@ -46,10 +46,17 @@ def caption(img, text, alpha=1.0, y=1270, size=88):
     f = font(FONT_SERIF, size)
     w = d.textlength(text, font=f)
     x = (W - w) / 2
+    box = np.asarray(img.convert('L').crop((int(x), y, int(x + w), y + size + 20)))
+    bright = box.mean() > 165
     sh = Image.new('RGBA', img.size, (0, 0, 0, 0))
-    ImageDraw.Draw(sh).text((x, y + 3), text, font=f, fill=(0, 0, 0, int(150 * alpha)))
+    if bright:
+        ink = (38, 30, 26)
+        ImageDraw.Draw(sh).text((x, y + 2), text, font=f, fill=(255, 255, 255, int(160 * alpha)))
+    else:
+        ink = CREAM
+        ImageDraw.Draw(sh).text((x, y + 3), text, font=f, fill=(0, 0, 0, int(190 * alpha)))
     sh = sh.filter(ImageFilter.GaussianBlur(10))
-    d.text((x, y), text, font=f, fill=CREAM + (int(255 * alpha),))
+    d.text((x, y), text, font=f, fill=ink + (int(255 * alpha),))
     out = Image.alpha_composite(img.convert('RGBA'), sh)
     return Image.alpha_composite(out, lay).convert('RGB')
 
@@ -96,7 +103,7 @@ def colour_frames(n_total):
     for c in COLOURS:
         im = Image.open(P('media/packshots', c + '.jpg')).convert('RGB')
         im = ImageOps.fit(im, (1500, 1500))
-        bg = Image.new('RGB', (W, H), (238, 233, 224))
+        bg = Image.new('RGB', (W, H), (255, 255, 255))
         im = im.resize((1240, 1240), Image.LANCZOS)
         bg.paste(im, ((W - 1240) // 2, 300))
         packs.append(bg)
@@ -118,17 +125,16 @@ def end_card(t):
     d = ImageDraw.Draw(img)
     a = min(1, t * 3)
     col = lambda c, k=1.0: tuple(int(18 + (v - 18) * a * k) for v in c)
-    pk = Image.open(P('media/packshots/latte.jpg')).convert('RGB').resize((760, 760), Image.LANCZOS)
-    m = Image.new('L', pk.size, 0)
-    ImageDraw.Draw(m).ellipse((0, 0, 760, 760), fill=255)
-    m = m.filter(ImageFilter.GaussianBlur(60))
+    pk = Image.open(P('media/cut/pack-latte.png')).convert('RGBA')
     s = 0.96 + 0.04 * ease(min(1, t))
-    pk2 = pk.resize((int(760 * s), int(760 * s)), Image.LANCZOS)
-    m2 = m.resize(pk2.size)
-    dark = Image.new('RGB', pk2.size, (18, 15, 13))
-    pk2 = Image.composite(pk2, dark, m2)
-    pk2 = Image.blend(dark, pk2, a)
-    img.paste(pk2, ((W - pk2.width) // 2, 330))
+    pk.thumbnail((int(720 * s), int(720 * s)), Image.LANCZOS)
+    glow = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    ImageDraw.Draw(glow).ellipse((W / 2 - 330, 420, W / 2 + 330, 1080), fill=(120, 95, 70, int(90 * a)))
+    glow = glow.filter(ImageFilter.GaussianBlur(90))
+    img = Image.alpha_composite(img.convert('RGBA'), glow)
+    pa = pk.copy(); pa.putalpha(pa.getchannel('A').point(lambda v: int(v * a)))
+    img.alpha_composite(pa, ((W - pk.width) // 2, 380))
+    img = img.convert('RGB'); d = ImageDraw.Draw(img)
     f1 = font(FONT_SERIF, 150); f2 = font(FONT_SANS, 40); f3 = font(FONT_SERIF, 74); f4 = font(FONT_SANS, 34)
     def ctext(y, s, f, c):
         w = d.textlength(s, font=f); d.text(((W - w) / 2, y), s, font=f, fill=c)
