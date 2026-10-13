@@ -1,0 +1,107 @@
+{%- comment -%}
+  COVR "Crafted with purpose" (v4 preview, 2026-10-13): three large 4:5 detail
+  photographs, each with its number and title set on the photo, and a short
+  plain-language line underneath. Product pages show the photos only
+  (`show_text` off).
+{%- endcomment -%}
+{%- liquid
+  assign covr_show = true
+  if request.page_type == 'product'
+    capture covr_side
+      render 'covr-v3-side', product: product
+    endcapture
+    assign covr_side = covr_side | strip
+    if covr_side != 'cover'
+      assign covr_show = false
+    endif
+  endif
+-%}
+{%- if covr_show -%}
+<div class="covr-v4-crafted{% unless section.settings.show_text %} covr-v4-crafted--photos{% endunless %}" {{ section.shopify_attributes }}>
+  {%- if section.settings.show_text -%}
+    <div class="covr-v4-crafted__head">
+      {%- if section.settings.eyebrow != blank -%}<p class="covr-v4-crafted__eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h2 class="covr-v4-crafted__heading">{{ section.settings.heading | escape }}{%- if section.settings.heading_accent != blank -%} <em>{{ section.settings.heading_accent | escape }}</em>{%- endif -%}</h2>
+      {%- endif -%}
+      {%- if section.settings.intro != blank -%}<p class="covr-v4-crafted__intro">{{ section.settings.intro | escape }}</p>{%- endif -%}
+    </div>
+  {%- endif -%}
+  <ul class="covr-v4-crafted__grid" role="list">
+    {%- for block in section.blocks -%}
+      {%- assign img = block.settings.image -%}
+      <li class="covr-v4-crafted__card" {{ block.shopify_attributes }}>
+        <figure class="covr-v4-crafted__frame">
+          {%- if img != blank -%}
+            {%- assign fy = 'object-position: 50% ' | append: block.settings.focal_y | append: '%' -%}
+            {{ img | image_url: width: 1400 | image_tag: widths: '500, 800, 1100, 1400', sizes: '(min-width: 750px) 33vw, 85vw', loading: 'lazy', alt: block.settings.image_alt, style: fy }}
+          {%- endif -%}
+          {%- if section.settings.show_text -%}
+            <figcaption class="covr-v4-crafted__cap">
+              <span class="covr-v4-crafted__num">{{ forloop.index | prepend: '0' }}</span>
+              <span class="covr-v4-crafted__title">{{ block.settings.title | escape }}</span>
+            </figcaption>
+          {%- endif -%}
+        </figure>
+        {%- if section.settings.show_text and block.settings.text != blank -%}
+          <p class="covr-v4-crafted__text">{{ block.settings.text | escape }}</p>
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>
+<style>
+  .covr-v4-crafted{padding:clamp(64px,9vw,120px) clamp(16px,4vw,56px);background:#faf8f4;color:#2a1f18}
+  .covr-v4-crafted__head{max-width:760px;margin:0 auto clamp(36px,5vw,64px);text-align:center;display:grid;gap:14px}
+  .covr-v4-crafted__eyebrow{margin:0;font:500 12px/1 var(--font-body--family);letter-spacing:.2em;text-transform:uppercase;color:#8f6446}
+  .covr-v4-crafted__heading{margin:0;font-family:var(--font-heading--family,serif);font-weight:400;font-size:clamp(36px,4.6vw,64px);line-height:1.02}
+  .covr-v4-crafted__heading em{display:block;color:#8f6446}
+  .covr-v4-crafted__intro{margin:0 auto;max-width:52ch;color:#5d5750;font-size:16px;line-height:1.65}
+  .covr-v4-crafted__grid{list-style:none;margin:0 auto;padding:0;max-width:1440px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,28px)}
+  .covr-v4-crafted__card{display:grid;gap:14px;align-content:start}
+  .covr-v4-crafted__frame{position:relative;margin:0;aspect-ratio:4/5;overflow:hidden;background:#e9e2d7}
+  .covr-v4-crafted__frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+  .covr-v4-crafted__card:hover img{transform:scale(1.05)}
+  .covr-v4-crafted__cap{position:absolute;left:0;right:0;bottom:0;padding:56px 22px 22px;display:grid;gap:6px;color:#f5f0e6;background:linear-gradient(180deg,transparent,rgba(20,14,10,.78))}
+  .covr-v4-crafted__num{font:500 12px/1 var(--font-body--family);letter-spacing:.2em;opacity:.85}
+  .covr-v4-crafted__title{font-family:var(--font-heading--family,serif);font-size:clamp(24px,2.2vw,32px);line-height:1.1}
+  .covr-v4-crafted__text{margin:0;color:#4b443d;font-size:15px;line-height:1.6;max-width:38ch}
+  .covr-v4-crafted--photos{padding-block:24px}
+  @media (max-width:749px){
+    .covr-v4-crafted__grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:82%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;margin-inline:-16px;padding-inline:16px}
+    .covr-v4-crafted__card{scroll-snap-align:start}
+  }
+</style>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "COVR V3 crafted",
+  "tag": "section",
+  "class": "covr-v3-crafted-wrapper",
+  "enabled_on": { "templates": ["index", "product"] },
+  "settings": [
+    { "type": "checkbox", "id": "show_text", "label": "Show headline and captions", "default": true },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow" },
+    { "type": "textarea", "id": "heading", "label": "Headline" },
+    { "type": "text", "id": "heading_accent", "label": "Headline, italic last line" },
+    { "type": "textarea", "id": "intro", "label": "Intro" }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Detail",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Photograph" },
+        { "type": "text", "id": "image_alt", "label": "Image alternative text" },
+        { "type": "range", "id": "focal_y", "label": "Vertical focal point", "min": 0, "max": 100, "step": 1, "unit": "%", "default": 50 },
+        { "type": "select", "id": "icon", "label": "Icon", "default": "waves", "options": [ { "value": "waves", "label": "Waves" }, { "value": "leaf", "label": "Leaf" }, { "value": "grid", "label": "Grid" }, { "value": "layers", "label": "Layers" } ] },
+        { "type": "text", "id": "title", "label": "Title (on the photo)" },
+        { "type": "textarea", "id": "text", "label": "Caption" }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [{ "name": "COVR V3 crafted" }]
+}
+{% endschema %}

@@ -1,0 +1,112 @@
+{%- comment -%}
+  COVR comparison (v4 preview, 2026-10-13): COVR as one dark column with the
+  cover itself at the top and a tick on every row, against a lighter "other
+  covers" column with a cross. Rows line up side by side on desktop and stay
+  paired on phones. The other column is general and hedged; the owner should
+  confirm each line before launch.
+{%- endcomment -%}
+{%- assign covr_p = all_products[section.settings.product_handle] -%}
+<div class="covr-v4-cmp" {{ section.shopify_attributes }}>
+  <div class="covr-v4-cmp__head">
+    {%- if section.settings.eyebrow != blank -%}<p class="covr-v4-cmp__eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+    {%- if section.settings.heading != blank -%}
+      <h2 class="covr-v4-cmp__heading">{{ section.settings.heading | escape }}{%- if section.settings.heading_accent != blank -%} <em>{{ section.settings.heading_accent | escape }}</em>{%- endif -%}</h2>
+    {%- endif -%}
+  </div>
+  <div class="covr-v4-cmp__table" role="table" aria-label="{{ section.settings.heading | escape }}">
+    <div class="covr-v4-cmp__row covr-v4-cmp__row--top" role="row">
+      <div class="covr-v4-cmp__c covr-v4-cmp__c--covr" role="columnheader">
+        {%- if covr_p.featured_image -%}{{ covr_p.featured_image | image_url: width: 500 | image_tag: loading: 'lazy', class: 'covr-v4-cmp__pic', alt: covr_p.title }}{%- endif -%}
+        <span class="covr-v4-cmp__brand">{{ section.settings.left_label | escape }}</span>
+      </div>
+      <div class="covr-v4-cmp__c covr-v4-cmp__c--other" role="columnheader">
+        <span class="covr-v4-cmp__ghost" aria-hidden="true"></span>
+        <span class="covr-v4-cmp__otherbrand">{{ section.settings.right_label | escape }}</span>
+      </div>
+    </div>
+    {%- for block in section.blocks -%}
+      <div class="covr-v4-cmp__row" role="row" {{ block.shopify_attributes }}>
+        <div class="covr-v4-cmp__c covr-v4-cmp__c--covr" role="cell">
+          <span class="covr-v4-cmp__mark covr-v4-cmp__mark--yes" aria-hidden="true"><svg viewBox="0 0 20 20" width="14" height="14"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="covr-v4-cmp__t"><strong>{{ block.settings.title | escape }}</strong><span>{{ block.settings.text | escape }}</span></span>
+        </div>
+        <div class="covr-v4-cmp__c covr-v4-cmp__c--other" role="cell">
+          <span class="covr-v4-cmp__mark covr-v4-cmp__mark--no" aria-hidden="true"><svg viewBox="0 0 20 20" width="12" height="12"><path d="M5 5l10 10M15 5L5 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <span class="covr-v4-cmp__t"><strong>{{ block.settings.other_title | escape }}</strong><span>{{ block.settings.other_text | escape }}</span></span>
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+  {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}
+    <div class="covr-v4-cmp__action"><a class="covr-v4-cmp__cta" href="{{ section.settings.button_link }}">{{ section.settings.button_label | escape }}</a></div>
+  {%- endif -%}
+</div>
+<style>
+  .covr-v4-cmp{padding:clamp(64px,9vw,120px) clamp(16px,4vw,56px);background:#f3eee5;color:#2a1f18}
+  .covr-v4-cmp__head{text-align:center;display:grid;gap:12px;margin:0 auto clamp(32px,5vw,56px);max-width:760px}
+  .covr-v4-cmp__eyebrow{margin:0;font:500 12px/1 var(--font-body--family);letter-spacing:.2em;text-transform:uppercase;color:#8f6446}
+  .covr-v4-cmp__heading{margin:0;font-family:var(--font-heading--family,serif);font-weight:400;font-size:clamp(36px,4.6vw,64px);line-height:1.02}
+  .covr-v4-cmp__heading em{display:block;color:#8f6446}
+  .covr-v4-cmp__table{max-width:1040px;margin:0 auto;display:grid}
+  .covr-v4-cmp__row{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);gap:0 clamp(12px,2vw,24px)}
+  .covr-v4-cmp__c{display:grid;grid-template-columns:28px 1fr;gap:14px;align-items:start;padding:22px clamp(16px,2.4vw,32px)}
+  .covr-v4-cmp__c--covr{background:#2a1f18;color:#f5f0e6;border-bottom:1px solid rgba(245,240,230,.1)}
+  .covr-v4-cmp__c--other{background:transparent;color:#7b7268;border-bottom:1px solid rgba(42,31,24,.1)}
+  .covr-v4-cmp__row--top .covr-v4-cmp__c{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:12px;padding-top:28px}
+  .covr-v4-cmp__row--top .covr-v4-cmp__c--covr{border-radius:6px 6px 0 0}
+  .covr-v4-cmp__row:last-child .covr-v4-cmp__c--covr{border-radius:0 0 6px 6px;border-bottom:0}
+  .covr-v4-cmp__pic{width:clamp(120px,14vw,170px);height:auto;border-radius:4px;background:#fff}
+  .covr-v4-cmp__brand{font-family:var(--font-heading--family,serif);font-size:30px;letter-spacing:.32em}
+  .covr-v4-cmp__ghost{width:clamp(90px,10vw,120px);aspect-ratio:3/4;border-radius:50% 50% 46% 46%/58% 58% 42% 42%;border:1.5px dashed rgba(42,31,24,.25)}
+  .covr-v4-cmp__otherbrand{font-family:var(--font-heading--family,serif);font-style:italic;font-size:22px}
+  .covr-v4-cmp__mark{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;margin-top:2px}
+  .covr-v4-cmp__mark--yes{background:#c9a77c;color:#2a1f18}
+  .covr-v4-cmp__mark--no{background:rgba(42,31,24,.08);color:#9a8f84}
+  .covr-v4-cmp__t strong{display:block;font-family:var(--font-heading--family,serif);font-weight:400;font-size:20px;line-height:1.25;margin-bottom:4px}
+  .covr-v4-cmp__c--covr .covr-v4-cmp__t span{color:rgba(245,240,230,.75);font-size:14px;line-height:1.55}
+  .covr-v4-cmp__c--other .covr-v4-cmp__t span{font-size:14px;line-height:1.55}
+  .covr-v4-cmp__action{text-align:center;margin-top:36px}
+  .covr-v4-cmp__cta{display:inline-block;background:#2a1f18;color:#f5f0e6;text-decoration:none;padding:17px 34px;font:600 12px/1 var(--font-body--family);letter-spacing:.18em;text-transform:uppercase}
+  @media (max-width:749px){
+    .covr-v4-cmp__row{grid-template-columns:1fr 1fr;gap:0 8px}
+    .covr-v4-cmp__c{grid-template-columns:1fr;gap:8px;padding:16px 12px}
+    .covr-v4-cmp__t strong{font-size:16px}
+    .covr-v4-cmp__t span{font-size:13px!important}
+    .covr-v4-cmp__brand{font-size:22px}.covr-v4-cmp__otherbrand{font-size:16px;text-align:center}
+  }
+</style>
+
+{% schema %}
+{
+  "name": "COVR V3 comparison",
+  "tag": "section",
+  "class": "covr-v3-compare-wrapper",
+  "enabled_on": { "templates": ["index"] },
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow" },
+    { "type": "textarea", "id": "heading", "label": "Headline" },
+    { "type": "text", "id": "heading_accent", "label": "Headline, italic last line" },
+    { "type": "text", "id": "product_handle", "label": "Cover shown at the top (product handle)", "default": "natural-canvas-light-brown-leather-padel-racket-cover" },
+    { "type": "text", "id": "left_label", "label": "Left column", "default": "COVR" },
+    { "type": "text", "id": "right_label", "label": "Right column", "default": "Other Racket Covers" },
+    { "type": "text", "id": "button_label", "label": "Button" },
+    { "type": "url", "id": "button_link", "label": "Button link" }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "Row",
+      "settings": [
+        { "type": "select", "id": "icon", "label": "COVR icon", "default": "sun", "options": [ { "value": "sun", "label": "Sun" }, { "value": "shield", "label": "Shield" }, { "value": "layers", "label": "Layers" }, { "value": "bag", "label": "Bag" } ] },
+        { "type": "text", "id": "title", "label": "COVR title" },
+        { "type": "textarea", "id": "text", "label": "COVR detail" },
+        { "type": "select", "id": "other_icon", "label": "Other icon", "default": "sun-off", "options": [ { "value": "sun-off", "label": "Sun, crossed" }, { "value": "bolt", "label": "Bolt" }, { "value": "layers-off", "label": "Layers, crossed" }, { "value": "bag-off", "label": "Bag, crossed" } ] },
+        { "type": "text", "id": "other_title", "label": "Other title" },
+        { "type": "textarea", "id": "other_text", "label": "Other detail" }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [{ "name": "COVR V3 comparison" }]
+}
+{% endschema %}

@@ -1,0 +1,1786 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "covr_v3_hero": {
+      "type": "covr-v3-hero",
+      "settings": {
+        "image": "shopify://shop_images/covr-two-covers-in-covr-box.jpg",
+        "placeholder": "covr-v3-ph-hero.jpg",
+        "image_alt": "COVR padel racket covers worn and carried, in short video clips",
+        "position_desktop": 50,
+        "position_mobile": 80,
+        "background": "#efefef",
+        "eyebrow": "100% handmade\nPadel racket covers",
+        "heading": "Free ball pouch with every cover",
+        "offer": "",
+        "h1": "eyebrow",
+        "body": "Cotton and leather, with an adjustable shoulder strap, a carry handle and a D-ring for a ball pouch.",
+        "button_label": "Shop covers",
+        "button_link": "shopify://products/natural-canvas-light-brown-leather-padel-racket-cover",
+        "video_1": "https://cdn.shopify.com/videos/c/vp/d00df51210b543aba4b21034d1a65fe8/d00df51210b543aba4b21034d1a65fe8.HD-1080p-3.3Mbps-97284822.mp4",
+        "video_2": "https://cdn.shopify.com/videos/c/vp/3c98fe60782641d092127d149d51808c/3c98fe60782641d092127d149d51808c.HD-1080p-2.5Mbps-97284823.mp4",
+        "video_3": "https://cdn.shopify.com/videos/c/vp/5b0605e85e6c48589dce0272caccc93e/5b0605e85e6c48589dce0272caccc93e.HD-1080p-2.5Mbps-97284824.mp4",
+        "video_4": "https://cdn.shopify.com/videos/c/vp/77a753c91dba4ff296263c7e1da96cac/77a753c91dba4ff296263c7e1da96cac.HD-1080p-2.5Mbps-97284825.mp4"
+      }
+    },
+    "covr_v3_pair": {
+      "type": "covr-v3-pair",
+      "settings": {
+        "image_1": "shopify://shop_images/covr-players-brown-and-black-covers.jpg",
+        "placeholder_1": "covr-v3-ph-pair-players.jpg",
+        "alt_1": "Two players with COVR covers: a brown cover held in front, a black cover worn on the back",
+        "position_1": 15,
+        "image_2": "shopify://shop_images/IMG_9142.jpg",
+        "placeholder_2": "covr-v3-ph-pair-box.jpg",
+        "alt_2": "Two COVR covers in a black COVR box with a printed dust bag",
+        "position_2": 72
+      }
+    },
+    "covr_v3_problem": {
+      "type": "covr-v3-problem",
+      "blocks": {
+        "card_heat": {
+          "type": "card",
+          "settings": {
+            "title": "Heat, Humidity & Sunlight",
+            "text": "Padel rackets contain foam, carbon or fiberglass that can degrade under extreme heat, humidity, and prolonged sunlight."
+          }
+        },
+        "card_surfaces": {
+          "type": "card",
+          "settings": {
+            "title": "Rough Surfaces",
+            "text": "Direct contact with rough surfaces causes scratches, scuffs, and unnecessary wear."
+          }
+        },
+        "card_transport": {
+          "type": "card",
+          "settings": {
+            "title": "Impacts & Unprotected Transport",
+            "text": "Drops, knocks, and loose transport can chip the frame, cause scratches, and weaken your racket over time."
+          }
+        }
+      },
+      "block_order": [
+        "card_heat",
+        "card_surfaces",
+        "card_transport"
+      ],
+      "settings": {
+        "eyebrow": "",
+        "heading_accent": "",
+        "background": "#2a1f18",
+        "heading": "Wonder why your racket doesn’t last long?",
+        "subheading": "It’s not the racket, it’s the cover."
+      }
+    },
+    "covr_v3_benefits": {
+      "type": "covr-v3-benefits",
+      "blocks": {
+        "p_sun": {
+          "type": "point",
+          "settings": {
+            "icon": "sun",
+            "title": "Shade From Direct Sun",
+            "text": "Keeps sunlight off your racket between games."
+          }
+        },
+        "p_move": {
+          "type": "point",
+          "settings": {
+            "icon": "shield",
+            "title": "Covered On The Move",
+            "text": "A cotton and leather layer between your racket and the rest of your kit."
+          }
+        },
+        "p_rough": {
+          "type": "point",
+          "settings": {
+            "icon": "slashes",
+            "title": "No More Rough-Surface Contact",
+            "text": "Keeps your racket covered and protected from scratches."
+          }
+        },
+        "p_safe": {
+          "type": "point",
+          "settings": {
+            "icon": "bag",
+            "title": "Safer Transport",
+            "text": "Carry your racket without leaving it exposed to other equipment."
+          }
+        }
+      },
+      "block_order": [
+        "p_sun",
+        "p_move",
+        "p_rough",
+        "p_safe"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/covr-ginger-cover-on-shoulder-strap.jpg",
+        "placeholder": "covr-v3-ph-benefits.jpg",
+        "image_alt": "A cream COVR cover with light brown leather carried on its shoulder strap, with a cream ball pouch clipped on",
+        "image_position": 60,
+        "eyebrow": "With COVR...",
+        "heading": "Your Racket,",
+        "heading_accent": "Better Protected.",
+        "body": "COVR helps protect your racket between games, during transport, and wherever you take it — so you can enjoy it for longer.",
+        "button_label": "Shop your COVR now",
+        "button_link": "shopify://products/natural-canvas-light-brown-leather-padel-racket-cover",
+        "badge": "Ginger cover · free ball pouch"
+      }
+    },
+    "covr_v3_stats": {
+      "type": "covr-v3-stats",
+      "settings": {
+        "eyebrow": "Real player experience",
+        "heading": "Players who used COVR",
+        "source": "",
+        "confirmed": false
+      }
+    },
+    "covr_v3_crafted": {
+      "type": "covr-v3-crafted",
+      "blocks": {
+        "c_body": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/covr-v4-crest.jpg",
+            "image_alt": "Close-up of the embroidered COVR crest on two covers",
+            "focal_y": 45,
+            "icon": "waves",
+            "title": "Embroidered crest",
+            "text": "The C·V·R crest is stitched into the cotton, with leather piping around the whole edge."
+          }
+        },
+        "c_lining": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/KEV0093.jpg",
+            "image_alt": "The open top of a COVR cover: a leather collar with press studs over a lining printed with the COVR monogram",
+            "focal_y": 45,
+            "icon": "leaf",
+            "title": "Leather collar",
+            "text": "The grip stays out, above a leather collar that closes with two press studs."
+          }
+        },
+        "c_pocket": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/KEV0199.jpg",
+            "image_alt": "A phone slipped into the zip pocket on the front of a brown COVR cover, with the strap and D-ring in frame",
+            "focal_y": 55,
+            "icon": "grid",
+            "title": "Front zip pocket",
+            "text": "Room for your phone, keys and cards, on the front of the cover."
+          }
+        }
+      },
+      "block_order": [
+        "c_body",
+        "c_lining",
+        "c_pocket"
+      ],
+      "settings": {
+        "show_text": true,
+        "eyebrow": "Crafted with purpose",
+        "heading": "Cotton, Leather and Metal.",
+        "heading_accent": "Made to Protect.",
+        "intro": "A cotton body, leather trim and metal hardware. Made by hand in Bali."
+      }
+    },
+    "covr_v3_compare": {
+      "type": "covr-v3-compare",
+      "blocks": {
+        "r1": {
+          "type": "row",
+          "settings": {
+            "icon": "sun",
+            "title": "Built with protection in mind.",
+            "text": "Cotton and leather keep direct sun and scuffs off your racket.",
+            "other_icon": "sun-off",
+            "other_title": "Thin nylon, little insulation.",
+            "other_text": "Many basic nylon and synthetic covers are a single thin layer."
+          }
+        },
+        "r2": {
+          "type": "row",
+          "settings": {
+            "icon": "shield",
+            "title": "Made for everyday carrying.",
+            "text": "Cotton, leather trim and metal hardware keep your racket covered in your bag and on the move.",
+            "other_icon": "bolt",
+            "other_title": "Less between racket and kit.",
+            "other_text": "Thin, lightweight covers do little against bumps or being pressed against other equipment."
+          }
+        },
+        "r3": {
+          "type": "row",
+          "settings": {
+            "icon": "layers",
+            "title": "Premium materials that last.",
+            "text": "A durable combination of cotton, leather and metal hardware, designed for long-term use.",
+            "other_icon": "layers-off",
+            "other_title": "Lower quality materials.",
+            "other_text": "Often made from polyester, nylon or thin fabrics that wear out quickly and lose their shape."
+          }
+        },
+        "r4": {
+          "type": "row",
+          "settings": {
+            "icon": "bag",
+            "title": "Designed for real players.",
+            "text": "A functional zip pocket, adjustable strap and carry handle make it easy to take everywhere.",
+            "other_icon": "bag-off",
+            "other_title": "Limited functionality.",
+            "other_text": "Many covers have no pocket, comfortable strap or carry handle."
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ],
+      "settings": {
+        "eyebrow": "The difference is clear",
+        "heading": "See How We Compare To",
+        "heading_accent": "Other Racket Covers.",
+        "left_label": "COVR",
+        "right_label": "Other Racket Covers",
+        "button_label": "Shop now",
+        "button_link": "shopify://products/natural-canvas-light-brown-leather-padel-racket-cover"
+      }
+    },
+    "covr_alt_answers": {
+      "type": "covr-alt-answers",
+      "settings": {
+        "anchor": "before-you-buy",
+        "eyebrow": "Good to know",
+        "heading": "Before you buy",
+        "body": "Fit, materials, delivery and returns, in brief. For anything else, email us.",
+        "padding-block-start": 72,
+        "padding-block-end": 0,
+        "image": "shopify://shop_images/KEV0295.jpg"
+      }
+    },
+    "covr_v3_lines": {
+      "type": "covr-v3-lines",
+      "blocks": {
+        "l_signature": {
+          "type": "line",
+          "settings": {
+            "name": "Signature",
+            "status": "Available now",
+            "link": "shopify://products/natural-canvas-light-brown-leather-padel-racket-cover",
+            "image": "shopify://shop_images/covr-line-signature-arch.jpg",
+            "placeholder": "covr-v3-ph-line-signature.jpg",
+            "image_alt": "The COVR Signature cover in cream canvas with light brown leather, with a ball pouch, in an arched niche"
+          }
+        },
+        "l_performance": {
+          "type": "line",
+          "settings": {
+            "name": "Performance",
+            "status": "Coming soon",
+            "link": "",
+            "image": "shopify://shop_images/covr-line-performance-arch.jpg",
+            "placeholder": "covr-v3-ph-line-performance.jpg",
+            "image_alt": "A sand-coloured COVR Performance cover with zips along the edges, with a ball pouch, in an arched niche"
+          }
+        },
+        "l_essential": {
+          "type": "line",
+          "settings": {
+            "name": "Essential",
+            "status": "Coming soon",
+            "link": "",
+            "image": "shopify://shop_images/covr-line-essential-arch.jpg",
+            "placeholder": "covr-v3-ph-line-essential.jpg",
+            "image_alt": "A cream COVR Essential cover with black trim and strap in an arched niche"
+          }
+        }
+      },
+      "block_order": [
+        "l_signature",
+        "l_performance",
+        "l_essential"
+      ],
+      "settings": {
+        "eyebrow": "",
+        "heading": ""
+      }
+    },
+    "covr_alt_hero": {
+      "type": "covr-alt-hero",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/Blue.jpg",
+        "image_alt": "A navy COVR padel racket cover with cream leather trim and the embroidered COVR crest, standing in a white arched alcove with the racket grip showing above the collar",
+        "wall_color": "#f6f6f6",
+        "d_height_vh": 72,
+        "m_crop_left": 2,
+        "m_crop_top": 20,
+        "m_crop_width": 96,
+        "m_ratio": 100,
+        "eyebrow": "Padel racket covers",
+        "heading": "[count] colours. One silhouette.",
+        "count_collection": "padel-racket-covers",
+        "support": "Cotton and leather, with an adjustable shoulder strap, a carry handle and a D-ring for a ball pouch.",
+        "cta_label": "Shop covers",
+        "cta_href": "#covers",
+        "pouch_product": "covr-ball-pouch",
+        "pouch_collection": "padel-ball-pouch",
+        "offer_pouch_colour": "Navy",
+        "offer_title": "Free ball pouch with your cover",
+        "offer_text": "Pick one of [pouch_colours] colours and add it to the same order.",
+        "offer_link_label": "How it works",
+        "offer_link_href": "#free-pouch"
+      }
+    },
+    "covr_alt_covers_anchor": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "COVR anchor: #covers",
+      "settings": {
+        "custom_liquid": "<div id=\"covers\"></div>",
+        "background_color": "",
+        "section_width": "page-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "product_list_nrEtdU": {
+      "type": "product-list",
+      "blocks": {
+        "static-header": {
+          "type": "_product-list-content",
+          "name": "t:names.header",
+          "static": true,
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": false,
+            "horizontal_alignment": "space-between",
+            "vertical_alignment": "flex-end",
+            "align_baseline": true,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "padding-block-start": 14,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "product_list_text_UgrmC7": {
+              "type": "_product-list-text",
+              "name": "t:names.collection_title",
+              "settings": {
+                "text": "<h2>Choose your colour</h2>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h3",
+                "font": "var(--font-body--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "product_list_button_KkCfxJ": {
+              "type": "_product-list-button",
+              "name": "t:names.product_list_button",
+              "settings": {
+                "label": "Shop all covers",
+                "open_in_new_tab": false,
+                "style_class": "button-unstyled",
+                "custom_button_background": "{{ settings.color_palette.foreground }}",
+                "custom_button_text": "{{ settings.color_palette.background }}",
+                "custom_button_border": "{{ settings.color_palette.background }}",
+                "link_text_color": "",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "product_list_text_UgrmC7",
+            "product_list_button_KkCfxJ"
+          ]
+        },
+        "static-product-card": {
+          "type": "_product-card",
+          "name": "t:names.product_card",
+          "static": true,
+          "settings": {
+            "product_card_gap": 4,
+            "background_color": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "product_card_gallery_ncCpdm": {
+              "type": "_product-card-gallery",
+              "name": "t:names.product_card_media",
+              "settings": {
+                "image_ratio": "portrait",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "product_title_YpF6aX": {
+              "type": "product-title",
+              "name": "t:names.product_title",
+              "settings": {
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 4,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "price_E7bjA7": {
+              "type": "price",
+              "name": "t:names.product_price",
+              "settings": {
+                "show_sale_price_first": true,
+                "show_installments": false,
+                "show_tax_info": false,
+                "type_preset": "h6",
+                "width": "100%",
+                "alignment": "left",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "text_color": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "product_card_gallery_ncCpdm",
+            "product_title_YpF6aX",
+            "price_E7bjA7"
+          ]
+        }
+      },
+      "disabled": true,
+      "name": "Featured collection",
+      "settings": {
+        "collection": "padel-racket-covers",
+        "layout_type": "grid",
+        "carousel_on_mobile": false,
+        "max_products": 10,
+        "columns": 5,
+        "mobile_columns": "2",
+        "mobile_card_size": "60cqw",
+        "columns_gap": 8,
+        "rows_gap": 24,
+        "icons_style": "arrow",
+        "icons_shape": "none",
+        "section_width": "page-width",
+        "horizontal_alignment": "flex-start",
+        "gap": 28,
+        "background_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 64,
+        "padding-block-end": 0
+      }
+    },
+    "covr_alt_pouch": {
+      "type": "covr-alt-pouch-offer",
+      "blocks": {
+        "step_cover": {
+          "type": "step",
+          "settings": {
+            "title": "Choose your cover",
+            "text": "Every colour qualifies."
+          }
+        },
+        "step_pouch": {
+          "type": "step",
+          "settings": {
+            "title": "Pick a pouch colour",
+            "text": "Add it to the same order as the cover."
+          }
+        },
+        "step_free": {
+          "type": "step",
+          "settings": {
+            "title": "The pouch is free",
+            "text": "The discount applies automatically. There is no code."
+          }
+        }
+      },
+      "block_order": [
+        "step_cover",
+        "step_pouch",
+        "step_free"
+      ],
+      "disabled": true,
+      "settings": {
+        "anchor": "free-pouch",
+        "image": "shopify://shop_images/IMG_8253_JPG.jpg",
+        "image_alt": "Four COVR ball pouches in a row, the cream one open with padel balls inside.",
+        "eyebrow": "Ball pouch",
+        "heading": "Add a pouch. It’s free with your cover.",
+        "body": "It holds three padel balls and clips to the D-ring on any COVR cover.",
+        "pouch_product": "covr-ball-pouch",
+        "pouch_collection": "padel-ball-pouch",
+        "cta_label": "Choose your pouch colour",
+        "cta_url": "shopify://products/covr-ball-pouch",
+        "link_label": "Choose your cover",
+        "link_href": "#covers",
+        "padding-block-start": 72,
+        "padding-block-end": 0
+      }
+    },
+    "covr_story": {
+      "type": "media-with-content",
+      "blocks": {
+        "media": {
+          "type": "_media-without-appearance",
+          "static": true,
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/KEV0056.jpg",
+            "link": "",
+            "video_loop": true,
+            "video_autoplay": false,
+            "image_position": "cover",
+            "video_position": "cover"
+          },
+          "blocks": {}
+        },
+        "content": {
+          "type": "_content-without-appearance",
+          "static": true,
+          "settings": {
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 14
+          },
+          "blocks": {
+            "covr_story_eyebrow": {
+              "type": "text",
+              "settings": {
+                "text": "<p>THE COVER</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h6",
+                "font": "var(--font-body--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "covr_story_heading": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>Built for the way you actually carry a racket.</h2>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h3",
+                "font": "var(--font-body--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "covr_story_body": {
+              "type": "text",
+              "settings": {
+                "text": "<p>An adjustable shoulder strap, a carry handle and a D-ring for a ball pouch. Wear it on your back, over a shoulder, or in your hand.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "covr_story_link": {
+              "type": "button",
+              "settings": {
+                "label": "Our story",
+                "link": "shopify://pages/our-story",
+                "open_in_new_tab": false,
+                "style_class": "link",
+                "custom_button_background": "{{ settings.color_palette.foreground }}",
+                "custom_button_text": "{{ settings.color_palette.background }}",
+                "custom_button_border": "{{ settings.color_palette.background }}",
+                "link_text_color": "",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "covr_story_eyebrow",
+            "covr_story_heading",
+            "covr_story_body",
+            "covr_story_link"
+          ]
+        }
+      },
+      "disabled": true,
+      "name": "Brand story",
+      "settings": {
+        "media_position": "right",
+        "media_width": "medium",
+        "media_height": "50svh",
+        "section_width": "page-width",
+        "extend_media": false,
+        "background_color": "#ffffff",
+        "padding-block-start": 72,
+        "padding-block-end": 0
+      }
+    },
+    "covr_details": {
+      "type": "covr-details",
+      "blocks": {
+        "detail_zip": {
+          "type": "detail",
+          "settings": {
+            "image": "shopify://shop_images/KEV0100.jpg",
+            "image_alt": "Close-up of a cream cotton COVR cover: leather piping, a metal zip and a leather zip pull embossed COVR, beside the crest",
+            "focal_x": 50,
+            "focal_y": 50,
+            "title": "Leather trim, metal hardware",
+            "text": "Leather piping runs the perimeter and the zip pull is a leather tab embossed COVR."
+          }
+        },
+        "detail_lining": {
+          "type": "detail",
+          "settings": {
+            "image": "shopify://shop_images/KEV0093.jpg",
+            "image_alt": "The open top of a COVR cover showing the leather collar with press studs and the lining printed with a repeating CO VR monogram",
+            "focal_x": 50,
+            "focal_y": 45,
+            "title": "Monogram lining, leather collar",
+            "text": "A lining printed with a repeating CO/VR monogram, under a leather collar with two press studs that leaves the grip exposed."
+          }
+        },
+        "detail_open": {
+          "type": "detail",
+          "settings": {
+            "image": "shopify://shop_images/KEV0199.jpg",
+            "image_alt": "A phone being slipped into the zip pocket on the front of a brown COVR cover on a padel court, with the leather collar, its D-ring and the webbing strap in frame",
+            "focal_x": 50,
+            "focal_y": 55,
+            "title": "A zip pocket",
+            "text": "A zip pocket takes a phone, keys and cards. An adjustable shoulder strap and a carry handle take it from there."
+          }
+        }
+      },
+      "block_order": [
+        "detail_zip",
+        "detail_lining",
+        "detail_open"
+      ],
+      "disabled": true,
+      "settings": {
+        "eyebrow": "THE DETAILS",
+        "heading": "Cotton, leather and metal",
+        "body": "Every cover pairs a cotton body with leather trim and metal hardware, and carries a D-ring for a COVR ball pouch.",
+        "padding-block-start": 72,
+        "padding-block-end": 64
+      }
+    },
+    "section_RzMbFJ": {
+      "type": "section",
+      "blocks": {
+        "text_HJPiAY": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<h2>Get 5% off your order</h2>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h3",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_TbxD4L": {
+          "type": "text",
+          "settings": {
+            "text": "<p>First access to new colourways.</p>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "paragraph",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "email_signup_eJNiGq": {
+          "type": "email-signup",
+          "settings": {
+            "width": "custom",
+            "custom_width": 50,
+            "heading": "",
+            "heading_text_color": "",
+            "heading_preset": "h3",
+            "border_style": "all",
+            "input_style": "custom",
+            "border_width": 1,
+            "border_radius": 100,
+            "input_background_color": "rgba(0,0,0,0)",
+            "input_text_color": "#00000087",
+            "input_border_color": "#00000021",
+            "input_type_preset": "paragraph",
+            "style_class": "button-unstyled",
+            "custom_button_background": "{{ settings.color_palette.foreground }}",
+            "custom_button_text": "{{ settings.color_palette.background }}",
+            "custom_button_border": "{{ settings.color_palette.background }}",
+            "link_text_color": "",
+            "display_type": "arrow",
+            "label": "Sign Up",
+            "integrated_button": true,
+            "button_type_preset": "paragraph",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_HJPiAY",
+        "text_TbxD4L",
+        "email_signup_eJNiGq"
+      ],
+      "disabled": true,
+      "name": "t:names.email_signup",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 16,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "#ffffff",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 72,
+        "padding-block-end": 72
+      }
+    },
+    "featured_blog_posts_fJdzFA": {
+      "type": "featured-blog-posts",
+      "blocks": {
+        "static-blog-title": {
+          "type": "_featured-blog-posts-title",
+          "name": "t:names.title",
+          "static": true,
+          "settings": {
+            "text": "<h2>The Padel Guide</h2>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "static-blog-post-card": {
+          "type": "_featured-blog-posts-card",
+          "name": "t:names.blog_card",
+          "static": true,
+          "settings": {
+            "alignment": "left",
+            "gap": 8,
+            "background_color": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "image": {
+              "type": "_featured-blog-posts-image",
+              "disabled": true,
+              "static": true,
+              "settings": {
+                "image_ratio": "square",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0
+              },
+              "blocks": {}
+            },
+            "title": {
+              "type": "_heading",
+              "name": "t:names.title",
+              "static": true,
+              "settings": {
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text": "<h4>{{ closest.article.title }}</h4>",
+                "read_only": false,
+                "alignment": "left",
+                "show_alignment": false,
+                "text_color": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "blog-post-info-text": {
+              "type": "_blog-post-info-text",
+              "name": "t:names.details",
+              "static": true,
+              "settings": {
+                "show_date": true,
+                "show_author": false,
+                "type_preset": "",
+                "alignment": "left",
+                "text_color": "",
+                "show_alignment": false,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "blog-post-description": {
+              "type": "_blog-post-description",
+              "name": "t:names.excerpt",
+              "static": true,
+              "settings": {
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "padding-block-start": 8,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": []
+        }
+      },
+      "disabled": true,
+      "name": "t:names.blog_posts_carousel",
+      "settings": {
+        "blog": "news",
+        "layout_type": "grid",
+        "carousel_on_mobile": false,
+        "post_limit": 3,
+        "columns": 3,
+        "mobile_columns": "1",
+        "mobile_card_size": "60cqw",
+        "columns_gap": 24,
+        "rows_gap": 16,
+        "icons_style": "arrow",
+        "icons_shape": "circle",
+        "section_width": "page-width",
+        "gap": 12,
+        "background_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 72,
+        "padding-block-end": 0
+      }
+    },
+    "covr_pouch_band": {
+      "type": "covr-pouch-band",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/IMG_8253_JPG.jpg",
+        "image_alt": "Four COVR ball pouches in a row, the cream one open with padel balls inside.",
+        "focal_x": 50,
+        "focal_y": 50,
+        "eyebrow": "Ball pouch",
+        "heading": "The finishing touch.",
+        "body": "Holds three padel balls and clips to the D-ring on any COVR cover.",
+        "offer": "Add a pouch to your cart alongside a cover and the pouch is free.",
+        "cta_label": "Choose your colour",
+        "cta_url": "shopify://products/covr-ball-pouch",
+        "padding-block-start": 72,
+        "padding-block-end": 0
+      }
+    },
+    "product_list_fa6P9H": {
+      "type": "product-list",
+      "blocks": {
+        "static-header": {
+          "type": "_product-list-content",
+          "name": "t:names.header",
+          "static": true,
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": false,
+            "horizontal_alignment": "space-between",
+            "vertical_alignment": "flex-end",
+            "align_baseline": true,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 8,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "padding-block-start": 14,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "product_list_text_YFtzcL": {
+              "type": "_product-list-text",
+              "name": "t:names.collection_title",
+              "settings": {
+                "text": "<h2>Ball pouches</h2>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h3",
+                "font": "var(--font-body--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "covr_pouch_offer": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Holds three padel balls and clips to the D-ring on any COVR cover. Add a pouch to your cart alongside a cover and the pouch is free.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "product_list_button_MWeP9V": {
+              "type": "_product-list-button",
+              "name": "t:names.product_list_button",
+              "settings": {
+                "label": "Shop all pouches",
+                "open_in_new_tab": false,
+                "style_class": "button-unstyled",
+                "custom_button_background": "{{ settings.color_palette.foreground }}",
+                "custom_button_text": "{{ settings.color_palette.background }}",
+                "custom_button_border": "{{ settings.color_palette.background }}",
+                "link_text_color": "",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "product_list_text_YFtzcL",
+            "covr_pouch_offer",
+            "product_list_button_MWeP9V"
+          ]
+        },
+        "static-product-card": {
+          "type": "_product-card",
+          "name": "t:names.product_card",
+          "static": true,
+          "settings": {
+            "product_card_gap": 4,
+            "background_color": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "product_card_gallery_677WP3": {
+              "type": "_product-card-gallery",
+              "name": "t:names.product_card_media",
+              "settings": {
+                "image_ratio": "portrait",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "product_title_YXxMTj": {
+              "type": "product-title",
+              "name": "t:names.product_title",
+              "settings": {
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 4,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "price_JQzVV4": {
+              "type": "price",
+              "name": "t:names.product_price",
+              "settings": {
+                "show_sale_price_first": true,
+                "show_installments": false,
+                "show_tax_info": false,
+                "type_preset": "h6",
+                "width": "100%",
+                "alignment": "left",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "text_color": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "product_card_gallery_677WP3",
+            "product_title_YXxMTj",
+            "price_JQzVV4"
+          ]
+        }
+      },
+      "disabled": true,
+      "name": "Featured collection",
+      "settings": {
+        "collection": "padel-ball-pouch",
+        "layout_type": "grid",
+        "carousel_on_mobile": false,
+        "max_products": 4,
+        "columns": 4,
+        "mobile_columns": "2",
+        "mobile_card_size": "60cqw",
+        "columns_gap": 8,
+        "rows_gap": 24,
+        "icons_style": "arrow",
+        "icons_shape": "none",
+        "section_width": "page-width",
+        "horizontal_alignment": "flex-start",
+        "gap": 28,
+        "background_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 72,
+        "padding-block-end": 0
+      }
+    },
+    "marquee_874bLr": {
+      "type": "marquee",
+      "blocks": {
+        "text_YwMHVk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Worldwide shipping · Handcrafted quality · Dispatched within 7 days</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "tight",
+            "letter_spacing": "tight",
+            "case": "none",
+            "wrap": "nowrap",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_YwMHVk"
+      ],
+      "disabled": true,
+      "name": "t:names.marquee_section",
+      "settings": {
+        "movement_direction": "normal",
+        "background_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 15,
+        "padding-block-end": 15,
+        "gap_between_elements": 20
+      }
+    },
+    "hero_jVaWmY": {
+      "type": "hero",
+      "blocks": {
+        "text_YLPk4p": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<p>New Season Colourways — Now Available</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-heading--family)",
+            "font_size": "1.25rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "button_H9gpTf": {
+          "type": "button",
+          "name": "t:names.button",
+          "settings": {
+            "label": "View the Collection",
+            "link": "shopify://collections/all",
+            "open_in_new_tab": false,
+            "style_class": "button-custom",
+            "custom_button_background": "rgba(0,0,0,0)",
+            "custom_button_text": "{{ settings.color_palette.background }}",
+            "custom_button_border": "{{ settings.color_palette.background }}",
+            "link_text_color": "",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_YLPk4p",
+        "button_H9gpTf"
+      ],
+      "disabled": true,
+      "name": "t:names.hero",
+      "settings": {
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/KEV0259.jpg",
+        "media_type_2": "image",
+        "stack_media_on_mobile": false,
+        "custom_mobile_media": false,
+        "media_type_1_mobile": "image",
+        "media_type_2_mobile": "image",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "space-between",
+        "vertical_alignment": "flex-end",
+        "align_baseline": true,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "flex-end",
+        "gap": 24,
+        "section_width": "page-width",
+        "section_height": "medium",
+        "section_height_custom": 50,
+        "background_color": "rgba(0,0,0,0)",
+        "toggle_overlay": true,
+        "overlay_color": "#12121266",
+        "overlay_style": "solid",
+        "gradient_direction": "to bottom",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 100,
+        "padding-block-end": 72
+      }
+    },
+    "section_cxM4h3": {
+      "type": "section",
+      "blocks": {
+        "text_gYPJJU": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<h3>Frequently asked questions</h3>",
+            "width": "fit-content",
+            "max_width": "narrow",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "accordion_6ThKz6": {
+          "type": "accordion",
+          "name": "t:names.accordion",
+          "settings": {
+            "icon": "caret",
+            "dividers": true,
+            "divider_color": "",
+            "type_preset": "h5",
+            "background_color": "",
+            "text_color": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "accordion_row_ffbgDK": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "What is the return policy?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_wCxkAJ": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Our goal is for every customer to be totally satisfied with their purchase. If this isn’t the case, let us know and we’ll do our best to work with you to make it right. </p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_wCxkAJ"
+              ]
+            },
+            "accordion_row_VdjTt8": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Are any purchases final sale?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_WJ3tkh": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>We are unable to accept returns on certain items. These will be carefully marked before purchase.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_WJ3tkh"
+              ]
+            },
+            "accordion_row_ghRUAj": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "When will I get my order?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_iKEQkQ": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<p>We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with further information. Delivery times vary depending on your location.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_iKEQkQ"
+              ]
+            },
+            "accordion_row_krMLaJ": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Where are your products manufactured?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_4bW6GF": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<p>Our products are manufactured both locally and globally. We carefully select our manufacturing partners to ensure our products are high quality and a fair value. </p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_4bW6GF"
+              ]
+            },
+            "accordion_row_HUHWb4": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How much does shipping cost?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_bw9tqf": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<p>Shipping is calculated based on your location and the items in your order. You will always know the shipping price before you purchase.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_bw9tqf"
+              ]
+            }
+          },
+          "block_order": [
+            "accordion_row_ffbgDK",
+            "accordion_row_VdjTt8",
+            "accordion_row_ghRUAj",
+            "accordion_row_krMLaJ",
+            "accordion_row_HUHWb4"
+          ]
+        }
+      },
+      "block_order": [
+        "text_gYPJJU",
+        "accordion_6ThKz6"
+      ],
+      "disabled": true,
+      "name": "t:names.faq_section",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 32,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "{{ settings.color_palette.background }}",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "covr_hero": {
+      "type": "covr-hero",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/KEV0222.jpg",
+        "image_alt": "A COVR cream canvas padel racket cover carried across the body on a padel court, racket handle showing at the top",
+        "media_share": 58,
+        "focal_desktop": 70,
+        "focal_mobile": 55,
+        "eyebrow": "PADEL RACKET COVERS",
+        "heading": "On court. In style.",
+        "support": "Handmade in Bali. Add a ball pouch to any cover and the pouch is free.",
+        "cta_label": "Choose your colour",
+        "cta_url": "shopify://collections/padel-racket-covers",
+        "cta_href": "#covers",
+        "link_label": "How the free pouch works",
+        "link_url": "shopify://collections/padel-ball-pouch",
+        "link_href": "#free-pouch"
+      }
+    }
+  },
+  "order": [
+    "covr_v3_hero",
+    "covr_v3_pair",
+    "covr_v3_problem",
+    "covr_v3_benefits",
+    "covr_v3_stats",
+    "covr_v3_crafted",
+    "covr_v3_compare",
+    "covr_alt_answers",
+    "covr_v3_lines",
+    "covr_alt_hero",
+    "covr_alt_covers_anchor",
+    "product_list_nrEtdU",
+    "covr_alt_pouch",
+    "covr_story",
+    "covr_details",
+    "section_RzMbFJ",
+    "featured_blog_posts_fJdzFA",
+    "covr_pouch_band",
+    "product_list_fa6P9H",
+    "marquee_874bLr",
+    "hero_jVaWmY",
+    "section_cxM4h3",
+    "covr_hero"
+  ]
+}

@@ -1,0 +1,57 @@
+{%- comment -%}
+  "Before you buy" (v4 preview, 2026-10-13): photo and contact at left, the
+  confirmed facts at right as clean numbered rows. Copy and sources stay in
+  snippets/covr-alt-facts.liquid (side: 'range').
+{%- endcomment -%}
+<div class="covr-v4-bb spacing-style" style="{% render 'spacing-style', settings: section.settings %}" {% if section.settings.anchor != blank %}id="{{ section.settings.anchor | handleize }}"{% endif %} {{ section.shopify_attributes }}>
+  <div class="covr-v4-bb__side">
+    {%- if section.settings.eyebrow != blank -%}<p class="covr-v4-bb__eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+    {%- if section.settings.heading != blank -%}<h2 class="covr-v4-bb__heading">{{ section.settings.heading }}</h2>{%- endif -%}
+    {%- if section.settings.body != blank -%}<p class="covr-v4-bb__body">{{ section.settings.body }}</p>{%- endif -%}
+    {%- if section.settings.image != blank -%}
+      <figure class="covr-v4-bb__pic">{{ section.settings.image | image_url: width: 1000 | image_tag: loading: 'lazy', widths: '500, 800, 1000', sizes: '(min-width: 990px) 34vw, 100vw' }}</figure>
+    {%- endif -%}
+    <a class="covr-v4-bb__mail" href="mailto:padel.covr@gmail.com">padel.covr@gmail.com</a>
+  </div>
+  <div class="covr-v4-bb__list">
+    {%- render 'covr-alt-facts', side: 'range' -%}
+  </div>
+</div>
+<style>
+  .covr-v4-bb{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,6vw,96px);padding-inline:clamp(16px,4vw,56px);padding-bottom:clamp(64px,8vw,110px);max-width:1440px;margin:0 auto;color:#2a1f18}
+  .covr-v4-bb__side{display:flex;flex-direction:column;gap:16px;align-self:start;position:sticky;top:96px}
+  .covr-v4-bb__eyebrow{margin:0;font:500 12px/1 var(--font-body--family);letter-spacing:.2em;text-transform:uppercase;color:#8f6446}
+  .covr-v4-bb__heading{margin:0;font-family:var(--font-heading--family,serif);font-weight:400;font-size:clamp(40px,4.6vw,64px);line-height:1}
+  .covr-v4-bb__body{margin:0;color:#5d5750;font-size:16px;line-height:1.6;max-width:36ch}
+  .covr-v4-bb__pic{margin:8px 0 0;aspect-ratio:4/3;overflow:hidden;border-radius:4px}
+  .covr-v4-bb__pic img{width:100%;height:100%;object-fit:cover}
+  .covr-v4-bb__mail{align-self:flex-start;font-size:15px;color:#2a1f18;border-bottom:1px solid #8f6446;text-decoration:none;padding-bottom:2px}
+  .covr-v4-bb__list{counter-reset:bb;display:grid}
+  .covr-v4-bb .covr-facts__row{counter-increment:bb;display:grid;grid-template-columns:3.2rem 10rem minmax(0,1fr);gap:6px 20px;padding:24px 0;border-top:1px solid rgba(42,31,24,.12);align-items:baseline}
+  .covr-v4-bb .covr-facts__row:last-child{border-bottom:1px solid rgba(42,31,24,.12)}
+  .covr-v4-bb .covr-facts__row::before{content:counter(bb,decimal-leading-zero);font:500 12px/1 var(--font-body--family);letter-spacing:.14em;color:#8f6446}
+  .covr-v4-bb .covr-facts__term{font-family:var(--font-heading--family,serif);font-size:22px;line-height:1.2;margin:0}
+  .covr-v4-bb .covr-facts__detail{margin:0;color:#4b443d;font-size:15px;line-height:1.65}
+  .covr-v4-bb .covr-facts__detail a{color:#2a1f18}
+  @media (max-width:989px){.covr-v4-bb{grid-template-columns:1fr}.covr-v4-bb__side{position:static}}
+  @media (max-width:600px){.covr-v4-bb .covr-facts__row{grid-template-columns:2.4rem 1fr}.covr-v4-bb .covr-facts__detail{grid-column:2}}
+</style>
+
+{% schema %}
+{
+  "name": "COVR before you buy",
+  "tag": "section",
+  "class": "covr-alt-answers-wrapper",
+  "enabled_on": { "templates": ["index"] },
+  "settings": [
+    { "type": "text", "id": "anchor", "label": "Anchor for in-page links", "default": "before-you-buy" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Before you buy" },
+    { "type": "text", "id": "heading", "label": "Heading" },
+    { "type": "textarea", "id": "body", "label": "Supporting copy" },
+    { "type": "image_picker", "id": "image", "label": "Photograph" },
+    { "type": "range", "id": "padding-block-start", "label": "Top padding", "min": 0, "max": 128, "step": 4, "unit": "px", "default": 72 },
+    { "type": "range", "id": "padding-block-end", "label": "Bottom padding", "min": 0, "max": 128, "step": 4, "unit": "px", "default": 0 }
+  ],
+  "presets": [{ "name": "COVR before you buy" }]
+}
+{% endschema %}

@@ -1,0 +1,95 @@
+{%- comment -%}
+  COVR "With COVR" band (v4 preview, 2026-10-13): a large photograph that
+  fills the left half edge to edge with a slow zoom as it scrolls into view,
+  and the four protection points as clear rows at right.
+{%- endcomment -%}
+{%- liquid
+  assign covr_img = section.settings.image
+  assign covr_alt = section.settings.image_alt | default: covr_img.alt
+-%}
+<div class="covr-v4-ben" id="covr-v4-ben-{{ section.id }}" style="--pos: {{ section.settings.image_position }}%;" {{ section.shopify_attributes }}>
+  <figure class="covr-v4-ben__media">
+    {%- if covr_img != blank -%}
+      {{ covr_img | image_url: width: 1800 | image_tag: widths: '700, 1000, 1400, 1800', sizes: '(min-width: 750px) 50vw, 100vw', loading: 'lazy', alt: covr_alt }}
+    {%- endif -%}
+    {%- if section.settings.badge != blank -%}<figcaption class="covr-v4-ben__badge">{{ section.settings.badge | escape }}</figcaption>{%- endif -%}
+  </figure>
+  <div class="covr-v4-ben__copy">
+    {%- if section.settings.eyebrow != blank -%}<p class="covr-v4-ben__eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+    {%- if section.settings.heading != blank -%}
+      <h2 class="covr-v4-ben__heading">{{ section.settings.heading | escape }}{%- if section.settings.heading_accent != blank -%}<em>{{ section.settings.heading_accent | escape }}</em>{%- endif -%}</h2>
+    {%- endif -%}
+    {%- if section.settings.body != blank -%}<p class="covr-v4-ben__body">{{ section.settings.body | escape }}</p>{%- endif -%}
+    {%- if section.blocks.size > 0 -%}
+      <ul class="covr-v4-ben__list" role="list">
+        {%- for block in section.blocks -%}
+          <li class="covr-v4-ben__item" {{ block.shopify_attributes }}>
+            <span class="covr-v4-ben__icon">{%- render 'covr-v3-icon', name: block.settings.icon, size: 22 -%}</span>
+            <span><strong>{{ block.settings.title | escape }}</strong><span>{{ block.settings.text | escape }}</span></span>
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+    {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}
+      <a class="covr-v4-ben__cta" href="{{ section.settings.button_link }}">{{ section.settings.button_label | escape }}</a>
+    {%- endif -%}
+  </div>
+</div>
+<style>
+  .covr-v4-ben{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:#f3eee5;color:#2a1f18;min-height:min(92svh,900px)}
+  .covr-v4-ben__media{position:relative;margin:0;overflow:hidden;min-height:560px;background:#e3dbcf}
+  .covr-v4-ben__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% var(--pos);transform:scale(calc(1.12 - var(--p,0) * .12));will-change:transform}
+  .covr-v4-ben__badge{position:absolute;left:20px;bottom:20px;background:#f5f0e6;color:#2a1f18;padding:10px 14px;font:500 11px/1 var(--font-body--family);letter-spacing:.18em;text-transform:uppercase}
+  .covr-v4-ben__copy{display:flex;flex-direction:column;justify-content:center;gap:20px;padding:clamp(48px,7vw,110px) clamp(20px,6vw,96px)}
+  .covr-v4-ben__eyebrow{margin:0;font:500 12px/1 var(--font-body--family);letter-spacing:.2em;text-transform:uppercase;color:#8f6446}
+  .covr-v4-ben__heading{margin:0;font-family:var(--font-heading--family,serif);font-weight:400;font-size:clamp(40px,4.8vw,72px);line-height:1}
+  .covr-v4-ben__heading em{display:block;color:#8f6446}
+  .covr-v4-ben__body{margin:0;max-width:44ch;color:#5d5750;font-size:16px;line-height:1.65}
+  .covr-v4-ben__list{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:10px}
+  .covr-v4-ben__item{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:center;background:#faf8f4;padding:14px 16px;border:1px solid rgba(42,31,24,.08)}
+  .covr-v4-ben__icon{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#2a1f18;color:#f5f0e6}
+  .covr-v4-ben__item strong{display:block;font-family:var(--font-heading--family,serif);font-weight:400;font-size:20px;line-height:1.2}
+  .covr-v4-ben__item span span{display:block;color:#5d5750;font-size:14px;line-height:1.5}
+  .covr-v4-ben__cta{align-self:flex-start;margin-top:6px;background:#2a1f18;color:#f5f0e6;text-decoration:none;padding:17px 30px;font:600 12px/1 var(--font-body--family);letter-spacing:.18em;text-transform:uppercase}
+  @media (max-width:749px){.covr-v4-ben{grid-template-columns:1fr}.covr-v4-ben__media{min-height:0;aspect-ratio:4/5}}
+</style>
+<script>
+  (function(){var el=document.getElementById('covr-v4-ben-{{ section.id }}');if(!el||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    var f=function(){var r=el.getBoundingClientRect(),p=Math.min(1,Math.max(0,(innerHeight-r.top)/(innerHeight+r.height)));el.style.setProperty('--p',p.toFixed(3))};
+    addEventListener('scroll',function(){requestAnimationFrame(f)},{passive:true});f();})();
+</script>
+
+{% schema %}
+{
+  "name": "COVR V3 with COVR",
+  "tag": "section",
+  "class": "covr-v3-benefits-wrapper",
+  "enabled_on": { "templates": ["index"] },
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Photograph" },
+    { "type": "text", "id": "placeholder", "label": "Placeholder asset", "default": "covr-v3-ph-benefits.jpg" },
+    { "type": "text", "id": "image_alt", "label": "Image alternative text" },
+    { "type": "range", "id": "image_position", "label": "Photograph position (top to bottom)", "min": 0, "max": 100, "step": 1, "unit": "%", "default": 50 },
+    { "type": "text", "id": "badge", "label": "Label on the photograph" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow" },
+    { "type": "textarea", "id": "heading", "label": "Headline" },
+    { "type": "text", "id": "heading_accent", "label": "Headline, italic last line" },
+    { "type": "textarea", "id": "body", "label": "Paragraph" },
+    { "type": "text", "id": "button_label", "label": "Button" },
+    { "type": "url", "id": "button_link", "label": "Button link" }
+  ],
+  "blocks": [
+    {
+      "type": "point",
+      "name": "Point",
+      "settings": [
+        { "type": "select", "id": "icon", "label": "Icon", "default": "sun", "options": [ { "value": "sun", "label": "Sun" }, { "value": "shield", "label": "Shield" }, { "value": "slashes", "label": "Rough surface" }, { "value": "bag", "label": "Bag" }, { "value": "layers", "label": "Layers" }, { "value": "leaf", "label": "Leaf" } ] },
+        { "type": "text", "id": "title", "label": "Title" },
+        { "type": "text", "id": "text", "label": "Detail" }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [{ "name": "COVR V3 with COVR" }]
+}
+{% endschema %}
