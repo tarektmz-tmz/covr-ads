@@ -1,0 +1,63 @@
+{%- comment -%}
+  "Before you buy" band for the homepage (COVR alternative storefront).
+
+  The same confirmed facts the product page shows under its buy buttons, for
+  the whole range: fit, materials, what is included, the free pouch,
+  delivery, returns and questions. Copy and sources live in
+  snippets/covr-alt-facts.liquid (side: 'range'), so the homepage and the
+  product page cannot drift apart.
+{%- endcomment -%}
+
+<div
+  class="covr-sec covr-alt-answers spacing-style"
+  style="{% render 'spacing-style', settings: section.settings %}"
+  {% if section.settings.anchor != blank %}
+    id="{{ section.settings.anchor | handleize }}"
+  {% endif %}
+  {{ section.shopify_attributes }}
+>
+  <div class="covr-alt-answers__intro">
+    {%- if section.settings.eyebrow != blank -%}
+      <p class="covr-eyebrow">{{ section.settings.eyebrow }}</p>
+    {%- endif -%}
+    {%- if section.settings.heading != blank -%}
+      <h2 class="covr-h2">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+    {%- if section.settings.body != blank -%}
+      <p class="covr-body">{{ section.settings.body }}</p>
+    {%- endif -%}
+    {%- if section.settings.image != blank -%}
+      <figure class="covr-alt-answers__pic">{{ section.settings.image | image_url: width: 1000 | image_tag: loading: 'lazy', widths: '500, 800, 1000', sizes: '(min-width: 990px) 34vw, 100vw', alt: section.settings.image_alt }}</figure>
+      <a class="covr-alt-answers__mail" href="mailto:padel.covr@gmail.com">padel.covr@gmail.com</a>
+    {%- endif -%}
+  </div>
+
+  <div class="covr-alt-answers__list">
+    {%- render 'covr-alt-facts', side: 'range' -%}
+  </div>
+</div>
+<style>
+  .covr-alt-answers__pic{margin:24px 0 0;max-width:560px;aspect-ratio:4/3;overflow:hidden;border-radius:4px}
+  .covr-alt-answers__pic img{display:block;width:100%;height:100%;object-fit:cover}
+  .covr-alt-answers__mail{display:inline-block;width:fit-content;align-self:flex-start;justify-self:start;margin-top:16px;font-size:15px;color:#2a1f18;border-bottom:1px solid #8f6446;text-decoration:none;padding-bottom:2px}
+</style>
+
+{% schema %}
+{
+  "name": "COVR before you buy",
+  "tag": "section",
+  "class": "covr-alt-answers-wrapper",
+  "enabled_on": { "templates": ["index"] },
+  "settings": [
+    { "type": "text", "id": "anchor", "label": "Anchor for in-page links", "default": "before-you-buy" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Before you buy" },
+    { "type": "text", "id": "heading", "label": "Heading" },
+    { "type": "textarea", "id": "body", "label": "Supporting copy" },
+    { "type": "image_picker", "id": "image", "label": "Photograph" },
+    { "type": "text", "id": "image_alt", "label": "Photograph alternative text" },
+    { "type": "range", "id": "padding-block-start", "label": "Top padding", "min": 0, "max": 128, "step": 4, "unit": "px", "default": 72 },
+    { "type": "range", "id": "padding-block-end", "label": "Bottom padding", "min": 0, "max": 128, "step": 4, "unit": "px", "default": 0 }
+  ],
+  "presets": [{ "name": "COVR before you buy" }]
+}
+{% endschema %}

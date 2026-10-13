@@ -1,0 +1,111 @@
+{%- comment -%}
+  COVR V3 "Crafted with purpose", from the owner's mockup: a small ruled
+  eyebrow, a two-line headline, an intro, then three detail photographs,
+  each with a number, a small icon, a title and a caption.
+
+  The same section closes the product page with `show_text` off, where the
+  mockup shows the three photographs alone. The photographs are the store's
+  existing detail shots (KEV0100, KEV0093, KEV0199).
+{%- endcomment -%}
+
+{%- liquid
+  # Product pages: covers only (the pouch has no strap, handle or racket).
+  assign covr_show = true
+  if request.page_type == 'product'
+    capture covr_side
+      render 'covr-v3-side', product: product
+    endcapture
+    assign covr_side = covr_side | strip
+    if covr_side != 'cover'
+      assign covr_show = false
+    endif
+  endif
+-%}
+
+{%- if covr_show -%}
+<div class="covr-v3-crafted{% unless section.settings.show_text %} covr-v3-crafted--photos{% endunless %}" {{ section.shopify_attributes }}>
+  <div class="covr-v3-crafted__inner">
+    {%- if section.settings.show_text -%}
+      <div class="covr-v3-crafted__head">
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="covr-v3-ruled">{{ section.settings.eyebrow | escape }}</p>
+        {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <h2 class="covr-v3-display covr-v3-crafted__heading">{{ section.settings.heading | escape | newline_to_br }}{%- if section.settings.heading_accent != blank -%}<br><em class="covr-v3-accent">{{ section.settings.heading_accent | escape }}</em>{%- endif -%}</h2>
+        {%- endif -%}
+        {%- if section.settings.intro != blank -%}
+          <p class="covr-v3-lede covr-v3-crafted__intro">{{ section.settings.intro | escape }}</p>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <ul class="covr-v3-crafted__grid" role="list">
+      {%- for block in section.blocks -%}
+        {%- assign covr_img = block.settings.image -%}
+        <li class="covr-v3-crafted__card" {{ block.shopify_attributes }}>
+          <figure class="covr-v3-crafted__frame">
+            {%- if covr_img != blank -%}
+              <img
+                src="{{ covr_img | image_url: width: 800 }}"
+                srcset="{{ covr_img | image_url: width: 480 }} 480w, {{ covr_img | image_url: width: 800 }} 800w, {{ covr_img | image_url: width: 1100 }} 1100w"
+                sizes="(min-width: 750px) 30vw, 100vw"
+                width="{{ covr_img.width }}"
+                height="{{ covr_img.height }}"
+                alt="{{ block.settings.image_alt | default: covr_img.alt | escape }}"
+                loading="lazy"
+                decoding="async"
+                style="object-position: 50% {{ block.settings.focal_y | default: 50 }}%;"
+              >
+            {%- endif -%}
+          </figure>
+          {%- if section.settings.show_text -%}
+            <div class="covr-v3-crafted__meta">
+              <span class="covr-v3-crafted__number">{{ forloop.index | prepend: '0' }}</span>
+              {%- if block.settings.icon != blank -%}
+                <span class="covr-v3-crafted__icon">{%- render 'covr-v3-icon', name: block.settings.icon, size: 20 -%}</span>
+              {%- endif -%}
+            </div>
+            <h3 class="covr-v3-crafted__title">{{ block.settings.title | escape }}</h3>
+            <p class="covr-v3-crafted__text">{{ block.settings.text | escape }}</p>
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "COVR V3 crafted",
+  "tag": "section",
+  "class": "covr-v3-crafted-wrapper",
+  "enabled_on": { "templates": ["index", "product"] },
+  "settings": [
+    { "type": "checkbox", "id": "show_text", "label": "Show headline and captions", "default": true },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow" },
+    { "type": "textarea", "id": "heading", "label": "Headline" },
+    { "type": "text", "id": "heading_accent", "label": "Headline, italic last line" },
+    { "type": "textarea", "id": "intro", "label": "Intro" }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Detail",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Photograph" },
+        { "type": "text", "id": "image_alt", "label": "Image alternative text" },
+        { "type": "range", "id": "focal_y", "label": "Vertical focal point", "min": 0, "max": 100, "step": 1, "unit": "%", "default": 50 },
+        {
+          "type": "select", "id": "icon", "label": "Icon", "default": "waves",
+          "options": [ { "value": "waves", "label": "Waves" }, { "value": "leaf", "label": "Leaf" }, { "value": "grid", "label": "Grid" }, { "value": "layers", "label": "Layers" } ]
+        },
+        { "type": "text", "id": "title", "label": "Title" },
+        { "type": "textarea", "id": "text", "label": "Caption" }
+      ]
+    }
+  ],
+  "max_blocks": 3,
+  "presets": [{ "name": "COVR V3 crafted" }]
+}
+{% endschema %}

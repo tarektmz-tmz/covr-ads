@@ -1,0 +1,52 @@
+{%- comment -%}
+  "Before you buy" band for the homepage (COVR alternative storefront).
+
+  The same confirmed facts the product page shows under its buy buttons, for
+  the whole range: fit, materials, what is included, the free pouch,
+  delivery, returns and questions. Copy and sources live in
+  snippets/covr-alt-facts.liquid (side: 'range'), so the homepage and the
+  product page cannot drift apart.
+{%- endcomment -%}
+
+<div
+  class="covr-sec covr-alt-answers spacing-style"
+  style="{% render 'spacing-style', settings: section.settings %}"
+  {% if section.settings.anchor != blank %}
+    id="{{ section.settings.anchor | handleize }}"
+  {% endif %}
+  {{ section.shopify_attributes }}
+>
+  <div class="covr-alt-answers__intro">
+    {%- if section.settings.eyebrow != blank -%}
+      <p class="covr-eyebrow">{{ section.settings.eyebrow }}</p>
+    {%- endif -%}
+    {%- if section.settings.heading != blank -%}
+      <h2 class="covr-h2">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+    {%- if section.settings.body != blank -%}
+      <p class="covr-body">{{ section.settings.body }}</p>
+    {%- endif -%}
+  </div>
+
+  <div class="covr-alt-answers__list">
+    {%- render 'covr-alt-facts', side: 'range' -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "COVR before you buy",
+  "tag": "section",
+  "class": "covr-alt-answers-wrapper",
+  "enabled_on": { "templates": ["index"] },
+  "settings": [
+    { "type": "text", "id": "anchor", "label": "Anchor for in-page links", "default": "before-you-buy" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Before you buy" },
+    { "type": "text", "id": "heading", "label": "Heading" },
+    { "type": "textarea", "id": "body", "label": "Supporting copy" },
+    { "type": "range", "id": "padding-block-start", "label": "Top padding", "min": 0, "max": 128, "step": 4, "unit": "px", "default": 72 },
+    { "type": "range", "id": "padding-block-end", "label": "Bottom padding", "min": 0, "max": 128, "step": 4, "unit": "px", "default": 0 }
+  ],
+  "presets": [{ "name": "COVR before you buy" }]
+}
+{% endschema %}
