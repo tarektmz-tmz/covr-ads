@@ -1,0 +1,68 @@
+{%- comment -%}
+  MAI MURI hero: a full-width photograph with very large words set across
+  the top, separated by slashes. The first word is blue. Each word can link.
+{%- endcomment -%}
+{%- render 'mai-base' -%}
+{%- assign mm_words = section.settings.words | newline_to_br | split: '<br />' -%}
+{%- assign mm_links = section.settings.links | newline_to_br | split: '<br />' -%}
+<section class="mm mm-hero" style="--mm-hero-bg:{{ section.settings.background }};--mm-hero-ink:{{ section.settings.text_color }}">
+  <div class="mm-hero__media">
+    {%- if section.settings.image_mobile != blank -%}
+      <picture>
+        <source media="(min-width: 750px)" srcset="{{ section.settings.image | image_url: width: 2400 }}">
+        {{ section.settings.image_mobile | image_url: width: 1200 | image_tag: loading: 'eager', fetchpriority: 'high', sizes: '100vw', widths: '600, 900, 1200', alt: section.settings.image.alt }}
+      </picture>
+    {%- elsif section.settings.image != blank -%}
+      {{ section.settings.image | image_url: width: 2400 | image_tag: loading: 'eager', fetchpriority: 'high', sizes: '100vw', widths: '800, 1200, 1800, 2400' }}
+    {%- endif -%}
+  </div>
+  <h1 class="mm-hero__words">
+    {%- for w in mm_words -%}
+      {%- assign word = w | strip -%}
+      {%- if word != blank -%}
+        {%- assign href = mm_links[forloop.index0] | strip -%}
+        <span class="mm-hero__w{% if forloop.first %} mm-hero__w--hi{% endif %}">
+          {%- if href != blank -%}<a href="{{ href }}">{{ word | escape }}</a>{%- else -%}{{ word | escape }}{%- endif -%}/</span>
+      {%- endif -%}
+    {%- endfor -%}
+  </h1>
+  {%- if section.settings.button_label != blank -%}
+    <a class="mm-pill mm-hero__cta" href="{{ section.settings.button_link | default: '/collections/all' }}">{{ section.settings.button_label | escape }} <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+  {%- endif -%}
+</section>
+<style>
+  .mm-hero{position:relative;background:var(--mm-hero-bg);overflow:hidden}
+  .mm-hero__media{position:relative;aspect-ratio:2400/1400;max-height:calc(100svh - 110px);width:100%}
+  .mm-hero__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 100%}
+  .mm-hero__words{position:absolute;top:clamp(10px,1.4vw,24px);left:clamp(14px,1.4vw,24px);right:clamp(14px,4vw,80px);margin:0;font:300 clamp(46px,6.9vw,124px)/1.02 var(--mm-sans);letter-spacing:-.045em;color:var(--mm-hero-ink)}
+  .mm-hero__w{display:inline-block;white-space:nowrap}
+  .mm-hero__w a{text-decoration:none;transition:color .2s}
+  .mm-hero__w a:hover{color:var(--mm-blue)}
+  .mm-hero__w--hi{color:var(--mm-blue)}
+  .mm-hero__cta{position:absolute;right:clamp(14px,2.6vw,50px);bottom:clamp(16px,2.6vw,46px)}
+  @media (max-width:749px){
+    .mm-hero__media{aspect-ratio:1200/1500;max-height:none}
+    .mm-hero__words{font-size:clamp(44px,13.5vw,64px);line-height:1.04}
+    .mm-hero{display:flex;flex-direction:column;align-items:center}
+    .mm-hero__cta{position:static;margin:0 0 22px}
+  }
+</style>
+
+{% schema %}
+{
+  "name": "MAI MURI hero",
+  "tag": "div",
+  "class": "mai-hero-section",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Photograph, desktop" },
+    { "type": "image_picker", "id": "image_mobile", "label": "Photograph, phones" },
+    { "type": "color", "id": "background", "label": "Background behind the photograph", "default": "#e1dcd6" },
+    { "type": "color", "id": "text_color", "label": "Big words colour", "default": "#111111" },
+    { "type": "textarea", "id": "words", "label": "Big words (one per line, first one is blue)", "default": "New In\nTotes\nColour\nNylon\nEveryday" },
+    { "type": "textarea", "id": "links", "label": "Links for the words (one per line, same order)" },
+    { "type": "text", "id": "button_label", "label": "Button", "default": "Shop the Tote" },
+    { "type": "url", "id": "button_link", "label": "Button link" }
+  ],
+  "presets": [{ "name": "MAI MURI hero" }]
+}
+{% endschema %}

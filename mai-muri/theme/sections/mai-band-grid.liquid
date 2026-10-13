@@ -1,0 +1,75 @@
+{%- comment -%}
+  MAI MURI coloured band + product cards. The band carries a big title and a
+  "Shop More" pill. Below it, one card per colour of the chosen product (or
+  the products of a collection), each with its own Add to Bag button.
+{%- endcomment -%}
+{%- render 'mai-base' -%}
+{%- assign mm_product = all_products[section.settings.product] -%}
+{%- assign mm_link = section.settings.link | default: mm_product.url | default: '/collections/all' -%}
+<section class="mm mm-bg" style="--mm-band:{{ section.settings.band_color }};--mm-band-ink:{{ section.settings.band_text }}">
+  <div class="mm-bg__band">
+    <h2 class="mm-bg__title">{{ section.settings.title | escape }}</h2>
+    {%- if section.settings.link_label != blank -%}
+      <a class="mm-pill" href="{{ mm_link }}">{{ section.settings.link_label | escape }} <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+    {%- endif -%}
+  </div>
+  <ul class="mm-bg__grid" role="list">
+    {%- if section.settings.collection != blank -%}
+      {%- for p in section.settings.collection.products limit: 12 -%}
+        {%- render 'mai-card', product: p, variant: p.selected_or_first_available_variant, name: p.title, tag: section.settings.tag, note: section.settings.note -%}
+      {%- endfor -%}
+    {%- elsif mm_product != blank -%}
+      {%- assign mm_seen = ',' -%}
+      {%- for v in mm_product.variants -%}
+        {%- assign key = ',' | append: v.option1 | append: ',' -%}
+        {%- unless mm_seen contains key -%}
+          {%- assign mm_seen = mm_seen | append: v.option1 | append: ',' -%}
+          {%- assign card_name = section.settings.card_prefix | append: ' — ' | append: v.option1 -%}
+          {%- if section.settings.card_prefix == blank -%}{%- assign card_name = mm_product.title | append: ' — ' | append: v.option1 -%}{%- endif -%}
+          {%- render 'mai-card', product: mm_product, variant: v, name: card_name, tag: section.settings.tag, note: section.settings.note -%}
+        {%- endunless -%}
+      {%- endfor -%}
+    {%- endif -%}
+  </ul>
+</section>
+<style>
+  .mm-bg__band{display:flex;align-items:center;justify-content:space-between;gap:20px;background:var(--mm-band);color:var(--mm-band-ink);padding:clamp(18px,2.2vw,30px) clamp(16px,2.6vw,50px)}
+  .mm-bg__title{margin:0;font:400 clamp(40px,4.4vw,64px)/1 var(--mm-sans);letter-spacing:-.04em}
+  .mm-bg__grid{list-style:none;margin:0;padding:clamp(20px,2.4vw,32px) clamp(16px,2.6vw,50px) clamp(36px,3.6vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:30px clamp(14px,1.6vw,30px)}
+  /* cards */
+  .mm-card{display:flex;flex-direction:column;min-width:0}
+  .mm-card__photo{position:relative;display:block;aspect-ratio:1/1;background:var(--mm-warm);overflow:hidden}
+  .mm-card__photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+  .mm-card:hover .mm-card__photo img{transform:scale(1.04)}
+  .mm-card__note{position:absolute;top:14px;left:16px;right:16px;z-index:1;font:400 10.5px/1.3 var(--mm-sans);letter-spacing:.03em;text-transform:uppercase;color:#8a8580}
+  .mm-card__name{margin-top:16px;font:400 18px/1.25 var(--mm-sans);letter-spacing:-.02em;text-decoration:none}
+  .mm-card__price{margin:12px 0 14px;font:400 17px/1 var(--mm-sans);letter-spacing:-.02em}
+  .mm-card__form{margin:0}
+  .mm-card__btn{width:100%;border:0;border-radius:999px;background:var(--mm-ink);color:#fff;padding:12px 16px;font:400 16px/1 var(--mm-sans);letter-spacing:-.02em;cursor:pointer;transition:background .2s}
+  .mm-card__btn:hover{background:var(--mm-blue)}
+  .mm-card__btn--off{background:#cad3da;color:#111;cursor:default}
+  .mm-card__tag{align-self:flex-start;margin-top:10px;background:var(--mm-blue);color:#fff;border-radius:999px;padding:5px 14px;font:400 13px/1 var(--mm-sans)}
+  @media (max-width:749px){.mm-card__name{font-size:15px;margin-top:12px}.mm-card__price{font-size:15px;margin:8px 0 10px}.mm-card__btn{font-size:14px;padding:11px 10px}}
+  @media (max-width:749px){.mm-bg__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 12px}.mm-bg__band .mm-pill{padding:6px 12px;font-size:13px}}
+</style>
+
+{% schema %}
+{
+  "name": "MAI MURI band + products",
+  "tag": "div",
+  "class": "mai-band-grid-section",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Band title", "default": "New In" },
+    { "type": "color", "id": "band_color", "label": "Band colour", "default": "#2f6e6f" },
+    { "type": "color", "id": "band_text", "label": "Band text colour", "default": "#ffffff" },
+    { "type": "text", "id": "link_label", "label": "Pill label", "default": "Shop More" },
+    { "type": "url", "id": "link", "label": "Pill link" },
+    { "type": "product", "id": "product", "label": "Product (one card per colour)" },
+    { "type": "text", "id": "card_prefix", "label": "Card name before the colour", "default": "The Tote" },
+    { "type": "collection", "id": "collection", "label": "Or: a collection (one card per product)" },
+    { "type": "text", "id": "tag", "label": "Small tag under the button", "default": "New" },
+    { "type": "text", "id": "note", "label": "Small note above each photo" }
+  ],
+  "presets": [{ "name": "MAI MURI band + products" }]
+}
+{% endschema %}

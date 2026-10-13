@@ -1,0 +1,54 @@
+{%- comment -%}
+  MAI MURI announcement bar: a black strip of short lines that scrolls
+  sideways without stopping. Lines are blocks.
+{%- endcomment -%}
+{%- render 'mai-base' -%}
+{%- capture mm_items -%}
+  {%- for block in section.blocks -%}
+    {%- if block.settings.text != blank -%}
+      <li {{ block.shopify_attributes }}>
+        {%- if block.settings.link != blank -%}<a href="{{ block.settings.link }}">{{ block.settings.text | escape }}</a>{%- else -%}{{ block.settings.text | escape }}{%- endif -%}
+      </li>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+<div class="mm mm-marquee" style="--mm-bar:{{ section.settings.background }};--mm-bar-ink:{{ section.settings.text_color }}">
+  <div class="mm-marquee__track">
+    <ul class="mm-marquee__list">{{ mm_items }}</ul>
+    <ul class="mm-marquee__list" aria-hidden="true">{{ mm_items }}</ul>
+    <ul class="mm-marquee__list" aria-hidden="true">{{ mm_items }}</ul>
+  </div>
+</div>
+<style>
+  .mm-marquee{background:var(--mm-bar);color:var(--mm-bar-ink);overflow:hidden;white-space:nowrap}
+  .mm-marquee__track{display:flex;width:max-content;animation:mmscroll 38s linear infinite}
+  .mm-marquee:hover .mm-marquee__track{animation-play-state:paused}
+  .mm-marquee__list{display:flex;margin:0;padding:0;list-style:none}
+  .mm-marquee__list li{padding:11px 40px;font:600 12.5px/1.2 var(--mm-sans);letter-spacing:.04em;text-transform:uppercase}
+  .mm-marquee__list a{text-decoration:none}
+  @keyframes mmscroll{to{transform:translateX(-33.333%)}}
+  @media (prefers-reduced-motion:reduce){.mm-marquee__track{animation:none}}
+</style>
+
+{% schema %}
+{
+  "name": "MAI MURI announcement",
+  "tag": "section",
+  "class": "mai-marquee-section",
+  "settings": [
+    { "type": "color", "id": "background", "label": "Background", "default": "#111111" },
+    { "type": "color", "id": "text_color", "label": "Text", "default": "#ffffff" }
+  ],
+  "blocks": [
+    {
+      "type": "line",
+      "name": "Line",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Text" },
+        { "type": "url", "id": "link", "label": "Link" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "MAI MURI announcement" }]
+}
+{% endschema %}

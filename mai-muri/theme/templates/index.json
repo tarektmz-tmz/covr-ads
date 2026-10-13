@@ -1,0 +1,158 @@
+{
+ "sections": {
+  "mm_hero": {
+   "type": "mai-hero",
+   "settings": {
+    "image": "shopify://shop_images/mai-hero-desktop.jpg",
+    "image_mobile": "shopify://shop_images/mai-hero-mobile.jpg",
+    "background": "#e1dcd6",
+    "text_color": "#111111",
+    "words": "New In\nTotes\nColour\nEveryday\nTravel\nWork",
+    "links": "shopify://products/contrast-color-large-nylon-canvas-tote-bag\nshopify://products/contrast-color-large-nylon-canvas-tote-bag\nshopify://products/contrast-color-large-nylon-canvas-tote-bag\nshopify://products/contrast-color-large-nylon-canvas-tote-bag\nshopify://products/contrast-color-large-nylon-canvas-tote-bag\nshopify://products/contrast-color-large-nylon-canvas-tote-bag",
+    "button_label": "Shop the Tote",
+    "button_link": "shopify://products/contrast-color-large-nylon-canvas-tote-bag"
+   }
+  },
+  "mm_new": {
+   "type": "mai-band-grid",
+   "settings": {
+    "title": "New In",
+    "band_color": "#2f6e6f",
+    "band_text": "#ffffff",
+    "link_label": "Shop More",
+    "link": "shopify://products/contrast-color-large-nylon-canvas-tote-bag",
+    "product": "contrast-color-large-nylon-canvas-tote-bag",
+    "card_prefix": "The Tote",
+    "tag": "New",
+    "note": ""
+   }
+  },
+  "mm_uses": {
+   "type": "mai-uses",
+   "blocks": {
+    "t1": {
+     "type": "tile",
+     "settings": {
+      "word": "Daily",
+      "colour": "Pink",
+      "image": "shopify://shop_images/mai-tote-pink.png",
+      "alt": "The pink tote with a green pocket",
+      "caption": "Pink",
+      "tile_color": "#ffd84d",
+      "tile_text": "#111111"
+     }
+    },
+    "t2": {
+     "type": "tile",
+     "settings": {
+      "word": "Travel",
+      "colour": "Khaki",
+      "image": "shopify://shop_images/mai-tote-khaki.png",
+      "alt": "The khaki tote with an orange pocket",
+      "caption": "Khaki",
+      "tile_color": "#a9c8ff",
+      "tile_text": "#111111"
+     }
+    },
+    "t3": {
+     "type": "tile",
+     "settings": {
+      "word": "Shopping",
+      "colour": "Green",
+      "image": "shopify://shop_images/mai-tote-green.png",
+      "alt": "The green tote with a blue pocket",
+      "caption": "Green",
+      "tile_color": "#ff7a45",
+      "tile_text": "#111111"
+     }
+    },
+    "t4": {
+     "type": "tile",
+     "settings": {
+      "word": "Work",
+      "colour": "Apricot",
+      "image": "shopify://shop_images/mai-tote-apricot.png",
+      "alt": "The apricot tote",
+      "caption": "Apricot",
+      "tile_color": "#cbb8ff",
+      "tile_text": "#111111"
+     }
+    }
+   },
+   "block_order": [
+    "t1",
+    "t2",
+    "t3",
+    "t4"
+   ],
+   "settings": {
+    "title": "Made For",
+    "band_color": "#eba7cf",
+    "band_text": "#ffffff",
+    "link_label": "Shop More",
+    "link": "shopify://products/contrast-color-large-nylon-canvas-tote-bag",
+    "product": "contrast-color-large-nylon-canvas-tote-bag"
+   }
+  },
+  "mm_statement": {
+   "type": "mai-statement",
+   "blocks": {
+    "f1": {
+     "type": "fact",
+     "settings": {
+      "title": "Durable nylon",
+      "text": "A colour-block body in durable nylon canvas, made for daily use."
+     }
+    },
+    "f2": {
+     "type": "fact",
+     "settings": {
+      "title": "Soft structure",
+      "text": "Spacious, with a soft structure that is easy to carry."
+     }
+    },
+    "f3": {
+     "type": "fact",
+     "settings": {
+      "title": "Shoulder or hand",
+      "text": "Long straps sit on your shoulder or carry it in your hand."
+     }
+    },
+    "f4": {
+     "type": "fact",
+     "settings": {
+      "title": "Pull-belt closure",
+      "text": "An easy pull-belt closes the top."
+     }
+    }
+   },
+   "block_order": [
+    "f1",
+    "f2",
+    "f3",
+    "f4"
+   ],
+   "settings": {
+    "line_1": "MAI MURI",
+    "line_2": "On You",
+    "text": "A spacious colour-block tote in five colours. For every day, travel, shopping and work."
+   }
+  },
+  "mm_newsletter": {
+   "type": "mai-newsletter",
+   "settings": {
+    "background": "#0a39b0",
+    "heading": "Newsletter",
+    "subheading": "Be the first to know.",
+    "text": "New colours and new bags. Sign up and hear about them first."
+   }
+  }
+ },
+ "order": [
+  "mm_hero",
+  "mm_new",
+  "mm_uses",
+  "mm_statement",
+  "mm_newsletter"
+ ]
+}

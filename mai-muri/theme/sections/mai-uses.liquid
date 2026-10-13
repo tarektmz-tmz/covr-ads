@@ -1,0 +1,83 @@
+{%- comment -%}
+  MAI MURI "Made for" strip: a coloured band, then tall colour tiles, each with
+  one big word and the tote in one of its colours (picked by colour name from
+  the chosen product).
+{%- endcomment -%}
+{%- render 'mai-base' -%}
+{%- assign mm_product = all_products[section.settings.product] -%}
+<section class="mm mm-uses" style="--mm-band:{{ section.settings.band_color }};--mm-band-ink:{{ section.settings.band_text }}">
+  <div class="mm-uses__band">
+    <h2 class="mm-uses__title">{{ section.settings.title | escape }}</h2>
+    {%- if section.settings.link_label != blank -%}
+      <a class="mm-pill" href="{{ section.settings.link | default: mm_product.url | default: '/collections/all' }}">{{ section.settings.link_label | escape }} <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+    {%- endif -%}
+  </div>
+  <ul class="mm-uses__grid" role="list">
+    {%- for block in section.blocks -%}
+      {%- assign tile_img = block.settings.image -%}
+      {%- assign tile_url = mm_product.url -%}
+      {%- if tile_img == blank and mm_product != blank -%}
+        {%- for v in mm_product.variants -%}
+          {%- assign o1 = v.option1 | downcase -%}
+          {%- assign want = block.settings.colour | downcase | strip -%}
+          {%- if o1 == want -%}{%- assign tile_img = v.featured_image -%}{%- assign tile_url = v.url -%}{%- break -%}{%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+      <li class="mm-uses__tile" style="--mm-tile:{{ block.settings.tile_color }};--mm-tile-ink:{{ block.settings.tile_text }}" {{ block.shopify_attributes }}>
+        <a href="{{ tile_url | default: '/collections/all' }}">
+          <span class="mm-uses__word">{{ block.settings.word | escape }}</span>
+          {%- if tile_img != blank -%}{{ tile_img | image_url: width: 900 | image_tag: loading: 'lazy', widths: '450, 700, 900', sizes: '(min-width: 990px) 25vw, 80vw', alt: block.settings.alt }}{%- endif -%}
+          {%- if block.settings.caption != blank -%}<span class="mm-uses__cap">{{ block.settings.caption | escape }}</span>{%- endif -%}
+        </a>
+      </li>
+    {%- endfor -%}
+  </ul>
+</section>
+<style>
+  .mm-uses__band{display:flex;align-items:center;justify-content:space-between;gap:20px;background:var(--mm-band);color:var(--mm-band-ink);padding:clamp(18px,2.2vw,30px) clamp(16px,2.6vw,50px)}
+  .mm-uses__title{margin:0;font:400 clamp(40px,4.4vw,64px)/1 var(--mm-sans);letter-spacing:-.04em}
+  .mm-uses__grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+  .mm-uses__tile a{position:relative;display:block;aspect-ratio:3/4;background:var(--mm-tile);color:var(--mm-tile-ink);text-decoration:none;overflow:hidden}
+  .mm-uses__tile img{position:absolute;left:8%;right:8%;bottom:4%;width:84%;height:70%;object-fit:contain;filter:drop-shadow(0 18px 18px rgba(0,0,0,.12));transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+  .mm-uses__tile a:hover img{transform:translateY(-10px) rotate(-2deg)}
+  .mm-uses__word{position:absolute;top:clamp(14px,1.6vw,26px);left:clamp(16px,1.8vw,28px);z-index:1;font:400 clamp(44px,4.8vw,84px)/.95 var(--mm-serif);letter-spacing:-.01em}
+  .mm-uses__cap{position:absolute;left:clamp(16px,1.8vw,28px);bottom:clamp(14px,1.6vw,22px);z-index:1;font:500 12px/1.2 var(--mm-sans);letter-spacing:.05em;text-transform:uppercase}
+  @media (max-width:749px){
+    .mm-uses__grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:72%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+    .mm-uses__tile{scroll-snap-align:start}
+    .mm-uses__band .mm-pill{padding:6px 12px;font-size:13px}
+  }
+</style>
+
+{% schema %}
+{
+  "name": "MAI MURI made for",
+  "tag": "div",
+  "class": "mai-uses-section",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Band title", "default": "Made For" },
+    { "type": "color", "id": "band_color", "label": "Band colour", "default": "#eba7cf" },
+    { "type": "color", "id": "band_text", "label": "Band text colour", "default": "#ffffff" },
+    { "type": "text", "id": "link_label", "label": "Pill label", "default": "Shop More" },
+    { "type": "url", "id": "link", "label": "Pill link" },
+    { "type": "product", "id": "product", "label": "Product the tiles show" }
+  ],
+  "blocks": [
+    {
+      "type": "tile",
+      "name": "Tile",
+      "settings": [
+        { "type": "text", "id": "word", "label": "Big word" },
+        { "type": "text", "id": "colour", "label": "Show this colour of the product (e.g. Pink)" },
+        { "type": "image_picker", "id": "image", "label": "Or: your own photo" },
+        { "type": "text", "id": "alt", "label": "Photo description" },
+        { "type": "text", "id": "caption", "label": "Small caption" },
+        { "type": "color", "id": "tile_color", "label": "Tile colour", "default": "#f4f2ef" },
+        { "type": "color", "id": "tile_text", "label": "Tile text colour", "default": "#111111" }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [{ "name": "MAI MURI made for" }]
+}
+{% endschema %}
