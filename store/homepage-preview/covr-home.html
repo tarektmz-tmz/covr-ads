@@ -1,0 +1,299 @@
+<title>COVR Homepage Story</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a scroll-told story in seven chapters. Sticky "stages" pin a scene while scroll drives it; between them, quiet paper sections. One look (paper + clay + court green), committed. */
+:root{
+  --paper:#f3eee5; --paper-2:#e9e1d4; --ink:#1e1a16; --mute:#6f655b;
+  --clay:#9a4e3a; --court:#23392e; --sand:#cdb89a; --cream:#f5f0e6;
+  --display:"Instrument Serif", "Iowan Old Style", Georgia, serif;
+  --body:"Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
+  --gut:clamp(16px,4vw,56px);
+  color-scheme:light;
+}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0}
+
+/* top bar */
+.bar{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;justify-content:space-between;align-items:center;
+  padding:calc(14px + env(safe-area-inset-top,0px)) var(--gut) 14px;color:var(--cream);mix-blend-mode:difference}
+.bar .logo{font:400 26px/1 var(--display);letter-spacing:.32em}
+.bar a{font:500 12px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;text-decoration:none}
+
+/* 1 hero */
+.hero{position:relative;height:92svh;min-height:560px;overflow:hidden;background:var(--court);color:var(--cream)}
+.hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(calc(1 + var(--p,0)*.12))}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,12,.25),rgba(20,16,12,0) 35%,rgba(20,16,12,.55))}
+.hero .copy{position:absolute;left:var(--gut);right:var(--gut);bottom:clamp(28px,7vh,72px);z-index:2;display:grid;gap:14px;
+  transform:translateY(calc(var(--p,0)*-60px));opacity:calc(1 - var(--p,0)*1.4)}
+.hero h1{font-size:clamp(52px,10vw,148px);line-height:.9}
+.hero h1 em{font-style:italic;color:var(--sand)}
+.hero .cue{display:flex;gap:10px;align-items:center}
+.hero .cue i{width:1px;height:38px;background:var(--cream);animation:cue 2.2s ease-in-out infinite;transform-origin:top}
+@keyframes cue{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* 2 manifesto: words ink in with scroll */
+.manifesto{height:220vh;position:relative}
+.manifesto .stage{position:sticky;top:0;height:100svh;display:grid;place-items:center;padding-inline:var(--gut)}
+.manifesto p{font:400 clamp(34px,6.2vw,88px)/1.08 var(--display);max-width:16ch;text-align:left}
+.manifesto span{color:color-mix(in srgb,var(--ink) 16%,transparent);transition:color .25s}
+.manifesto span.on{color:var(--ink)}
+.manifesto span.k{font-style:italic;color:color-mix(in srgb,var(--clay) 25%,transparent)}
+.manifesto span.k.on{color:var(--clay)}
+
+/* 3 materials: pinned image stack + steps */
+.materials{position:relative;background:var(--paper-2)}
+.materials .grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(24px,5vw,80px);padding-inline:var(--gut)}
+.materials .pin{position:sticky;top:0;height:100svh;display:flex;align-items:center}
+.frame{position:relative;width:100%;aspect-ratio:4/5;max-height:84svh;overflow:hidden;background:var(--sand)}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.12);transition:opacity .7s ease,transform 1.6s cubic-bezier(.2,.7,.2,1)}
+.frame img.on{opacity:1;transform:scale(1)}
+.frame .tag{position:absolute;left:14px;bottom:14px;z-index:2;background:var(--cream);color:var(--ink);padding:8px 10px}
+.steps{display:grid}
+.step{min-height:92svh;display:flex;flex-direction:column;justify-content:center;gap:16px;max-width:30rem;opacity:.28;transition:opacity .5s}
+.step.on{opacity:1}
+.step .n{color:var(--clay)}
+.step h3{font-size:clamp(34px,4.4vw,60px);line-height:1.02}
+.step p{color:var(--mute);max-width:34ch}
+.chapter{display:flex;gap:14px;align-items:baseline;padding:clamp(64px,10vw,120px) var(--gut) 0}
+.chapter h2{font-size:clamp(40px,6vw,84px);line-height:1}
+
+/* 4 colourways */
+.colours{height:520vh;position:relative;background:var(--paper)}
+.colours .stage{position:sticky;top:0;height:100svh;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;padding-inline:var(--gut);gap:24px;transition:background-color .6s}
+.swatchwrap{position:relative;height:min(78svh,720px);display:grid;place-items:center}
+.swatchwrap img{position:absolute;max-height:100%;width:auto;max-width:100%;filter:drop-shadow(0 30px 40px rgba(30,20,10,.28));opacity:0;transform:translateY(40px) rotate(-4deg) scale(.94);transition:opacity .55s,transform .8s cubic-bezier(.2,.7,.2,1)}
+.swatchwrap img.on{opacity:1;transform:none}
+.cinfo{display:grid;gap:18px}
+.cinfo .count{font:500 13px/1 var(--mono);letter-spacing:.14em;color:var(--mute)}
+.cinfo h3{font-size:clamp(56px,9vw,132px);line-height:.92;transition:color .4s}
+.cinfo dl{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;margin:0;font-size:15px}
+.cinfo dt{font:500 11px/1.9 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.cinfo dd{margin:0}
+.dots{display:flex;gap:8px;flex-wrap:wrap}
+.dots b{width:18px;height:18px;border-radius:50%;border:1px solid rgba(0,0,0,.18);transform:scale(.8);transition:transform .3s}
+.dots b.on{transform:scale(1.15);outline:1px solid var(--ink);outline-offset:3px}
+.sold{font:500 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;background:var(--ink);color:var(--cream);padding:6px 8px;justify-self:start}
+
+/* 5 in the wild: vertical scroll drives a horizontal reel */
+.wild{height:420vh;position:relative;background:var(--court);color:var(--cream)}
+.wild .stage{position:sticky;top:0;height:100svh;overflow:hidden;display:grid;grid-template-rows:auto 1fr;gap:clamp(16px,3vh,32px);padding-block:clamp(64px,10vh,96px) clamp(24px,5vh,48px)}
+.wild .head{display:flex;justify-content:space-between;align-items:end;gap:16px;padding-inline:var(--gut);flex-wrap:wrap}
+.wild h2{font-size:clamp(40px,6vw,84px);line-height:1}
+.wild h2 em{color:var(--sand)}
+.reel{display:flex;gap:clamp(12px,2vw,24px);padding-inline:var(--gut);will-change:transform;align-items:stretch;min-height:0}
+.reel figure{margin:0;flex:0 0 auto;height:100%;aspect-ratio:4/5;max-width:78vw;position:relative;overflow:hidden}
+.reel figure.tall{aspect-ratio:9/16}
+.reel img{width:100%;height:100%;object-fit:cover;transform:scale(1.08) translateX(var(--px,0));transition:transform .2s linear}
+.reel figcaption{position:absolute;left:12px;bottom:12px;font:500 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;background:rgba(20,16,12,.55);padding:7px 9px}
+
+/* 6 gift */
+.gift{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,80px);padding:clamp(80px,12vw,160px) var(--gut);align-items:center}
+.gift .pair{position:relative;aspect-ratio:1/1.05}
+.gift .pair img{position:absolute;object-fit:cover;box-shadow:0 30px 60px -20px rgba(30,20,10,.35)}
+.gift .a{width:72%;height:82%;left:0;top:0;transform:translateY(calc(var(--p,0)*-40px))}
+.gift .b{width:46%;height:56%;right:0;bottom:0;transform:translateY(calc(var(--p,0)*50px))}
+.gift .txt{display:grid;gap:20px;max-width:30rem}
+.gift h2{font-size:clamp(40px,5.5vw,76px);line-height:1}
+.gift p{color:var(--mute)}
+
+/* 7 offer */
+.offer{background:var(--clay);color:var(--cream);padding:clamp(80px,12vw,150px) var(--gut);display:grid;gap:28px;justify-items:start;position:relative;overflow:hidden}
+.offer .big{font:400 clamp(64px,13vw,190px)/.86 var(--display)}
+.offer .big s{opacity:.55;font-size:.45em;vertical-align:.9em;margin-right:.2em}
+.offer .code{display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:18px}
+.offer .code b{font:500 20px/1 var(--mono);letter-spacing:.3em;border:1px dashed var(--cream);padding:12px 14px}
+.btn{display:inline-flex;align-items:center;gap:12px;background:var(--cream);color:var(--ink);text-decoration:none;padding:18px 26px;font:600 13px/1 var(--body);letter-spacing:.16em;text-transform:uppercase}
+.btn:focus-visible,.bar a:focus-visible{outline:2px solid var(--sand);outline-offset:3px}
+.offer .ghost{position:absolute;right:-4vw;bottom:-6vw;font:400 34vw/.8 var(--display);opacity:.08;letter-spacing:.1em;pointer-events:none}
+footer{padding:28px var(--gut);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font:500 11px/1.6 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+
+/* reveal for plain blocks (visible at rest; animates only when JS marks it) */
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .9s,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+
+@media (max-width:820px){
+  .materials .grid{grid-template-columns:1fr}
+  .materials .pin{height:auto;top:0;padding-top:calc(56px + env(safe-area-inset-top,0px));z-index:2;background:var(--paper-2)}
+  .frame{aspect-ratio:4/3;max-height:42svh}
+  .step{min-height:70svh;justify-content:flex-start;padding-top:24px}
+  .colours .stage{grid-template-columns:1fr;grid-template-rows:1fr auto;align-content:center;padding-block:72px 32px}
+  .swatchwrap{height:46svh}
+  .cinfo h3{font-size:56px}
+  .gift{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero video{display:none}
+  *{transition:none!important;animation:none!important}
+}
+</style>
+
+<header class="bar"><span class="logo">COVR</span><a href="https://www.padelcovr.com/collections/padel-racket-covers" target="_blank" rel="noopener">Shop covers</a></header>
+
+<section class="hero" data-p>
+  <img class="poster" src="img/hero-poster.jpg" alt="">
+  <video src="img/hero.mp4" poster="img/hero-poster.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
+  <div class="copy">
+    <span class="eyebrow">Handmade in Bali · Padel racket covers</span>
+    <h1>Your racket goes <em>everywhere</em> you go.</h1>
+    <span class="cue eyebrow"><i></i>Scroll</span>
+  </div>
+</section>
+
+<section class="manifesto" data-p aria-label="Brand statement">
+  <div class="stage"><p id="mf">Give it something <span class="k">worth</span> <span class="k">carrying.</span> Cut, stitched and finished by hand, so the thing that protects your racket looks as good as you play.</p></div>
+</section>
+
+<section class="materials" id="made">
+  <div class="chapter rv"><span class="eyebrow">Chapter one</span><h2>How it’s made</h2></div>
+  <div class="grid">
+    <div class="pin"><div class="frame" id="frame">
+      <img class="on" src="img/chair.jpg" alt="Latte cover with a racket inside on a green courtside chair">
+      <img src="img/crest.jpg" alt="Embroidered COVR crest close-up">
+      <img src="img/zip.jpg" alt="Front zip pocket and leather pull">
+      <img src="img/racketin.jpg" alt="Hands opening the zip around the curve">
+      <img src="img/collar.jpg" alt="Leather collar with the grip above it">
+      <span class="tag eyebrow" id="tag">Latte · on court</span>
+    </div></div>
+    <div class="steps">
+      <div class="step on" data-img="0" data-tag="Latte · on court"><span class="n eyebrow">Shape</span><h3>Cut to follow the racket head.</h3><p>A teardrop in cotton, with leather piping around the whole edge. Made by hand in Bali.</p></div>
+      <div class="step" data-img="1" data-tag="Crest · embroidered"><span class="n eyebrow">Crest</span><h3>An embroidered crest on the front.</h3><p>C, V, R and a racket, stitched into the fabric.</p></div>
+      <div class="step" data-img="2" data-tag="Pocket · front zip"><span class="n eyebrow">Pocket</span><h3>A front zip pocket.</h3><p>Phone, keys and cards ride with the racket.</p></div>
+      <div class="step" data-img="3" data-tag="36 cm · curved zip"><span class="n eyebrow">36 cm</span><h3>A zip that follows the curve.</h3><p>It opens around the edge, so the racket slides in and out in one move.</p></div>
+      <div class="step" data-img="4" data-tag="Collar · leather"><span class="n eyebrow">Collar</span><h3>The grip stays out.</h3><p>It sits above a leather collar. Carry it by the handle or on the adjustable shoulder strap.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="colours" id="colours" data-p>
+  <div class="stage" id="cstage">
+    <div class="swatchwrap" id="swatches"></div>
+    <div class="cinfo">
+      <span class="count" id="ccount">01 / 10</span>
+      <h3 id="cname">Navy</h3>
+      <dl><dt>Body</dt><dd id="cbody"></dd><dt>Trim</dt><dd id="ctrim"></dd><dt>Hardware</dt><dd id="chw"></dd></dl>
+      <span class="sold" id="csold" hidden>Sold out</span>
+      <div class="dots" id="cdots"></div>
+    </div>
+  </div>
+</section>
+
+<section class="wild" id="wild" data-p>
+  <div class="stage">
+    <div class="head"><h2>Carried, <em>not</em> stuffed in a bag.</h2><span class="eyebrow">Chapter three · in the wild</span></div>
+    <div class="reel" id="reel">
+      <figure><img src="img/steps.jpg" alt="Two players on court steps with Latte and Mocha covers"><figcaption>Latte · Mocha</figcaption></figure>
+      <figure><img src="img/club.jpg" alt="Latte cover worn on the back at the social club"><figcaption>Latte</figcaption></figure>
+      <figure class="tall"><img src="img/studio.jpg" alt="Total Black and Ash covers in the studio"><figcaption>Total Black · Ash</figcaption></figure>
+      <figure><img src="img/navy.jpg" alt="Navy cover on the court"><figcaption>Navy</figcaption></figure>
+      <figure class="tall"><img src="img/pink.jpg" alt="Baby Pink cover held by its handle"><figcaption>Baby Pink</figcaption></figure>
+      <figure><img src="img/ginger.jpg" alt="Ginger cover on the shoulder strap"><figcaption>Ginger</figcaption></figure>
+      <figure class="tall"><img src="img/sky.jpg" alt="Sky Denim cover in the studio"><figcaption>Sky Denim</figcaption></figure>
+      <figure class="tall"><img src="img/sofa.jpg" alt="Two covers in their box on a sofa in afternoon sun"><figcaption>Boxed</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="gift" data-p>
+  <div class="pair"><img class="a" src="img/unbox.jpg" alt="Latte cover being unboxed"><img class="b" src="img/pouch.jpg" alt="Clip-on ball pouch with a Latte cover"></div>
+  <div class="txt rv">
+    <span class="eyebrow">Chapter four · the box</span>
+    <h2>It arrives ready to give.</h2>
+    <p>Every cover comes with a free clip-on ball pouch that holds three balls.</p>
+  </div>
+</section>
+
+<section class="offer" id="offer">
+  <span class="ghost" aria-hidden="true">COVR</span>
+  <span class="eyebrow">Until 26 October</span>
+  <div class="big"><s>$249</s>20% off</div>
+  <div class="code">Use code <b>COV20</b> at checkout.</div>
+  <a class="btn" href="https://www.padelcovr.com/collections/padel-racket-covers" target="_blank" rel="noopener">Choose your colour →</a>
+</section>
+<footer><span>COVR · padelcovr.com</span><span>Homepage preview · not live</span></footer>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var C=[
+    ['navy','Navy','Navy cotton canvas','Cream leather','Gold','#dfe3ea'],
+    ['latte','Latte','Undyed cotton canvas','Dark brown leather','Gold','#efe6d8'],
+    ['ginger','Ginger','Undyed cotton canvas','Tan leather','Gold','#f1e2cf'],
+    ['total-black','Total Black','Black cotton canvas','Black leather','Black or gold','#d9d5cf'],
+    ['ash','Ash','Ash grey cotton denim','Black leather','Darkened','#e2e1df'],
+    ['coffee','Coffee','Coffee cotton twill','Black leather','Darkened','#e6dbd2'],
+    ['mocha','Mocha','Walnut cotton canvas','Crème leather','Gold','#eadccd',1],
+    ['vanilla-cream','Vanilla Cream','Vanilla cotton twill','Cream leather','Gold','#f4ecdc'],
+    ['baby-pink','Baby Pink','Blush cotton twill','White leather','Gold','#f6e1e4'],
+    ['sky-denim','Sky Denim','Sky-blue cotton denim','Natural leather','Gold','#dfe8f1']
+  ];
+  var sw=document.getElementById('swatches'),dots=document.getElementById('cdots');
+  C.forEach(function(c,i){
+    var im=new Image();im.src='img/c-'+c[0]+'.webp';im.alt=c[1]+' COVR cover';if(!i)im.className='on';sw.appendChild(im);
+    var b=document.createElement('b');b.style.background=c[5];b.title=c[1];if(!i)b.className='on';dots.appendChild(b);
+  });
+  var cur=-1;
+  function setColour(i){
+    if(i===cur)return;cur=i;var c=C[i];
+    sw.querySelectorAll('img').forEach(function(m,k){m.classList.toggle('on',k===i)});
+    dots.querySelectorAll('b').forEach(function(m,k){m.classList.toggle('on',k===i)});
+    document.getElementById('cname').textContent=c[1];
+    document.getElementById('cbody').textContent=c[2];
+    document.getElementById('ctrim').textContent=c[3];
+    document.getElementById('chw').textContent=c[4];
+    document.getElementById('ccount').textContent=String(i+1).padStart(2,'0')+' / 10';
+    document.getElementById('csold').hidden=!c[6];
+    document.getElementById('cstage').style.backgroundColor=c[5];
+  }
+  setColour(0);
+
+  // manifesto words
+  var mf=document.getElementById('mf'),words=[];
+  [].slice.call(mf.childNodes).forEach(function(n){
+    if(n.nodeType===3){n.textContent.split(/(\s+)/).forEach(function(t){if(!t)return;
+      if(/^\s+$/.test(t)){mf.insertBefore(document.createTextNode(t),n)}else{var s=document.createElement('span');s.textContent=t;mf.insertBefore(s,n)}});mf.removeChild(n)}
+  });
+  words=[].slice.call(mf.querySelectorAll('span'));
+  if(reduce)words.forEach(function(w){w.classList.add('on')});
+
+  var steps=[].slice.call(document.querySelectorAll('.step')),imgs=[].slice.call(document.querySelectorAll('#frame img')),tag=document.getElementById('tag');
+  var reel=document.getElementById('reel'),figs=[].slice.call(reel.querySelectorAll('img'));
+  var pEls=[].slice.call(document.querySelectorAll('[data-p]'));
+
+  function prog(el){var r=el.getBoundingClientRect(),h=r.height-innerHeight;return h>0?Math.min(1,Math.max(0,-r.top/h)):Math.min(1,Math.max(0,(innerHeight-r.top)/(innerHeight+r.height)))}
+
+  function frame(){
+    pEls.forEach(function(el){el.style.setProperty('--p',prog(el).toFixed(4))});
+    if(!reduce){
+      var mp=prog(document.querySelector('.manifesto'));var n=Math.round(mp*1.25*words.length);
+      words.forEach(function(w,i){w.classList.toggle('on',i<n)});
+    }
+    // materials: the step nearest the viewport centre wins
+    var best=0,bd=1e9;steps.forEach(function(s,i){var r=s.getBoundingClientRect(),d=Math.abs(r.top+r.height/2-innerHeight/2);if(d<bd){bd=d;best=i}});
+    steps.forEach(function(s,i){s.classList.toggle('on',i===best)});
+    imgs.forEach(function(m,i){m.classList.toggle('on',i===+steps[best].dataset.img)});
+    tag.textContent=steps[best].dataset.tag;
+    // colours
+    var cp=prog(document.getElementById('colours'));setColour(Math.min(C.length-1,Math.floor(cp*C.length*0.999)));
+    // reel
+    var wp=prog(document.getElementById('wild'));var max=Math.max(0,reel.scrollWidth-innerWidth);
+    if(!reduce){reel.style.transform='translateX('+(-wp*max).toFixed(1)+'px)';
+      figs.forEach(function(f){var r=f.getBoundingClientRect();var c=(r.left+r.width/2)/innerWidth-.5;f.style.setProperty('--px',(c*-18).toFixed(1)+'px')});}
+  }
+  var ticking=false;function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(function(){ticking=false;frame()})}}
+  addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);frame();
+
+  // gentle reveals for plain blocks
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.2});
+  document.querySelectorAll('.rv').forEach(function(el){if(reduce)el.classList.add('in');else io.observe(el)});
+  setTimeout(function(){document.querySelectorAll('.rv').forEach(function(el){if(el.getBoundingClientRect().top<innerHeight)el.classList.add('in')})},50);
+})();
+</script>
