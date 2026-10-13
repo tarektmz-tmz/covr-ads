@@ -1,0 +1,109 @@
+{%- comment -%}
+  MAI MURI sizes: the bag drawn at each size, to scale against the largest,
+  with measurements, weight and what fits. Colour dots above swap every bag to
+  that colour. Blocks: "size" (one per size) and "swatch" (one per colour).
+{%- endcomment -%}
+{%- render 'mai-base' -%}
+{%- assign mm_sw = section.blocks | where: 'type', 'swatch' -%}
+{%- assign mm_sz = section.blocks | where: 'type', 'size' -%}
+{%- assign mm_first = mm_sw.first.settings.image -%}
+<section class="mm mm-sz" id="{{ section.settings.anchor | default: 'sizes' }}" style="--mm-sz-bg:{{ section.settings.background }}">
+  <div class="mm-sz__head">
+    <h2 class="mm-sz__title">{{ section.settings.title | escape }}{%- if section.settings.title_italic != blank -%} <em>{{ section.settings.title_italic | escape }}</em>{%- endif -%}</h2>
+    {%- if mm_sw.size > 0 -%}
+      <div class="mm-sz__swatches" role="radiogroup" aria-label="Colour">
+        {%- for b in mm_sw -%}
+          <button type="button" class="mm-sz__sw{% if forloop.first %} is-on{% endif %}" style="--mm-dot:{{ b.settings.dot }}" role="radio" aria-checked="{% if forloop.first %}true{% else %}false{% endif %}" aria-label="{{ b.settings.name | escape }}" data-src="{{ b.settings.image | image_url: width: 900 }}" data-name="{{ b.settings.name | escape }}" {{ b.shopify_attributes }}></button>
+        {%- endfor -%}
+        <span class="mm-sz__swname" aria-live="polite">{{ mm_sw.first.settings.name | escape }}</span>
+      </div>
+    {%- endif -%}
+  </div>
+  <ol class="mm-sz__row" role="list">
+    {%- for b in mm_sz -%}
+      <li class="mm-sz__item" {{ b.shopify_attributes }}>
+        <div class="mm-sz__stage">
+          {%- if mm_first != blank -%}<img class="mm-sz__img" src="{{ mm_first | image_url: width: 900 }}" alt="{{ b.settings.name | escape }} size" loading="lazy" style="width:{{ b.settings.scale }}%">{%- endif -%}
+        </div>
+        <p class="mm-sz__name">{{ b.settings.name | escape }}</p>
+        <p class="mm-sz__dims">{{ b.settings.dims | escape }}</p>
+        {%- if b.settings.weight != blank -%}<p class="mm-sz__weight">{{ b.settings.weight | escape }}</p>{%- endif -%}
+        {%- if b.settings.fits != blank -%}<p class="mm-sz__fits">{{ b.settings.fits | escape }}</p>{%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ol>
+  {%- if section.settings.note != blank -%}<p class="mm-sz__note">{{ section.settings.note | escape }}</p>{%- endif -%}
+</section>
+<script>
+  (function(){var r=document.getElementById('{{ section.settings.anchor | default: 'sizes' }}');if(!r)return;
+    var imgs=r.querySelectorAll('.mm-sz__img'),nm=r.querySelector('.mm-sz__swname');
+    r.querySelectorAll('.mm-sz__sw').forEach(function(b){b.addEventListener('click',function(){
+      r.querySelectorAll('.mm-sz__sw').forEach(function(x){x.classList.remove('is-on');x.setAttribute('aria-checked','false')});
+      b.classList.add('is-on');b.setAttribute('aria-checked','true');if(nm)nm.textContent=b.dataset.name;
+      imgs.forEach(function(i){i.style.opacity=0;setTimeout(function(){i.src=b.dataset.src;i.style.opacity=1},160)});
+    })});
+  })();
+</script>
+<style>
+  .mm-sz{background:var(--mm-sz-bg);padding:clamp(56px,7vw,110px) clamp(16px,2.6vw,50px)}
+  .mm-sz__head{max-width:1500px;margin:0 auto clamp(30px,4vw,60px);display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .mm-sz__title{margin:0;font:400 clamp(48px,5.6vw,92px)/.95 var(--mm-serif)}
+  .mm-sz__title em{font-style:italic;color:#c9806e}
+  .mm-sz__swatches{display:flex;align-items:center;gap:10px}
+  .mm-sz__sw{width:30px;height:30px;border-radius:50%;border:0;padding:0;background:var(--mm-dot);cursor:pointer;box-shadow:0 0 0 2px var(--mm-sz-bg),0 0 0 3px rgba(46,33,25,.18);transition:transform .2s,box-shadow .2s}
+  .mm-sz__sw:hover{transform:scale(1.1)}
+  .mm-sz__sw.is-on{box-shadow:0 0 0 3px var(--mm-sz-bg),0 0 0 5px var(--mm-ink)}
+  .mm-sz__swname{margin-left:6px;min-width:80px;font:400 22px/1 var(--mm-serif);font-style:italic}
+  .mm-sz__row{list-style:none;margin:0 auto;padding:0;max-width:1500px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,2vw,36px);align-items:start}
+  .mm-sz__item{text-align:center;min-width:0}
+  .mm-sz__stage{height:clamp(150px,20vw,330px);display:flex;align-items:flex-end;justify-content:center;border-bottom:1.5px solid var(--mm-ink);padding-bottom:10px}
+  .mm-sz__img{max-width:100%;height:auto;filter:drop-shadow(0 14px 14px rgba(46,33,25,.14));transition:opacity .16s}
+  .mm-sz__name{margin:16px 0 6px;font:400 clamp(30px,2.8vw,44px)/1 var(--mm-serif)}
+  .mm-sz__dims{margin:0;font:500 12px/1.4 var(--mm-sans);letter-spacing:.08em}
+  .mm-sz__weight{margin:2px 0 0;font:400 12px/1.4 var(--mm-sans);color:#6b5d53;letter-spacing:.06em}
+  .mm-sz__fits{margin:10px auto 0;max-width:24ch;font:400 14px/1.45 var(--mm-sans);color:#6b5d53}
+  .mm-sz__note{max-width:1500px;margin:26px auto 0;font:400 13px/1.4 var(--mm-sans);color:#6b5d53;text-align:center}
+  @media (max-width:749px){
+    .mm-sz__row{grid-template-columns:1fr 1fr;row-gap:36px}
+    .mm-sz__stage{height:150px}
+    .mm-sz__fits{font-size:13px}
+  }
+</style>
+
+{% schema %}
+{
+  "name": "MAI MURI sizes",
+  "tag": "div",
+  "class": "mai-sizes-section",
+  "settings": [
+    { "type": "text", "id": "anchor", "label": "Anchor", "default": "sizes" },
+    { "type": "color", "id": "background", "label": "Background", "default": "#f1ede6" },
+    { "type": "text", "id": "title", "label": "Title", "default": "Four sizes," },
+    { "type": "text", "id": "title_italic", "label": "Title, italic part", "default": "one shape" },
+    { "type": "text", "id": "note", "label": "Note under the sizes" }
+  ],
+  "blocks": [
+    {
+      "type": "size",
+      "name": "Size",
+      "settings": [
+        { "type": "text", "id": "name", "label": "Name" },
+        { "type": "range", "id": "scale", "label": "Drawn width (% of the largest)", "min": 10, "max": 100, "step": 1, "unit": "%", "default": 100 },
+        { "type": "text", "id": "dims", "label": "Measurements" },
+        { "type": "text", "id": "weight", "label": "Weight" },
+        { "type": "textarea", "id": "fits", "label": "What fits" }
+      ]
+    },
+    {
+      "type": "swatch",
+      "name": "Colour",
+      "settings": [
+        { "type": "text", "id": "name", "label": "Colour name" },
+        { "type": "color", "id": "dot", "label": "Dot colour", "default": "#2e2119" },
+        { "type": "image_picker", "id": "image", "label": "Cut-out photo" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "MAI MURI sizes" }]
+}
+{% endschema %}

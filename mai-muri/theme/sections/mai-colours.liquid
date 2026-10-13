@@ -1,0 +1,125 @@
+{%- comment -%}
+  MAI MURI colour cards: a serif heading row, then one rounded tile per colour
+  (blocks). Each card shows the bag on a tint of its colour, the price of the
+  chosen size, size buttons (Micro, XS, M, XL) and Add to Bag. Variants are
+  matched by colour name against the product's first option.
+{%- endcomment -%}
+{%- render 'mai-base' -%}
+{%- assign mm_product = all_products[section.settings.product] -%}
+<section class="mm mm-col" id="{{ section.settings.anchor | default: 'colours' }}" style="--mm-col-bg:{{ section.settings.background }}">
+  <div class="mm-col__head">
+    <h2 class="mm-col__title">{{ section.settings.title | escape }}{%- if section.settings.title_italic != blank -%} <em>{{ section.settings.title_italic | escape }}</em>{%- endif -%}</h2>
+    {%- if section.settings.text != blank -%}<p class="mm-col__text">{{ section.settings.text | escape }}</p>{%- endif -%}
+  </div>
+  {%- if mm_product != blank -%}
+  <ul class="mm-col__grid" role="list">
+    {%- for block in section.blocks -%}
+      {%- assign want = block.settings.colour | downcase | strip -%}
+      {%- assign first_v = nil -%}
+      {%- assign chosen = nil -%}
+      {%- for v in mm_product.variants -%}
+        {%- assign o1 = v.option1 | downcase -%}
+        {%- if o1 == want -%}
+          {%- if first_v == nil -%}{%- assign first_v = v -%}{%- endif -%}
+          {%- if v.option2 == section.settings.default_size -%}{%- assign chosen = v -%}{%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- if chosen == nil -%}{%- assign chosen = first_v -%}{%- endif -%}
+      {%- if chosen != nil -%}
+        <li class="mm-cc" style="--mm-tint:{{ block.settings.tint }};--mm-dot:{{ block.settings.dot }}" {{ block.shopify_attributes }}>
+          <a class="mm-cc__tile" href="{{ chosen.url }}">
+            <span class="mm-cc__dot" aria-hidden="true"></span>
+            {%- assign img = block.settings.image | default: chosen.featured_image -%}
+            {%- if img != blank -%}{{ img | image_url: width: 900 | image_tag: loading: 'lazy', widths: '450, 700, 900', sizes: '(min-width: 990px) 20vw, 60vw', alt: block.settings.alt }}{%- endif -%}
+          </a>
+          <div class="mm-cc__row">
+            <a class="mm-cc__name" href="{{ chosen.url }}">{{ block.settings.colour | escape }}</a>
+            <span class="mm-cc__price" data-mm-price>{{ chosen.price | money }}</span>
+          </div>
+          <form method="post" action="{{ routes.cart_add_url }}" class="mm-cc__form" data-mm-card>
+            <fieldset class="mm-cc__sizes">
+              <legend class="mm-cc__legend">Size</legend>
+              {%- for v in mm_product.variants -%}
+                {%- assign o1 = v.option1 | downcase -%}
+                {%- if o1 == want -%}
+                  <label class="mm-cc__size{% unless v.available %} is-off{% endunless %}">
+                    <input type="radio" name="id" value="{{ v.id }}" data-price="{{ v.price | money | escape }}" {% if v.id == chosen.id %}checked{% endif %} {% unless v.available %}disabled{% endunless %}>
+                    <span>{{ v.option2 | escape }}</span>
+                  </label>
+                {%- endif -%}
+              {%- endfor -%}
+            </fieldset>
+            <input type="hidden" name="quantity" value="1">
+            <button type="submit" class="mm-cc__btn">Add to Bag</button>
+          </form>
+        </li>
+      {%- endif -%}
+    {%- endfor -%}
+  </ul>
+  {%- endif -%}
+</section>
+<script>
+  document.querySelectorAll('#{{ section.settings.anchor | default: 'colours' }} [data-mm-card]').forEach(function(f){
+    f.addEventListener('change',function(e){var r=e.target;if(r.name!=='id')return;var p=f.closest('.mm-cc').querySelector('[data-mm-price]');if(p)p.textContent=r.dataset.price;});
+  });
+</script>
+<style>
+  .mm-col{background:var(--mm-col-bg);padding:clamp(56px,7vw,110px) clamp(16px,2.6vw,50px)}
+  .mm-col__head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin:0 auto clamp(26px,3vw,44px);max-width:1500px}
+  .mm-col__title{margin:0;font:400 clamp(48px,5.6vw,92px)/.95 var(--mm-serif);letter-spacing:-.01em}
+  .mm-col__title em{font-style:italic;color:#c9806e}
+  .mm-col__text{margin:0;max-width:34ch;font:400 16px/1.5 var(--mm-sans);color:#6b5d53}
+  .mm-col__grid{list-style:none;margin:0 auto;padding:0;max-width:1500px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(12px,1.4vw,22px)}
+  .mm-cc{position:relative;display:flex;flex-direction:column;min-width:0}
+  .mm-cc__tile{position:relative;display:block;aspect-ratio:4/5;border-radius:22px;background:var(--mm-tint);overflow:hidden}
+  .mm-cc__tile img{position:absolute;left:8%;right:8%;top:14%;width:84%;height:74%;object-fit:contain;filter:drop-shadow(0 16px 18px rgba(46,33,25,.16));transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+  .mm-cc__tile:hover img{transform:translateY(-8px) rotate(-3deg)}
+  .mm-cc__dot{position:absolute;top:16px;left:16px;width:18px;height:18px;border-radius:50%;background:var(--mm-dot);box-shadow:0 0 0 3px rgba(255,255,255,.7)}
+  .mm-cc__row{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-top:14px}
+  .mm-cc__name{font:400 26px/1 var(--mm-serif);text-decoration:none}
+  .mm-cc__price{font:400 14px/1 var(--mm-sans);color:#6b5d53;white-space:nowrap}
+  .mm-cc__form{margin:12px 0 0;display:grid;gap:10px}
+  .mm-cc__sizes{border:0;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+  .mm-cc__legend{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .mm-cc__size{position:relative;cursor:pointer}
+  .mm-cc__size input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+  .mm-cc__size span{display:block;text-align:center;border:1px solid rgba(46,33,25,.25);border-radius:999px;padding:7px 0;font:500 12.5px/1 var(--mm-sans);letter-spacing:.02em;transition:all .15s}
+  .mm-cc__size input:checked+span{background:var(--mm-ink);border-color:var(--mm-ink);color:#fff}
+  .mm-cc__size input:focus-visible+span{outline:2px solid #c9806e;outline-offset:2px}
+  .mm-cc__size.is-off span{opacity:.35;text-decoration:line-through}
+  .mm-cc__btn{width:100%;border:0;border-radius:999px;background:var(--mm-ink);color:#fff;padding:12px 16px;font:400 15px/1 var(--mm-sans);cursor:pointer;transition:background .2s}
+  .mm-cc__btn:hover{background:#c9806e}
+  @media (max-width:989px){.mm-col__grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(240px,62%);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-inline:calc(-1 * clamp(16px,2.6vw,50px));padding-inline:clamp(16px,2.6vw,50px);scroll-padding-inline:clamp(16px,2.6vw,50px)}.mm-cc{scroll-snap-align:start}}
+</style>
+
+{% schema %}
+{
+  "name": "MAI MURI colours",
+  "tag": "div",
+  "class": "mai-colours-section",
+  "settings": [
+    { "type": "text", "id": "anchor", "label": "Anchor", "default": "colours" },
+    { "type": "color", "id": "background", "label": "Background", "default": "#ffffff" },
+    { "type": "text", "id": "title", "label": "Title", "default": "Pick your" },
+    { "type": "text", "id": "title_italic", "label": "Title, italic part", "default": "colour" },
+    { "type": "textarea", "id": "text", "label": "Text" },
+    { "type": "product", "id": "product", "label": "Product" },
+    { "type": "text", "id": "default_size", "label": "Size selected at first", "default": "M" }
+  ],
+  "blocks": [
+    {
+      "type": "colour",
+      "name": "Colour",
+      "settings": [
+        { "type": "text", "id": "colour", "label": "Colour name (as in the product)" },
+        { "type": "image_picker", "id": "image", "label": "Cut-out photo" },
+        { "type": "text", "id": "alt", "label": "Photo description" },
+        { "type": "color", "id": "tint", "label": "Tile colour", "default": "#f1ede6" },
+        { "type": "color", "id": "dot", "label": "Dot colour", "default": "#2e2119" }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [{ "name": "MAI MURI colours" }]
+}
+{% endschema %}

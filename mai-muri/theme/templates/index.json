@@ -3,95 +3,192 @@
   "mm_hero": {
    "type": "mai-hero",
    "settings": {
-    "image": "shopify://shop_images/mai-hero-desktop.jpg",
-    "image_mobile": "shopify://shop_images/mai-hero-mobile.jpg",
-    "background": "#e1dcd6",
-    "text_color": "#111111",
-    "words": "New In\nTotes\nColour\nEveryday\nTravel\nWork",
-    "links": "shopify://products/contrast-color-large-nylon-canvas-tote-bag\nshopify://products/contrast-color-large-nylon-canvas-tote-bag\nshopify://products/contrast-color-large-nylon-canvas-tote-bag\nshopify://products/contrast-color-large-nylon-canvas-tote-bag\nshopify://products/contrast-color-large-nylon-canvas-tote-bag\nshopify://products/contrast-color-large-nylon-canvas-tote-bag",
-    "button_label": "Shop the Tote",
-    "button_link": "shopify://products/contrast-color-large-nylon-canvas-tote-bag"
+    "image": "shopify://shop_images/mm-hero-desktop.jpg",
+    "image_mobile": "shopify://shop_images/mm-hero-mobile.jpg",
+    "background": "#f1ede6",
+    "text_color": "#2e2119",
+    "accent": "#c9806e",
+    "eyebrow": "The Muri Bag",
+    "heading": "Soft nylon,\n*five ways.*",
+    "text": "Taupe, chocolate, olive, rosé and black. From Micro to XL.",
+    "button_label": "Shop the bag",
+    "button_link": "shopify://products/muri-bag",
+    "button2_label": "Find your size",
+    "button2_link": "#sizes"
    }
   },
-  "mm_new": {
-   "type": "mai-band-grid",
-   "settings": {
-    "title": "New In",
-    "band_color": "#2f6e6f",
-    "band_text": "#ffffff",
-    "link_label": "Shop More",
-    "link": "shopify://products/contrast-color-large-nylon-canvas-tote-bag",
-    "product": "contrast-color-large-nylon-canvas-tote-bag",
-    "card_prefix": "The Tote",
-    "tag": "New",
-    "note": ""
-   }
-  },
-  "mm_uses": {
-   "type": "mai-uses",
+  "mm_colours": {
+   "type": "mai-colours",
    "blocks": {
-    "t1": {
-     "type": "tile",
+    "c0": {
+     "type": "colour",
      "settings": {
-      "word": "Daily",
-      "colour": "Pink",
-      "image": "shopify://shop_images/mai-tote-pink.png",
-      "alt": "The pink tote with a green pocket",
-      "caption": "Pink",
-      "tile_color": "#ffd84d",
-      "tile_text": "#111111"
+      "colour": "Taupe",
+      "image": "shopify://shop_images/mm-bag-taupe.png",
+      "alt": "The Muri Bag in Taupe",
+      "tint": "#e9e0d4",
+      "dot": "#a8927c"
      }
     },
-    "t2": {
-     "type": "tile",
+    "c1": {
+     "type": "colour",
      "settings": {
-      "word": "Travel",
-      "colour": "Khaki",
-      "image": "shopify://shop_images/mai-tote-khaki.png",
-      "alt": "The khaki tote with an orange pocket",
-      "caption": "Khaki",
-      "tile_color": "#a9c8ff",
-      "tile_text": "#111111"
+      "colour": "Chocolate",
+      "image": "shopify://shop_images/mm-bag-chocolate.png",
+      "alt": "The Muri Bag in Chocolate",
+      "tint": "#e6d6cc",
+      "dot": "#5b3b2c"
      }
     },
-    "t3": {
-     "type": "tile",
+    "c2": {
+     "type": "colour",
      "settings": {
-      "word": "Shopping",
-      "colour": "Green",
-      "image": "shopify://shop_images/mai-tote-green.png",
-      "alt": "The green tote with a blue pocket",
-      "caption": "Green",
-      "tile_color": "#ff7a45",
-      "tile_text": "#111111"
+      "colour": "Olive",
+      "image": "shopify://shop_images/mm-bag-olive.png",
+      "alt": "The Muri Bag in Olive",
+      "tint": "#e2e3cf",
+      "dot": "#545a37"
      }
     },
-    "t4": {
-     "type": "tile",
+    "c3": {
+     "type": "colour",
      "settings": {
-      "word": "Work",
-      "colour": "Apricot",
-      "image": "shopify://shop_images/mai-tote-apricot.png",
-      "alt": "The apricot tote",
-      "caption": "Apricot",
-      "tile_color": "#cbb8ff",
-      "tile_text": "#111111"
+      "colour": "Rosé",
+      "image": "shopify://shop_images/mm-bag-rose.png",
+      "alt": "The Muri Bag in Rosé",
+      "tint": "#f6dfd7",
+      "dot": "#e2ab9d"
+     }
+    },
+    "c4": {
+     "type": "colour",
+     "settings": {
+      "colour": "Black",
+      "image": "shopify://shop_images/mm-bag-black.png",
+      "alt": "The Muri Bag in Black",
+      "tint": "#e4e1dc",
+      "dot": "#1b1b1b"
      }
     }
    },
    "block_order": [
-    "t1",
-    "t2",
-    "t3",
-    "t4"
+    "c0",
+    "c1",
+    "c2",
+    "c3",
+    "c4"
    ],
    "settings": {
-    "title": "Made For",
-    "band_color": "#eba7cf",
-    "band_text": "#ffffff",
-    "link_label": "Shop More",
-    "link": "shopify://products/contrast-color-large-nylon-canvas-tote-bag",
-    "product": "contrast-color-large-nylon-canvas-tote-bag"
+    "anchor": "colours",
+    "background": "#ffffff",
+    "title": "Pick your",
+    "title_italic": "colour",
+    "text": "Five colours, one soft shape. Choose a size on each card and add it to your bag.",
+    "product": "muri-bag",
+    "default_size": "M"
+   }
+  },
+  "mm_sizes": {
+   "type": "mai-sizes",
+   "blocks": {
+    "s0": {
+     "type": "size",
+     "settings": {
+      "name": "Micro",
+      "scale": 32,
+      "dims": "13.3 × 17.1 × 10.2 cm",
+      "weight": "75 g",
+      "fits": "Phone, wallet, small essentials."
+     }
+    },
+    "s1": {
+     "type": "size",
+     "settings": {
+      "name": "XS",
+      "scale": 67,
+      "dims": "26 × 35.6 × 8.9 cm",
+      "weight": "135 g",
+      "fits": "iPad mini, water bottle, daily essentials."
+     }
+    },
+    "s2": {
+     "type": "size",
+     "settings": {
+      "name": "M",
+      "scale": 81,
+      "dims": "30.5 × 43.2 × 10.2 cm",
+      "weight": "160 g",
+      "fits": "10.9\" iPad, water bottle, clothes, daily essentials."
+     }
+    },
+    "s3": {
+     "type": "size",
+     "settings": {
+      "name": "XL",
+      "scale": 100,
+      "dims": "38.7 × 53.3 × 14 cm",
+      "weight": "195 g",
+      "fits": "15\" laptop, jacket, travel items, daily essentials."
+     }
+    },
+    "w0": {
+     "type": "swatch",
+     "settings": {
+      "name": "Rosé",
+      "dot": "#e2ab9d",
+      "image": "shopify://shop_images/mm-bag-rose.png"
+     }
+    },
+    "w1": {
+     "type": "swatch",
+     "settings": {
+      "name": "Taupe",
+      "dot": "#a8927c",
+      "image": "shopify://shop_images/mm-bag-taupe.png"
+     }
+    },
+    "w2": {
+     "type": "swatch",
+     "settings": {
+      "name": "Chocolate",
+      "dot": "#5b3b2c",
+      "image": "shopify://shop_images/mm-bag-chocolate.png"
+     }
+    },
+    "w3": {
+     "type": "swatch",
+     "settings": {
+      "name": "Olive",
+      "dot": "#545a37",
+      "image": "shopify://shop_images/mm-bag-olive.png"
+     }
+    },
+    "w4": {
+     "type": "swatch",
+     "settings": {
+      "name": "Black",
+      "dot": "#1b1b1b",
+      "image": "shopify://shop_images/mm-bag-black.png"
+     }
+    }
+   },
+   "block_order": [
+    "s0",
+    "s1",
+    "s2",
+    "s3",
+    "w0",
+    "w1",
+    "w2",
+    "w3",
+    "w4"
+   ],
+   "settings": {
+    "anchor": "sizes",
+    "background": "#f1ede6",
+    "title": "Four sizes,",
+    "title_italic": "one shape",
+    "note": "Height × width × depth. Tap a colour to see every size in it."
    }
   },
   "mm_statement": {
@@ -100,29 +197,29 @@
     "f1": {
      "type": "fact",
      "settings": {
-      "title": "Durable nylon",
-      "text": "A colour-block body in durable nylon canvas, made for daily use."
+      "title": "Light nylon",
+      "text": "Lightweight, water-resistant nylon, used for every part of the bag."
      }
     },
     "f2": {
      "type": "fact",
      "settings": {
-      "title": "Soft structure",
-      "text": "Spacious, with a soft structure that is easy to carry."
+      "title": "Gathered top",
+      "text": "A soft, gathered opening above a roomy body."
      }
     },
     "f3": {
      "type": "fact",
      "settings": {
-      "title": "Shoulder or hand",
-      "text": "Long straps sit on your shoulder or carry it in your hand."
+      "title": "Front pocket",
+      "text": "A flat patch pocket on the front."
      }
     },
     "f4": {
      "type": "fact",
      "settings": {
-      "title": "Pull-belt closure",
-      "text": "An easy pull-belt closes the top."
+      "title": "Two ways to carry",
+      "text": "By the handle, or on the adjustable shoulder strap."
      }
     }
    },
@@ -133,25 +230,27 @@
     "f4"
    ],
    "settings": {
+    "background": "#ffffff",
     "line_1": "MAI MURI",
-    "line_2": "On You",
-    "text": "A spacious colour-block tote in five colours. For every day, travel, shopping and work."
+    "line_2": "on you",
+    "text": "One soft bag in five colours and four sizes, for every day and every trip."
    }
   },
   "mm_newsletter": {
    "type": "mai-newsletter",
    "settings": {
-    "background": "#0a39b0",
-    "heading": "Newsletter",
+    "background": "#e7b3a4",
+    "text_color": "#2e2119",
+    "heading": "Stay *close~",
     "subheading": "Be the first to know.",
-    "text": "New colours and new bags. Sign up and hear about them first."
+    "text": "New colours and new sizes. Sign up and hear about them first."
    }
   }
  },
  "order": [
   "mm_hero",
-  "mm_new",
-  "mm_uses",
+  "mm_colours",
+  "mm_sizes",
   "mm_statement",
   "mm_newsletter"
  ]

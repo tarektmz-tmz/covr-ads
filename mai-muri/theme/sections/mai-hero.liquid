@@ -1,11 +1,10 @@
 {%- comment -%}
-  MAI MURI hero: a full-width photograph with very large words set across
-  the top, separated by slashes. The first word is blue. Each word can link.
+  MAI MURI hero: a wide photograph of the bags with a large serif headline on
+  top. Wrap a word in *stars* to set it in italic colour. Two pill buttons.
 {%- endcomment -%}
 {%- render 'mai-base' -%}
-{%- assign mm_words = section.settings.words | newline_to_br | split: '<br />' -%}
-{%- assign mm_links = section.settings.links | newline_to_br | split: '<br />' -%}
-<section class="mm mm-hero" style="--mm-hero-bg:{{ section.settings.background }};--mm-hero-ink:{{ section.settings.text_color }}">
+{%- assign mm_head = section.settings.heading | escape | replace: '*', '|' | split: '|' -%}
+<section class="mm mm-hero" style="--mm-hero-bg:{{ section.settings.background }};--mm-hero-ink:{{ section.settings.text_color }};--mm-hero-hi:{{ section.settings.accent }}">
   <div class="mm-hero__media">
     {%- if section.settings.image_mobile != blank -%}
       <picture>
@@ -16,35 +15,35 @@
       {{ section.settings.image | image_url: width: 2400 | image_tag: loading: 'eager', fetchpriority: 'high', sizes: '100vw', widths: '800, 1200, 1800, 2400' }}
     {%- endif -%}
   </div>
-  <h1 class="mm-hero__words">
-    {%- for w in mm_words -%}
-      {%- assign word = w | strip -%}
-      {%- if word != blank -%}
-        {%- assign href = mm_links[forloop.index0] | strip -%}
-        <span class="mm-hero__w{% if forloop.first %} mm-hero__w--hi{% endif %}">
-          {%- if href != blank -%}<a href="{{ href }}">{{ word | escape }}</a>{%- else -%}{{ word | escape }}{%- endif -%}/</span>
-      {%- endif -%}
-    {%- endfor -%}
-  </h1>
-  {%- if section.settings.button_label != blank -%}
-    <a class="mm-pill mm-hero__cta" href="{{ section.settings.button_link | default: '/collections/all' }}">{{ section.settings.button_label | escape }} <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
-  {%- endif -%}
+  <div class="mm-hero__copy">
+    {%- if section.settings.eyebrow != blank -%}<p class="mm-hero__eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+    <h1 class="mm-hero__head">
+      {%- for part in mm_head -%}{%- if forloop.index0 == 1 or forloop.index0 == 3 -%}<em>{{ part }}</em>{%- else -%}{{ part | newline_to_br }}{%- endif -%}{%- endfor -%}
+    </h1>
+    {%- if section.settings.text != blank -%}<p class="mm-hero__text">{{ section.settings.text | escape }}</p>{%- endif -%}
+    <div class="mm-hero__ctas">
+      {%- if section.settings.button_label != blank -%}<a class="mm-hero__btn" href="{{ section.settings.button_link | default: '/collections/all' }}">{{ section.settings.button_label | escape }}</a>{%- endif -%}
+      {%- if section.settings.button2_label != blank -%}<a class="mm-pill" href="{{ section.settings.button2_link | default: '#sizes' }}">{{ section.settings.button2_label | escape }} <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>{%- endif -%}
+    </div>
+  </div>
 </section>
 <style>
-  .mm-hero{position:relative;background:var(--mm-hero-bg);overflow:hidden}
-  .mm-hero__media{position:relative;aspect-ratio:2400/1400;max-height:calc(100svh - 110px);width:100%}
+  .mm-hero{position:relative;background:var(--mm-hero-bg);overflow:hidden;color:var(--mm-hero-ink)}
+  .mm-hero__media{position:relative;aspect-ratio:2400/1350;max-height:calc(100svh - 100px);min-height:560px;width:100%}
   .mm-hero__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 100%}
-  .mm-hero__words{position:absolute;top:clamp(10px,1.4vw,24px);left:clamp(14px,1.4vw,24px);right:clamp(14px,4vw,80px);margin:0;font:300 clamp(46px,6.9vw,124px)/1.02 var(--mm-sans);letter-spacing:-.045em;color:var(--mm-hero-ink)}
-  .mm-hero__w{display:inline-block;white-space:nowrap}
-  .mm-hero__w a{text-decoration:none;transition:color .2s}
-  .mm-hero__w a:hover{color:var(--mm-blue)}
-  .mm-hero__w--hi{color:var(--mm-blue)}
-  .mm-hero__cta{position:absolute;right:clamp(14px,2.6vw,50px);bottom:clamp(16px,2.6vw,46px)}
+  .mm-hero__copy{position:absolute;top:clamp(26px,4vw,72px);left:0;right:0;text-align:center;padding:0 20px;display:flex;flex-direction:column;align-items:center}
+  .mm-hero__eyebrow{margin:0 0 14px;font:500 12px/1 var(--mm-sans);letter-spacing:.22em;text-transform:uppercase}
+  .mm-hero__head{margin:0;font:400 clamp(52px,7.4vw,128px)/.92 var(--mm-serif);letter-spacing:-.015em}
+  .mm-hero__head em{font-style:italic;color:var(--mm-hero-hi)}
+  .mm-hero__text{margin:18px auto 0;max-width:46ch;font:400 clamp(15px,1.15vw,18px)/1.5 var(--mm-sans)}
+  .mm-hero__ctas{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap;justify-content:center}
+  .mm-hero__btn{display:inline-flex;align-items:center;border-radius:999px;background:var(--mm-hero-ink);color:var(--mm-hero-bg) !important;padding:10px 22px;font:400 15px/1 var(--mm-sans);text-decoration:none;transition:background .2s}
+  .mm-hero__btn:hover{background:var(--mm-hero-hi)}
+  .mm-hero .mm-pill{background:transparent;color:var(--mm-hero-ink);border-color:var(--mm-hero-ink)}
   @media (max-width:749px){
-    .mm-hero__media{aspect-ratio:1200/1500;max-height:none}
-    .mm-hero__words{font-size:clamp(44px,13.5vw,64px);line-height:1.04}
-    .mm-hero{display:flex;flex-direction:column;align-items:center}
-    .mm-hero__cta{position:static;margin:0 0 22px}
+    .mm-hero__media{aspect-ratio:1200/1500;max-height:none;min-height:0}
+    .mm-hero__copy{top:28px}
+    .mm-hero__head{font-size:clamp(46px,13vw,64px)}
   }
 </style>
 
@@ -56,12 +55,16 @@
   "settings": [
     { "type": "image_picker", "id": "image", "label": "Photograph, desktop" },
     { "type": "image_picker", "id": "image_mobile", "label": "Photograph, phones" },
-    { "type": "color", "id": "background", "label": "Background behind the photograph", "default": "#e1dcd6" },
-    { "type": "color", "id": "text_color", "label": "Big words colour", "default": "#111111" },
-    { "type": "textarea", "id": "words", "label": "Big words (one per line, first one is blue)", "default": "New In\nTotes\nColour\nNylon\nEveryday" },
-    { "type": "textarea", "id": "links", "label": "Links for the words (one per line, same order)" },
-    { "type": "text", "id": "button_label", "label": "Button", "default": "Shop the Tote" },
-    { "type": "url", "id": "button_link", "label": "Button link" }
+    { "type": "color", "id": "background", "label": "Background", "default": "#f1ede6" },
+    { "type": "color", "id": "text_color", "label": "Text colour", "default": "#2e2119" },
+    { "type": "color", "id": "accent", "label": "Italic word colour", "default": "#c9806e" },
+    { "type": "text", "id": "eyebrow", "label": "Small line above" },
+    { "type": "textarea", "id": "heading", "label": "Headline (wrap a word in *stars* for italic colour)", "default": "Soft nylon,\n*five ways.*" },
+    { "type": "textarea", "id": "text", "label": "Sentence under it" },
+    { "type": "text", "id": "button_label", "label": "Button", "default": "Shop the bag" },
+    { "type": "url", "id": "button_link", "label": "Button link" },
+    { "type": "text", "id": "button2_label", "label": "Second button", "default": "Find your size" },
+    { "type": "text", "id": "button2_link", "label": "Second button link", "default": "#sizes" }
   ],
   "presets": [{ "name": "MAI MURI hero" }]
 }

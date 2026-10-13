@@ -3,10 +3,10 @@
   and an email sign-up that adds the address to Shopify customers.
 {%- endcomment -%}
 {%- render 'mai-base' -%}
-<section class="mm mm-nl" style="--mm-nl:{{ section.settings.background }}">
+<section class="mm mm-nl" style="--mm-nl:{{ section.settings.background }};--mm-nl-ink:{{ section.settings.text_color }}">
   <div class="mm-nl__inner">
     <div class="mm-nl__head">
-      <h2 class="mm-nl__big">{{ section.settings.heading | escape }}</h2>
+      <h2 class="mm-nl__big">{{ section.settings.heading | escape | replace: '*', '<em>' | replace: '~', '</em>' }}</h2>
       {%- if section.settings.subheading != blank -%}<p class="mm-nl__sub">{{ section.settings.subheading | escape }}</p>{%- endif -%}
     </div>
     <div class="mm-nl__form">
@@ -28,17 +28,18 @@
   </div>
 </section>
 <style>
-  .mm-nl{background:var(--mm-nl);color:#fff}
+  .mm-nl{background:var(--mm-nl);color:var(--mm-nl-ink)}
   /* one sign-up is enough: hide the theme footer's own email box on pages that show this block */
   body:has(.mm-nl) footer .shopify-section:has(input[type=email]){display:none}
   .mm-nl__inner{max-width:1340px;margin:0 auto;padding:clamp(64px,8vw,120px) clamp(16px,2.6vw,50px);display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(28px,4vw,70px);align-items:center}
-  .mm-nl__big{margin:0;font:400 clamp(64px,8vw,132px)/.9 var(--mm-sans);letter-spacing:-.06em}
+  .mm-nl__big{margin:0;font:400 clamp(64px,8vw,132px)/.9 var(--mm-serif);letter-spacing:-.02em}
+  .mm-nl__big em{font-style:italic}
   .mm-nl__sub{margin:12px 0 0;font:300 clamp(34px,3.6vw,56px)/1 var(--mm-sans);letter-spacing:-.05em}
   .mm-nl__text{margin:0 0 18px;font:400 16px/1.4 var(--mm-sans);max-width:46ch}
   .mm-nl__row{display:flex}
   .mm-nl__label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-  .mm-nl__row input{flex:1;min-width:0;border:0;border-radius:0;padding:12px 16px;font:400 16px/1.2 var(--mm-sans);color:#111;background:#fff}
-  .mm-nl__row button{display:flex;align-items:center;gap:8px;border:0;border-radius:0;background:#000;color:#fff;padding:12px 30px;font:400 16px/1 var(--mm-sans);cursor:pointer}
+  .mm-nl__row input{flex:1;min-width:0;border:0;border-radius:999px 0 0 999px;padding:12px 16px;font:400 16px/1.2 var(--mm-sans);color:#111;background:#fff}
+  .mm-nl__row button{display:flex;align-items:center;gap:8px;border:0;border-radius:0 999px 999px 0;background:var(--mm-nl-ink);color:var(--mm-nl);padding:12px 30px;font:400 16px/1 var(--mm-sans);cursor:pointer}
   .mm-nl__row button svg{width:14px;height:14px}
   .mm-nl__ok,.mm-nl__err{margin:12px 0 0;font:400 15px/1.4 var(--mm-sans)}
   @media (max-width:749px){.mm-nl__inner{grid-template-columns:minmax(0,1fr)}.mm-nl__big{font-size:clamp(48px,17vw,80px)}.mm-nl__sub{font-size:clamp(28px,9vw,40px)}.mm-nl__row button{padding:12px 18px}}
@@ -50,8 +51,9 @@
   "tag": "div",
   "class": "mai-newsletter-section",
   "settings": [
-    { "type": "color", "id": "background", "label": "Background", "default": "#0a39b0" },
-    { "type": "text", "id": "heading", "label": "Big word", "default": "Newsletter" },
+    { "type": "color", "id": "background", "label": "Background", "default": "#e7b3a4" },
+    { "type": "color", "id": "text_color", "label": "Text colour", "default": "#2e2119" },
+    { "type": "text", "id": "heading", "label": "Big word (*word~ for italic)", "default": "Newsletter" },
     { "type": "text", "id": "subheading", "label": "Line under it", "default": "Be the first to know." },
     { "type": "textarea", "id": "text", "label": "Text above the email box", "default": "New colours and new bags. Sign up and hear about them first." }
   ],
