@@ -1,0 +1,62 @@
+{%- doc -%}
+  COVR product page v4 (buy box first): style only. Puts the colours, the
+  free pouch and Add to cart on the first screen, makes the main photo
+  smaller, and blends the white packshot backgrounds into the page colour.
+{%- enddoc -%}
+<style>
+  /* white photo backgrounds take the page colour */
+  .product-information .product-media-container,
+  .product-information .product-media { background: transparent !important; }
+  .product-information .product-media__image,
+  .covr-v3-swatch__img,
+  .covr-v3-buy__img { mix-blend-mode: multiply; }
+  /* the gallery is its own layer, so it needs the page colour behind it for the blend */
+  .product-information media-gallery { background-color: #f7f3ec; }
+
+  /* tighter buy column */
+  .covr-v3-heading__price { margin-top: 8px !important; font-size: 20px !important; }
+  .covr-v3-colours__heading { margin-bottom: 8px !important; }
+  .covr-v3-swatch { padding: 4px 2px 6px !important; }
+  .covr-v3-buy__heading { font-size: 20px !important; }
+  .covr-v3-buy__sub { margin-top: 2px !important; margin-bottom: 8px !important; }
+  .covr-v3-trust__row { margin-top: 0 !important; }
+
+  @media (min-width: 750px) {
+    .product-information media-gallery .product-media-container:first-child {
+      width: min(100%, 400px); justify-self: center; margin-inline: auto;
+    }
+    .covr-v3-heading__title { font-size: 40px !important; line-height: 1.02 !important; }
+    .covr-v3-colours__list { grid-template-columns: repeat(10, minmax(0, 1fr)) !important; gap: 6px 4px !important; }
+    .covr-v3-swatch__frame { width: 52px !important; height: 52px !important; }
+    .covr-v3-buy__swatches { grid-template-columns: repeat(11, minmax(0, 1fr)) !important; gap: 6px !important; }
+    .covr-v3-buy__swatch { height: auto !important; aspect-ratio: 1 / 0.86; }
+  }
+
+  @media (max-width: 749px) {
+    .product-information__media .product-media-container,
+    .product-information__media .product-media { height: 200px !important; aspect-ratio: auto !important; }
+    .product-information__media .product-media__image { object-fit: contain !important; height: 100% !important; }
+    .product-details { padding-top: 12px !important; }
+    .covr-v3-heading__title { font-size: 30px !important; }
+    .covr-v3-heading__price { margin-top: 4px !important; }
+    .covr-v3-colours__list { display: flex !important; flex-wrap: nowrap !important; overflow-x: auto; gap: 4px !important; scrollbar-width: none; margin-inline: -16px; padding-inline: 16px; }
+    .covr-v3-colours__list::-webkit-scrollbar { display: none; }
+    .covr-v3-colours__item { flex: 0 0 64px; }
+    .covr-v3-swatch { width: 64px !important; }
+    .covr-v3-buy__sub { display: none; }
+    .covr-v3-swatch__frame { width: 46px !important; height: 46px !important; }
+    .covr-v3-swatch__name { font-size: 10px !important; }
+    .covr-v3-buy__heading { font-size: 18px !important; }
+    .covr-v3-buy__swatches { display: flex !important; flex-wrap: nowrap; overflow-x: auto; gap: 6px !important; scrollbar-width: none; padding-bottom: 2px; }
+    .covr-v3-buy__swatches::-webkit-scrollbar { display: none; }
+    .covr-v3-buy__swatch { flex: 0 0 50px; width: 50px !important; height: 43px !important; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "COVR page style (v4)",
+  "tag": null,
+  "settings": []
+}
+{% endschema %}
