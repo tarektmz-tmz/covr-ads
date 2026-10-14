@@ -10,6 +10,7 @@ Palette: cream (#F5F0E6) text on photos, black, natural canvas tones.
 - `python3 scripts/make_ads.py <photo> --headline ... --sub ... --name ...` makes 1080x1080, 1080x1350 and 1080x1920 ads in `ads/`.
 - Don't advertise colours with stock 0 (check `stock` in products.json); in the Oct 2026 pull that was Mocha. The ball pouch is available (stock just not entered in Shopify).
 - Ad requests: make ONE image only, vertical 4:5 at 1080x1350 (no separate story/square versions unless asked).
+- Use the photo exactly as it is (no zoom-out, no blurred/mirrored extensions). Only a light fade behind the text at the top and bottom, no heavy dark gradients.
 - Keep text on images short (headline under ~8 words). Put the longer selling copy in the Facebook primary text instead.
 
 ## Designed ads (creative/)
