@@ -23,34 +23,43 @@
 
   @media (min-width: 750px) {
     .product-information media-gallery .product-media-container:first-child {
-      width: min(100%, 400px); justify-self: center; margin-inline: auto;
+      width: min(100%, 480px); justify-self: center; margin-inline: auto;
     }
     .covr-v3-heading__title { font-size: 40px !important; line-height: 1.02 !important; }
-    .covr-v3-colours__list { grid-template-columns: repeat(10, minmax(0, 1fr)) !important; gap: 6px 4px !important; }
-    .covr-v3-swatch__frame { width: 52px !important; height: 52px !important; }
-    .covr-v3-buy__swatches { grid-template-columns: repeat(11, minmax(0, 1fr)) !important; gap: 6px !important; }
-    .covr-v3-buy__swatch { height: auto !important; aspect-ratio: 1 / 0.86; }
+    .covr-v3-colours__list { grid-template-columns: repeat(10, minmax(0, 1fr)) !important; gap: 8px 4px !important; }
+    .covr-v3-swatch__frame { width: 62px !important; height: 62px !important; }
+    .covr-v3-swatch__name { font-size: 12px !important; }
+    .covr-v3-buy__swatches { grid-template-columns: repeat(6, minmax(0, 1fr)) !important; gap: 8px !important; }
+    .covr-v3-buy__swatch { height: auto !important; aspect-ratio: auto; height: 64px !important; }
   }
 
   @media (max-width: 749px) {
     .product-information__media .product-media-container,
-    .product-information__media .product-media { height: 200px !important; aspect-ratio: auto !important; }
+    .product-information__media .product-media { height: 260px !important; aspect-ratio: auto !important; }
     .product-information__media .product-media__image { object-fit: contain !important; height: 100% !important; }
     .product-details { padding-top: 12px !important; }
     .covr-v3-heading__title { font-size: 30px !important; }
     .covr-v3-heading__price { margin-top: 4px !important; }
     .covr-v3-colours__list { display: flex !important; flex-wrap: nowrap !important; overflow-x: auto; gap: 4px !important; scrollbar-width: none; margin-inline: -16px; padding-inline: 16px; }
     .covr-v3-colours__list::-webkit-scrollbar { display: none; }
-    .covr-v3-colours__item { flex: 0 0 64px; }
-    .covr-v3-swatch { width: 64px !important; }
+    .covr-v3-colours__item { flex: 0 0 74px; }
+    .covr-v3-swatch { width: 74px !important; }
     .covr-v3-buy__sub { display: none; }
-    .covr-v3-swatch__frame { width: 46px !important; height: 46px !important; }
-    .covr-v3-swatch__name { font-size: 10px !important; }
+    .covr-v3-swatch__frame { width: 58px !important; height: 58px !important; }
+    .covr-v3-swatch__name { font-size: 11px !important; }
     .covr-v3-buy__heading { font-size: 18px !important; }
     .covr-v3-buy__swatches { display: flex !important; flex-wrap: nowrap; overflow-x: auto; gap: 6px !important; scrollbar-width: none; padding-bottom: 2px; }
     .covr-v3-buy__swatches::-webkit-scrollbar { display: none; }
-    .covr-v3-buy__swatch { flex: 0 0 50px; width: 50px !important; height: 43px !important; }
+    .covr-v3-buy__swatch { flex: 0 0 66px; width: 66px !important; height: 56px !important; }
   }
+
+  /* no "Arrived damaged" panel */
+  .covr-v3-trust__panel { display: none !important; }
+
+  /* shorter gap around "Why padel players choose COVR" */
+  .covr-v3-band { padding-block: 40px !important; }
+  .covr-v3-band__head { padding-top: 0 !important; }
+  .covr-v3-band__head + .covr-v3-band__list { padding-top: 24px !important; }
 </style>
 
 {% schema %}
