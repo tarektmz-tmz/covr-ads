@@ -1,0 +1,139 @@
+{%- comment -%}
+  COVR V3 hero (theme 153821184090), built to the owner's homepage mockup:
+  a light grey band, the offer as a large tan headline at left with a small
+  two-line eyebrow, a pill button, and the studio photograph at right.
+
+  The photograph comes from `image` (Shopify Files) when set; until the
+  owner's original is uploaded it falls back to a placeholder cropped from
+  the mockup (assets/covr-v3-ph-hero.jpg). The photograph is cropped to a
+  portrait frame on desktop and a square on phones; the two "position"
+  settings choose which part of it stays in view in each.
+
+  Colour note: the mockup's tan pill (#a37857) gives white text 3.9:1; the
+  pill here is #8f6446 (5.2:1) so the label passes WCAG AA. The headline
+  keeps a lighter tan because it is large text (3:1 needed).
+{%- endcomment -%}
+
+{%- liquid
+  assign covr_img = section.settings.image
+  assign covr_alt = section.settings.image_alt | default: covr_img.alt
+-%}
+
+<div
+  class="covr-v3-hero"
+  style="--v3-hero-bg: {{ section.settings.background | default: '#efefef' }}; --v3-hero-pos-d: {{ section.settings.position_desktop }}%; --v3-hero-pos-m: {{ section.settings.position_mobile }}%;"
+  {{ section.shopify_attributes }}
+>
+  <div class="covr-v3-hero__inner">
+    <div class="covr-v3-hero__copy">
+      {%- comment -%}
+        The page has one H1. `h1` chooses whether it is the big headline
+        (default) or the eyebrow; the look is the same either way. Option 3
+        keeps the offer as the big headline and makes the eyebrow ("100%
+        handmade / Padel racket covers") the H1, so search engines read what
+        the store sells.
+      {%- endcomment -%}
+      {%- liquid
+        assign covr_h1_eyebrow = false
+        if section.settings.h1 == 'eyebrow' and section.settings.eyebrow != blank
+          assign covr_h1_eyebrow = true
+        endif
+      -%}
+      {%- if section.settings.eyebrow != blank -%}
+        {%- if covr_h1_eyebrow -%}
+          <h1 class="covr-v3-hero__eyebrow">{{ section.settings.eyebrow | escape | newline_to_br }}</h1>
+        {%- else -%}
+          <p class="covr-v3-hero__eyebrow">{{ section.settings.eyebrow | escape | newline_to_br }}</p>
+        {%- endif -%}
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        {%- if covr_h1_eyebrow -%}
+          <p class="covr-v3-hero__heading">{{ section.settings.heading | escape }}</p>
+        {%- else -%}
+          <h1 class="covr-v3-hero__heading">{{ section.settings.heading | escape }}</h1>
+        {%- endif -%}
+      {%- endif -%}
+      {%- if section.settings.offer != blank -%}
+        <p class="covr-v3-hero__offer">{{ section.settings.offer | escape }}</p>
+      {%- endif -%}
+      {%- if section.settings.body != blank -%}
+        <p class="covr-v3-hero__body">{{ section.settings.body | escape }}</p>
+      {%- endif -%}
+      {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}
+        <a class="covr-v3-pill covr-v3-pill--tan covr-v3-hero__cta" href="{{ section.settings.button_link }}">
+          {{- section.settings.button_label | escape -}}
+        </a>
+      {%- endif -%}
+    </div>
+
+    <figure class="covr-v3-hero__media">
+      {%- if covr_img != blank -%}
+        <img
+          src="{{ covr_img | image_url: width: 1100 }}"
+          srcset="
+            {{ covr_img | image_url: width: 600 }} 600w,
+            {{ covr_img | image_url: width: 900 }} 900w,
+            {{ covr_img | image_url: width: 1100 }} 1100w,
+            {{ covr_img | image_url: width: 1500 }} 1500w
+          "
+          sizes="(min-width: 990px) 44vw, 100vw"
+          width="{{ covr_img.width }}"
+          height="{{ covr_img.height }}"
+          alt="{{ covr_alt | escape }}"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+        >
+      {%- elsif section.settings.placeholder != blank -%}
+        <img
+          src="{{ section.settings.placeholder | asset_url }}"
+          width="600"
+          height="723"
+          alt="{{ covr_alt | escape }}"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+        >
+      {%- endif -%}
+    </figure>
+  </div>
+</div>
+
+{%- comment -%} Homepage spacing (15 Oct 2026): tighter gaps between sections. {%- endcomment -%}
+<style>
+  .covr-v3-pair, .covr-v3-problem, .covr-v3-benefits, .covr-v4-crafted,
+  .covr-v3-compare, .covr-v3-lines { padding-top: 64px !important; padding-bottom: 64px !important; }
+  .covr-alt-answers { padding-top: 56px !important; padding-bottom: 56px !important; }
+  @media (max-width: 749px) {
+    .covr-v3-pair, .covr-v3-problem, .covr-v3-benefits, .covr-v4-crafted,
+    .covr-v3-compare, .covr-v3-lines, .covr-alt-answers { padding-top: 44px !important; padding-bottom: 44px !important; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "COVR V3 hero",
+  "tag": "section",
+  "class": "covr-v3-hero-wrapper",
+  "enabled_on": { "templates": ["index"] },
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Photograph" },
+    { "type": "text", "id": "placeholder", "label": "Placeholder asset (until the photograph is set)", "default": "covr-v3-ph-hero.jpg" },
+    { "type": "text", "id": "image_alt", "label": "Image alternative text" },
+    { "type": "range", "id": "position_desktop", "label": "Photograph position, desktop (top to bottom)", "min": 0, "max": 100, "step": 1, "unit": "%", "default": 50 },
+    { "type": "range", "id": "position_mobile", "label": "Photograph position, phones (top to bottom)", "min": 0, "max": 100, "step": 1, "unit": "%", "default": 80 },
+    { "type": "color", "id": "background", "label": "Background", "default": "#efefef" },
+    { "type": "textarea", "id": "eyebrow", "label": "Eyebrow (two lines)" },
+    { "type": "text", "id": "heading", "label": "Headline (the page's H1)" },
+    { "type": "text", "id": "offer", "label": "Offer line under the headline" },
+    {
+      "type": "select", "id": "h1", "label": "Page heading (H1) for search engines", "default": "headline",
+      "options": [ { "value": "headline", "label": "The headline" }, { "value": "eyebrow", "label": "The eyebrow" } ]
+    },
+    { "type": "textarea", "id": "body", "label": "Supporting sentence" },
+    { "type": "text", "id": "button_label", "label": "Button" },
+    { "type": "url", "id": "button_link", "label": "Button link" }
+  ],
+  "presets": [{ "name": "COVR V3 hero" }]
+}
+{% endschema %}
