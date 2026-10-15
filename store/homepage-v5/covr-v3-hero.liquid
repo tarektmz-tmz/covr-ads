@@ -20,7 +20,7 @@
 -%}
 
 <div
-  class="covr-v3-hero"
+  class="covr-v3-hero{% if section.settings.layout == 'trio' %} covr-v3-hero--trio{% endif %}"
   style="--v3-hero-bg: {{ section.settings.background | default: '#efefef' }}; --v3-hero-pos-d: {{ section.settings.position_desktop }}%; --v3-hero-pos-m: {{ section.settings.position_mobile }}%;"
   {{ section.shopify_attributes }}
 >
@@ -66,8 +66,56 @@
       {%- endif -%}
     </div>
 
-    <figure class="covr-v3-hero__media">
-      {%- if covr_img != blank -%}
+    {%- if section.settings.layout == 'trio' -%}
+      {%- comment -%} Trio layout (15 Oct 2026): the text above, three photographs side by side below. {%- endcomment -%}
+      <div class="covr-v3-hero__trio">
+        {%- for i in (1..3) -%}
+          {%- if i == 1 -%}{%- assign covr_t = section.settings.image -%}{%- else -%}{%- assign covr_tkey = 'image_' | append: i -%}{%- assign covr_t = section.settings[covr_tkey] -%}{%- endif -%}
+          {%- if covr_t == blank -%}{%- continue -%}{%- endif -%}
+          <figure class="covr-v3-hero__trio-item">
+            {{ covr_t | image_url: width: 1100 | image_tag: widths: '400, 600, 800, 1100', sizes: '(min-width: 990px) 31vw, 78vw', loading: 'eager', alt: covr_t.alt }}
+          </figure>
+        {%- endfor -%}
+      </div>
+    {%- else -%}
+    <figure class="covr-v3-hero__media{% if section.settings.video_1 != blank %} covr-v3-hero__media--video{% endif %}">
+      {%- if section.settings.video_1 != blank -%}
+        {%- comment -%}
+          Hero videos (15 Oct 2026): up to two muted clips that play in turn
+          with a crossfade, then start again. The photograph above is not used
+          while a video is set.
+        {%- endcomment -%}
+        {%- for i in (1..2) -%}
+          {%- assign covr_vkey = 'video_' | append: i -%}
+          {%- assign covr_v = section.settings[covr_vkey] -%}
+          {%- if covr_v == blank -%}{%- continue -%}{%- endif -%}
+          {%- assign covr_src = '' -%}{%- assign covr_h = 0 -%}
+          {%- for s in covr_v.sources -%}
+            {%- if s.format == 'mp4' and s.height <= 1080 and s.height > covr_h -%}{%- assign covr_src = s.url -%}{%- assign covr_h = s.height -%}{%- endif -%}
+          {%- endfor -%}
+          <video class="covr-v3-hero__video{% if forloop.first %} is-on{% endif %}" muted playsinline preload="{% if forloop.first %}auto{% else %}metadata{% endif %}"{% if forloop.first %} autoplay{% endif %} poster="{{ covr_v.preview_image | image_url: width: 1100 }}" aria-label="{{ covr_v.alt | default: covr_alt | escape }}">
+            <source src="{{ covr_src }}" type="video/mp4">
+          </video>
+        {%- endfor -%}
+        <script>
+          (function () {
+            var fig = document.currentScript.parentNode;
+            var vids = fig.querySelectorAll('video');
+            if (!vids.length) return;
+            if (vids.length === 1) { vids[0].loop = true; vids[0].play().catch(function () {}); return; }
+            vids.forEach(function (v, i) {
+              v.addEventListener('ended', function () {
+                var next = vids[(i + 1) % vids.length];
+                next.currentTime = 0;
+                next.play().catch(function () {});
+                next.classList.add('is-on');
+                v.classList.remove('is-on');
+              });
+            });
+            vids[0].play().catch(function () {});
+          })();
+        </script>
+      {%- elsif covr_img != blank -%}
         <img
           src="{{ covr_img | image_url: width: 1100 }}"
           srcset="
@@ -96,6 +144,7 @@
         >
       {%- endif -%}
     </figure>
+    {%- endif -%}
   </div>
 </div>
 
@@ -107,6 +156,28 @@
   /* homepage v5: shorter "Before you buy" (fit, free pouch, delivery, returns, questions) */
   .covr-alt-answers .covr-facts__row:nth-child(2), .covr-alt-answers .covr-facts__row:nth-child(3), .covr-alt-answers .covr-facts__row:nth-child(7) { display: none; }
   .covr-v5-colours-wrapper { scroll-margin-top: 90px; }
+  /* hero trio layout */
+  .covr-v3 .covr-v3-hero--trio .covr-v3-hero__inner { display: block; max-width: 1320px; padding: 56px clamp(16px, 4vw, 56px) 64px; }
+  .covr-v3 .covr-v3-hero--trio .covr-v3-hero__copy { align-items: center; text-align: center; padding: 0; margin: 0 auto; max-width: 760px; }
+  .covr-v3 .covr-v3-hero--trio .covr-v3-hero__eyebrow { text-align: center; margin-bottom: 18px; }
+  .covr-v3 .covr-v3-hero--trio .covr-v3-hero__heading { max-width: none; font-size: clamp(2.375rem, 5vw, 4rem); }
+  .covr-v3 .covr-v3-hero--trio .covr-v3-hero__body { margin-left: auto; margin-right: auto; }
+  .covr-v3 .covr-v3-hero--trio .covr-v3-hero__cta { margin-top: 28px; }
+  .covr-v3-hero__trio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 44px; }
+  .covr-v3-hero__trio-item { margin: 0; aspect-ratio: 4 / 5; overflow: hidden; }
+  .covr-v3-hero__trio-item img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  @media (max-width: 749px) {
+    .covr-v3 .covr-v3-hero--trio .covr-v3-hero__inner { padding: 36px 0 44px; }
+    .covr-v3 .covr-v3-hero--trio .covr-v3-hero__copy { padding: 0 16px; }
+    .covr-v3-hero__trio { display: flex; gap: 10px; margin-top: 32px; padding: 0 16px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+    .covr-v3-hero__trio::-webkit-scrollbar { display: none; }
+    .covr-v3-hero__trio-item { flex: 0 0 78%; scroll-snap-align: center; }
+  }
+  /* hero videos */
+  .covr-v3-hero__media--video { position: relative; background: #e9e4dc; }
+  .covr-v3 .covr-v3-hero__media--video video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .8s ease; }
+  .covr-v3 .covr-v3-hero__media--video video.is-on { opacity: 1; }
+  @media (max-width: 989px) { .covr-v3 .covr-v3-hero__media--video { aspect-ratio: 4 / 5; } }
   @media (max-width: 749px) {
     .covr-v3-pair, .covr-v3-problem, .covr-v3-benefits, .covr-v4-crafted,
     .covr-v3-compare, .covr-v3-lines, .covr-alt-answers { padding-top: 44px !important; padding-bottom: 44px !important; }
@@ -120,7 +191,15 @@
   "class": "covr-v3-hero-wrapper",
   "enabled_on": { "templates": ["index"] },
   "settings": [
-    { "type": "image_picker", "id": "image", "label": "Photograph" },
+    {
+      "type": "select", "id": "layout", "label": "Layout", "default": "split",
+      "options": [ { "value": "split", "label": "Text left, photo or video right" }, { "value": "trio", "label": "Text on top, three photos below" } ]
+    },
+    { "type": "image_picker", "id": "image", "label": "Photograph (first of three in the trio layout)" },
+    { "type": "image_picker", "id": "image_2", "label": "Second photograph (trio layout)" },
+    { "type": "image_picker", "id": "image_3", "label": "Third photograph (trio layout)" },
+    { "type": "video", "id": "video_1", "label": "Video 1 (plays instead of the photograph)" },
+    { "type": "video", "id": "video_2", "label": "Video 2 (plays after video 1)" },
     { "type": "text", "id": "placeholder", "label": "Placeholder asset (until the photograph is set)", "default": "covr-v3-ph-hero.jpg" },
     { "type": "text", "id": "image_alt", "label": "Image alternative text" },
     { "type": "range", "id": "position_desktop", "label": "Photograph position, desktop (top to bottom)", "min": 0, "max": 100, "step": 1, "unit": "%", "default": 50 },
