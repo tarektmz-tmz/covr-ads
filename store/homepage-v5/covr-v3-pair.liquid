@@ -1,0 +1,81 @@
+{%- comment -%}
+  COVR V3 photo pair: two photographs side by side on white, as in the
+  owner's mockup (players with their covers; covers in the COVR box). Each
+  photograph falls back to a placeholder cropped from the mockup until the
+  original is uploaded to Shopify Files and chosen here. Each sits in a
+  fixed frame (the mockup's proportions); "position" picks which part of a
+  taller photograph stays in view.
+{%- endcomment -%}
+
+<div class="covr-v3-pair" {{ section.shopify_attributes }}>
+  <div class="covr-v3-pair__inner">
+    {%- for i in (1..2) -%}
+      {%- liquid
+        assign covr_key = 'image_' | append: i
+        assign covr_ph_key = 'placeholder_' | append: i
+        assign covr_alt_key = 'alt_' | append: i
+        assign covr_img = section.settings[covr_key]
+        assign covr_ph = section.settings[covr_ph_key]
+        assign covr_alt = section.settings[covr_alt_key]
+        assign covr_pos_key = 'position_' | append: i
+      -%}
+      <figure class="covr-v3-pair__item covr-v3-pair__item--{{ i }}" style="--v3-pos: {{ section.settings[covr_pos_key] }}%;">
+        {%- if covr_img != blank -%}
+          <img
+            src="{{ covr_img | image_url: width: 900 }}"
+            srcset="{{ covr_img | image_url: width: 500 }} 500w, {{ covr_img | image_url: width: 900 }} 900w, {{ covr_img | image_url: width: 1300 }} 1300w"
+            sizes="(min-width: 750px) 42vw, 50vw"
+            width="{{ covr_img.width }}"
+            height="{{ covr_img.height }}"
+            alt="{{ covr_alt | default: covr_img.alt | escape }}"
+            loading="lazy"
+            decoding="async"
+          >
+        {%- elsif covr_ph != blank -%}
+          <img src="{{ covr_ph | asset_url }}" width="{% if i == 1 %}445{% else %}504{% endif %}" height="{% if i == 1 %}589{% else %}583{% endif %}" alt="{{ covr_alt | escape }}" loading="lazy" decoding="async">
+        {%- endif -%}
+      </figure>
+    {%- endfor -%}
+  </div>
+  {%- if section.settings.heading != blank or section.settings.button_label != blank -%}
+    <div class="covr-v3-pair__text">
+      {%- if section.settings.heading != blank -%}<h2 class="covr-v3-pair__heading">{{ section.settings.heading | escape }}{% if section.settings.heading_accent != blank %} <em>{{ section.settings.heading_accent | escape }}</em>{% endif %}</h2>{%- endif -%}
+      {%- if section.settings.text != blank -%}<p class="covr-v3-pair__body">{{ section.settings.text | escape }}</p>{%- endif -%}
+      {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}
+        <a class="covr-v3-pill covr-v3-pill--dark covr-v3-pill--caps covr-v3-pair__cta" href="{{ section.settings.button_link }}">{{ section.settings.button_label | escape }}</a>
+      {%- endif -%}
+    </div>
+    <style>
+      .covr-v3-pair__text { max-width: 640px; margin: 28px auto 0; text-align: center; padding: 0 16px; }
+      .covr-v3-pair__heading { margin: 0; font-family: var(--font-heading--family, inherit); font-weight: 400; font-size: clamp(28px, 3vw, 40px); line-height: 1.08; }
+      .covr-v3-pair__heading em { color: #8f6446; }
+      .covr-v3-pair__body { margin: 10px 0 0; font-size: 15px; line-height: 1.55; opacity: .8; }
+      .covr-v3-pair__cta { margin-top: 20px; display: inline-flex; }
+    </style>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "COVR V3 photo pair",
+  "tag": "section",
+  "class": "covr-v3-pair-wrapper",
+  "enabled_on": { "templates": ["index"] },
+  "settings": [
+    { "type": "image_picker", "id": "image_1", "label": "Left photograph" },
+    { "type": "text", "id": "placeholder_1", "label": "Left placeholder asset", "default": "covr-v3-ph-pair-players.jpg" },
+    { "type": "text", "id": "alt_1", "label": "Left alternative text" },
+    { "type": "range", "id": "position_1", "label": "Left photograph position (top to bottom)", "min": 0, "max": 100, "step": 1, "unit": "%", "default": 50 },
+    { "type": "image_picker", "id": "image_2", "label": "Right photograph" },
+    { "type": "text", "id": "placeholder_2", "label": "Right placeholder asset", "default": "covr-v3-ph-pair-box.jpg" },
+    { "type": "text", "id": "alt_2", "label": "Right alternative text" },
+    { "type": "range", "id": "position_2", "label": "Right photograph position (top to bottom)", "min": 0, "max": 100, "step": 1, "unit": "%", "default": 50 },
+    { "type": "text", "id": "heading", "label": "Heading under the photographs" },
+    { "type": "text", "id": "heading_accent", "label": "Heading, italic part" },
+    { "type": "textarea", "id": "text", "label": "Text" },
+    { "type": "text", "id": "button_label", "label": "Button" },
+    { "type": "url", "id": "button_link", "label": "Button link" }
+  ],
+  "presets": [{ "name": "COVR V3 photo pair" }]
+}
+{% endschema %}
