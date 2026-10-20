@@ -99,7 +99,7 @@ def price_story():
 <div class="price"><div class="label">Purchase price</div><div class="amt">$170,000</div>
 <div class="sub">30 + 30 year leasehold &nbsp;·&nbsp; Land included</div></div>
 <div class="plan"><div class="head label">14-month payment plan</div>{rows}
-<div class="row total"><div class="st">Total</div><div class="pc">100%</div><div class="am">$170,000</div></div></div>
+</div>
 <div class="extra"><div><div class="t">Rental-ready package</div>
 <div class="d">Furniture &amp; decor · TV · Kitchen appliances</div></div><div class="v">+$10,000</div></div>
 <div class="cta"><div class="t">Private viewings by appointment</div><div class="w">DM for details</div></div>"""
