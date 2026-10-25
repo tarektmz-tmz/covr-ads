@@ -41,7 +41,7 @@ Link: https://advancewatchco.com/pages/rolex-day-date-40-dubai
 Thumbnail: day-date-40.jpg
 Caption:
 Rolex Day-Date 40 in Dubai 🇦🇪 The President, in yellow, Everose or white gold, or platinum.
-Brand new, full set, from AED 190,000. References, prices and what to check before you buy, all in our free guide. Link in bio.
+Brand new, full set, from AED 210,000. References, prices and what to check before you buy, all in our free guide. Link in bio.
 DM us the one you want. #rolex #rolexday #rolexdubai #dubaiwatches #luxurywatches
 
 ## Sky-Dweller
