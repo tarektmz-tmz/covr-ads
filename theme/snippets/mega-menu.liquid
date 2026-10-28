@@ -1,0 +1,249 @@
+{%- comment -%}
+  Mega Menu Component
+
+  Full-width dropdown with three layouts:
+  - Every child is a collection (Buy Watches): three large brand tiles.
+  - Every child is a page (Articles): a row of mini watch tiles.
+  - Anything else: the original sidebar and content panel.
+
+  Parameters:
+  - link {Object} - Main navigation link with children (required)
+
+  JavaScript: Handled by mega-menu.js component
+{%- endcomment -%}
+
+{%- liquid
+  assign tiles_mode = true
+  assign pages_mode = true
+  if link.links.size == 0
+    assign tiles_mode = false
+    assign pages_mode = false
+  endif
+  for c in link.links
+    unless c.type == 'collection_link'
+      assign tiles_mode = false
+    endunless
+    unless c.type == 'page_link'
+      assign pages_mode = false
+    endunless
+  endfor
+  assign tile_order = 'rolex-watches,patek-philippe-watches,audemars-piguet-watches' | split: ','
+  assign cdn = 'https://cdn.shopify.com/s/files/1/0622/9426/1831/files/'
+-%}
+
+{%- if tiles_mode -%}
+  <style>
+    .mmt-wrap { height: 100%; display: flex; gap: 22px; padding: 24px 40px; max-width: 1280px; margin: 0 auto; box-sizing: border-box; }
+    .mmt-tile { position: relative; flex: 1 1 0; display: block; border-radius: 16px; overflow: hidden; background: linear-gradient(180deg, #2a2a2a, #121212); text-decoration: none; }
+    .mmt-tile img { position: absolute; left: 0; right: 0; top: 3%; width: 100%; height: 80%; object-fit: contain; transition: transform .5s ease; filter: drop-shadow(0 18px 24px rgba(0,0,0,.55)); }
+    .mmt-tile:hover img { transform: scale(1.07); }
+    .mmt-tile .mmt-name { position: absolute; left: 0; right: 0; bottom: 0; padding: 44px 12px 22px; text-align: center; color: #fff; font-size: 22px; font-weight: 300; letter-spacing: .3px; background: linear-gradient(0deg, rgba(0,0,0,.8), transparent); }
+    .mmt-tile .mmt-name:after { content: ""; display: block; width: 44px; height: 1px; background: #d4af37; margin: 10px auto 0; transition: width .3s ease; }
+    .mmt-tile:hover .mmt-name:after { width: 90px; }
+  </style>
+{%- elsif pages_mode -%}
+  <style>
+    .mmp-wrap { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; padding: 22px 40px 26px; max-width: 1280px; margin: 0 auto; box-sizing: border-box; }
+    .mmp-tile { position: relative; display: block; height: 180px; border-radius: 14px; overflow: hidden; background: linear-gradient(180deg, #2a2a2a, #121212); text-decoration: none; color: #fff; }
+    .mmp-tile img { position: absolute; top: 8px; left: 0; right: 0; margin: 0 auto; height: 112px; width: auto; max-width: 90%; object-fit: contain; transition: transform .4s ease; filter: drop-shadow(0 8px 12px rgba(0,0,0,.5)); }
+    .mmp-tile:hover img { transform: scale(1.1); }
+    .mmp-tile .mmp-name { position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 8px 12px; text-align: center; font-size: 15px; font-weight: 500; color: #fff; background: linear-gradient(0deg, rgba(0,0,0,.85), transparent); }
+    .mmp-tile .mmp-name:after { content: ""; display: block; width: 26px; height: 1px; background: #d4af37; margin: 7px auto 0; transition: width .3s ease; }
+    .mmp-tile:hover .mmp-name:after { width: 56px; }
+    .mmp-all { display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #d4af37; text-align: center; padding: 12px; }
+    .mmp-all b { font-size: 18px; font-weight: 600; color: #e6c76a; }
+    .mmp-all span { margin-top: 6px; font-size: 13px; color: #d6dde3; }
+  </style>
+{%- endif -%}
+
+<mega-menu class="relative group/dropdown flex items-center">
+  <a
+    href="{{ link.url }}"
+    class="
+      lg:text-lg text-6 py-2 px-[15px] whitespace-nowrap cursor-pointer
+      group-hover:opacity-70 transition-opacity duration-300 hover:!opacity-100
+      flex items-center gap-1 tap-target after:h-[var(--header-group-height,83px)]
+    "
+    data-mega-menu-trigger
+    role="button"
+    aria-expanded="false"
+    aria-haspopup="menu"
+    aria-label="Open {{ link.title }} menu"
+  >
+    <span>{{- link.title -}}</span>
+    {%- render 'icon',
+      icon: 'chevron-down',
+      class: 'w-3 h-3 transition-transform duration-200 group-hover/dropdown:rotate-180'
+    -%}
+  </a>
+
+  <div
+    class="fixed top-[var(--header-group-height,83px)] left-0 w-screen bg-white shadow-lg z-50 opacity-0 invisible transition-all duration-200 group-hover/dropdown:opacity-100 group-hover/dropdown:visible pointer-events-none group-hover/dropdown:pointer-events-auto h-[85vh] max-h-[600px]"
+    {% if pages_mode %}style="height: auto;"{% endif %}
+    data-mega-menu-dropdown
+  >
+    {%- if tiles_mode -%}
+      <div class="mmt-wrap">
+        {%- for h in tile_order -%}
+          {%- for c in link.links -%}
+            {%- if c.handle == h -%}
+              {%- liquid
+                case h
+                  when 'rolex-watches'
+                    assign tile_img = 'https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126500ln-0001.webp?v=1759421227&width=900'
+                  when 'patek-philippe-watches'
+                    assign tile_img = 'https://cdn.shopify.com/s/files/1/0622/9426/1831/files/656a90d84798563658f69553_5711-1R-001.avif?v=1771754084&width=900'
+                  when 'audemars-piguet-watches'
+                    assign tile_img = 'https://cdn.shopify.com/s/files/1/0622/9426/1831/files/66229b59305a170a8bad35e8_15510OR.OO.1320OR.03.avif?v=1761048469&width=900'
+                endcase
+              -%}
+              <a href="{{ c.url }}" class="mmt-tile" aria-label="{{ c.title | escape }}">
+                <img src="{{ tile_img }}" alt="{{ c.title | escape }}" loading="lazy">
+                <span class="mmt-name">{{ c.title }}</span>
+              </a>
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endfor -%}
+        {%- for c in link.links -%}
+          {%- unless tile_order contains c.handle -%}
+            <a href="{{ c.url }}" class="mmt-tile" aria-label="{{ c.title | escape }}">
+              {%- if c.object.image != blank -%}
+                <img src="{{ c.object.image | image_url: width: 900 }}" alt="{{ c.title | escape }}" loading="lazy">
+              {%- endif -%}
+              <span class="mmt-name">{{ c.title }}</span>
+            </a>
+          {%- endunless -%}
+        {%- endfor -%}
+      </div>
+      <div class="hidden" aria-hidden="true">
+        {%- for child_link in link.links -%}
+          <a href="{{ child_link.url }}" data-mega-menu-child="{{ child_link.handle }}" tabindex="-1">{{ child_link.title }}</a>
+          <div data-mega-menu-grandchildren="{{ child_link.handle }}" class="js-hidden"></div>
+        {%- endfor -%}
+      </div>
+    {%- elsif pages_mode -%}
+      <div class="mmp-wrap">
+        {%- for c in link.links -%}
+          {%- liquid
+            assign pimg = ''
+            case c.handle
+              when 'submariner'
+                assign pimg = 'm126610ln-0001.webp'
+              when 'daytona'
+                assign pimg = 'm126500ln-0001.webp'
+              when 'gmt-master-ii'
+                assign pimg = 'm126710blro-0002.webp'
+              when 'datejust-41'
+                assign pimg = 'm126334-0028.webp'
+              when 'day-date-40'
+                assign pimg = 'm228238-0042_32d5b89f-b4e4-4a76-ab9b-b390ffdb3120.webp'
+              when 'sky-dweller'
+                assign pimg = 'm336934-0005.webp'
+              when 'yacht-master'
+                assign pimg = 'm226627-0001.webp'
+              when 'land-dweller'
+                assign pimg = 'm127234-0001_1.webp'
+              when 'air-king'
+                assign pimg = 'm126900-0001.webp'
+            endcase
+          -%}
+          {%- if pimg == '' -%}
+            <a href="{{ c.url }}" class="mmp-tile mmp-all" aria-label="{{ c.title | escape }}">
+              <b>{{ c.title }}</b>
+              <span>A guide for every model →</span>
+            </a>
+          {%- else -%}
+            <a href="{{ c.url }}" class="mmp-tile" aria-label="{{ c.title | escape }}">
+              <img src="{{ cdn }}{{ pimg }}?width=300" alt="Rolex {{ c.title | escape }}" loading="lazy">
+              <span class="mmp-name">{{ c.title }}</span>
+            </a>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+      <div class="hidden" aria-hidden="true">
+        {%- for child_link in link.links -%}
+          <a href="{{ child_link.url }}" data-mega-menu-child="{{ child_link.handle }}" tabindex="-1">{{ child_link.title }}</a>
+          <div data-mega-menu-grandchildren="{{ child_link.handle }}" class="js-hidden"></div>
+        {%- endfor -%}
+      </div>
+    {%- else -%}
+    <div class="h-full grid grid-cols-[1fr,2.5fr]">
+      <!-- Left sidebar: Child links -->
+      <div class="bg-gray-50 border-r border-gray-200 overflow-y-auto">
+        <div class="px-6 py-4">
+          {%- for child_link in link.links -%}
+            <a
+              href="{{ child_link.url }}"
+              class="
+                flex items-center justify-between text-gray-700 py-3
+                transition-all duration-200 cursor-pointer border-b border-gray-200
+                 group/item peer
+              "
+              data-mega-menu-child="{{ child_link.handle }}"
+              role="tab"
+              aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+              id="mega-menu-{{ child_link.handle }}"
+              tabindex="{% if forloop.first %}0{% else %}-1{% endif %}"
+            >
+              <span class="font-medium text-base">{{ child_link.title }}</span>
+              {%- render 'icon',
+                icon: 'chevron-right',
+                class: 'w-4 h-4 text-gray-400 group-hover/item:text-gray-600 transition-colors'
+              -%}
+            </a>
+          {%- endfor -%}
+        </div>
+      </div>
+
+      <!-- Right content area: Grandchildren containers -->
+      <div class="flex-1 bg-white overflow-y-auto">
+        <div class="px-12 py-8 relative" role="tabpanel">
+          {%- for child_link in link.links -%}
+            <div
+              class="absolute inset-0 px-12 py-8 pt-4 transition-all duration-200{% unless forloop.first %} js-hidden{% endunless %}"
+              data-mega-menu-grandchildren="{{ child_link.handle }}"
+              role="tabpanel"
+              aria-labelledby="mega-menu-{{ child_link.handle }}"
+            >
+              <a
+                href="{{ child_link.url }}"
+                class="block mb-8 group"
+                aria-label="View all {{ child_link.title }}"
+              >
+                <h4 class="font-semibold text-gray-900 text-2xl group-hover:text-black transition-colors">
+                  View All {{ child_link.title }}
+                </h4>
+              </a>
+              {%- if child_link.links.size > 0 -%}
+                <nav
+                  class="grid grid-rows-6 grid-flow-col auto-cols-fr gap-x-4 gap-y-4 max-h-[60vh] overflow-y-auto"
+                  aria-label="{{ child_link.title }} navigation"
+                >
+                  {%- for grandchild_link in child_link.links -%}
+                    <a
+                      href="{{ grandchild_link.url }}"
+                      class="text-gray-600 hover:text-black transition-colors block text-sm uppercase tracking-wide"
+                    >
+                      {{ grandchild_link.title }}
+                    </a>
+                  {%- endfor -%}
+                </nav>
+              {%- else -%}
+                <div class="text-gray-500">
+                  <a
+                    href="{{ child_link.url }}"
+                    class="text-blue-600 hover:text-blue-800 text-lg"
+                    aria-label="View all {{ child_link.title }}"
+                  >
+                    View all {{ child_link.title }} →
+                  </a>
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+    {%- endif -%}
+  </div>
+</mega-menu>
