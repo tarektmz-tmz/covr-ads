@@ -36,7 +36,7 @@ mission=sec("awc-mission",{
  "button_1_text":"Shop watches in stock","button_1_link":"shopify://collections/all",
  "button_2_text":"Ask on WhatsApp","button_2_link":WA,
  "button_3_text":"Read the free guides","button_3_link":"#guides",
- "video":"shopify://files/videos/Advance Watch.mov","poster":"shopify://shop_images/WhatsApp_Image_2025-10-26_at_9.01.58_PM.jpg","video_tag":"Inside Advance Watch Co."},
+ "video":"shopify://files/videos/Advance Watch.mov","poster":"shopify://shop_images/WhatsApp_Image_2025-10-26_at_9.01.58_PM.jpg","video_tag":"Client delivery, Dubai"},
  [("point",{"title":"Brand new, full set","text":"Box, papers and warranty card."}),
   ("point",{"title":"Multiple stages of authentication","text":"Third-party authentication on request."}),
   ("point",{"title":"Fair prices, published in AED","text":"Never “price on request”."}),
