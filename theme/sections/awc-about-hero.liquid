@@ -1,0 +1,26 @@
+{{ 'awc-home.css' | asset_url | stylesheet_tag }}
+<section class="awc-s awc-ah awc-pad">
+  <div class="awc-wrap">
+    <span class="awc-eyebrow">{{ section.settings.eyebrow }}</span>
+    <h1 class="awc-h" style="font-family:var(--font-heading);font-weight:500;line-height:1.1;margin:0 0 14px">{{ section.settings.heading }}</h1>
+    <div class="awc-lead">{{ section.settings.text }}</div>
+    <div class="awc-stats" style="justify-content:center;border-top-color:rgba(255,255,255,.16)">
+      {%- for block in section.blocks -%}<div class="awc-stat" {{ block.shopify_attributes }}><strong>{{ block.settings.number }}</strong><span>{{ block.settings.label }}</span></div>{%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "AWC About hero",
+  "settings": [
+    {"type":"text","id":"eyebrow","label":"Small line","default":"About us"},
+    {"type":"text","id":"heading","label":"Heading","default":"Luxury watches, bought with complete confidence."},
+    {"type":"richtext","id":"text","label":"Text"}
+  ],
+  "blocks": [
+    {"type":"stat","name":"Stat","settings":[{"type":"text","id":"number","label":"Number"},{"type":"text","id":"label","label":"Label"}]}
+  ],
+  "presets": [{"name":"AWC About hero"}]
+}
+{% endschema %}

@@ -1,0 +1,763 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero-banner": {
+      "type": "hero-banner",
+      "blocks": {
+        "heading_rqk3m7": {
+          "type": "heading",
+          "settings": {
+            "heading": "Luxury Watches.\n\nWithout the Wait.",
+            "html_tag": "h2",
+            "heading_size_mobile": "text-4xl",
+            "heading_size_desktop": "md:text-6xl",
+            "heading_weight": "font-normal"
+          }
+        },
+        "paragraph_nDhYxK": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph": "<p>Rolex • Audemars Piguet • Patek Philippe</p><p>Brand New • Full Set • Same-Day Delivery in Dubai</p><p><strong>500+ watches delivered • 400+ happy clients</strong></p>",
+            "text_size_mobile": "text-base",
+            "text_size_desktop": "md:text-2xl",
+            "text_weight": "font-light"
+          }
+        },
+        "button_GFKEMH": {
+          "type": "button",
+          "settings": {
+            "button_text": "View All Watches",
+            "button_link": "shopify://collections",
+            "show_button_mobile": true,
+            "show_button_desktop": true,
+            "button_style": "btn--secondary",
+            "custom_bg_color": "",
+            "custom_text_color": "",
+            "custom_border_color": "",
+            "custom_hover_color": "",
+            "custom_hover_border_color": "",
+            "custom_border_width": 1
+          }
+        },
+        "button_whatsapp": {
+          "type": "button",
+          "settings": {
+            "button_text": "Chat on WhatsApp",
+            "button_link": "https://wa.me/971561853856?text=Hi%2C%20I%27m%20interested%20in%20your%20watches.",
+            "show_button_mobile": true,
+            "show_button_desktop": true,
+            "button_style": "btn--custom",
+            "custom_bg_color": "#25D366",
+            "custom_text_color": "#ffffff",
+            "custom_border_color": "#25D366",
+            "custom_hover_color": "#1ebe5a",
+            "custom_hover_border_color": "#1ebe5a",
+            "custom_border_width": 1
+          }
+        }
+      },
+      "block_order": [
+        "heading_rqk3m7",
+        "paragraph_nDhYxK",
+        "button_GFKEMH",
+        "button_whatsapp"
+      ],
+      "settings": {
+        "image_desktop": "shopify://shop_images/config-launcher-watches-day-date-m228235-0055_2403jva_002.jpg",
+        "image_mobile": "shopify://shop_images/hero-mobile-day-date.jpg",
+        "overlay_color": "linear-gradient(90deg, #000000f2 20%, #0000 80%)",
+        "text_color": "#ffffff",
+        "align_mobile": "text-left justify-end items-start",
+        "align_desktop": "md:text-left md:justify-center md:items-start"
+      }
+    },
+    "trust_bar": {
+      "type": "trust-bar",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "text": "100% Authentic"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "text": "Full Set, Box & Papers"
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "text": "Third-Party Authenticated"
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "text": "Same-Day Delivery in Dubai"
+          }
+        },
+        "b5": {
+          "type": "item",
+          "settings": {
+            "text": "Manufacturer Warranty"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
+      ],
+      "settings": {
+        "background_color": "#000000",
+        "text_color": "#ffffff",
+        "accent_color": "#d4af37"
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "name": "Featured Collection",
+      "settings": {
+        "title": "Ready for Same-Day Delivery in Dubai",
+        "heading_tag": "h2",
+        "heading_size_mobile": "text-2xl",
+        "heading_size_desktop": "md:text-3xl",
+        "heading_weight": "font-normal",
+        "heading_align_mobile": "text-center",
+        "heading_align_desktop": "md:text-left",
+        "collection": "frontpage",
+        "products_shown": 12,
+        "show_product_count": false,
+        "show_button_mobile": false,
+        "show_button_desktop": true,
+        "button_label": "View all",
+        "button_style": "btn--primary",
+        "custom_bg_color": "",
+        "custom_text_color": "",
+        "custom_border_color": "",
+        "custom_hover_color": "",
+        "custom_hover_border_color": "",
+        "custom_border_width": 1
+      }
+    },
+    "awc_mission": {
+      "type": "awc-mission",
+      "settings": {
+        "eyebrow": "Our mission",
+        "heading": "A watch dealer built by someone who worked inside Rolex.",
+        "text": "<p>Buying a luxury watch should feel exciting, not stressful. But between multi-year waiting lists, inflated prices and sellers who pass off polished or altered watches as new, it is hard to know who to trust.</p><p>I started Advance Watch Co. to change that: expert guidance, fair prices published in AED, and brand new, authenticated watches, delivered with a private presentation.</p>",
+        "button_1_text": "Shop watches in stock",
+        "button_1_link": "shopify://collections/all",
+        "button_2_text": "Ask on WhatsApp",
+        "button_2_link": "https://wa.me/971561853856?text=Hi%2C%20I%27m%20interested%20in%20your%20watches.",
+        "button_3_text": "Read the free guides",
+        "button_3_link": "#guides",
+        "video": "shopify://files/videos/Advance Watch.mov",
+        "poster": "shopify://shop_images/WhatsApp_Image_2025-10-26_at_9.01.58_PM.jpg",
+        "video_tag": "Inside Advance Watch Co."
+      },
+      "blocks": {
+        "b1": {
+          "type": "point",
+          "settings": {
+            "title": "Brand new, full set",
+            "text": "Box, papers and warranty card."
+          }
+        },
+        "b2": {
+          "type": "point",
+          "settings": {
+            "title": "Multiple stages of authentication",
+            "text": "Third-party authentication on request."
+          }
+        },
+        "b3": {
+          "type": "point",
+          "settings": {
+            "title": "Fair prices, published in AED",
+            "text": "Never “price on request”."
+          }
+        },
+        "b4": {
+          "type": "point",
+          "settings": {
+            "title": "One personal contact",
+            "text": "From first message to private presentation."
+          }
+        },
+        "b5": {
+          "type": "stat",
+          "settings": {
+            "number": "2019–23",
+            "label": "Inside Rolex, Dubai Mall"
+          }
+        },
+        "b6": {
+          "type": "stat",
+          "settings": {
+            "number": "500+",
+            "label": "Watches delivered"
+          }
+        },
+        "b7": {
+          "type": "stat",
+          "settings": {
+            "number": "400+",
+            "label": "Happy clients"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6",
+        "b7"
+      ]
+    },
+    "awc_reviews": {
+      "type": "awc-reviews",
+      "settings": {
+        "eyebrow": "Client messages",
+        "heading": "What our clients say",
+        "text": "Real messages from real handovers. Tap a message to read it."
+      },
+      "blocks": {
+        "b1": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2025-10-27_at_11.04.11.jpg",
+            "quote": "“Thanks again for the watch and the amazing buying experience. Would definitely get all our watches from you.”",
+            "author": "Verified client · Rolex Datejust"
+          }
+        },
+        "b2": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2025-10-28_at_8.57.20_PM.jpg",
+            "quote": "“I enjoyed working with you. I can only recommend. We will continue.”",
+            "author": "Verified client · Datejust, blue dial"
+          }
+        },
+        "b3": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2025-10-28_at_8.57.11_PM_1.jpg",
+            "quote": "“Got it fitted. Crazy watch man, thanks!”",
+            "author": "Verified client · Datejust, mint green"
+          }
+        },
+        "b4": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2025-10-27_at_11.04.04_1.jpg",
+            "quote": "“Thank you Tarek for this bad ass Rolex!”",
+            "author": "Verified client"
+          }
+        },
+        "b5": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2025-10-27_at_11.04.06.jpg",
+            "quote": "“Yes finished! Fits well.”",
+            "author": "Verified client · AP Royal Oak"
+          }
+        },
+        "b6": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2025-10-28_at_8.57.19_PM.jpg",
+            "quote": "“Wow, looks amazing!!”",
+            "author": "Verified client · Datejust, Everose Rolesor"
+          }
+        },
+        "b7": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2025-10-28_at_8.57.20_PM_1.jpg",
+            "quote": "“Thank you really much.”",
+            "author": "Verified client · Rolex Day-Date"
+          }
+        },
+        "b8": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2025-10-27_at_11.04.05.jpg",
+            "quote": "“Another watch added to the collection.”",
+            "author": "@lukebatchelor__ · Day-Date 40"
+          }
+        },
+        "b9": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2025-10-28_at_8.57.11_PM.jpg",
+            "quote": "“You know what time it is.”",
+            "author": "@mrbrandowner · Private handover"
+          }
+        },
+        "b10": {
+          "type": "review",
+          "settings": {
+            "video": "shopify://files/videos/IMG_6535_hero_desktop_horizontal.mp4",
+            "quote": "Client handover, caught on camera.",
+            "author": "Client handover"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6",
+        "b7",
+        "b8",
+        "b9",
+        "b10"
+      ]
+    },
+    "awc_why": {
+      "type": "awc-why",
+      "settings": {
+        "eyebrow": "Contact us",
+        "heading": "Contact Us to Buy Luxury Watches in Dubai",
+        "text": "<p>Choose Advance Watch Co: where exceptional service meets an exclusive selection of the world’s most sought-after watches. Tell us the model, dial and budget you have in mind and we confirm availability, usually within a few hours.</p>",
+        "us_label": "Advance Watch Co.",
+        "them_label": "Some sellers"
+      },
+      "blocks": {
+        "b1": {
+          "type": "row",
+          "settings": {
+            "topic": "Condition",
+            "us": "Brand new, unworn, full set",
+            "them": "Polished, used watches sold as new"
+          }
+        },
+        "b2": {
+          "type": "row",
+          "settings": {
+            "topic": "Originality",
+            "us": "Original dial, date and parts",
+            "them": "Dial or date changed, parts swapped"
+          }
+        },
+        "b3": {
+          "type": "row",
+          "settings": {
+            "topic": "Authentication",
+            "us": "Multiple stages, third-party on request",
+            "them": "None, just “trust me”"
+          }
+        },
+        "b4": {
+          "type": "row",
+          "settings": {
+            "topic": "Price",
+            "us": "Fair, published in AED",
+            "them": "Overpriced, or “price on request”"
+          }
+        },
+        "b5": {
+          "type": "row",
+          "settings": {
+            "topic": "Service",
+            "us": "One dedicated contact, private presentation",
+            "them": "Anonymous chat, rushed handover"
+          }
+        },
+        "b6": {
+          "type": "row",
+          "settings": {
+            "topic": "Payment",
+            "us": "25% deposit, balance on delivery",
+            "them": "Pay in full before you see anything"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6"
+      ]
+    },
+    "awc_articles": {
+      "type": "awc-learn",
+      "settings": {
+        "eyebrow": "Articles & research",
+        "heading": "Learn before you buy",
+        "text": "Straight answers from a former Rolex insider: prices, fakes, waiting lists and which model fits you.",
+        "dark": false,
+        "blog": "guides",
+        "show_articles": true,
+        "article_count": 6,
+        "models_title": "Tap a model to read its guide",
+        "models_link": "/pages/buy-rolex-dubai",
+        "models_link_text": "Prices for every model"
+      },
+      "blocks": {
+        "b1": {
+          "type": "model",
+          "settings": {
+            "title": "Submariner",
+            "price": "from AED 51,500",
+            "link": "/pages/rolex-submariner-dubai",
+            "image": "shopify://shop_images/m126610ln-0001.webp"
+          }
+        },
+        "b2": {
+          "type": "model",
+          "settings": {
+            "title": "Daytona",
+            "price": "from AED 103,000",
+            "link": "/pages/rolex-daytona-dubai",
+            "image": "shopify://shop_images/m126500ln-0001.webp"
+          }
+        },
+        "b3": {
+          "type": "model",
+          "settings": {
+            "title": "GMT-Master II",
+            "price": "from AED 67,000",
+            "link": "/pages/rolex-gmt-master-ii-dubai",
+            "image": "shopify://shop_images/m126710blro-0002.webp"
+          }
+        },
+        "b4": {
+          "type": "model",
+          "settings": {
+            "title": "Datejust 41",
+            "price": "from AED 48,000",
+            "link": "/pages/rolex-datejust-41-dubai",
+            "image": "shopify://shop_images/m126334-0028.webp"
+          }
+        },
+        "b5": {
+          "type": "model",
+          "settings": {
+            "title": "Day-Date 40",
+            "price": "from AED 210,000",
+            "link": "/pages/rolex-day-date-40-dubai",
+            "image": "shopify://shop_images/m228238-0042_32d5b89f-b4e4-4a76-ab9b-b390ffdb3120.webp"
+          }
+        },
+        "b6": {
+          "type": "model",
+          "settings": {
+            "title": "Sky-Dweller",
+            "price": "from AED 80,000",
+            "link": "/pages/rolex-sky-dweller-dubai",
+            "image": "shopify://shop_images/m336934-0005.webp"
+          }
+        },
+        "b7": {
+          "type": "model",
+          "settings": {
+            "title": "Yacht-Master",
+            "price": "from AED 93,500",
+            "link": "/pages/rolex-yacht-master-dubai",
+            "image": "shopify://shop_images/m226627-0001.webp"
+          }
+        },
+        "b8": {
+          "type": "model",
+          "settings": {
+            "title": "Land-Dweller",
+            "price": "from AED 73,500",
+            "link": "/pages/rolex-land-dweller-dubai",
+            "image": "shopify://shop_images/m127234-0001_1.webp"
+          }
+        },
+        "b9": {
+          "type": "model",
+          "settings": {
+            "title": "Air-King",
+            "price": "from AED 36,000",
+            "link": "/pages/rolex-air-king-dubai",
+            "image": "shopify://shop_images/m126900-0001.webp"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6",
+        "b7",
+        "b8",
+        "b9"
+      ]
+    },
+    "awc_guides": {
+      "type": "awc-learn",
+      "settings": {
+        "eyebrow": "Free guides",
+        "heading": "We give the value first",
+        "text": "Read, compare, then decide. Every guide is free and written to help you avoid scams and overpaying.",
+        "dark": true,
+        "blog": "guides",
+        "show_articles": false,
+        "models_title": "",
+        "models_link": "/blogs/guides",
+        "models_link_text": "All guides"
+      },
+      "blocks": {
+        "b1": {
+          "type": "model",
+          "settings": {
+            "title": "Buy Rolex in Dubai",
+            "price": "Every model, price & checklist",
+            "link": "/pages/buy-rolex-dubai",
+            "image": "shopify://shop_images/m126610ln-0001.webp"
+          }
+        },
+        "b2": {
+          "type": "model",
+          "settings": {
+            "title": "Spot a fake Rolex",
+            "price": "12 checks before you pay",
+            "link": "/blogs/guides/how-to-spot-a-fake-rolex-dubai",
+            "image": "shopify://shop_images/m126710blro-0002.webp"
+          }
+        },
+        "b3": {
+          "type": "model",
+          "settings": {
+            "title": "Buy safely in Dubai",
+            "price": "10 steps, start to finish",
+            "link": "/blogs/guides/how-to-buy-a-rolex-safely-in-dubai",
+            "image": "shopify://shop_images/m126500ln-0001.webp"
+          }
+        },
+        "b4": {
+          "type": "model",
+          "settings": {
+            "title": "Rolex FAQ",
+            "price": "Your questions, answered",
+            "link": "/pages/rolex-faq-dubai",
+            "image": "shopify://shop_images/m126334-0028.webp"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ]
+    },
+    "awc_founder": {
+      "type": "awc-founder",
+      "settings": {
+        "image": "shopify://shop_images/IMG-6227.jpg",
+        "badge_number": "10,000+",
+        "badge_label": "Clients served at Rolex",
+        "eyebrow": "Meet the founder",
+        "heading": "Hi, I’m Tarek.",
+        "text": "<p>I’m a former Senior Sales Representative at Rolex with over four years in the luxury watch industry. I’ve personally assisted more than 10,000 clients, and learned what makes someone love a watch, and what makes a bad deal.</p><p>After seeing long waiting lists, high prices and delays in traditional retail, I founded Advance Watch Co. to give you a trusted, transparent and seamless way to own your dream watch.</p>",
+        "button_text": "Our full story",
+        "button_link": "/pages/about-us",
+        "show_gallery": false
+      },
+      "blocks": {
+        "b1": {
+          "type": "step",
+          "settings": {
+            "year": "2019",
+            "text": "Joined Rolex, Dubai Mall"
+          }
+        },
+        "b2": {
+          "type": "step",
+          "settings": {
+            "year": "2023",
+            "text": "Founded Advance Watch Co."
+          }
+        },
+        "b3": {
+          "type": "step",
+          "settings": {
+            "year": "Today",
+            "text": "500+ watches delivered"
+          }
+        },
+        "b4": {
+          "type": "offer",
+          "settings": {
+            "text": "A trusted, transparent process, so you buy with full confidence"
+          }
+        },
+        "b5": {
+          "type": "offer",
+          "settings": {
+            "text": "Fair market pricing, no overpaying or guessing"
+          }
+        },
+        "b6": {
+          "type": "offer",
+          "settings": {
+            "text": "Fast and secure delivery, no months of waiting"
+          }
+        },
+        "b7": {
+          "type": "offer",
+          "settings": {
+            "text": "A personal luxury experience, you learn every detail of your watch"
+          }
+        },
+        "b8": {
+          "type": "offer",
+          "settings": {
+            "text": "The peace of mind that every watch is brand new and authentic"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6",
+        "b7",
+        "b8"
+      ]
+    },
+    "awc_faq": {
+      "type": "awc-faq",
+      "settings": {
+        "eyebrow": "Good to know",
+        "heading": "Frequently asked questions",
+        "more_link": "/pages/rolex-faq-dubai",
+        "more_text": "All questions answered"
+      },
+      "blocks": {
+        "b1": {
+          "type": "qa",
+          "settings": {
+            "q": "What condition are the watches you sell?",
+            "a": "<p>Most of our watches are unworn. For discontinued models, we can also source pre-owned and like-new watches.</p>"
+          }
+        },
+        "b2": {
+          "type": "qa",
+          "settings": {
+            "q": "Does the watch come with a box and papers?",
+            "a": "<p>Yes. Our watches come as a full set, with box and papers.</p>"
+          }
+        },
+        "b3": {
+          "type": "qa",
+          "settings": {
+            "q": "Is there a manufacturer’s warranty?",
+            "a": "<p>Yes, if the watch is less than 5 years old. Watches are sold with the remaining manufacturer guarantee, counted from the original purchase date. Rolex offers a 5-year worldwide guarantee.</p>"
+          }
+        },
+        "b4": {
+          "type": "qa",
+          "settings": {
+            "q": "How long does delivery take?",
+            "a": "<p>Same-day delivery in Dubai, or 24–48 hours across the UAE, depending on the watch’s availability.</p>"
+          }
+        },
+        "b5": {
+          "type": "qa",
+          "settings": {
+            "q": "Why can’t I buy a luxury watch at the retail store?",
+            "a": "<p>Retail shops have had little or no availability for years, with waiting lists of 2–8 years for some watches. The secondary market is where you can find almost any watch, at a premium price.</p>"
+          }
+        },
+        "b6": {
+          "type": "qa",
+          "settings": {
+            "q": "Do you only sell Rolex?",
+            "a": "<p>No. Besides Rolex we offer Audemars Piguet, Patek Philippe, Richard Mille and other prestigious brands.</p>"
+          }
+        },
+        "b7": {
+          "type": "qa",
+          "settings": {
+            "q": "What do you mean by watch sourcing?",
+            "a": "<p>We find the watch you want, even if it’s not in our collection. We search far and wide for the exact timepiece you’re looking for.</p>"
+          }
+        },
+        "b8": {
+          "type": "qa",
+          "settings": {
+            "q": "Do you buy or trade watches?",
+            "a": "<p>Yes. Reach out and one of our team will assist you with the process.</p>"
+          }
+        },
+        "b9": {
+          "type": "qa",
+          "settings": {
+            "q": "What do I need to know before buying?",
+            "a": "<p>Research the models, buy from a reputable dealer, check the condition, compare prices, ask for certification and warranty, and choose a seller with real after-sales support.</p>"
+          }
+        },
+        "b10": {
+          "type": "qa",
+          "settings": {
+            "q": "What payment methods do you accept?",
+            "a": "<p>Bank transfer, cash, crypto and credit cards (applicable fees). A 25% deposit confirms your order, with the balance paid on delivery.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6",
+        "b7",
+        "b8",
+        "b9",
+        "b10"
+      ]
+    },
+    "whatsapp_signup": {
+      "type": "whatsapp-signup",
+      "name": "WhatsApp signup",
+      "settings": {
+        "eyebrow": "New arrivals",
+        "heading": "Be the first to see new arrivals",
+        "text": "<p>Join our WhatsApp list and get new watches, prices and availability before they go on Instagram.</p>",
+        "button_text": "Join on WhatsApp",
+        "wa_message": "Hi, please add me to your New Arrivals list.",
+        "note": "No spam. Reply STOP anytime.",
+        "background_color": "#000000",
+        "text_color": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "hero-banner",
+    "trust_bar",
+    "featured_collection",
+    "awc_mission",
+    "awc_reviews",
+    "awc_why",
+    "awc_articles",
+    "awc_guides",
+    "awc_founder",
+    "awc_faq",
+    "whatsapp_signup"
+  ]
+}

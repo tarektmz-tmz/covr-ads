@@ -1,0 +1,46 @@
+{{ 'awc-home.css' | asset_url | stylesheet_tag }}
+<section class="awc-s awc-cream awc-pad">
+  <div class="awc-wrap">
+    <div class="awc-why-top">
+      <div>
+        {%- if section.settings.eyebrow != blank -%}<span class="awc-eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
+        <h2 class="awc-h" style="margin-bottom:0">{{ section.settings.heading }}</h2>
+      </div>
+      <div class="awc-lead">{{ section.settings.text }}</div>
+    </div>
+    <div class="awc-cmp">
+      <div class="awc-cmp-h"><div></div><div class="us">{{ section.settings.us_label }}</div><div class="them">{{ section.settings.them_label }}</div></div>
+      {%- for block in section.blocks -%}
+        <div class="awc-cmp-r" {{ block.shopify_attributes }}><div class="t">{{ block.settings.topic }}</div><div class="us">{{ block.settings.us }}</div><div class="them">{{ block.settings.them }}</div></div>
+      {%- endfor -%}
+    </div>
+    <div class="awc-contact">
+      <a class="awc-btn wa" href="{{ section.settings.wa_link }}">{{ section.settings.wa_text }}</a>
+      <a class="awc-btn" href="tel:{{ section.settings.phone_raw }}">{{ section.settings.phone_text }}</a>
+      <a class="awc-btn ghost" style="color:var(--n)" href="{{ section.settings.ig_link }}" rel="noopener">{{ section.settings.ig_text }}</a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "AWC Why us + contact",
+  "settings": [
+    {"type":"text","id":"eyebrow","label":"Small line","default":"Contact us"},
+    {"type":"text","id":"heading","label":"Heading","default":"Contact Us to Buy Luxury Watches in Dubai"},
+    {"type":"richtext","id":"text","label":"Text","default":"<p>Choose Advance Watch Co.</p>"},
+    {"type":"text","id":"us_label","label":"Our column","default":"Advance Watch Co."},
+    {"type":"text","id":"them_label","label":"Other column","default":"Some sellers"},
+    {"type":"text","id":"wa_text","label":"WhatsApp button","default":"Chat on WhatsApp"},
+    {"type":"text","id":"wa_link","label":"WhatsApp link","default":"https://wa.me/971561853856"},
+    {"type":"text","id":"phone_text","label":"Call button","default":"Call +971 56 185 3856"},
+    {"type":"text","id":"phone_raw","label":"Phone (digits)","default":"+971561853856"},
+    {"type":"text","id":"ig_text","label":"Instagram button","default":"@advance_watchco"},
+    {"type":"text","id":"ig_link","label":"Instagram link","default":"https://www.instagram.com/advance_watchco/"}
+  ],
+  "blocks": [
+    {"type":"row","name":"Row","settings":[{"type":"text","id":"topic","label":"Topic"},{"type":"text","id":"us","label":"Us"},{"type":"text","id":"them","label":"Others"}]}
+  ],
+  "presets": [{"name":"AWC Why us + contact"}]
+}
+{% endschema %}

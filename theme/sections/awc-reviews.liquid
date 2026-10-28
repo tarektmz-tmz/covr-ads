@@ -1,0 +1,70 @@
+{{ 'awc-home.css' | asset_url | stylesheet_tag }}
+<section id="awc-rv-{{ section.id }}" class="awc-s awc-pad" style="background:#fff">
+  <div class="awc-wrap">
+    <div class="awc-head">
+      <span class="awc-eyebrow">{{ section.settings.eyebrow }}</span>
+      <h2 class="awc-h">{{ section.settings.heading }}</h2>
+      <p class="awc-lead">{{ section.settings.text }}</p>
+    </div>
+    <div class="awc-rv">
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign vurl = ''
+          if block.settings.video != blank
+            for s in block.settings.video.sources
+              if s.format == 'mp4' and vurl == blank
+                assign vurl = s.url
+              endif
+            endfor
+          endif
+        -%}
+        <div class="awc-rc" {{ block.shopify_attributes }}>
+          {%- if vurl != blank -%}
+            <button type="button" class="th" data-video="{{ vurl }}" aria-label="Play video"><video src="{{ vurl }}#t=0.5" preload="metadata" muted playsinline></video><i>&#9654;</i></button>
+          {%- elsif block.settings.image != blank -%}
+            <button type="button" class="th" data-img="{{ block.settings.image | image_url: width: 900 }}" aria-label="View message"><img src="{{ block.settings.image | image_url: width: 200 }}" alt="Client message" loading="lazy" width="64" height="114"></button>
+          {%- endif -%}
+          <div>
+            <div class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            {%- if block.settings.quote != blank -%}<q>{{ block.settings.quote }}</q>{%- endif -%}
+            <small>{{ block.settings.author }}</small>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+  <div class="awc-lb" data-lb><b data-lbx>&times;</b><div data-lbc></div></div>
+  <script>
+    (function(){
+      var s=document.getElementById('awc-rv-{{ section.id }}');if(!s)return;
+      var lb=s.querySelector('[data-lb]'),c=s.querySelector('[data-lbc]');
+      function close(){lb.classList.remove('on');c.innerHTML='';}
+      s.addEventListener('click',function(e){
+        var t=e.target.closest('.th');
+        if(t){c.innerHTML=t.dataset.video?'<video src="'+t.dataset.video+'" controls autoplay playsinline></video>':'<img src="'+t.dataset.img+'" alt="">';lb.classList.add('on');return;}
+        if(e.target===lb||e.target.hasAttribute('data-lbx'))close();
+      });
+      document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+    })();
+  </script>
+</section>
+
+{% schema %}
+{
+  "name": "AWC Reviews wall",
+  "settings": [
+    {"type":"text","id":"eyebrow","label":"Small line","default":"Client messages"},
+    {"type":"text","id":"heading","label":"Heading","default":"What our clients say"},
+    {"type":"text","id":"text","label":"Text","default":"Real messages from real handovers. Tap a message to read it."}
+  ],
+  "blocks": [
+    {"type":"review","name":"Review","settings":[
+      {"type":"image_picker","id":"image","label":"Screenshot / photo"},
+      {"type":"video","id":"video","label":"Video (optional)"},
+      {"type":"text","id":"quote","label":"Quote"},
+      {"type":"text","id":"author","label":"Author line"}
+    ]}
+  ],
+  "presets": [{"name":"AWC Reviews wall"}]
+}
+{% endschema %}
