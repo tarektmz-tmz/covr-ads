@@ -21,7 +21,7 @@
         "paragraph_nDhYxK": {
           "type": "paragraph",
           "settings": {
-            "paragraph": "<p>Rolex • Audemars Piguet • Patek Philippe</p><p>Brand New • Full Set • Same-Day Delivery in Dubai</p><p><strong>500+ watches delivered • 400+ happy clients</strong></p>",
+            "paragraph": "<p>Rolex • Audemars Piguet • Patek Philippe</p><p>Brand New • Full Set • Delivered in Dubai in 24–48 Hours</p><p><strong>500+ watches delivered • 400+ happy clients</strong></p>",
             "text_size_mobile": "text-base",
             "text_size_desktop": "md:text-2xl",
             "text_weight": "font-light"
@@ -99,7 +99,7 @@
         "b4": {
           "type": "item",
           "settings": {
-            "text": "Same-Day Delivery in Dubai"
+            "text": "Delivery in 24–48 Hours"
           }
         },
         "b5": {
@@ -126,7 +126,7 @@
       "type": "featured-collection",
       "name": "Featured Collection",
       "settings": {
-        "title": "Ready for Same-Day Delivery in Dubai",
+        "title": "Ready for Delivery in 24–48 Hours",
         "heading_tag": "h2",
         "heading_size_mobile": "text-2xl",
         "heading_size_desktop": "md:text-3xl",
@@ -673,7 +673,7 @@
           "type": "qa",
           "settings": {
             "q": "How long does delivery take?",
-            "a": "<p>Same-day delivery in Dubai, or 24–48 hours across the UAE, depending on the watch’s availability.</p>"
+            "a": "<p>Delivered within 24–48 hours across the UAE, depending on the watch’s availability.</p>"
           }
         },
         "b5": {
