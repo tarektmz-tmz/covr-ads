@@ -3,8 +3,9 @@
 .awc-wrap{max-width:1180px;margin:0 auto;padding:0 20px}
 .awc-s h2,.awc-s h3{font-family:var(--font-heading);font-weight:500;line-height:1.15;margin:0}
 .awc-s p{margin:0}
+.awc-s p+p{margin-top:12px}
 .awc-eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--g);font-weight:600;margin-bottom:10px;display:block}
-.awc-h{font-size:clamp(26px,3.4vw,42px);margin-bottom:14px}
+.awc-h{font-size:clamp(26px,3.4vw,42px);margin-bottom:18px}
 .awc-lead{font-size:clamp(15px,1.5vw,18px);color:inherit;opacity:.88;max-width:62ch}
 .awc-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
 .awc-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 22px;border-radius:999px;font-size:14px;font-weight:600;letter-spacing:.04em;text-decoration:none;border:1.5px solid var(--g);color:var(--n);background:var(--g);transition:transform .2s,background .2s,color .2s}
