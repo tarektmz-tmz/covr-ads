@@ -106,7 +106,7 @@ def tpl(order):
     for k,v in order:
         secs[k]=v;ord_.append(k)
     return HDR+json.dumps({"sections":secs,"order":ord_},indent=2,ensure_ascii=False)
-open('templates/index.json','w').write(tpl([("hero-banner",hero),("trust_bar",trust),("featured_collection",feat),("awc_mission",mission),("awc_reviews",reviews),("awc_why",why),("awc_articles",articles),("awc_guides",guides),("awc_founder",founder(False)),("awc_faq",faq),("whatsapp_signup",signup)]))
+open('templates/index.json','w').write(tpl([("hero-banner",hero),("trust_bar",trust),("featured_collection",feat),("awc_mission",mission),("awc_founder",founder(False)),("awc_reviews",reviews),("awc_why",why),("awc_articles",articles),("awc_guides",guides),("awc_faq",faq),("whatsapp_signup",signup)]))
 ah=sec("awc-about-hero",{"eyebrow":"About us","heading":"Luxury watches, bought with complete confidence.",
  "text":"<p>At Advance Watch Co., buying a watch is more than a transaction. It’s an experience. Choosing a timepiece should feel exciting, effortless and unforgettable, so we guide you every step of the way, with the confidence and clarity we would expect if we were the ones buying.</p>"},
  [("stat",{"number":"2019–23","label":"Inside Rolex, Dubai Mall"}),("stat",{"number":"500+","label":"Watches delivered"}),("stat",{"number":"400+","label":"Happy clients"}),("stat",{"number":"100%","label":"Brand new & authentic"})])
