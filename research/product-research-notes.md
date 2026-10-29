@@ -97,9 +97,13 @@ Before choosing a supplier: GMP certificate, FDA facility registration, COA show
 - Menus: Home · Shop Ceylon Cinnamon · Why Ceylon · FAQ · Contact (footer: Shop, FAQ, Contact, Search)
 - Theme copy "Ceylora – new homepage" (unpublished): new homepage, announcement bar (Fall Sale + guarantee), Poppins + Plus Jakarta Sans fonts, brown/cream colors
 
+- AI photos (Canva, file "Ceylora Ceylon Cinnamon – store photos"): all CJ supplier photos removed from the product; 9 new product photos (kitchen family main photo, key benefits, take 1 softgel daily, pouch + 90-day badge, inside the formula, family table, daily routine, couple cooking, MCT coconut)
+- Text on infographics is added in code (not by AI) so spelling stays correct; claims kept FDA-safe with asterisk + disclaimer
+- Theme copy "Ceylora – new photos" (unpublished): new homepage photos, "Ceylora vs Other Brands" comparison image, "Made for Real, Everyday Life" photo cards, new product page section photos; product description placeholders replaced with photos
+
 **Still to do**
-- Preview and publish the theme copy (Online Store > Themes)
+- Preview and publish "Ceylora – new photos" (Online Store > Themes)
 - Store name: Settings > General (currently "My Store 3")
-- Replace CJ photos and placeholders with AI photos (see photo reference sheet)
+- Confirm with supplier: non-GMO, gluten-free, lab tested (printed on the pouch, not verified yet)
 - Set CJ shipping method to one that ships to the US, order a sample
 - Policies (refund 90 days, shipping), reviews app (Judge.me), upgrade from trial plan
