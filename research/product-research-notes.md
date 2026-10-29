@@ -101,8 +101,10 @@ Before choosing a supplier: GMP certificate, FDA facility registration, COA show
 - Text on infographics is added in code (not by AI) so spelling stays correct; claims kept FDA-safe with asterisk + disclaimer
 - Theme copy "Ceylora – new photos" (unpublished): new homepage photos, "Ceylora vs Other Brands" comparison image, "Made for Real, Everyday Life" photo cards, new product page section photos; product description placeholders replaced with photos
 
+- Theme copy "Ceylora – small photos" (draft): product gallery fills its column (max 720px) and stays in view while scrolling; Metabolae-style product page: bundle cards with 1/3/5-bag photos (custom block `ceylora-bundles`), "Why This Formula Works" cards, "Feel Better. Every Day." benefit rows with +, week-by-week timeline, comparison table, 90-day guarantee banner with badge; homepage "Buy Now" button and centered section titles
+
 **Still to do**
-- Preview and publish "Ceylora – new photos" (Online Store > Themes)
+- Preview and publish "Ceylora – small photos" (Online Store > Themes); check bundle cards change the price and add the right bundle to cart
 - Store name: Settings > General (currently "My Store 3")
 - Confirm with supplier: non-GMO, gluten-free, lab tested (printed on the pouch, not verified yet)
 - Set CJ shipping method to one that ships to the US, order a sample
