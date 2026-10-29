@@ -103,6 +103,9 @@ Before choosing a supplier: GMP certificate, FDA facility registration, COA show
 
 - Theme copy "Ceylora – small photos" (draft): product gallery fills its column (max 720px) and stays in view while scrolling; Metabolae-style product page: bundle cards with 1/3/5-bag photos (custom block `ceylora-bundles`), "Why This Formula Works" cards, "Feel Better. Every Day." benefit rows with +, week-by-week timeline, comparison table, 90-day guarantee banner with badge; homepage "Buy Now" button and centered section titles
 
+- Theme copy "Ceylora – v5" (draft): hero button "Shop Ceylon Now" and bigger hero photo; brown "Ceylora vs. Other Brands" section (table with bag + 4 checks + "Try Risk-Free Today"); "Not All Cinnamon Is the Same" Cassia vs Ceylon section; REASON 1/2/3 labels; blood-cell "Antioxidant & Metabolic Support" card (replaces woman-on-mat photo); couple-at-breakfast card; brown 90-day guarantee with scalloped seal; featured product section removed; full footer (brand, contact, quick links, help, email sign-up, FDA disclosure, payment icons); asterisks removed
+- Product description now in closed click-to-open tabs that slide out on hover (live now; styled once v5 is published)
+
 **Still to do**
 - Preview and publish "Ceylora – small photos" (Online Store > Themes); check bundle cards change the price and add the right bundle to cart
 - Store name: Settings > General (currently "My Store 3")
