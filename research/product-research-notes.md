@@ -85,3 +85,21 @@ Before choosing a supplier: GMP certificate, FDA facility registration, COA show
 - Shophunter, Winning Hunter: store revenue estimates
 - StoreLeads: search Shopify stores by keyword, sales and traffic filters
 - Minea: already tried, did not like it
+
+---
+
+## Ceylora store build (Shopify: 5u7eju-qa.myshopify.com, currency AED)
+
+**Done**
+- Product renamed to "Ceylora Ceylon Cinnamon 7,200mg Equivalent with MCT Oil" (URL /products/ceylon-cinnamon), vendor Ceylora, new description (wrong CJ "astaxanthin" text removed), photo placeholders inside the description
+- Bundles: Buy 1 Bag AED 109.99 (was 219.99) · Buy 2 Get 1 Free AED 219.99 (was 659.99) · Buy 3 Get 2 Free AED 329.99 (was 1,099.99). CJ variant IDs and SKUs unchanged
+- Pages: /pages/ceylon-cinnamon-benefits (7 Benefits landing page), /pages/faq
+- Menus: Home · Shop Ceylon Cinnamon · Why Ceylon · FAQ · Contact (footer: Shop, FAQ, Contact, Search)
+- Theme copy "Ceylora – new homepage" (unpublished): new homepage, announcement bar (Fall Sale + guarantee), Poppins + Plus Jakarta Sans fonts, brown/cream colors
+
+**Still to do**
+- Preview and publish the theme copy (Online Store > Themes)
+- Store name: Settings > General (currently "My Store 3")
+- Replace CJ photos and placeholders with AI photos (see photo reference sheet)
+- Set CJ shipping method to one that ships to the US, order a sample
+- Policies (refund 90 days, shipping), reviews app (Judge.me), upgrade from trial plan
