@@ -1,0 +1,235 @@
+{%- comment -%}
+  Ceylora bundle cards: one clickable card per variant (photo, price, per-bag price, savings).
+  Clicking a card selects the matching variant in the theme's own variant picker, which is
+  kept in the page (visually hidden) so prices, cart and URL keep working as normal.
+{%- endcomment -%}
+{%- assign p = closest.product -%}
+{%- if p != blank and p.variants.size > 1 -%}
+  {%- assign current = p.selected_or_first_available_variant -%}
+  <div class="ceylora-bundles" {{ block.shopify_attributes }}>
+    {%- if block.settings.heading != blank -%}
+      <p class="ceylora-bundles__heading">{{ block.settings.heading }}</p>
+    {%- endif -%}
+    {%- for v in p.variants -%}
+      {%- liquid
+        case forloop.index
+          when 1
+            assign img = block.settings.image_1
+            assign label = block.settings.label_1
+            assign badge = block.settings.badge_1
+            assign bags = block.settings.bags_1
+          when 2
+            assign img = block.settings.image_2
+            assign label = block.settings.label_2
+            assign badge = block.settings.badge_2
+            assign bags = block.settings.bags_2
+          else
+            assign img = block.settings.image_3
+            assign label = block.settings.label_3
+            assign badge = block.settings.badge_3
+            assign bags = block.settings.bags_3
+        endcase
+        if label == blank
+          assign label = v.title
+        endif
+        if bags == blank or bags < 1
+          assign bags = 1
+        endif
+        assign per_bag = v.price | divided_by: bags | floor
+        assign save = 0
+        if v.compare_at_price > v.price
+          assign save = v.compare_at_price | minus: v.price | times: 100 | divided_by: v.compare_at_price | floor
+        endif
+      -%}
+      <button
+        type="button"
+        class="ceylora-bundle{% if v.id == current.id %} is-active{% endif %}"
+        data-variant-id="{{ v.id }}"
+        {% unless v.available %}disabled{% endunless %}
+      >
+        {%- if badge != blank -%}
+          <span class="ceylora-bundle__badge">{{ badge }}</span>
+        {%- endif -%}
+        {%- if img != blank -%}
+          {{ img | image_url: width: 200 | image_tag: class: 'ceylora-bundle__img', loading: 'lazy', alt: label }}
+        {%- endif -%}
+        <span class="ceylora-bundle__text">
+          <strong>{{ label }}</strong>
+          <small>
+            {%- if bags > 1 -%}{{ per_bag | money }} per bag{%- if save > 0 %} · {% endif -%}{%- endif -%}
+            {%- if save > 0 -%}You save {{ save }}%{%- endif -%}
+          </small>
+        </span>
+        <span class="ceylora-bundle__price">
+          <strong>{{ v.price | money }}</strong>
+          {%- if v.compare_at_price > v.price -%}
+            <s>{{ v.compare_at_price | money }}</s>
+          {%- endif -%}
+        </span>
+      </button>
+    {%- endfor -%}
+  </div>
+
+  <script>
+    if (!window.ceyloraBundlesReady) {
+      window.ceyloraBundlesReady = true;
+      document.addEventListener('click', function (event) {
+        var card = event.target.closest && event.target.closest('.ceylora-bundle');
+        if (!card) return;
+        var root = card.closest('.ceylora-bundles');
+        var scope = root.closest('.product-details') || document;
+        var id = card.getAttribute('data-variant-id');
+
+        root.querySelectorAll('.ceylora-bundle').forEach(function (other) {
+          other.classList.toggle('is-active', other === card);
+        });
+
+        var picker = scope.querySelector('variant-picker');
+        if (picker) {
+          var radio = picker.querySelector('input[type="radio"][data-variant-id="' + id + '"]');
+          if (radio) {
+            if (!radio.checked) radio.click();
+            return;
+          }
+          var option = picker.querySelector('option[data-variant-id="' + id + '"]');
+          if (option) {
+            var select = option.closest('select');
+            select.value = option.value;
+            select.dispatchEvent(new Event('change', { bubbles: true }));
+            return;
+          }
+        }
+
+        // No picker found: point the add-to-cart form at the chosen variant directly.
+        scope.querySelectorAll('form[action*="/cart/add"] input[name="id"]').forEach(function (input) {
+          input.value = id;
+        });
+      });
+    }
+  </script>
+{%- endif -%}
+
+{% stylesheet %}
+  .ceylora-bundles {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .ceylora-bundles__heading {
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .ceylora-bundle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    padding: 14px 18px;
+    border: 1.5px solid #e2d6ca;
+    border-radius: 14px;
+    background: #fff;
+    color: inherit;
+    font: inherit;
+    text-align: start;
+    cursor: pointer;
+    transition: border-color 0.2s, background-color 0.2s;
+  }
+
+  .ceylora-bundle:hover {
+    border-color: #c99a78;
+  }
+
+  .ceylora-bundle.is-active {
+    border-color: #b8673a;
+    background: #fbf1ea;
+    box-shadow: 0 0 0 1px #b8673a;
+  }
+
+  .ceylora-bundle[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .ceylora-bundle__img {
+    flex: 0 0 64px;
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .ceylora-bundle__text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1 1 auto;
+  }
+
+  .ceylora-bundle__text small {
+    opacity: 0.75;
+  }
+
+  .ceylora-bundle__price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: #b8673a;
+    white-space: nowrap;
+  }
+
+  .ceylora-bundle__price s {
+    color: #8a817c;
+    font-size: 0.85em;
+  }
+
+  .ceylora-bundle__badge {
+    position: absolute;
+    top: -11px;
+    inset-inline-end: 16px;
+    padding: 2px 12px;
+    border-radius: 999px;
+    background: #b8673a;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  /* The theme's own picker stays in the page so variant changes keep working; hide it visually. */
+  .product-details:has(.ceylora-bundles) variant-picker {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Bundle cards",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Choose your bundle" },
+    { "type": "header", "content": "Bundle 1" },
+    { "type": "image_picker", "id": "image_1", "label": "Image" },
+    { "type": "text", "id": "label_1", "label": "Label", "default": "Buy 1 Bag" },
+    { "type": "number", "id": "bags_1", "label": "Bags", "default": 1 },
+    { "type": "text", "id": "badge_1", "label": "Badge" },
+    { "type": "header", "content": "Bundle 2" },
+    { "type": "image_picker", "id": "image_2", "label": "Image" },
+    { "type": "text", "id": "label_2", "label": "Label", "default": "Buy 2, Get 1 Free" },
+    { "type": "number", "id": "bags_2", "label": "Bags", "default": 3 },
+    { "type": "text", "id": "badge_2", "label": "Badge", "default": "Recommended" },
+    { "type": "header", "content": "Bundle 3" },
+    { "type": "image_picker", "id": "image_3", "label": "Image" },
+    { "type": "text", "id": "label_3", "label": "Label", "default": "Buy 3, Get 2 Free" },
+    { "type": "number", "id": "bags_3", "label": "Bags", "default": 5 },
+    { "type": "text", "id": "badge_3", "label": "Badge", "default": "Best Value" }
+  ],
+  "presets": [{ "name": "Bundle cards" }]
+}
+{% endschema %}

@@ -1,0 +1,12 @@
+{
+  "name": "store-kit-tools",
+  "private": true,
+  "description": "Image, ad and storefront test tools for Shopify store builds",
+  "dependencies": {
+    "@fontsource/oswald": "5.0.17",
+    "@fontsource/playfair-display": "5.0.25",
+    "@fontsource/poppins": "5.0.14",
+    "liquidjs": "10.16.1",
+    "lucide-static": "0.400.0"
+  }
+}

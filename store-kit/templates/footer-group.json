@@ -1,0 +1,386 @@
+{
+  "type": "footer",
+  "name": "t:names.footer",
+  "sections": {
+    "ceylora_footer": {
+      "type": "footer",
+      "blocks": {
+        "brand": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-start",
+            "gap": 14,
+            "width": "fill",
+            "width_mobile": "fill",
+            "height": "fit"
+          },
+          "blocks": {
+            "name": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Ceylora</p>",
+                "width": "100%",
+                "max_width": "none",
+                "alignment": "left",
+                "type_preset": "h3",
+                "text_color": "#ffffff"
+              },
+              "blocks": {}
+            },
+            "tag": {
+              "type": "text",
+              "settings": {
+                "text": "<p>One softgel a day. True Ceylon cinnamon in MCT oil for steady energy and everyday wellness.</p>",
+                "width": "100%",
+                "max_width": "none",
+                "alignment": "left",
+                "type_preset": "custom",
+                "text_color": "#f3e3d3",
+                "font_size": "0.875rem"
+              },
+              "blocks": {}
+            },
+            "r1": {
+              "type": "group",
+              "settings": {
+                "content_direction": "row",
+                "vertical_on_mobile": false,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "gap": 10,
+                "width": "fill",
+                "width_mobile": "fill",
+                "height": "fit"
+              },
+              "blocks": {
+                "i": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "chat_bubble",
+                    "width": 20,
+                    "icon_color": "#f3e3d3"
+                  },
+                  "blocks": {}
+                },
+                "t": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><a href=\"/pages/contact\">Contact us</a> anytime</p>",
+                    "width": "100%",
+                    "max_width": "none",
+                    "alignment": "left",
+                    "type_preset": "custom",
+                    "text_color": "#f3e3d3",
+                    "font_size": "0.875rem"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "i",
+                "t"
+              ]
+            },
+            "r2": {
+              "type": "group",
+              "settings": {
+                "content_direction": "row",
+                "vertical_on_mobile": false,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "gap": 10,
+                "width": "fill",
+                "width_mobile": "fill",
+                "height": "fit"
+              },
+              "blocks": {
+                "i": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "return",
+                    "width": 20,
+                    "icon_color": "#f3e3d3"
+                  },
+                  "blocks": {}
+                },
+                "t": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>90-day money back guarantee</p>",
+                    "width": "100%",
+                    "max_width": "none",
+                    "alignment": "left",
+                    "type_preset": "custom",
+                    "text_color": "#f3e3d3",
+                    "font_size": "0.875rem"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "i",
+                "t"
+              ]
+            },
+            "r3": {
+              "type": "group",
+              "settings": {
+                "content_direction": "row",
+                "vertical_on_mobile": false,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "gap": 10,
+                "width": "fill",
+                "width_mobile": "fill",
+                "height": "fit"
+              },
+              "blocks": {
+                "i": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "lock",
+                    "width": 20,
+                    "icon_color": "#f3e3d3"
+                  },
+                  "blocks": {}
+                },
+                "t": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Secure checkout</p>",
+                    "width": "100%",
+                    "max_width": "none",
+                    "alignment": "left",
+                    "type_preset": "custom",
+                    "text_color": "#f3e3d3",
+                    "font_size": "0.875rem"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "i",
+                "t"
+              ]
+            }
+          },
+          "block_order": [
+            "name",
+            "tag",
+            "r1",
+            "r2",
+            "r3"
+          ]
+        },
+        "links": {
+          "type": "menu",
+          "settings": {
+            "menu": "main-menu",
+            "heading": "Quick Links",
+            "menu_spacing": 10,
+            "heading_preset": "h4",
+            "link_preset": "paragraph",
+            "text_color": "#f3e3d3"
+          },
+          "blocks": {}
+        },
+        "help": {
+          "type": "menu",
+          "settings": {
+            "menu": "footer",
+            "heading": "Help",
+            "menu_spacing": 10,
+            "heading_preset": "h4",
+            "link_preset": "paragraph",
+            "text_color": "#f3e3d3"
+          },
+          "blocks": {}
+        },
+        "join": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-start",
+            "gap": 14,
+            "width": "fill",
+            "width_mobile": "fill",
+            "height": "fit"
+          },
+          "blocks": {
+            "h": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Join Our Email List</p>",
+                "width": "100%",
+                "max_width": "none",
+                "alignment": "left",
+                "type_preset": "h4",
+                "text_color": "#ffffff"
+              },
+              "blocks": {}
+            },
+            "t": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Get wellness tips, new offers and early access to sales.</p>",
+                "width": "100%",
+                "max_width": "none",
+                "alignment": "left",
+                "type_preset": "custom",
+                "text_color": "#f3e3d3",
+                "font_size": "0.875rem"
+              },
+              "blocks": {}
+            },
+            "form": {
+              "type": "email-signup",
+              "settings": {
+                "width": "fill",
+                "heading": "",
+                "border_style": "all",
+                "input_style": "custom",
+                "border_width": 1,
+                "border_radius": 100,
+                "input_background_color": "#ffffff",
+                "input_text_color": "#2a2421",
+                "input_border_color": "#ffffff",
+                "input_type_preset": "paragraph",
+                "style_class": "button-custom",
+                "custom_button_background": "#b8673a",
+                "custom_button_text": "#ffffff",
+                "custom_button_border": "#b8673a",
+                "display_type": "text",
+                "label": "Sign Up",
+                "integrated_button": false,
+                "button_type_preset": "paragraph"
+              },
+              "blocks": {}
+            },
+            "n": {
+              "type": "text",
+              "settings": {
+                "text": "<p>No spam. Unsubscribe anytime.</p>",
+                "width": "100%",
+                "max_width": "none",
+                "alignment": "left",
+                "type_preset": "custom",
+                "text_color": "#f3e3d3",
+                "font_size": "0.75rem"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "h",
+            "t",
+            "form",
+            "n"
+          ]
+        }
+      },
+      "block_order": [
+        "brand",
+        "links",
+        "help",
+        "join"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "gap": 40,
+        "background_color": "{{ settings.color_palette.color7 }}",
+        "padding-block-start": 64,
+        "padding-block-end": 32
+      }
+    },
+    "ceylora_disclosure": {
+      "type": "section",
+      "blocks": {
+        "disc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Results vary by individual. Consult your doctor before use if you are pregnant, nursing, taking medication or have a medical condition.</p>",
+            "width": "100%",
+            "max_width": "none",
+            "alignment": "center",
+            "type_preset": "custom",
+            "font_size": "0.75rem",
+            "text_color": "#f3e3d3"
+          },
+          "blocks": {}
+        },
+        "pay": {
+          "type": "payment-icons",
+          "settings": {
+            "horizontal_alignment": "center",
+            "gap": 8
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "disc",
+        "pay"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 16,
+        "section_width": "page-width",
+        "section_height": "",
+        "background_color": "{{ settings.color_palette.color7 }}",
+        "border": "solid",
+        "border_width": 1,
+        "border_opacity": 20,
+        "border_color": "#f3e3d3",
+        "padding-block-start": 24,
+        "padding-block-end": 8
+      }
+    },
+    "footer_utilities_jLGE8U": {
+      "type": "footer-utilities",
+      "blocks": {
+        "footer_copyright_jweRK8": {
+          "type": "footer-copyright",
+          "settings": {
+            "show_powered_by": false,
+            "font_size": "0.75rem",
+            "case": "none"
+          },
+          "blocks": {}
+        },
+        "footer_policy_list_VCdnpa": {
+          "type": "footer-policy-list",
+          "settings": {
+            "font_size": "0.75rem",
+            "case": "none"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "footer_copyright_jweRK8",
+        "footer_policy_list_VCdnpa"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "gap": 24,
+        "background_color": "{{ settings.color_palette.color7 }}",
+        "divider_thickness": 0,
+        "padding-block-start": 12,
+        "padding-block-end": 32
+      }
+    }
+  },
+  "order": [
+    "ceylora_footer",
+    "ceylora_disclosure",
+    "footer_utilities_jLGE8U"
+  ]
+}

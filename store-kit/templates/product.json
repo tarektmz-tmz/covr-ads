@@ -1,0 +1,2039 @@
+{
+  "sections": {
+    "main": {
+      "type": "product-information",
+      "blocks": {
+        "media-gallery": {
+          "type": "_product-media-gallery",
+          "static": true,
+          "settings": {
+            "media_presentation": "carousel",
+            "media_columns": "two",
+            "image_gap": 4,
+            "large_first_image": false,
+            "icons_style": "chevron",
+            "slideshow_controls_style": "thumbnails",
+            "slideshow_mobile_controls_style": "dots",
+            "thumbnail_position": "bottom",
+            "thumbnail_width": 72,
+            "thumbnail_radius": 8,
+            "aspect_ratio": "1",
+            "constrain_to_viewport": false,
+            "media_fit": "contain",
+            "media_radius": 20,
+            "extend_media": false,
+            "zoom": true,
+            "video_loop": false,
+            "hide_variants": false,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "product-details": {
+          "type": "_product-details",
+          "static": true,
+          "settings": {
+            "width": "fill",
+            "width_mobile": "fill",
+            "height": "fit",
+            "details_position": "flex-start",
+            "gap": 24,
+            "sticky_details_desktop": false,
+            "padding-block-start": 8,
+            "padding-block-end": 24,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "group_icgrde": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "width_mobile": "fill",
+                "height": "fit",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "text_xrnftG": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h1>{{ closest.product.title }}</h1>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h3"
+                  },
+                  "blocks": {}
+                },
+                "price_tVjtKg": {
+                  "type": "price",
+                  "settings": {
+                    "show_sale_price_first": true,
+                    "show_installments": false,
+                    "show_tax_info": false,
+                    "type_preset": "h4",
+                    "width": "100%",
+                    "alignment": "left"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_xrnftG",
+                "price_tVjtKg"
+              ]
+            },
+            "variant_picker_R3rGDr": {
+              "type": "variant-picker",
+              "settings": {
+                "variant_style": "buttons",
+                "show_swatches": false,
+                "alignment": "left"
+              },
+              "blocks": {}
+            },
+            "buy_buttons_eYQEYi": {
+              "type": "buy-buttons",
+              "settings": {
+                "stacking": true,
+                "show_pickup_availability": false,
+                "gift_card_form": true
+              },
+              "blocks": {
+                "quantity": {
+                  "type": "quantity",
+                  "static": true,
+                  "settings": {
+                    "input_style": "custom",
+                    "input_background_color": "{{ settings.color_palette.background }}",
+                    "input_text_color": "{{ settings.color_palette.color10 }}",
+                    "input_border_color": "{{ settings.color_palette.color11 }}"
+                  },
+                  "blocks": {}
+                },
+                "add-to-cart": {
+                  "type": "add-to-cart",
+                  "static": true,
+                  "settings": {
+                    "style_class": "button"
+                  },
+                  "blocks": {}
+                },
+                "accelerated-checkout": {
+                  "type": "accelerated-checkout",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                }
+              },
+              "block_order": []
+            },
+            "guarantee_txt": {
+              "type": "text",
+              "settings": {
+                "text": "<p>&#128737; <strong>90-Day Money-Back Guarantee</strong> &middot; Free shipping on 3+ bags</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte"
+              },
+              "blocks": {}
+            },
+            "text_aEtTtq": {
+              "type": "text",
+              "settings": {
+                "text": "{{ closest.product.description }}",
+                "width": "100%",
+                "max_width": "none",
+                "alignment": "left",
+                "type_preset": "rte"
+              },
+              "blocks": {}
+            },
+            "bundles": {
+              "type": "ceylora-bundles",
+              "settings": {
+                "heading": "Choose your bundle",
+                "image_1": "shopify://shop_images/ceylora-bundle-1.jpg",
+                "label_1": "Buy 1 Bag",
+                "bags_1": 1,
+                "badge_1": "",
+                "image_2": "shopify://shop_images/ceylora-bundle-3.jpg",
+                "label_2": "Buy 2, Get 1 Free",
+                "bags_2": 3,
+                "badge_2": "Recommended",
+                "image_3": "shopify://shop_images/ceylora-bundle-5.jpg",
+                "label_3": "Buy 3, Get 2 Free",
+                "bags_3": 5,
+                "badge_3": "Best Value"
+              },
+              "blocks": {}
+            },
+            "points": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "flex-start",
+                "gap": 14,
+                "width": "fill",
+                "width_mobile": "fill",
+                "height": "fit"
+              },
+              "blocks": {
+                "pp_a": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "row",
+                    "vertical_on_mobile": false,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "horizontal_alignment_flex_direction_column": "center",
+                    "vertical_alignment_flex_direction_column": "flex-start",
+                    "gap": 16,
+                    "width": "fill",
+                    "width_mobile": "fill",
+                    "height": "fit"
+                  },
+                  "blocks": {
+                    "ppt0": {
+                      "type": "group",
+                      "settings": {
+                        "content_direction": "row",
+                        "vertical_on_mobile": false,
+                        "horizontal_alignment": "flex-start",
+                        "vertical_alignment": "center",
+                        "horizontal_alignment_flex_direction_column": "flex-start",
+                        "vertical_alignment_flex_direction_column": "flex-start",
+                        "gap": 12,
+                        "width": "fill",
+                        "width_mobile": "fill",
+                        "height": "fit"
+                      },
+                      "blocks": {
+                        "ppt0_i": {
+                          "type": "icon",
+                          "settings": {
+                            "icon": "none",
+                            "image_upload": "shopify://shop_images/ceylora-icon-insulin.png",
+                            "width": 44
+                          },
+                          "blocks": {}
+                        },
+                        "ppt0_t": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Supports Healthy Insulin Sensitivity</strong></p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "paragraph"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "ppt0_i",
+                        "ppt0_t"
+                      ]
+                    },
+                    "ppt1": {
+                      "type": "group",
+                      "settings": {
+                        "content_direction": "row",
+                        "vertical_on_mobile": false,
+                        "horizontal_alignment": "flex-start",
+                        "vertical_alignment": "center",
+                        "horizontal_alignment_flex_direction_column": "flex-start",
+                        "vertical_alignment_flex_direction_column": "flex-start",
+                        "gap": 12,
+                        "width": "fill",
+                        "width_mobile": "fill",
+                        "height": "fit"
+                      },
+                      "blocks": {
+                        "ppt1_i": {
+                          "type": "icon",
+                          "settings": {
+                            "icon": "none",
+                            "image_upload": "shopify://shop_images/ceylora-icon-blood-sugar.png",
+                            "width": 44
+                          },
+                          "blocks": {}
+                        },
+                        "ppt1_t": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Supports Healthy Blood Sugar Levels</strong></p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "paragraph"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "ppt1_i",
+                        "ppt1_t"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "ppt0",
+                    "ppt1"
+                  ]
+                },
+                "pp_b": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "row",
+                    "vertical_on_mobile": false,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "horizontal_alignment_flex_direction_column": "center",
+                    "vertical_alignment_flex_direction_column": "flex-start",
+                    "gap": 16,
+                    "width": "fill",
+                    "width_mobile": "fill",
+                    "height": "fit"
+                  },
+                  "blocks": {
+                    "ppt2": {
+                      "type": "group",
+                      "settings": {
+                        "content_direction": "row",
+                        "vertical_on_mobile": false,
+                        "horizontal_alignment": "flex-start",
+                        "vertical_alignment": "center",
+                        "horizontal_alignment_flex_direction_column": "flex-start",
+                        "vertical_alignment_flex_direction_column": "flex-start",
+                        "gap": 12,
+                        "width": "fill",
+                        "width_mobile": "fill",
+                        "height": "fit"
+                      },
+                      "blocks": {
+                        "ppt2_i": {
+                          "type": "icon",
+                          "settings": {
+                            "icon": "none",
+                            "image_upload": "shopify://shop_images/ceylora-icon-blood-pressure.png",
+                            "width": 44
+                          },
+                          "blocks": {}
+                        },
+                        "ppt2_t": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Supports Healthy Blood Pressure</strong></p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "paragraph"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "ppt2_i",
+                        "ppt2_t"
+                      ]
+                    },
+                    "ppt3": {
+                      "type": "group",
+                      "settings": {
+                        "content_direction": "row",
+                        "vertical_on_mobile": false,
+                        "horizontal_alignment": "flex-start",
+                        "vertical_alignment": "center",
+                        "horizontal_alignment_flex_direction_column": "flex-start",
+                        "vertical_alignment_flex_direction_column": "flex-start",
+                        "gap": 12,
+                        "width": "fill",
+                        "width_mobile": "fill",
+                        "height": "fit"
+                      },
+                      "blocks": {
+                        "ppt3_i": {
+                          "type": "icon",
+                          "settings": {
+                            "icon": "none",
+                            "image_upload": "shopify://shop_images/ceylora-icon-energy.png",
+                            "width": 44
+                          },
+                          "blocks": {}
+                        },
+                        "ppt3_t": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Supports Steady Energy</strong></p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "paragraph"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "ppt3_i",
+                        "ppt3_t"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "ppt2",
+                    "ppt3"
+                  ]
+                }
+              },
+              "block_order": [
+                "pp_a",
+                "pp_b"
+              ]
+            }
+          },
+          "block_order": [
+            "group_icgrde",
+            "points",
+            "bundles",
+            "variant_picker_R3rGDr",
+            "buy_buttons_eYQEYi",
+            "guarantee_txt",
+            "text_aEtTtq"
+          ]
+        }
+      },
+      "settings": {
+        "content_width": "content-center-aligned",
+        "desktop_media_position": "left",
+        "equal_columns": true,
+        "limit_details_width": true,
+        "gap": 48,
+        "enable_sticky_add_to_cart": true,
+        "background_color": "{{ settings.color_palette.color8 }}",
+        "padding-block-start": 32,
+        "padding-block-end": 32
+      }
+    },
+    "section_tGDYRc": {
+      "type": "section",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 40,
+        "section_width": "page-width",
+        "section_height": "",
+        "background_color": "#F6EEE5",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      },
+      "blocks": {
+        "cols": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 40,
+            "width": "fill",
+            "width_mobile": "fill",
+            "height": "fit",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "c1": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "width_mobile": "fill",
+                "height": "fit",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "i1": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "leaf",
+                    "width": 32
+                  },
+                  "blocks": {}
+                },
+                "h1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>True Ceylon, Not Cassia</strong></p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h4"
+                  },
+                  "blocks": {}
+                },
+                "p1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Naturally low in coumarin, made for everyday use.</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "i1",
+                "h1",
+                "p1"
+              ]
+            },
+            "c2": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "width_mobile": "fill",
+                "height": "fit",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "i2": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "lightning_bolt",
+                    "width": 32
+                  },
+                  "blocks": {}
+                },
+                "h2": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>7,200mg in One Softgel</strong></p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h4"
+                  },
+                  "blocks": {}
+                },
+                "p2": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>A concentrated extract instead of a handful of capsules.</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "i2",
+                "h2",
+                "p2"
+              ]
+            },
+            "c3": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "width_mobile": "fill",
+                "height": "fit",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "i3": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "heart",
+                    "width": 32
+                  },
+                  "blocks": {}
+                },
+                "h3": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>90-Day Guarantee</strong></p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h4"
+                  },
+                  "blocks": {}
+                },
+                "p3": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Try it for 90 days. Not happy? Full refund.</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "i3",
+                "h3",
+                "p3"
+              ]
+            }
+          },
+          "block_order": [
+            "c1",
+            "c2",
+            "c3"
+          ]
+        }
+      },
+      "block_order": [
+        "cols"
+      ]
+    },
+    "section_djbjjt": {
+      "type": "section",
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "center",
+        "vertical_alignment": "center",
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 48,
+        "section_width": "page-width",
+        "section_height": "",
+        "background_color": "{{ settings.color_palette.color8 }}",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      },
+      "blocks": {
+        "img1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ceylora-key-benefits-sq.jpg",
+            "image_ratio": "square",
+            "width": "custom",
+            "custom_width": 50,
+            "width_mobile": "fill",
+            "height": "fit",
+            "border_radius": 20
+          },
+          "blocks": {}
+        },
+        "g1": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "custom",
+            "width_mobile": "fill",
+            "height": "fit",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_width": 45
+          },
+          "blocks": {
+            "t1": {
+              "type": "text",
+              "settings": {
+                "text": "<p>What Ceylora Supports</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h3"
+              },
+              "blocks": {}
+            },
+            "t2": {
+              "type": "text",
+              "settings": {
+                "text": "<p>True Ceylon cinnamon is studied for supporting healthy glucose metabolism and steady daily energy. Antioxidant support in one easy softgel a day.</p>",
+                "width": "fit-content",
+                "max_width": "narrow",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font_size": "1.125rem"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "t1",
+            "t2"
+          ]
+        }
+      },
+      "block_order": [
+        "img1",
+        "g1"
+      ]
+    },
+    "section_BfGYR4": {
+      "type": "section",
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "center",
+        "vertical_alignment": "center",
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 48,
+        "section_width": "page-width",
+        "section_height": "",
+        "background_color": "{{ settings.color_palette.color8 }}",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      },
+      "blocks": {
+        "g2": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "custom",
+            "width_mobile": "fill",
+            "height": "fit",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_width": 45
+          },
+          "blocks": {
+            "t3": {
+              "type": "text",
+              "settings": {
+                "text": "<p>What's Inside</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h3"
+              },
+              "blocks": {}
+            },
+            "t4": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Concentrated Ceylon cinnamon extract (12:1), equal to 7,200mg of raw Ceylon bark, in MCT oil from coconut. 30 softgels per bag, one a day.</p>",
+                "width": "fit-content",
+                "max_width": "narrow",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font_size": "1.125rem"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "t3",
+            "t4"
+          ]
+        },
+        "img2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ceylora-inside-formula-sq.jpg",
+            "image_ratio": "square",
+            "width": "custom",
+            "custom_width": 50,
+            "width_mobile": "fill",
+            "height": "fit",
+            "border_radius": 20
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "g2",
+        "img2"
+      ]
+    },
+    "section_compare": {
+      "type": "section",
+      "blocks": {
+        "cmp_img": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ceylora-vs-other-brands-v2.png",
+            "link": "shopify://products/ceylon-cinnamon",
+            "image_ratio": "adapt",
+            "width": "custom",
+            "custom_width": 50,
+            "width_mobile": "fill",
+            "height": "fit",
+            "border_radius": 0
+          },
+          "blocks": {}
+        },
+        "cmp_text": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 22,
+            "width": "custom",
+            "custom_width": 45,
+            "width_mobile": "fill",
+            "height": "fit",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "cmp_kicker": {
+              "type": "text",
+              "settings": {
+                "text": "<p><strong>WHY PEOPLE SWITCH</strong></p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font_size": "0.875rem",
+                "letter_spacing": "loose",
+                "text_color": "#ffe3cf"
+              },
+              "blocks": {}
+            },
+            "cmp_title": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Ceylora vs. Other Brands</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h2",
+                "text_color": "#ffffff"
+              },
+              "blocks": {}
+            },
+            "cmp_points": {
+              "type": "text",
+              "settings": {
+                "text": "<p>&#10003;&nbsp; <strong>True Ceylon cinnamon</strong> from Sri Lanka, not cheap cassia</p><p>&#10003;&nbsp; <strong>Naturally low in coumarin</strong>, made for gentle daily use</p><p>&#10003;&nbsp; <strong>Concentrated 12:1 extract</strong> in MCT oil, not dry powder</p><p>&#10003;&nbsp; <strong>Just 1 small softgel a day</strong>, no big capsules, no aftertaste</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font_size": "1.125rem",
+                "line_height": "loose",
+                "text_color": "#ffffff"
+              },
+              "blocks": {}
+            },
+            "cmp_btn": {
+              "type": "button",
+              "settings": {
+                "label": "Try Risk-Free Today",
+                "link": "shopify://products/ceylon-cinnamon",
+                "style_class": "button-custom",
+                "custom_button_background": "#ffffff",
+                "custom_button_text": "#7f3412",
+                "custom_button_border": "#ffffff",
+                "width": "fit-content",
+                "width_mobile": "fit-content"
+              },
+              "blocks": {}
+            },
+            "cmp_note": {
+              "type": "text",
+              "settings": {
+                "text": "<p>&#128737;&nbsp; 90-day money back guarantee</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font_size": "0.875rem",
+                "text_color": "#ffe3cf"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "cmp_kicker",
+            "cmp_title",
+            "cmp_points",
+            "cmp_btn",
+            "cmp_note"
+          ]
+        }
+      },
+      "block_order": [
+        "cmp_img",
+        "cmp_text"
+      ],
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "center",
+        "vertical_alignment": "center",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 56,
+        "section_width": "page-width",
+        "section_height": "",
+        "background_color": "#a8552a",
+        "border_radius": 0,
+        "padding-block-start": 72,
+        "padding-block-end": 72
+      }
+    },
+    "section_why": {
+      "type": "carousel",
+      "blocks": {
+        "static-header": {
+          "type": "group",
+          "static": true,
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "flex-end",
+            "align_baseline": true,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "width_mobile": "fill",
+            "height": "fit",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 16
+          },
+          "blocks": {
+            "text_QFE67A": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Why This Ceylon Cinnamon Formula Works</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "center",
+                "type_preset": "h2"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_QFE67A"
+          ]
+        },
+        "static-carousel-content": {
+          "type": "_carousel-content",
+          "static": true,
+          "settings": {
+            "height": "fit",
+            "position": "top",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0
+          },
+          "blocks": {
+            "wcard0": {
+              "type": "_card",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 20,
+                "aspect_ratio": "adapt",
+                "padding-block-start": 0,
+                "padding-block-end": 0
+              },
+              "blocks": {
+                "wimg0": {
+                  "type": "image",
+                  "settings": {
+                    "image": "shopify://shop_images/ceylora-ceylon-quills.jpg",
+                    "image_ratio": "adapt",
+                    "width": "fill",
+                    "width_mobile": "fill",
+                    "height": "fit",
+                    "border_radius": 16
+                  },
+                  "blocks": {}
+                },
+                "wgrp0": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 8,
+                    "width": "fill",
+                    "width_mobile": "fill",
+                    "height": "fit",
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0
+                  },
+                  "blocks": {
+                    "wt0a": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p><strong>Genuine Ceylon, Not Cassia</strong></p>",
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "h4"
+                      },
+                      "blocks": {}
+                    },
+                    "wt0b": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Each softgel contains Cinnamomum verum from Sri Lanka, concentrated 12:1. Unlike Cassia, it is naturally low in coumarin, which matters when you take it every day.</p>",
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "wt0a",
+                    "wt0b"
+                  ]
+                }
+              },
+              "block_order": [
+                "wimg0",
+                "wgrp0"
+              ]
+            },
+            "wcard1": {
+              "type": "_card",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 20,
+                "aspect_ratio": "adapt",
+                "padding-block-start": 0,
+                "padding-block-end": 0
+              },
+              "blocks": {
+                "wimg1": {
+                  "type": "image",
+                  "settings": {
+                    "image": "shopify://shop_images/ceylora-softgel-bowl.jpg",
+                    "image_ratio": "adapt",
+                    "width": "fill",
+                    "width_mobile": "fill",
+                    "height": "fit",
+                    "border_radius": 16
+                  },
+                  "blocks": {}
+                },
+                "wgrp1": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 8,
+                    "width": "fill",
+                    "width_mobile": "fill",
+                    "height": "fit",
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0
+                  },
+                  "blocks": {
+                    "wt1a": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p><strong>7,200 mg in One Softgel</strong></p>",
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "h4"
+                      },
+                      "blocks": {}
+                    },
+                    "wt1b": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Many cinnamon supplements give you a few hundred milligrams of powder. One Ceylora softgel delivers the equivalent of 7,200 mg of raw Ceylon cinnamon.</p>",
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "wt1a",
+                    "wt1b"
+                  ]
+                }
+              },
+              "block_order": [
+                "wimg1",
+                "wgrp1"
+              ]
+            },
+            "wcard2": {
+              "type": "_card",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 20,
+                "aspect_ratio": "adapt",
+                "padding-block-start": 0,
+                "padding-block-end": 0
+              },
+              "blocks": {
+                "wimg2": {
+                  "type": "image",
+                  "settings": {
+                    "image": "shopify://shop_images/ceylora-mct-dropper.jpg",
+                    "image_ratio": "adapt",
+                    "width": "fill",
+                    "width_mobile": "fill",
+                    "height": "fit",
+                    "border_radius": 16
+                  },
+                  "blocks": {}
+                },
+                "wgrp2": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 8,
+                    "width": "fill",
+                    "width_mobile": "fill",
+                    "height": "fit",
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0
+                  },
+                  "blocks": {
+                    "wt2a": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p><strong>MCT-Powered Absorption</strong></p>",
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "h4"
+                      },
+                      "blocks": {}
+                    },
+                    "wt2b": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Cinnamon’s active compounds are fat-soluble, so Ceylora suspends the extract in MCT oil from coconut instead of a dry powder capsule.</p>",
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "wt2a",
+                    "wt2b"
+                  ]
+                }
+              },
+              "block_order": [
+                "wimg2",
+                "wgrp2"
+              ]
+            },
+            "wcard3": {
+              "type": "_card",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 20,
+                "aspect_ratio": "adapt",
+                "padding-block-start": 0,
+                "padding-block-end": 0
+              },
+              "blocks": {
+                "wimg3": {
+                  "type": "image",
+                  "settings": {
+                    "image": "shopify://shop_images/ceylora-one-softgel.jpg",
+                    "image_ratio": "adapt",
+                    "width": "fill",
+                    "width_mobile": "fill",
+                    "height": "fit",
+                    "border_radius": 16
+                  },
+                  "blocks": {}
+                },
+                "wgrp3": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 8,
+                    "width": "fill",
+                    "width_mobile": "fill",
+                    "height": "fit",
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0
+                  },
+                  "blocks": {
+                    "wt3a": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p><strong>One Small, Easy Softgel</strong></p>",
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "h4"
+                      },
+                      "blocks": {}
+                    },
+                    "wt3b": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>No chalky capsules and no powder to stir into your coffee. Just one smooth softgel with breakfast.</p>",
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "wt3a",
+                    "wt3b"
+                  ]
+                }
+              },
+              "block_order": [
+                "wimg3",
+                "wgrp3"
+              ]
+            }
+          },
+          "block_order": [
+            "wcard0",
+            "wcard1",
+            "wcard2",
+            "wcard3"
+          ]
+        }
+      },
+      "settings": {
+        "columns": 4,
+        "mobile_columns": "1",
+        "section_width": "page-width",
+        "columns_gap": 12,
+        "background_color": "{{ settings.color_palette.color8 }}",
+        "icons_style": "chevron",
+        "icons_shape": "none",
+        "padding-block-start": 56,
+        "padding-block-end": 56
+      }
+    },
+    "section_benefits": {
+      "type": "section",
+      "blocks": {
+        "ben_title": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Feel Better. Every Day.</p>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h2"
+          },
+          "blocks": {}
+        },
+        "ben_sub": {
+          "type": "text",
+          "settings": {
+            "text": "<p>From steady daily support to effortless use, here is what makes Ceylora different.</p>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "rte"
+          },
+          "blocks": {}
+        },
+        "ben_row1": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 20,
+            "width": "fill",
+            "width_mobile": "fill",
+            "height": "fit",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "bcard0": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 16,
+                "width": "fill",
+                "width_mobile": "fill",
+                "height": "fit",
+                "padding-block-start": 16,
+                "padding-block-end": 16,
+                "padding-inline-start": 16,
+                "padding-inline-end": 16,
+                "background_color": "#FFFFFF",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "#E6DCCF",
+                "border_radius": 16
+              },
+              "blocks": {
+                "bacc0": {
+                  "type": "accordion",
+                  "settings": {
+                    "icon": "plus",
+                    "dividers": false,
+                    "type_preset": "h5"
+                  },
+                  "blocks": {
+                    "row0": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "Healthy Glucose Metabolism",
+                        "open_by_default": false,
+                        "image_upload": "shopify://shop_images/ceylora-energy-walk.jpg",
+                        "width": 72
+                      },
+                      "blocks": {
+                        "t0": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Supports healthy blood sugar levels already within the normal range. True Ceylon cinnamon in a concentrated 12:1 extract, with MCT oil to help your body use it.</p>",
+                            "width": "100%"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "t0"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "row0"
+                  ]
+                }
+              },
+              "block_order": [
+                "bacc0"
+              ]
+            },
+            "bcard1": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 16,
+                "width": "fill",
+                "width_mobile": "fill",
+                "height": "fit",
+                "padding-block-start": 16,
+                "padding-block-end": 16,
+                "padding-inline-start": 16,
+                "padding-inline-end": 16,
+                "background_color": "#FFFFFF",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "#E6DCCF",
+                "border_radius": 16
+              },
+              "blocks": {
+                "bacc1": {
+                  "type": "accordion",
+                  "settings": {
+                    "icon": "plus",
+                    "dividers": false,
+                    "type_preset": "h5"
+                  },
+                  "blocks": {
+                    "row0": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "Gentle on the Stomach",
+                        "open_by_default": false,
+                        "image_upload": "shopify://shop_images/ceylora-gentle-daily.jpg",
+                        "width": 72
+                      },
+                      "blocks": {
+                        "t0": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>A liquid cinnamon extract in MCT oil, inside a smooth softgel. No harsh powder and no cinnamon aftertaste.</p>",
+                            "width": "100%"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "t0"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "row0"
+                  ]
+                }
+              },
+              "block_order": [
+                "bacc1"
+              ]
+            }
+          },
+          "block_order": [
+            "bcard0",
+            "bcard1"
+          ]
+        },
+        "ben_row2": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 20,
+            "width": "fill",
+            "width_mobile": "fill",
+            "height": "fit",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "bcard2": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 16,
+                "width": "fill",
+                "width_mobile": "fill",
+                "height": "fit",
+                "padding-block-start": 16,
+                "padding-block-end": 16,
+                "padding-inline-start": 16,
+                "padding-inline-end": 16,
+                "background_color": "#FFFFFF",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "#E6DCCF",
+                "border_radius": 16
+              },
+              "blocks": {
+                "bacc2": {
+                  "type": "accordion",
+                  "settings": {
+                    "icon": "plus",
+                    "dividers": false,
+                    "type_preset": "h5"
+                  },
+                  "blocks": {
+                    "row0": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "Naturally Low in Coumarin",
+                        "open_by_default": false,
+                        "image_upload": "shopify://shop_images/ceylora-ceylon-quills.jpg",
+                        "width": 72
+                      },
+                      "blocks": {
+                        "t0": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Unlike common Cassia cinnamon, Ceylon cinnamon is naturally low in coumarin, which makes it better suited to daily, long-term use.</p>",
+                            "width": "100%"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "t0"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "row0"
+                  ]
+                }
+              },
+              "block_order": [
+                "bacc2"
+              ]
+            },
+            "bcard3": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 16,
+                "width": "fill",
+                "width_mobile": "fill",
+                "height": "fit",
+                "padding-block-start": 16,
+                "padding-block-end": 16,
+                "padding-inline-start": 16,
+                "padding-inline-end": 16,
+                "background_color": "#FFFFFF",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "#E6DCCF",
+                "border_radius": 16
+              },
+              "blocks": {
+                "bacc3": {
+                  "type": "accordion",
+                  "settings": {
+                    "icon": "plus",
+                    "dividers": false,
+                    "type_preset": "h5"
+                  },
+                  "blocks": {
+                    "row0": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "Better Daily Absorption",
+                        "open_by_default": false,
+                        "image_upload": "shopify://shop_images/ceylora-mct-dropper.jpg",
+                        "width": 72
+                      },
+                      "blocks": {
+                        "t0": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Cinnamon compounds are fat-soluble. MCT oil acts as a carrier for the 7,200 mg equivalent Ceylon extract.</p>",
+                            "width": "100%"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "t0"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "row0"
+                  ]
+                }
+              },
+              "block_order": [
+                "bacc3"
+              ]
+            }
+          },
+          "block_order": [
+            "bcard2",
+            "bcard3"
+          ]
+        }
+      },
+      "block_order": [
+        "ben_title",
+        "ben_sub",
+        "ben_row1",
+        "ben_row2"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "center",
+        "vertical_alignment": "center",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 20,
+        "section_width": "page-width",
+        "section_height": "",
+        "background_color": "#F6EEE5",
+        "padding-block-start": 56,
+        "padding-block-end": 56
+      }
+    },
+    "section_guarantee": {
+      "type": "section",
+      "blocks": {
+        "g_text": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 16,
+            "width": "custom",
+            "width_mobile": "fill",
+            "height": "fit",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_width": 45
+          },
+          "blocks": {
+            "g_badge": {
+              "type": "image",
+              "settings": {
+                "image": "shopify://shop_images/ceylora-90-day-badge.png",
+                "image_ratio": "square",
+                "width": "custom",
+                "custom_width": 22,
+                "width_mobile": "fill",
+                "height": "fit",
+                "border_radius": 0
+              },
+              "blocks": {}
+            },
+            "g_kicker": {
+              "type": "text",
+              "settings": {
+                "text": "<p><strong>FEEL THE DIFFERENCE</strong></p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte"
+              },
+              "blocks": {}
+            },
+            "g_title": {
+              "type": "text",
+              "settings": {
+                "text": "<p>90-Day Risk-Free Trial</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h2"
+              },
+              "blocks": {}
+            },
+            "g_copy": {
+              "type": "text",
+              "settings": {
+                "text": "<p>If you are not completely satisfied in your first 90 days, contact us for a full refund. No questions asked.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte"
+              },
+              "blocks": {}
+            },
+            "g_btn": {
+              "type": "button",
+              "settings": {
+                "label": "Try Risk-Free Today",
+                "link": "shopify://products/ceylon-cinnamon",
+                "style_class": "button",
+                "width": "fit-content",
+                "width_mobile": "fit-content"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "g_badge",
+            "g_kicker",
+            "g_title",
+            "g_copy",
+            "g_btn"
+          ]
+        },
+        "g_img": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ceylora-couple-cooking.jpg",
+            "image_ratio": "square",
+            "width": "custom",
+            "custom_width": 50,
+            "width_mobile": "fill",
+            "height": "fit",
+            "border_radius": 24
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "g_text",
+        "g_img"
+      ],
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "center",
+        "vertical_alignment": "center",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 48,
+        "section_width": "page-width",
+        "section_height": "",
+        "background_color": "{{ settings.color_palette.color9 }}",
+        "padding-block-start": 64,
+        "padding-block-end": 64
+      }
+    },
+    "section_timeline": {
+      "type": "section",
+      "blocks": {
+        "t_img": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ceylora-daily-routine-sq.jpg",
+            "image_ratio": "square",
+            "width": "custom",
+            "custom_width": 45,
+            "width_mobile": "fill",
+            "height": "fit",
+            "border_radius": 24
+          },
+          "blocks": {}
+        },
+        "t_text": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 16,
+            "width": "custom",
+            "width_mobile": "fill",
+            "height": "fit",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_width": 50
+          },
+          "blocks": {
+            "t_kicker": {
+              "type": "text",
+              "settings": {
+                "text": "<p><strong>YOUR WELLNESS JOURNEY</strong></p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte"
+              },
+              "blocks": {}
+            },
+            "t_title": {
+              "type": "text",
+              "settings": {
+                "text": "<p>What To Expect, Week By Week</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h2"
+              },
+              "blocks": {}
+            },
+            "t_copy": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Ceylora Ceylon is designed to support your daily wellness routine over time. Stay consistent with your softgel, keep moving every day, and build healthier habits week by week.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte"
+              },
+              "blocks": {}
+            },
+            "t_acc": {
+              "type": "accordion",
+              "settings": {
+                "icon": "plus",
+                "dividers": true,
+                "type_preset": "h5"
+              },
+              "blocks": {
+                "row0": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Week 1–2: Easy Start",
+                    "open_by_default": true
+                  },
+                  "blocks": {
+                    "t0": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<ul><li>One softgel a day fits easily into your routine</li><li>You may notice steadier energy and fewer afternoon slumps</li><li>Some people find sugar cravings easier to manage</li><li>Your body starts getting daily Ceylon cinnamon support</li></ul>",
+                        "width": "100%"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "t0"
+                  ]
+                },
+                "row1": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Week 3–4: Daily Balance",
+                    "open_by_default": false
+                  },
+                  "blocks": {
+                    "t1": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<ul><li>Feel more balanced throughout the day</li><li>Fewer of the energy ups and downs you had before</li><li>Your routine starts to feel natural and easy to keep</li><li>Consistency becomes second nature</li></ul>",
+                        "width": "100%"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "t1"
+                  ]
+                },
+                "row2": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Week 5–6: Ceylora Ceylon Support",
+                    "open_by_default": false
+                  },
+                  "blocks": {
+                    "t2": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<ul><li>Supports healthy glucose metabolism already within the normal range</li><li>More confidence in your daily energy and overall well-being</li><li>Benefits build with continued use</li><li>Keep going: steady daily use is what counts</li></ul>",
+                        "width": "100%"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "t2"
+                  ]
+                },
+                "row3": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Week 7–8+: Long-Term Wellness",
+                    "open_by_default": false
+                  },
+                  "blocks": {
+                    "t3": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<ul><li>Ongoing metabolic and antioxidant support</li><li>Designed for consistent, long-term daily use</li><li>Focused on stability, not quick fixes</li><li>Results depend on individual health, diet and lifestyle</li></ul>",
+                        "width": "100%"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "t3"
+                  ]
+                }
+              },
+              "block_order": [
+                "row0",
+                "row1",
+                "row2",
+                "row3"
+              ]
+            },
+            "t_btn": {
+              "type": "button",
+              "settings": {
+                "label": "Start My Routine",
+                "link": "shopify://products/ceylon-cinnamon",
+                "style_class": "button",
+                "width": "fit-content",
+                "width_mobile": "fit-content"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "t_kicker",
+            "t_title",
+            "t_copy",
+            "t_acc",
+            "t_btn"
+          ]
+        }
+      },
+      "block_order": [
+        "t_img",
+        "t_text"
+      ],
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "center",
+        "vertical_alignment": "center",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 48,
+        "section_width": "page-width",
+        "section_height": "",
+        "background_color": "",
+        "padding-block-start": 64,
+        "padding-block-end": 64
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_tGDYRc",
+    "section_why",
+    "section_djbjjt",
+    "section_benefits",
+    "section_BfGYR4",
+    "section_timeline",
+    "section_compare",
+    "section_guarantee"
+  ]
+}
