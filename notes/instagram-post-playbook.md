@@ -6,3 +6,6 @@ Every Instagram post for Advance Watch Co is built to get STOPS, SAVES, SENDS, c
 - Real numbers only, source on slide, UAE prices may differ, not-affiliated line on every post that shows Rolex.
 - Caption: hook line, the list, then 3 calls to action (save / send / comment 1-5), course line, disclaimer, hashtags.
 - Course: $99 (was $439), link in bio.
+
+## Colour rule (from Tarek, Oct 30)
+Use RED to flag anything under retail / cheap / a deal (banner, price box, savings tag) so it grabs attention. Gold stays for brand accents, white for text.
