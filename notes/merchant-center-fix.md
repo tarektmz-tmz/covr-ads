@@ -16,7 +16,7 @@ Merchant Center > Settings (gear) > Shipping and returns > Returns tab > add pol
 - Country: United Arab Emirates
 - Returns: "Not accepted / final sale" (matches the store's Refund policy: all watch sales are final)
 - Policy URL: https://advancewatchco.com/policies/refund-policy
-Then Shipping tab: UAE, free standard shipping, 1-2 days handling+transit (24-48 hours).
+Then Shipping tab: UAE, free standard shipping, same day to 2 days (same-day Dubai, 24-48h rest of UAE).
 
 ## Fix 3: shipping policy text (paste into Shopify > Settings > Policies > Shipping policy)
 See below. It removes the Canada / UK / EU boilerplate.
@@ -26,7 +26,7 @@ See below. It removes the Canada / UK / EU boilerplate.
 
 Advance Watch delivers within the United Arab Emirates only.
 
-**Delivery time:** 24-48 hours after your order is confirmed and the deposit is received.
+**Delivery time:** Same-day delivery in Dubai, or within 24-48 hours across the UAE, depending on availability, once your order is confirmed and the deposit is received.
 
 **Shipping cost:** Free standard shipping on all orders in the UAE.
 
