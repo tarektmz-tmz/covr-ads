@@ -1,0 +1,89 @@
+{%- comment -%}
+  COVR homepage v6 (8 Nov 2026): "Shop by collection". One card per
+  collection block: the collection's image (or its first product's photo),
+  its name, a short line and "From" price. A block marked "coming soon" shows
+  without a link.
+{%- endcomment -%}
+
+<div class="covr-v6-cols" id="shop-by-collection" {{ section.shopify_attributes }}>
+  <div class="covr-v6-cols__head">
+    {%- if section.settings.eyebrow != blank -%}<p class="covr-v6-cols__eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+    {%- if section.settings.heading != blank -%}<h2 class="covr-v6-cols__heading">{{ section.settings.heading | escape }}</h2>{%- endif -%}
+  </div>
+  <ul class="covr-v6-cols__grid" role="list">
+    {%- for block in section.blocks -%}
+      {%- liquid
+        assign c = collections[block.settings.collection]
+        assign img = block.settings.image
+        if img == blank and c != blank
+          assign img = c.image | default: c.products.first.featured_media
+        endif
+        assign soon = block.settings.coming_soon
+      -%}
+      <li class="covr-v6-cols__item{% if soon %} is-soon{% endif %}" {{ block.shopify_attributes }}>
+        {%- unless soon -%}<a class="covr-v6-cols__card" href="{{ c.url | default: '#' }}">{%- else -%}<div class="covr-v6-cols__card">{%- endunless -%}
+          <span class="covr-v6-cols__media">
+            {%- if img != blank -%}
+              {{ img | image_url: width: 900 | image_tag: loading: 'lazy', widths: '400, 600, 900', sizes: '(min-width: 990px) 30vw, 90vw', alt: block.settings.title, class: 'covr-v6-cols__img' }}
+            {%- endif -%}
+            {%- if soon -%}<span class="covr-v6-cols__badge">Coming soon</span>{%- endif -%}
+          </span>
+          <span class="covr-v6-cols__name">{{ block.settings.title | default: c.title | escape }}</span>
+          {%- if block.settings.text != blank -%}<span class="covr-v6-cols__text">{{ block.settings.text | escape }}</span>{%- endif -%}
+          {%- if soon == false and c != blank and c.products_count > 0 -%}
+            <span class="covr-v6-cols__price">From {{ c.products | map: 'price' | sort | first | money_without_trailing_zeros }}</span>
+          {%- endif -%}
+        {%- unless soon -%}</a>{%- else -%}</div>{%- endunless -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>
+
+<style>
+  .covr-v6-cols { scroll-margin-top: 90px; padding: 64px clamp(16px, 4vw, 56px); background: #fff; }
+  .covr-v6-cols__head { text-align: center; margin: 0 auto 32px; }
+  .covr-v6-cols__eyebrow { margin: 0 0 10px; font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: #8f6446; }
+  .covr-v6-cols__heading { margin: 0; font-family: var(--font-heading--family, inherit); font-weight: 400; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.05; }
+  .covr-v6-cols__grid { list-style: none; margin: 0 auto; padding: 0; max-width: 1240px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+  .covr-v6-cols__card { display: flex; flex-direction: column; align-items: center; text-align: center; text-decoration: none; color: inherit; }
+  .covr-v6-cols__media { position: relative; display: block; width: 100%; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 14px; background: #f7f3ec; }
+  .covr-v6-cols__img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.0); transition: transform .5s ease; }
+  .covr-v6-cols__card:hover .covr-v6-cols__img { transform: scale(1.05); }
+  .covr-v6-cols__badge { position: absolute; top: 14px; left: 50%; transform: translateX(-50%); background: #2a1f18; color: #f5f0e6; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; padding: 7px 14px; border-radius: 999px; }
+  .covr-v6-cols__name { margin-top: 14px; font-family: var(--font-heading--family, inherit); font-size: 28px; line-height: 1.1; }
+  .covr-v6-cols__text { margin-top: 6px; font-size: 14px; opacity: .8; }
+  .covr-v6-cols__price { margin-top: 6px; font-size: 14px; letter-spacing: .04em; }
+  .covr-v6-cols__item.is-soon .covr-v6-cols__img { opacity: .5; }
+  @media (max-width: 749px) {
+    .covr-v6-cols { padding: 44px 16px; }
+    .covr-v6-cols__grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+    .covr-v6-cols__item.is-soon { grid-column: 1 / -1; max-width: 60%; justify-self: center; }
+    .covr-v6-cols__name { font-size: 22px; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "COVR shop by collection",
+  "tag": "section",
+  "class": "covr-v6-cols-wrapper",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Small line above the heading", "default": "Three lines" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Shop by collection" }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        { "type": "collection", "id": "collection", "label": "Collection" },
+        { "type": "text", "id": "title", "label": "Name (defaults to the collection title)" },
+        { "type": "text", "id": "text", "label": "Short line" },
+        { "type": "image_picker", "id": "image", "label": "Image (defaults to the collection or first product photo)" },
+        { "type": "checkbox", "id": "coming_soon", "label": "Coming soon (no link, no price)", "default": false }
+      ]
+    }
+  ],
+  "presets": [{ "name": "COVR shop by collection" }]
+}
+{% endschema %}
