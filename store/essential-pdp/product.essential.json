@@ -92,7 +92,7 @@
             "covr_v3_trust": {
               "type": "covr-v3-trust",
               "settings": {
-                "delivery_line": "Free worldwide delivery",
+                "delivery_line": "Free delivery in Indonesia",
                 "returns_line": "100% handmade in Bali",
                 "returns_icon": "leaf",
                 "panel_title": "",
@@ -115,7 +115,7 @@
                 "icon_2": "bag",
                 "text_2": "Clip-on adjustable shoulder strap",
                 "icon_3": "plane",
-                "text_3": "Free worldwide delivery",
+                "text_3": "Free delivery in Indonesia",
                 "icon_4": "shield",
                 "text_4": "Fits most standard padel rackets"
               }
@@ -200,7 +200,12 @@
           }
         }
       },
-      "block_order": ["b1", "b2", "b3", "b4"],
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
       "settings": {
         "eyebrow": "COVR Essential",
         "heading": "Everything your racket needs"
@@ -233,8 +238,8 @@
         "q4": {
           "type": "question",
           "settings": {
-            "question": "How long does delivery take?",
-            "answer": "<p>Every cover is made by hand in Bali and ships from our workshop. Free international delivery takes 20 to 30 days from dispatch, or choose DHL Express for $19.99 at checkout. You’ll get a tracking link as soon as it ships.</p>"
+            "question": "How much is delivery?",
+            "answer": "<p>Every cover is made by hand in Bali. Delivery within Indonesia is free. International shipping is $50, added at checkout. Import duties and taxes are not included.</p>"
           }
         },
         "q5": {
@@ -252,7 +257,14 @@
           }
         }
       },
-      "block_order": ["q1", "q2", "q3", "q4", "q5", "q6"],
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
       "settings": {
         "image": "shopify://shop_images/0008-6766054045719711318.jpg",
         "image_alt": "A grey COVR Essential cover worn on a player's back at the padel net",
@@ -275,7 +287,9 @@
           }
         }
       },
-      "block_order": ["judge_me_reviews_review_widget"],
+      "block_order": [
+        "judge_me_reviews_review_widget"
+      ],
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -305,5 +319,10 @@
       }
     }
   },
-  "order": ["main", "covr_v3_band", "covr_faq", "reviews"]
+  "order": [
+    "main",
+    "covr_v3_band",
+    "covr_faq",
+    "reviews"
+  ]
 }
