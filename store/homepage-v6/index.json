@@ -276,7 +276,7 @@
      "settings": {
       "name": "Signature",
       "status": "Available now",
-      "link": "shopify://products/natural-canvas-light-brown-leather-padel-racket-cover",
+      "link": "shopify://collections/signature",
       "image": "shopify://shop_images/covr-line-signature-arch.jpg",
       "placeholder": "covr-v3-ph-line-signature.jpg",
       "image_alt": "The COVR Signature cover in cream canvas with light brown leather, with a ball pouch, in an arched niche"
@@ -297,8 +297,8 @@
      "type": "line",
      "settings": {
       "name": "Essential",
-      "status": "Coming soon",
-      "link": "",
+      "status": "Available now",
+      "link": "shopify://collections/essential",
       "image": "shopify://shop_images/covr-line-essential-arch.jpg",
       "placeholder": "covr-v3-ph-line-essential.jpg",
       "image_alt": "A cream COVR Essential cover with black trim and strap in an arched niche"
@@ -307,14 +307,13 @@
    },
    "block_order": [
     "l_signature",
-    "l_performance",
-    "l_essential"
+    "l_essential",
+    "l_performance"
    ],
    "settings": {
-    "eyebrow": "",
-    "heading": ""
-   },
-   "disabled": true
+    "eyebrow": "Three lines",
+    "heading": "Shop by collection"
+   }
   },
   "covr_v5_colours": {
    "type": "covr-v5-colours",
@@ -335,55 +334,11 @@
     "button": "Sign up",
     "success": "Thank you. You're on the list."
    }
-  },
-  "covr_v6_collections": {
-   "type": "covr-v6-collections",
-   "blocks": {
-    "sig": {
-     "type": "collection",
-     "settings": {
-      "collection": "signature",
-      "title": "Signature",
-      "text": "Cotton, leather trim, metal hardware.",
-      "image": "shopify://shop_images/covr-line-signature-arch.jpg",
-      "coming_soon": false
-     }
-    },
-    "ess": {
-     "type": "collection",
-     "settings": {
-      "collection": "essential",
-      "title": "Essential",
-      "text": "Clean canvas, clip-on strap, everyday.",
-      "image": "shopify://shop_images/covr-line-essential-arch.jpg",
-      "coming_soon": false
-     }
-    },
-    "perf": {
-     "type": "collection",
-     "settings": {
-      "collection": "performance",
-      "title": "Performance",
-      "text": "Built for match day.",
-      "image": "shopify://shop_images/covr-line-performance-arch.jpg",
-      "coming_soon": true
-     }
-    }
-   },
-   "block_order": [
-    "sig",
-    "ess",
-    "perf"
-   ],
-   "settings": {
-    "eyebrow": "Three lines",
-    "heading": "Shop by collection"
-   }
   }
  },
  "order": [
   "covr_v3_hero",
-  "covr_v6_collections",
+  "covr_v3_lines",
   "covr_v5_colours",
   "covr_v3_benefits",
   "covr_v3_crafted",
@@ -392,7 +347,6 @@
   "covr_alt_answers",
   "covr_v5_signup",
   "covr_v3_problem",
-  "covr_v3_stats",
-  "covr_v3_lines"
+  "covr_v3_stats"
  ]
 }
