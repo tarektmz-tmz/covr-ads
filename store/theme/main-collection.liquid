@@ -62,16 +62,17 @@
 
       {% paginate collection.products by products_per_page %}
         {%- comment -%}
-          COVR "pairs + photo" layout (Padel Racket Covers only): each row is two
+          COVR "pairs + photo" layout (Padel Racket Covers and, since 8 Nov 2026, Essential): each row is two
           matching covers plus one lifestyle photo from Settings > Files, and the
           photo side alternates. Used on page 1 with no filters and the default
           sort; otherwise the normal grid renders. Covers not listed in
           pair_rows are appended after the pairs.
           Row format: handle-a,handle-b,file-name,object-position
+          A handle written img:file-name is a photo the size of one card.
         {%- endcomment -%}
         {%- liquid
           assign covr_pairs = false
-          if collection.handle == 'padel-racket-covers' and paginate.current_page == 1
+          if paginate.current_page == 1 and collection.handle == 'padel-racket-covers' or paginate.current_page == 1 and collection.handle == 'essential'
             assign covr_pairs = true
             for f in collection.filters
               if f.active_values.size > 0 or f.min_value.value != nil or f.max_value.value != nil
@@ -87,7 +88,11 @@
         {% capture children %}
           {%- if covr_pairs -%}
             {%- liquid
+              if collection.handle == 'essential'
+                assign pair_rows = 'essential-vanilla-cream-padel-racket-cover-covr,essential-sky-denim-padel-racket-cover-covr,0010-6766054045719711318.jpg,50% 40%;essential-ash-padel-racket-cover-covr,img:0002-6766054045719711318.jpg,0007-6766054045719711318.jpg,50% 55%' | split: ';'
+              else
               assign pair_rows = 'natural-canvas-total-black-leather-padel-racket-cover,natural-canvas-ash-denim-leather-padel-racket-cover,covr-pairs-1.jpg,50% 62%;natural-canvas-dark-brown-leather-padel-racket-cover,natural-canvas-light-brown-leather-padel-racket-cover,covr-pairs-2.jpg,50% 80%;natural-canvas-coffee-leather-padel-racket-cover-copy,brown-padel-racket-cover,covr-pairs-3.jpg,50% 72%;blue-padel-racket-cover,natural-canvas-vanilla-cream-leather-padel-racket-cover,covr-pairs-4.jpg,50% 45%;natural-canvas-baby-pink-leather-padel-racket-cover,natural-canvas-sky-denim-leather-padel-racket-cover,covr-pairs-5.jpg,50% 62%' | split: ';'
+              endif
               assign used = ','
             -%}
             {%- for row in pair_rows -%}
@@ -105,6 +110,16 @@
               {%- comment -%} Flipped rows: photo first on desktop, but always after the pair on mobile {%- endcomment -%}
               {%- if flip == 1 -%}<li class="covr-pair-photo covr-pair-photo--desktop">{{ photo_img }}</li>{%- endif -%}
               {%- for h in parts limit: 2 -%}
+                {%- if h contains 'img:' -%}
+                  {%- assign cell_name = h | remove: 'img:' -%}
+                  {%- assign cell = images[cell_name] -%}
+                  <li class="covr-pair-cell">
+                    {%- if cell != blank -%}
+                      {{ cell | image_url: width: 1000 | image_tag: widths: '400, 600, 800, 1000', sizes: '(min-width: 750px) 25vw, 50vw', loading: 'lazy', alt: cell.alt }}
+                    {%- endif -%}
+                  </li>
+                  {%- continue -%}
+                {%- endif -%}
                 {%- for product in collection.products -%}
                   {%- if product.handle == h -%}
                     {%- assign used = used | append: product.handle | append: ',' -%}
@@ -175,6 +190,23 @@
               overflow: hidden;
               list-style: none;
               background: rgb(var(--color-foreground-rgb) / 0.06);
+            }
+            .product-grid--{{ section.id }} .covr-pair-cell {
+              position: relative;
+              overflow: hidden;
+              list-style: none;
+              aspect-ratio: 3 / 4;
+              background: rgb(var(--color-foreground-rgb) / 0.06);
+            }
+            .product-grid--{{ section.id }} .covr-pair-cell img {
+              position: absolute;
+              inset: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+            .product-grid--{{ section.id }}:is([product-grid-view='zoom-out'], [product-grid-view='mobile-single']) .covr-pair-cell {
+              display: none;
             }
             .product-grid--{{ section.id }} .covr-pair-photo img {
               position: absolute;

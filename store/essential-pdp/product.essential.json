@@ -1,0 +1,309 @@
+{
+  "sections": {
+    "main": {
+      "type": "product-information",
+      "blocks": {
+        "media-gallery": {
+          "type": "_product-media-gallery",
+          "static": true,
+          "settings": {
+            "media_presentation": "grid",
+            "media_columns": "two",
+            "image_gap": 10,
+            "large_first_image": true,
+            "icons_style": "arrow",
+            "slideshow_controls_style": "thumbnails",
+            "slideshow_mobile_controls_style": "dots",
+            "thumbnail_position": "left",
+            "thumbnail_width": 64,
+            "aspect_ratio": "1",
+            "constrain_to_viewport": false,
+            "media_fit": "cover",
+            "media_radius": 14,
+            "extend_media": false,
+            "zoom": true,
+            "video_loop": false,
+            "hide_variants": true,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "product-details": {
+          "type": "_product-details",
+          "static": true,
+          "settings": {
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fill",
+            "details_position": "flex-start",
+            "gap": 14,
+            "sticky_details_desktop": true,
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 24,
+            "padding-block-end": 24,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "covr_v3_heading": {
+              "type": "covr-v3-heading",
+              "settings": {
+                "cover_title": "Essential Padel Racket Cover",
+                "cover_lead": "",
+                "badge_tag": "best-seller",
+                "badge_label": "Best seller",
+                "show_colour": false,
+                "show_price": true,
+                "colour_hidden": true
+              }
+            },
+            "covr_v3_colours": {
+              "type": "covr-v3-colours",
+              "settings": {
+                "heading": "Choose your colour",
+                "order": "essential-vanilla-cream-padel-racket-cover-covr\nessential-sky-denim-padel-racket-cover-covr\nessential-ash-padel-racket-cover-covr",
+                "show_current": false
+              }
+            },
+            "covr_v3_buy": {
+              "type": "covr-v3-buy",
+              "settings": {
+                "pouch_product": "covr-ball-pouch",
+                "heading": "Add a ball pouch",
+                "subheading": "Clips onto your cover. [price]",
+                "heading_paid": "Add a ball pouch",
+                "subheading_paid": "Clips onto your cover. [price]",
+                "button_label": "Add to cart",
+                "fallback_colour": "",
+                "button_price": true
+              }
+            },
+            "covr_v3_trust": {
+              "type": "covr-v3-trust",
+              "settings": {
+                "delivery_line": "Free worldwide delivery",
+                "returns_line": "100% handmade in Bali",
+                "returns_icon": "leaf",
+                "panel_title": "",
+                "panel_text": ""
+              }
+            },
+            "covr_v4_tags": {
+              "type": "covr-v4-tags",
+              "settings": {
+                "tag_1": "Protects from scratches",
+                "tag_2": "Zipped all the way round",
+                "tag_3": "Clip-on strap"
+              }
+            },
+            "covr_v3_features": {
+              "type": "covr-v3-features",
+              "settings": {
+                "icon_1": "leaf",
+                "text_1": "Handmade in Bali",
+                "icon_2": "bag",
+                "text_2": "Clip-on adjustable shoulder strap",
+                "icon_3": "plane",
+                "text_3": "Free worldwide delivery",
+                "icon_4": "shield",
+                "text_4": "Fits most standard padel rackets"
+              }
+            },
+            "covr_v3_accordions": {
+              "type": "covr-v3-accordions",
+              "settings": {
+                "included": "The racket cover with its clip-on adjustable shoulder strap. Made for most standard padel rackets: the teardrop-shaped cover is 39 × 29 cm and zips all the way round, so the whole racket sits inside.",
+                "care_fallback": "Spot clean and allow to air dry naturally."
+              }
+            },
+            "covr_v3_ip_note": {
+              "type": "covr-v3-ip-note",
+              "settings": {
+                "text": "Original COVR™ design. Protected by applicable intellectual property rights, including registered design rights where applicable."
+              }
+            },
+            "covr_v4_style": {
+              "type": "covr-v4-pdp-style",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "covr_v3_heading",
+            "covr_v3_colours",
+            "covr_v3_buy",
+            "covr_v3_trust",
+            "covr_v4_tags",
+            "covr_v3_features",
+            "covr_v3_accordions",
+            "covr_v3_ip_note",
+            "covr_v4_style"
+          ]
+        }
+      },
+      "block_order": [],
+      "settings": {
+        "content_width": "content-center-aligned",
+        "desktop_media_position": "left",
+        "equal_columns": true,
+        "limit_details_width": false,
+        "gap": 24,
+        "background_color": "#f7f3ec",
+        "padding-block-start": 0,
+        "padding-block-end": 0,
+        "enable_sticky_add_to_cart": false
+      }
+    },
+    "covr_v3_band": {
+      "type": "covr-v3-band",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "title": "Protection, between games",
+            "text": "Keeps scratches, scuffs and direct sun off your racket whenever you are not playing."
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "icon": "layers",
+            "title": "Zipped all the way round",
+            "text": "The zip runs right round the cover, so the whole racket sits inside, grip included."
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Handmade in Bali",
+            "text": "Cut and stitched by hand in Bali, with piping round the edge and an embroidered COVR crest."
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "icon": "bag",
+            "title": "Easy to carry",
+            "text": "An adjustable shoulder strap that clips on, and comes off when you don't need it."
+          }
+        }
+      },
+      "block_order": ["b1", "b2", "b3", "b4"],
+      "settings": {
+        "eyebrow": "COVR Essential",
+        "heading": "Everything your racket needs"
+      }
+    },
+    "covr_faq": {
+      "type": "covr-v4-card",
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "Will it fit my racket?",
+            "answer": "<p>It fits most standard padel rackets. The teardrop-shaped cover is 39 × 29 cm.</p>"
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "How is it different from Signature?",
+            "answer": "<p>The Essential zips all the way round, so the whole racket, grip included, sits inside. Signature leaves the grip out under a leather collar and adds leather trim and a front zip pocket.</p>"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "What’s in the box?",
+            "answer": "<p>The cover with its clip-on adjustable shoulder strap. Add a COVR ball pouch above if you’d like one.</p>"
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "How long does delivery take?",
+            "answer": "<p>Every cover is made by hand in Bali and ships from our workshop. Free international delivery takes 20 to 30 days from dispatch, or choose DHL Express for $19.99 at checkout. You’ll get a tracking link as soon as it ships.</p>"
+          }
+        },
+        "q5": {
+          "type": "question",
+          "settings": {
+            "question": "How do I care for it?",
+            "answer": "<p>Spot clean and allow to air dry naturally.</p>"
+          }
+        },
+        "q6": {
+          "type": "question",
+          "settings": {
+            "question": "Can I return or exchange it?",
+            "answer": "<p>If it arrives damaged or faulty, email us with photos and we’ll replace or refund it at our cost. Customers in the UK, EU and EEA can cancel within 14 days of delivery, and unused covers can be exchanged for another colour. <a href=\"/policies/refund-policy\">Refund policy</a></p>"
+          }
+        }
+      },
+      "block_order": ["q1", "q2", "q3", "q4", "q5", "q6"],
+      "settings": {
+        "image": "shopify://shop_images/0008-6766054045719711318.jpg",
+        "image_alt": "A grey COVR Essential cover worn on a player's back at the padel net",
+        "focal_y": 40,
+        "image_side": "left",
+        "eyebrow": "Before you buy",
+        "heading": "Got questions?"
+      }
+    },
+    "reviews": {
+      "type": "_blocks",
+      "blocks": {
+        "judge_me_reviews_review_widget": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": ["judge_me_reviews_review_widget"],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "{{ settings.color_palette.background }}",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    }
+  },
+  "order": ["main", "covr_v3_band", "covr_faq", "reviews"]
+}
