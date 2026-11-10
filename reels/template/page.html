@@ -1,0 +1,154 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'OswaldX';src:url('assets/oswald.ttf');font-weight:200 700}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;background:#070d16;overflow:hidden}
+#st{position:absolute;left:0;top:0;width:1080px;height:1920px;overflow:hidden;font-family:'Inter',sans-serif;color:#fff}
+#bg{position:absolute;inset:0;background:#070d16}
+#glow{position:absolute;left:-200px;top:300px;width:1480px;height:1300px;background:radial-gradient(ellipse at center,rgba(190,140,60,.30),rgba(190,140,60,0) 62%);filter:blur(10px)}
+#vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 45%,rgba(0,0,0,.65) 100%)}
+.os{font-family:'OswaldX',sans-serif;font-weight:700}
+#logo{position:absolute;left:50%;top:34px;transform:translateX(-50%);display:flex;align-items:center;gap:14px;padding:10px 28px 10px 14px;border-radius:60px;background:rgba(8,16,26,.7);border:1px solid rgba(190,140,60,.6)}
+#logo img{width:46px;height:46px}
+#logo span{font-family:'OswaldX';font-weight:500;letter-spacing:4px;font-size:28px;color:#d9b36a}
+#win{position:absolute;overflow:hidden;border:3px solid #c9a24f;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+#vimg{position:absolute;left:0;top:0;transform-origin:0 0}
+.gold{background:linear-gradient(180deg,#f6dc9b,#c9953f 60%,#8a6320);-webkit-background-clip:text;background-clip:text;color:transparent}
+#intro{position:absolute;left:60px;top:1210px;width:960px}
+#intro .l1{font-size:92px;line-height:1;letter-spacing:2px}
+#intro .l2{font-size:36px;font-weight:500;letter-spacing:3px;color:#dfe5ee;margin-top:14px}
+#intro .bar{height:5px;background:linear-gradient(90deg,#f6dc9b,#c9953f);margin-top:20px;width:0}
+.scene{position:absolute;inset:0;opacity:0}
+.ttl{position:absolute;left:50px;top:150px;width:640px}
+.ttl .k{font-family:'OswaldX';font-weight:500;letter-spacing:10px;font-size:34px;color:#d9b36a}
+.ttl .n{font-family:'OswaldX';font-weight:700;font-size:112px;line-height:1.02;color:#fff;white-space:nowrap}
+.ttl .u{height:5px;background:linear-gradient(90deg,#f6dc9b,#c9953f);width:0;margin-top:10px}
+.chips{position:absolute;left:50px;top:462px;display:flex;gap:14px;flex-wrap:wrap;width:980px}
+.chip{font-family:'OswaldX';font-weight:500;letter-spacing:3px;font-size:28px;padding:10px 22px;border-radius:40px;border:2px solid rgba(201,162,79,.8);background:rgba(8,16,26,.65);color:#f1d9a0;opacity:0}
+.wat{position:absolute;opacity:0}
+.wat .spot{position:absolute;left:50%;top:50%;width:150%;height:90%;transform:translate(-50%,-50%);background:radial-gradient(ellipse at center,rgba(255,226,160,.34),rgba(255,226,160,0) 66%);border-radius:50%}
+.wat img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 30px 28px rgba(0,0,0,.65));-webkit-box-reflect:below 6px linear-gradient(transparent 72%,rgba(255,255,255,.16))}
+.lab{position:absolute;text-align:center;opacity:0;font-family:'OswaldX';letter-spacing:3px}
+.lab .a{font-size:34px;font-weight:600;color:#fff}
+.lab .b{font-size:24px;font-weight:400;color:#d9b36a;margin-top:2px}
+#wipe{position:absolute;top:-300px;left:-200px;width:260px;height:2600px;background:linear-gradient(90deg,rgba(246,220,155,0),#f6dc9b 35%,#c9953f 70%,rgba(201,149,63,0));transform:rotate(14deg);opacity:0;filter:blur(2px)}
+#cap{position:absolute;left:50%;top:1560px;transform:translateX(-50%);padding:18px 34px;border-radius:30px;background:rgba(8,16,26,.72);border:1px solid rgba(201,162,79,.45);text-align:center;white-space:nowrap;opacity:0}
+#cap span{font-family:'OswaldX';font-weight:700;font-size:70px;letter-spacing:1px;color:#fff;display:inline-block;margin:0 9px;text-transform:uppercase}
+#cap span.on{color:#f2c96b;transform:scale(1.12)}
+#foot{position:absolute;left:0;right:0;top:1830px;text-align:center;font-family:'OswaldX';font-size:32px;letter-spacing:6px;color:#c9a24f}
+</style></head><body><div id="st">
+<div id="bg"></div><div id="glow"></div>
+<div id="logo"><img src="assets/logo.png"><span>ADVANCE WATCH CO</span></div>
+<div id="win"><img id="vimg"></div>
+<div id="intro"><div class="l1 os gold" id="i1">FORMER ROLEX EMPLOYEE</div><div class="l2" id="i2">4 YEARS WORKING DIRECTLY WITH ROLEX</div><div class="bar" id="ib"></div></div>
+<div id="scenes"></div>
+<div id="vig"></div><div id="wipe"></div>
+<div id="cap"></div><div id="foot">@ADVANCE_WATCHCO</div>
+</div>
+<script src="words.js"></script><script>
+const W=1080,H=1920,FPS=30;
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const eo=x=>1-Math.pow(1-clamp(x),3), eio=x=>{x=clamp(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2};
+const lerp=(a,b,t)=>a+(b-a)*t;
+const SCENES=[
+ {s:7.05,e:14.85,k:'ROLEX',n:'DAYTONA',chips:['40 MM','OYSTERSTEEL','CERACHROM BEZEL'],w:[['dayw','WHITE DIAL','126500LN'],['dayb','BLACK DIAL','126500LN']]},
+ {s:14.85,e:22.95,k:'ROLEX',n:'GMT-MASTER II',chips:['40 MM','OYSTERSTEEL','JUBILEE BRACELET'],w:[['pepsi','PEPSI','126710BLRO'],['bruce','BRUCE WAYNE','126710GRNR'],['batgirl','BATGIRL','126710BLNR']]},
+ {s:22.95,e:30.47,k:'ROLEX',n:'SUBMARINER',chips:['FULL STEEL','41 MM','CERACHROM BEZEL'],w:[['subnd','NO-DATE BLACK','124060'],['subd','DATE BLACK','126610LN'],['subg','GREEN BEZEL','126610LV']]}
+];
+let words=null,chunks=[],built=false;
+function build(){
+  const sc=document.getElementById('scenes');
+  SCENES.forEach((S,si)=>{
+    const d=document.createElement('div');d.className='scene';d.id='sc'+si;
+    d.innerHTML=`<div class="ttl"><div class="k">${S.k} ·</div><div class="n" id="n${si}"></div><div class="u" id="u${si}"></div></div><div class="chips" id="ch${si}"></div>`;
+    sc.appendChild(d);
+    const n=S.w.length; S.pos=[];
+    const stageY=640, stageH=780;
+    const wh=n==2?740:540, ww=wh*0.56;
+    const gap=n==2?130:34; const total=n*ww+(n-1)*gap; const x0=(W-total)/2;
+    S.w.forEach((it,i)=>{
+      const x=x0+i*(ww+gap), y=stageY+(stageH-wh)/2-(n==2?30:0);
+      const el=document.createElement('div');el.className='wat';el.id=`w${si}_${i}`;
+      el.style.cssText=`left:${x}px;top:${y}px;width:${ww}px;height:${wh}px;perspective:1400px`;
+      el.innerHTML=`<div class="spot"></div><img src="assets/${it[0]}.png">`;
+      d.appendChild(el);
+      const lab=document.createElement('div');lab.className='lab';lab.id=`l${si}_${i}`;
+      lab.style.cssText=`left:${x-30}px;top:${y+wh+22}px;width:${ww+60}px`;
+      lab.innerHTML=`<div class="a">${it[1]}</div><div class="b">REF. ${it[2]}</div>`;
+      d.appendChild(lab);
+      S.pos.push({x,y,ww,wh});
+    });
+    S.chips.forEach((c,i)=>{const ch=document.createElement('div');ch.className='chip';ch.textContent=c;ch.id=`c${si}_${i}`;document.getElementById('ch'+si).appendChild(ch)});
+  });
+  // chunks
+  chunks=[];let cur=[];
+  words.forEach((w,i)=>{cur.push(w);const gap=i+1<words.length?words[i+1][1]-w[2]:9;
+    if(cur.length>=4||/[.,?!]$/.test(w[0])||gap>0.45){chunks.push(cur);cur=[]}});
+  if(cur.length)chunks.push(cur);
+  built=true;
+}
+function winState(t){
+  // big -> pip between 6.2 and 7.05
+  const k=eio((t-6.2)/0.85);
+  const big={x:60,y:170,w:960,h:1010,r:44,sc:960/576,ox:0,oy:-150};
+  const pip={x:720,y:120,w:290,h:290,r:34,sc:0.74,ox:-135,oy:-100};
+  const g=(a,b)=>lerp(a,b,k);
+  return {x:g(big.x,pip.x),y:g(big.y,pip.y),w:g(big.w,pip.w),h:g(big.h,pip.h),r:g(big.r,pip.r),sc:g(big.sc,pip.sc),ox:g(big.ox,pip.ox),oy:g(big.oy,pip.oy)};
+}
+window.setup=async function(){
+  words=window.WORDS;
+  build();
+};
+window.setTime=async function(t){
+  const idx=Math.min(914,Math.floor(t*FPS)+1);
+  const im=document.getElementById('vimg');
+  im.src='vf/f_'+String(idx).padStart(4,'0')+'.jpg'; await im.decode();
+  // bg glow motion
+  const gl=document.getElementById('glow'); gl.style.transform=`translate(${Math.sin(t*0.5)*80}px,${Math.cos(t*0.4)*50}px)`;
+  // window
+  const ws=winState(t); const win=document.getElementById('win');
+  win.style.cssText=`left:${ws.x}px;top:${ws.y}px;width:${ws.w}px;height:${ws.h}px;border-radius:${ws.r}px`;
+  im.style.width=(576*ws.sc)+'px'; im.style.height=(1024*ws.sc)+'px'; im.style.left=ws.ox+'px'; im.style.top=ws.oy+'px';
+  // intro
+  const ia=clamp((t-0.5)/0.7), io=1-clamp((t-6.0)/0.5);
+  const intro=document.getElementById('intro'); intro.style.opacity=io;
+  document.getElementById('i1').style.transform=`translateY(${(1-eo(ia))*50}px)`; document.getElementById('i1').style.opacity=eo(ia);
+  document.getElementById('i2').style.opacity=eo((t-1.0)/0.7);
+  document.getElementById('ib').style.width=(eo((t-1.1)/0.9)*960)+'px';
+  // scenes
+  SCENES.forEach((S,si)=>{
+    const el=document.getElementById('sc'+si); const lt=t-S.s; 
+    const vis = t>=S.s-0.05 && t<S.e+0.05;
+    el.style.opacity=vis?1:0; if(!vis)return;
+    const out=1-clamp((t-(S.e-0.25))/0.25)*0.0;
+    // title
+    const tt=eo((lt-0.15)/0.6); const n=document.getElementById('n'+si);
+    if(!n.textContent)n.textContent=S.n;
+    n.style.transform=`translateY(${(1-tt)*60}px)`; n.style.opacity=tt;
+    n.style.fontSize=(S.n.length>10?84:112)+'px';
+    document.getElementById('u'+si).style.width=(eo((lt-0.5)/0.7)*560)+'px';
+    S.chips.forEach((c,i)=>{const ce=document.getElementById(`c${si}_${i}`);const a=eo((lt-0.7-i*0.18)/0.4);ce.style.opacity=a;ce.style.transform=`translateY(${(1-a)*24}px)`});
+    S.w.forEach((it,i)=>{
+      const we=document.getElementById(`w${si}_${i}`); const la=document.getElementById(`l${si}_${i}`);
+      const d0=0.35+i*0.28; const a=eo((lt-d0)/0.8);
+      const fl=Math.sin(t*1.6+i*1.3)*10, tilt=Math.sin(t*0.9+i)*7, sc=0.9+0.1*a+Math.min(1,lt/6)*0.04;
+      we.style.opacity=a; we.style.transform=`translateY(${(1-a)*140+fl}px) scale(${sc}) rotateY(${tilt}deg)`;
+      we.style.filter=`blur(${(1-a)*12}px)`;
+      const la2=eo((lt-d0-0.5)/0.5); la.style.opacity=la2; la.style.transform=`translateY(${(1-la2)*20}px)`;
+    });
+  });
+  // wipe at boundaries
+  const wipe=document.getElementById('wipe'); let wv=0,wx=-400;
+  [7.05,14.85,22.95].forEach(b=>{const k=(t-(b-0.45))/0.9; if(k>0&&k<1){wv=1;wx=lerp(-400,1500,eio(k))}});
+  wipe.style.opacity=wv; wipe.style.left=wx+'px';
+  // caption
+  const cap=document.getElementById('cap'); let ci=-1;
+  for(let i=0;i<chunks.length;i++){const c=chunks[i];const st=c[0][1]-0.05;const nx=i+1<chunks.length?chunks[i+1][0][1]-0.04:99;const en=Math.min(c[c.length-1][2]+0.2,nx);if(t>=st&&t<en){ci=i;break}}
+  if(ci<0){cap.style.opacity=0}else{
+    const c=chunks[ci]; if(cap.dataset.ci!=ci){cap.dataset.ci=ci;cap.innerHTML=c.map((w,j)=>`<span id="cw${j}">${w[0].replace(/[.,?!]/g,'')}</span>`).join('')}
+    c.forEach((w,j)=>{const s=document.getElementById('cw'+j);if(s)s.className=(t>=w[1]-0.02&&t<w[2]+0.1)?'on':''});
+    cap.style.opacity=1;
+  }
+  return true;
+};
+</script></body></html>
