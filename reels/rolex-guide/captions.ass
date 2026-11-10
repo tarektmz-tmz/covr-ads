@@ -1,0 +1,84 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Cap,Oswald,78,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,1,0,0,0,100,100,0,0,1,6,2,5,60,60,0,1
+
+[Events]
+Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
+Dialogue: 0,0:00:00.00,0:00:00.48,Cap,,0,0,0,,{\an5\pos(540,1085)}I WANT YOU TO
+Dialogue: 0,0:00:00.50,0:00:01.44,Cap,,0,0,0,,{\an5\pos(540,1085)}PAY ATTENTION HERE WITH
+Dialogue: 0,0:00:01.46,0:00:01.68,Cap,,0,0,0,,{\an5\pos(540,1085)}ME,
+Dialogue: 0,0:00:01.70,0:00:02.28,Cap,,0,0,0,,{\an5\pos(540,1085)}AS I'M A ROLEX
+Dialogue: 0,0:00:02.30,0:00:03.37,Cap,,0,0,0,,{\an5\pos(540,1085)}FORMER EMPLOYEE,
+Dialogue: 0,0:00:03.50,0:00:04.20,Cap,,0,0,0,,{\an5\pos(540,1085)}ADVICE I'M GIVING YOU
+Dialogue: 0,0:00:04.22,0:00:05.08,Cap,,0,0,0,,{\an5\pos(540,1085)}IS BASED ON 4
+Dialogue: 0,0:00:05.10,0:00:06.58,Cap,,0,0,0,,{\an5\pos(540,1085)}YEARS EXPERIENCE WORKING DIRECTLY
+Dialogue: 0,0:00:06.60,0:00:07.19,Cap,,0,0,0,,{\an5\pos(540,1085)}WITH ROLEX.
+Dialogue: 0,0:00:07.21,0:00:07.93,Cap,,0,0,0,,{\an5\pos(540,1085)}LET'S START WITH THE
+Dialogue: 0,0:00:07.95,0:00:08.67,Cap,,0,0,0,,{\an5\pos(540,1085)}ROLEX {\c&H3C9BD4&}DAYTONA.{\c&HFFFFFF&}
+Dialogue: 0,0:00:08.69,0:00:09.21,Cap,,0,0,0,,{\an5\pos(540,1085)}IF YOU'RE PLANNING TO
+Dialogue: 0,0:00:09.23,0:00:09.83,Cap,,0,0,0,,{\an5\pos(540,1085)}GO FOR A ROLEX
+Dialogue: 0,0:00:09.85,0:00:10.45,Cap,,0,0,0,,{\an5\pos(540,1085)}{\c&H3C9BD4&}DAYTONA,{\c&HFFFFFF&}
+Dialogue: 0,0:00:10.47,0:00:11.03,Cap,,0,0,0,,{\an5\pos(540,1085)}THE TOP TWO TO
+Dialogue: 0,0:00:11.05,0:00:11.87,Cap,,0,0,0,,{\an5\pos(540,1085)}GO FOR IS THE
+Dialogue: 0,0:00:11.89,0:00:13.41,Cap,,0,0,0,,{\an5\pos(540,1085)}ROLEX {\c&H3C9BD4&}DAYTONA{\c&HFFFFFF&} STEEL IN
+Dialogue: 0,0:00:13.43,0:00:14.43,Cap,,0,0,0,,{\an5\pos(540,1085)}WHITE DIAL OR THE
+Dialogue: 0,0:00:14.45,0:00:15.05,Cap,,0,0,0,,{\an5\pos(540,1085)}BLACK DIAL.
+Dialogue: 0,0:00:15.07,0:00:15.31,Cap,,0,0,0,,{\an5\pos(540,1085)}SECOND,
+Dialogue: 0,0:00:15.33,0:00:16.07,Cap,,0,0,0,,{\an5\pos(540,1085)}WE HAVE THE ROLEX
+Dialogue: 0,0:00:16.09,0:00:16.97,Cap,,0,0,0,,{\an5\pos(540,1085)}{\c&H3C9BD4&}GMT{\c&HFFFFFF&} -MASTER.
+Dialogue: 0,0:00:16.99,0:00:17.67,Cap,,0,0,0,,{\an5\pos(540,1085)}WE GO FOR A
+Dialogue: 0,0:00:17.69,0:00:18.45,Cap,,0,0,0,,{\an5\pos(540,1085)}FULL STEEL AS WELL
+Dialogue: 0,0:00:18.47,0:00:19.80,Cap,,0,0,0,,{\an5\pos(540,1085)}WITH THE JUBILEE BRACELET,
+Dialogue: 0,0:00:20.03,0:00:20.58,Cap,,0,0,0,,{\an5\pos(540,1085)}{\c&H3C9BD4&}PEPSI,{\c&HFFFFFF&}
+Dialogue: 0,0:00:20.71,0:00:22.15,Cap,,0,0,0,,{\an5\pos(540,1085)}BRUCE {\c&H3C9BD4&}WAYNE{\c&HFFFFFF&} OR {\c&H3C9BD4&}GMT{\c&HFFFFFF&}
+Dialogue: 0,0:00:22.17,0:00:22.97,Cap,,0,0,0,,{\an5\pos(540,1085)}-MASTER {\c&H3C9BD4&}BATGIRL.{\c&HFFFFFF&}
+Dialogue: 0,0:00:22.99,0:00:23.31,Cap,,0,0,0,,{\an5\pos(540,1085)}IF YOU WANT TO
+Dialogue: 0,0:00:23.33,0:00:23.97,Cap,,0,0,0,,{\an5\pos(540,1085)}GO FOR A ROLEX
+Dialogue: 0,0:00:23.99,0:00:24.84,Cap,,0,0,0,,{\an5\pos(540,1085)}{\c&H3C9BD4&}SUBMARINER,{\c&HFFFFFF&}
+Dialogue: 0,0:00:24.87,0:00:25.45,Cap,,0,0,0,,{\an5\pos(540,1085)}WE GO FOR A
+Dialogue: 0,0:00:25.47,0:00:26.52,Cap,,0,0,0,,{\an5\pos(540,1085)}FULL STEEL AS WELL,
+Dialogue: 0,0:00:26.55,0:00:27.88,Cap,,0,0,0,,{\an5\pos(540,1085)}{\c&H3C9BD4&}SUBMARINER{\c&HFFFFFF&} NO DATE BLACK,
+Dialogue: 0,0:00:27.97,0:00:29.07,Cap,,0,0,0,,{\an5\pos(540,1085)}{\c&H3C9BD4&}SUBMARINER{\c&HFFFFFF&} DATE BLACK AND
+Dialogue: 0,0:00:29.09,0:00:30.03,Cap,,0,0,0,,{\an5\pos(540,1085)}{\c&H3C9BD4&}SUBMARINER{\c&HFFFFFF&} IN A GREEN
+Dialogue: 0,0:00:30.05,0:00:30.52,Cap,,0,0,0,,{\an5\pos(540,1085)}BEZEL.
+Dialogue: 0,0:00:30.57,0:00:32.24,Cap,,0,0,0,,{\an5\pos(540,1085)}FOR THE {\c&H3C9BD4&}DATEJUST{\c&HFFFFFF&} 41MM,
+Dialogue: 0,0:00:32.31,0:00:33.27,Cap,,0,0,0,,{\an5\pos(540,1085)}WE ONLY GO FOR
+Dialogue: 0,0:00:33.29,0:00:34.21,Cap,,0,0,0,,{\an5\pos(540,1085)}A WHITE GOLD FLUTED
+Dialogue: 0,0:00:34.23,0:00:35.56,Cap,,0,0,0,,{\an5\pos(540,1085)}BEZEL AND JUBILEE BRACELET.
+Dialogue: 0,0:00:35.65,0:00:36.39,Cap,,0,0,0,,{\an5\pos(540,1085)}THE DIALS WE GO
+Dialogue: 0,0:00:36.41,0:00:37.59,Cap,,0,0,0,,{\an5\pos(540,1085)}FOR ARE MINTY GREEN,
+Dialogue: 0,0:00:37.61,0:00:38.23,Cap,,0,0,0,,{\an5\pos(540,1085)}OMBRE GREEN,
+Dialogue: 0,0:00:38.25,0:00:39.15,Cap,,0,0,0,,{\an5\pos(540,1085)}THAT'S THE NEW ONE,
+Dialogue: 0,0:00:39.17,0:00:40.41,Cap,,0,0,0,,{\an5\pos(540,1085)}{\c&H3C9BD4&}WIMBLEDON{\c&HFFFFFF&} OR BLUE INDEX.
+Dialogue: 0,0:00:40.43,0:00:40.93,Cap,,0,0,0,,{\an5\pos(540,1085)}IF YOU ARE GOING
+Dialogue: 0,0:00:40.95,0:00:42.00,Cap,,0,0,0,,{\an5\pos(540,1085)}FOR A {\c&H3C9BD4&}SKY{\c&HFFFFFF&} {\c&H3C9BD4&}-DWELLER,{\c&HFFFFFF&}
+Dialogue: 0,0:00:42.03,0:00:42.71,Cap,,0,0,0,,{\an5\pos(540,1085)}YOU ONLY GO FOR
+Dialogue: 0,0:00:42.73,0:00:43.69,Cap,,0,0,0,,{\an5\pos(540,1085)}A WHITE GOLD JUBILEE
+Dialogue: 0,0:00:43.71,0:00:44.29,Cap,,0,0,0,,{\an5\pos(540,1085)}BRACELET,
+Dialogue: 0,0:00:44.31,0:00:45.51,Cap,,0,0,0,,{\an5\pos(540,1085)}EITHER GREEN OR BLUE
+Dialogue: 0,0:00:45.53,0:00:45.85,Cap,,0,0,0,,{\an5\pos(540,1085)}DIAL.
+Dialogue: 0,0:00:45.87,0:00:47.14,Cap,,0,0,0,,{\an5\pos(540,1085)}THE OTHER DIAL COLORS,
+Dialogue: 0,0:00:47.19,0:00:47.73,Cap,,0,0,0,,{\an5\pos(540,1085)}THEY'RE GOING TO LOSE
+Dialogue: 0,0:00:47.75,0:00:48.81,Cap,,0,0,0,,{\an5\pos(540,1085)}{\c&H3C9BD4&}VALUE{\c&HFFFFFF&} OVER THE YEARS.
+Dialogue: 0,0:00:48.83,0:00:49.31,Cap,,0,0,0,,{\an5\pos(540,1085)}AND IF YOU HAVE
+Dialogue: 0,0:00:49.33,0:00:49.97,Cap,,0,0,0,,{\an5\pos(540,1085)}A LOW BUDGET AND
+Dialogue: 0,0:00:49.99,0:00:50.45,Cap,,0,0,0,,{\an5\pos(540,1085)}YOU WANT TO GO
+Dialogue: 0,0:00:50.47,0:00:51.39,Cap,,0,0,0,,{\an5\pos(540,1085)}FOR SOMETHING BASIC,
+Dialogue: 0,0:00:51.41,0:00:51.96,Cap,,0,0,0,,{\an5\pos(540,1085)}GO FOR
+Dialogue: 0,0:00:52.85,0:00:54.31,Cap,,0,0,0,,{\an5\pos(540,1085)}EITHER TIFFANY BLUE OR
+Dialogue: 0,0:00:54.33,0:00:55.42,Cap,,0,0,0,,{\an5\pos(540,1085)}THE PISTACHIO DIAL.
+Dialogue: 0,0:00:55.57,0:00:56.27,Cap,,0,0,0,,{\an5\pos(540,1085)}AND FOR THE ROLEX
+Dialogue: 0,0:00:56.29,0:00:56.98,Cap,,0,0,0,,{\an5\pos(540,1085)}DAY -DATE,
+Dialogue: 0,0:00:57.11,0:00:57.65,Cap,,0,0,0,,{\an5\pos(540,1085)}I MADE A FULL
+Dialogue: 0,0:00:57.67,0:00:58.77,Cap,,0,0,0,,{\an5\pos(540,1085)}VIDEO EXPLAINING THE TOP
+Dialogue: 0,0:00:58.79,0:00:59.63,Cap,,0,0,0,,{\an5\pos(540,1085)}10 ROLEX DAY -DATE
+Dialogue: 0,0:00:59.65,0:01:00.40,Cap,,0,0,0,,{\an5\pos(540,1085)}TO GO FOR.
+Dialogue: 0,0:01:00.47,0:01:01.13,Cap,,0,0,0,,{\an5\pos(540,1085)}YOU CAN FIND IT
+Dialogue: 0,0:01:01.15,0:01:01.92,Cap,,0,0,0,,{\an5\pos(540,1085)}IN MY PAGE,
+Dialogue: 0,0:01:02.15,0:01:02.94,Cap,,0,0,0,,{\an5\pos(540,1085)}ADVANCE WATCH CO.
