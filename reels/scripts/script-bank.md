@@ -66,3 +66,9 @@ Scenes: CARD "Send us the watch" / CARD 3 things we check / END
 ## Notes
 - All facts come from the approved carousel content (carousels/daily). Reel 09 and 05 carry no price/investment promise.
 - Pacing: generate at voice speed ~1.05-1.1 with flowing sentences (no staged pauses) so no cuts are needed.
+
+## Confirmed by Tarek (treat as fact, do not re-ask)
+- Boutique waiting lists for hot models: 5 years, some boutiques 10 years; no clear timing, people wait and still don't get the watch.
+- Some boutiques won't even take your name; you need a big purchase history (works like a loyalty program).
+- We source in 2 to 48 hours and deliver to the doorstep.
+- Rule: write the full script, get approval, THEN generate video (no video before approval).
