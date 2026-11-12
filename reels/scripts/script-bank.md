@@ -72,3 +72,4 @@ Scenes: CARD "Send us the watch" / CARD 3 things we check / END
 - Some boutiques won't even take your name; you need a big purchase history (works like a loyalty program).
 - We source in 2 to 48 hours and deliver to the doorstep.
 - Rule: write the full script, get approval, THEN generate video (no video before approval).
+- DELIVERY WORDING (confirmed): sourcing takes from 1 hour up to 48 hours depending on the watch, case by case. Use this everywhere (replaces "1-2 hours").
