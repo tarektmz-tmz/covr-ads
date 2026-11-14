@@ -41,7 +41,7 @@
 <div id="endc"><div class="box"><img src="assets/logo.png"><div class="h gold">ADVANCE WATCH CO</div><div class="i">@advance_watchco</div><div class="t">Rolex guides and watches in Dubai</div><div class="p">WhatsApp link in our bio</div></div></div>
 </div>
 <script src="cfg.js"></script><script>
-const FPS=25,NF=C.nf,VID=C.dur,HOLD=2.6,TOT=VID+HOLD;
+const FPS=C.fps||25,NF=C.nf,VID=C.dur,HOLD=2.6,TOT=VID+HOLD;
 const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
 const eo=x=>1-Math.pow(1-clamp(x),3);
 const eob=x=>{x=clamp(x);const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
