@@ -1,11 +1,12 @@
-# 5 top-viral reels to recreate: scripts for your approval
+# 5 top-viral reels to recreate
+STATUS (Nov 15): all five scripts APPROVED by Tarek (R1 and R5 final wording as he edited it). Waiting on exact watch pictures before any video is made.
 Nothing is made and no credits are spent until you say "make it" for each one.
 Look: you bottom-right, hook first with no watches, 50 fps, natural audio. Each reel copies the visual concept of YOUR original video of that reel (see 'Visual' under each). Only R5 is a ranking-board reel. Shirts alternate: R1 green, R2 beige, R3 green, R4 beige, R5 green.
 
 ## R1. 571K "5 Rolex you should never buy at retail" (gold lineup) | green | about 60 s, about 21 credits
 Visual (new, in the style you liked): numbered title, watch on the left, and a price-drop bar chart on the right: a tall bar for the boutique price, a shorter bar for the market price, and a red box showing the loss. Hook screen has no watches.
 
-From a former Rolex employee: don't buy these watches, because you are guaranteed to lose money. Five Rolex watches you should never buy at retail.
+From a former Rolex employee: Five Rolex watches you should never buy at retail.
 One. The full rose gold GMT. It's $58,100 at the Rolex boutique, and in the market it's $48,500. That's $10,000 down the second you walk out of the boutique.
 Two. The full gold Sky-Dweller. It's $67,200 at the Rolex boutique, and in the market it's $55,400. That's $12,000 lost.
 Three. The full yellow gold Submariner. It's $55,640 at the Rolex boutique, and in the market it's $44,900. You lose $11,000.
@@ -62,7 +63,7 @@ Now tell me, which watch in your opinion lost the most hype? Drop it in the comm
 ## R5. 106K "Top 5 picks for your first Rolex" | green | about 52 s, about 17 credits
 Visual: the ranking board (this is a ranking reel): Entry, Sport, Statement, Icon, Luxury rows filling with your picks.
 
-From a former Rolex employee: the top five picks for your first Rolex, ranked from entry to luxury.
+From a former Rolex employee: top five picks for your first Rolex, ranked from entry to luxury.
 One. The Datejust, green or Wimbledon dial. That's your entry level, the perfect everyday classic.
 Two. The Submariner, black or green. The ultimate sport Rolex, and it holds value like a rock.
 Three. The GMT-Master, Batman or Bruce Wayne. This is your statement piece, the high-demand watch everyone is chasing right now.
