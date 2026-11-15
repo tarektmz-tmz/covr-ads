@@ -1,8 +1,10 @@
 # 5 top-viral reels to recreate: scripts for your approval
 Nothing is made and no credits are spent until you say "make it" for each one.
-Look: corner layout, you bottom-right, faded boutique background, hook first with no watches, watches appear as you say them, 50 fps, natural audio. Shirts alternate: R1 green, R2 beige, R3 green, R4 beige, R5 green.
+Look: you bottom-right, hook first with no watches, 50 fps, natural audio. Each reel copies the visual concept of YOUR original video of that reel (see 'Visual' under each). Only R5 is a ranking-board reel. Shirts alternate: R1 green, R2 beige, R3 green, R4 beige, R5 green.
 
 ## R1. 571K "5 Rolex you should never buy at retail" (gold lineup) | green | about 60 s, about 21 credits
+Visual (your v7 video): bright boutique photo, one big watch in the middle per item, black price tags "ROLEX PRICE" then "MARKET PRICE", then a red loss box. Hook screen has no watches.
+
 From a former Rolex employee: don't buy these watches, because you are guaranteed to lose money. Five Rolex watches you should never buy at retail.
 One. The full rose gold GMT. It's $58,100 at the Rolex boutique, and in the market it's $48,500. That's $10,000 down the second you walk out of the boutique.
 Two. The full gold Sky-Dweller. It's $67,200 at the Rolex boutique, and in the market it's $55,400. That's $12,000 lost.
@@ -12,6 +14,8 @@ Five. The full gold Day-Date, diamond dial and diamond bezel. It's $85,100 at th
 Send this video to someone about to go to the Rolex boutique and overpay.
 
 ## R2. 477K "You'll lose money the second you walk out" (gold and platinum lineup) | beige | about 58 s, about 19 credits
+Visual: same family as R1 but a different look: numbered title, watch on the left, a red price-box stack on the right (retail, market, YOU LOSE, % down).
+
 From a former Rolex employee: five Rolex watches you should never buy at retail. You lose money the second you walk out.
 One. White gold GMT-Master Sprite. It's $59,795 at the Rolex boutique, and $47,960 in the market. You lose $11,800.
 Two. White gold Day-Date, ombré blue dial. It's $59,200 at the Rolex boutique, and $53,150 in the market. You lose $6,000.
@@ -21,6 +25,8 @@ And five. Deepsea blue. It's $18,815 at the Rolex boutique, and $16,900 in the m
 DM me for price and availability.
 
 ## R3. 475K "5 Rolex going up in value" | green | about 70 s, about 23 credits
+Visual (your v8 video): numbered gold circle and watch name at the top, watch on the left, four price boxes on the right (retail price at Rolex boutique, market price, profit, profit up %), "ADVANCE WATCH CO" at the bottom.
+
 From a former Rolex employee: these five Rolex watches are always going up in value.
 One. The GMT-Master Pepsi. It's $13,000 at the Rolex boutique, and in the market it's selling for $35,400. That's $22,400 profit, 172% up in value.
 Two. The Daytona Panda. It's $18,300 at the Rolex boutique, and in the market $38,700. That's $20,400 profit, 111% up.
@@ -34,6 +40,8 @@ Your current store prices are different from those market numbers, so there are 
 - Option B (recommended): refresh the market side from your store today: Pepsi $31,314 (+$18,300, +141%); Daytona Panda $39,483 (+$21,200, +116%); Sky-Dweller green $27,229 (+$7,600, +39%); Datejust mint $18,652 (+$5,600, +43%); Day-Date Everose slate ombré $65,350 (+$5,900, +10%). Boutique prices unchanged (I can't confirm Rolex's current list prices).
 
 ## R4. 463K "6 Rolex that lost their value" | beige | about 70 s, about 23 credits
+Visual (your original video): your website product page for each watch, with the VALUE now shown on screen (peak price and today's price) as you say it, which the original did not do.
+
 From a former Rolex employee: six Rolex watches lost their value, and I will never recommend any of them.
 One. Rolex Air-King. It peaked at $8,500 in 2020, today it's $7,600. No nickname, no waitlist, and no collector chasing it. High supply and no demand.
 Two. Rolex Milgauss. It hit $22,000 in 2020, now it's under $11,000. That's a 52% drop, and no collector is interested.
@@ -43,7 +51,17 @@ Five. Full yellow gold Sky-Dweller. Another big chunky watch, in full flashy yel
 Six. Rolex Deepsea Challenge. It's an incredible watch, but think about it: who will put a 50 mm watch on their wrist, and when you want to sell it, you will have a real challenge finding a buyer.
 Now tell me, which watch in your opinion lost the most hype? Drop it in the comments.
 
+## R4 on-screen values (needs your numbers where marked)
+1. Air-King: peak $8,500 (2020), today $7,600 (your numbers). Note: your store lists the Air-King 126900 at 36,000 AED = $9,803 today, so please confirm $7,600.
+2. Milgauss: $22,000 (2020), now under $11,000, -52% (your numbers).
+3. Explorer: NEED your peak and today numbers. (Store today: Explorer II 226570 = 45,000 AED = $12,253.)
+4. Two-tone Sea-Dweller: NEED your numbers. (Store today: 126603 = 85,000 AED = $23,145, the steel one is 58,000 AED = $15,794.)
+5. Full yellow gold Sky-Dweller: 20 to 30% below retail (your words). Needs the retail number to show dollars.
+6. Deepsea Challenge: NEED your numbers.
+
 ## R5. 106K "Top 5 picks for your first Rolex" | green | about 52 s, about 17 credits
+Visual: the ranking board (this is a ranking reel): Entry, Sport, Statement, Icon, Luxury rows filling with your picks.
+
 From a former Rolex employee: the top five picks for your first Rolex, ranked from entry to luxury.
 One. The Datejust, green or Wimbledon dial. That's your entry level, the perfect everyday classic.
 Two. The Submariner, black or green. The ultimate sport Rolex, and it holds value like a rock.
