@@ -3,7 +3,7 @@ Nothing is made and no credits are spent until you say "make it" for each one.
 Look: you bottom-right, hook first with no watches, 50 fps, natural audio. Each reel copies the visual concept of YOUR original video of that reel (see 'Visual' under each). Only R5 is a ranking-board reel. Shirts alternate: R1 green, R2 beige, R3 green, R4 beige, R5 green.
 
 ## R1. 571K "5 Rolex you should never buy at retail" (gold lineup) | green | about 60 s, about 21 credits
-Visual (your v7 video): bright boutique photo, one big watch in the middle per item, black price tags "ROLEX PRICE" then "MARKET PRICE", then a red loss box. Hook screen has no watches.
+Visual (new, in the style you liked): numbered title, watch on the left, and a price-drop bar chart on the right: a tall bar for the boutique price, a shorter bar for the market price, and a red box showing the loss. Hook screen has no watches.
 
 From a former Rolex employee: don't buy these watches, because you are guaranteed to lose money. Five Rolex watches you should never buy at retail.
 One. The full rose gold GMT. It's $58,100 at the Rolex boutique, and in the market it's $48,500. That's $10,000 down the second you walk out of the boutique.
@@ -14,7 +14,7 @@ Five. The full gold Day-Date, diamond dial and diamond bezel. It's $85,100 at th
 Send this video to someone about to go to the Rolex boutique and overpay.
 
 ## R2. 477K "You'll lose money the second you walk out" (gold and platinum lineup) | beige | about 58 s, about 19 credits
-Visual: same family as R1 but a different look: numbered title, watch on the left, a red price-box stack on the right (retail, market, YOU LOSE, % down).
+Visual (approved by you): numbered title, watch on the left, a red price-box stack on the right (retail, market, YOU LOSE, % down).
 
 From a former Rolex employee: five Rolex watches you should never buy at retail. You lose money the second you walk out.
 One. White gold GMT-Master Sprite. It's $59,795 at the Rolex boutique, and $47,960 in the market. You lose $11,800.
@@ -25,7 +25,7 @@ And five. Deepsea blue. It's $18,815 at the Rolex boutique, and $16,900 in the m
 DM me for price and availability.
 
 ## R3. 475K "5 Rolex going up in value" | green | about 70 s, about 23 credits
-Visual (your v8 video): numbered gold circle and watch name at the top, watch on the left, four price boxes on the right (retail price at Rolex boutique, market price, profit, profit up %), "ADVANCE WATCH CO" at the bottom.
+Visual (approved by you): numbered gold circle and watch name at the top, watch on the left, four price boxes on the right (retail price at Rolex boutique, market price, profit, profit up %), "ADVANCE WATCH CO" at the bottom.
 
 From a former Rolex employee: these five Rolex watches are always going up in value.
 One. The GMT-Master Pepsi. It's $13,000 at the Rolex boutique, and in the market it's selling for $35,400. That's $22,400 profit, 172% up in value.
@@ -40,7 +40,7 @@ Your current store prices are different from those market numbers, so there are 
 - Option B (recommended): refresh the market side from your store today: Pepsi $31,314 (+$18,300, +141%); Daytona Panda $39,483 (+$21,200, +116%); Sky-Dweller green $27,229 (+$7,600, +39%); Datejust mint $18,652 (+$5,600, +43%); Day-Date Everose slate ombré $65,350 (+$5,900, +10%). Boutique prices unchanged (I can't confirm Rolex's current list prices).
 
 ## R4. 463K "6 Rolex that lost their value" | beige | about 70 s, about 23 credits
-Visual (your original video): your website product page for each watch, with the VALUE now shown on screen (peak price and today's price) as you say it, which the original did not do.
+Visual (new, in the style you liked): numbered title, watch on the left, and a falling price chart on the right with the 2020 peak and today's value, plus a red tag. The value is on screen for every watch.
 
 From a former Rolex employee: six Rolex watches lost their value, and I will never recommend any of them.
 One. Rolex Air-King. It peaked at $8,500 in 2020, today it's $7,600. No nickname, no waitlist, and no collector chasing it. High supply and no demand.
