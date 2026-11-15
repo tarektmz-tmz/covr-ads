@@ -1,0 +1,38 @@
+<html><head><meta charset=utf-8><style>
+@font-face{font-family:'OswaldX';src:url('../oswald.ttf');font-weight:200 700}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1920px;position:relative;overflow:hidden;background:#000;font-family:'OswaldX'}
+.bg{position:absolute;inset:0;background:url(../bg.jpg) center/cover;filter:brightness(.38) blur(3px)}
+.vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 35%,rgba(0,0,0,0) 30%,rgba(0,0,0,.65) 100%)}
+.lab{position:absolute;left:34px;width:210px;border-radius:18px;color:#10131a;font-size:33px;font-weight:700;letter-spacing:1px;text-align:center;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.5),inset 0 2px 0 rgba(255,255,255,.45)}
+.row{position:absolute;left:256px;width:790px;border-radius:18px;background:linear-gradient(90deg,rgba(255,255,255,.10),rgba(255,255,255,.04));border:1.5px solid rgba(255,255,255,.14);backdrop-filter:blur(6px)}
+.row img{position:absolute;filter:drop-shadow(0 8px 12px rgba(0,0,0,.7))}
+.gt{background:linear-gradient(180deg,#ffe08a,#f2b632);color:#0b0f18;display:inline-block;padding:4px 26px 10px;border-radius:10px;transform:rotate(-1.5deg);box-shadow:0 12px 34px rgba(0,0,0,.55);font-weight:700;line-height:1}
+.card{position:absolute;left:40px;right:40px;top:120px;height:570px;border-radius:32px;background:linear-gradient(180deg,rgba(18,20,26,.92),rgba(8,9,12,.92));border:2px solid rgba(242,182,50,.55);box-shadow:0 20px 60px rgba(0,0,0,.6);text-align:center}
+.card:before{content:'';position:absolute;inset:8px;border-radius:26px;border:1px solid rgba(255,255,255,.08)}
+</style></head><body><div class=bg></div><div class=vig></div><div id=s></div>
+<script>
+const st=new URLSearchParams(location.search).get('s');
+const A='file:///home/user/covr-ads/reels/template-v6/assets/',B='file:///tmp/claude-0/-home-user-covr-ads/bca811f7-ffe6-553a-aec5-c55dc8fbf7aa/scratchpad/b2/corner/';
+const T=[['IMPOSSIBLE','linear-gradient(180deg,#ff8a93,#e0525f)'],['HARD','linear-gradient(180deg,#ffc08a,#ee8a43)'],['MEDIUM','linear-gradient(180deg,#fff0a0,#eac84a)'],['EASY','linear-gradient(180deg,#b9f28f,#5fc260)']];
+const placed={0:[B+'djo.png'],1:[B+'batman.png',B+'djb.png'],2:[A+'subnd.png'],3:[A+'subd.png']};
+const tp=st=='hook'?1010:730,hh=st=='hook'?104:146,gap=st=='hook'?8:8;
+let h='';
+if(st=='hook'){
+ h+=`<div style="position:absolute;top:250px;width:100%;text-align:center;letter-spacing:9px;font-size:30px;color:#e6c27a;font-weight:500">FORMER ROLEX EMPLOYEE</div>
+ <div style="position:absolute;top:300px;width:100%;text-align:center;font-size:118px;font-weight:700;color:#fff;line-height:1.02;text-shadow:0 6px 30px #000">CAN YOU WALK IN<br>AND BUY THESE?</div>
+ <div style="position:absolute;top:640px;width:100%;text-align:center"><span class=gt style="font-size:92px">ROLEX AVAILABILITY</span></div>
+ <div style="position:absolute;top:780px;width:100%;text-align:center;color:#ddd;font-size:48px;letter-spacing:4px">RANKED FROM IMPOSSIBLE TO EASY</div>`;
+}else{
+ h+=`<div class=card><img src="${B}skb.png" style="height:330px;margin-top:20px;filter:drop-shadow(0 14px 30px #000)">
+ <div style="color:#fff;font-size:74px;font-weight:700;letter-spacing:2px;margin-top:4px">SKY-DWELLER BLUE DIAL</div>
+ <div style="color:#f2b632;font-size:44px;font-weight:500;letter-spacing:2px;margin-top:2px">STILL NOT GETTING ALLOCATED AT RETAIL</div></div>`;
+}
+T.forEach((t,i)=>{const y=tp+i*(hh+gap);
+ h+=`<div class=lab style="top:${y}px;height:${hh}px;background:${t[1]}">${t[0]}</div><div class=row style="top:${y}px;height:${hh}px">${st=='hook'?'':(placed[i]||[]).map((p,k)=>`<img src="${p}" style="left:${18+k*140}px;top:8px;height:${hh-16}px">`).join('')}</div>`});
+if(st!='hook')h+=`<div style="position:absolute;left:0;width:100%;top:718px;display:none"></div>`;
+h+=`<div style="position:absolute;left:20px;width:590px;top:${st=='hook'?1500:1355}px;text-align:center;color:#fff;font-size:50px;font-weight:700;line-height:1.1;text-shadow:0 4px 16px #000">${st=='hook'?'<span style="color:#f2b632">WATCH TO THE END</span><br>TO SEE WHERE EACH ONE LANDS':'<span style="color:#f2b632">STILL ONE OF THE NICEST</span><br>JUBILEE COMBOS'}</div>`;
+h+=`<div style="position:absolute;left:620px;top:1380px;width:460px;height:540px;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 46px),linear-gradient(to bottom,transparent 0,#000 46px);-webkit-mask-composite:source-in"><img src="corner.png" style="width:460px"></div>`;
+h+=`<div style="position:absolute;left:20px;top:8px;color:#fff8;font-size:24px">PREVIEW – stand-in watch pictures</div>`;
+document.getElementById('s').innerHTML=h;
+</script></body></html>
