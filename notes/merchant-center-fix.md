@@ -36,7 +36,7 @@ Advance Watch delivers within the United Arab Emirates only.
 
 **Outside the UAE:** We don't currently ship outside the UAE.
 
-**Questions:** advancewco@gmail.com or WhatsApp +971 56 185 3856.
+**Questions:** info@advancewatchco.com or WhatsApp +971 56 185 3856.
 ---
 (Check "insured in transit" and "show ID" are true for how you deliver before pasting; delete those lines if not.)
 
