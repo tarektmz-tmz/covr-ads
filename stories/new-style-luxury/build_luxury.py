@@ -27,12 +27,12 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#000}
 .cap{font-family:'Corm',serif;text-transform:uppercase;letter-spacing:.42em;font-weight:600;font-size:22px}
 .gold{color:#cdb07a}.ink{color:#1c1812}
 .rule{position:absolute;height:1px;background:linear-gradient(90deg,transparent,#cdb07a 20%,#cdb07a 80%,transparent)}
-.tiny{position:absolute;left:0;right:0;text-align:center;font-size:19px;letter-spacing:.3em;text-transform:uppercase;font-weight:600}
+.tiny{position:absolute;left:0;right:0;text-align:center;font-size:17px;line-height:1.75;letter-spacing:.24em;text-transform:uppercase;font-weight:600}
 """.replace("__NOISE__", NOISE)
 
-DISC_R = "Independent dealer · Not affiliated with Rolex · WhatsApp in bio"
-DISC_P = "Independent dealer · Not affiliated with Patek Philippe · WhatsApp in bio"
-DISC_K = "Advance Watch Co · WhatsApp in bio"
+DISC_R = "Independent dealer · Not affiliated with Rolex<br>WhatsApp in bio"
+DISC_P = "Independent dealer · Not affiliated with Patek Philippe<br>WhatsApp in bio"
+DISC_K = "Advance Watch Co<br>WhatsApp in bio"
 
 
 def page(name, bg, body):
@@ -85,16 +85,16 @@ def av3_emerald():  # Datejust 41 green ombre 126334
 <div class='a' style='left:66px;right:66px;top:256px;bottom:338px;border:1px solid rgba(205,176,122,.75)'></div>
 <div class='a' style='left:80px;right:80px;top:270px;bottom:352px;border:1px solid rgba(205,176,122,.28)'></div>
 <div class='a c cap gold' style='top:326px'>Advance Watch Co</div>
-<div class='a' style='left:50%;top:430px;width:900px;height:900px;transform:translateX(-50%);background:radial-gradient(circle,rgba(70,150,110,.20),transparent 62%)'></div>
-<img class='a' src='../assets/dj.png' style='left:50%;top:430px;height:700px;transform:translateX(-50%);
+<div class='a' style='left:50%;top:390px;width:900px;height:900px;transform:translateX(-50%);background:radial-gradient(circle,rgba(70,150,110,.20),transparent 62%)'></div>
+<img class='a' src='../assets/dj.png' style='left:50%;top:390px;height:700px;transform:translateX(-50%);
  -webkit-box-reflect:below 4px linear-gradient(transparent 60%,rgba(255,255,255,.18))'>
-<div class='a c' style='top:1172px;font-size:88px;font-weight:500;color:#efe6d2'>Datejust 41</div>
-<div class='a c' style='top:1278px;font-size:32px;font-style:italic;color:#bcd0c2'>Green ombré dial · Steel &amp; white gold</div>
-<div class='rule' style='left:320px;width:440px;top:1344px'></div>
-<div class='a c cap gold' style='top:1372px;font-size:21px'>Reference 126334</div>
-<div class='a c' style='top:1418px;font-size:50px;font-weight:500;color:#efe6d2;letter-spacing:.06em'>AED 73,400</div>
-<div class='a c' style='top:1488px;font-size:32px;font-style:italic;color:#cdb07a'>Now available</div>
-<div class='tiny' style='top:1578px;color:rgba(239,230,210,.4)'>__D__</div>""".replace("__D__", DISC_R)
+<div class='a c' style='top:1130px;font-size:88px;font-weight:500;color:#efe6d2'>Datejust 41</div>
+<div class='a c' style='top:1236px;font-size:32px;font-style:italic;color:#bcd0c2'>Green ombré dial · Steel &amp; white gold</div>
+<div class='rule' style='left:320px;width:440px;top:1302px'></div>
+<div class='a c cap gold' style='top:1330px;font-size:21px'>Reference 126334</div>
+<div class='a c' style='top:1376px;font-size:50px;font-weight:500;color:#efe6d2;letter-spacing:.06em'>AED 73,400</div>
+<div class='a c' style='top:1446px;font-size:32px;font-style:italic;color:#cdb07a'>Now available</div>
+<div class='tiny' style='top:1500px;color:rgba(239,230,210,.4)'>__D__</div>""".replace("__D__", DISC_R)
     return page("available_3_emerald_velvet", "background:radial-gradient(1100px 1200px at 50% 30%,#0f3a2c,#06231a 55%,#031510)", body)
 
 
@@ -120,6 +120,7 @@ def av5_macro():  # Day-Date 40 228238 dial macro
     body = """
 <img class='a' src='../assets/dial_macro.png' style='left:50%;top:360px;width:1180px;transform:translateX(-50%)'>
 <div class='a' style='inset:0;background:radial-gradient(ellipse 620px 640px at 50% 38%,transparent 30%,rgba(5,5,5,.88) 78%,#050505 100%)'></div>
+<div class='a' style='left:0;right:0;top:330px;height:300px;background:linear-gradient(180deg,#050505 10%,rgba(5,5,5,.0))'></div>
 <div class='a c cap gold' style='top:270px'>Advance Watch Co</div>
 <div class='rule' style='left:420px;width:240px;top:1285px'></div>
 <div class='a c' style='top:1316px;font-size:60px;font-weight:500;color:#f2eadb'>Day-Date 40</div>
@@ -166,10 +167,10 @@ def k2_checks():
 def k3_five():
     body = """
 <div class='a c cap gold' style='top:300px'>The Rolex guarantee</div>
-<div class='a c' style='top:360px;font-size:760px;line-height:1;font-weight:300;font-family:Corm,serif;color:transparent;-webkit-text-stroke:2.5px #cdb07a;letter-spacing:-.02em'>5</div>
-<div class='a c' style='top:1130px;font-size:76px;font-weight:500;color:#f2eadb;letter-spacing:.34em'>YEARS</div>
-<div class='rule' style='left:420px;width:240px;top:1240px'></div>
-<div class='a' style='left:150px;right:150px;top:1280px;text-align:center;font-size:36px;line-height:1.35;color:rgba(242,234,219,.82)'>It begins on the date printed on the card, the date of the sale. A recent date means most of it is still ahead of you. <span style='font-style:italic;color:#cdb07a'>Check it before you pay.</span></div>
+<div class='a c' style='top:330px;font-size:690px;line-height:1;font-weight:300;font-family:Corm,serif;color:transparent;-webkit-text-stroke:2.5px #cdb07a;letter-spacing:-.02em'>5</div>
+<div class='a c' style='top:1150px;font-size:76px;font-weight:500;color:#f2eadb;letter-spacing:.34em'>YEARS</div>
+<div class='rule' style='left:420px;width:240px;top:1260px'></div>
+<div class='a' style='left:150px;right:150px;top:1300px;text-align:center;font-size:36px;line-height:1.35;color:rgba(242,234,219,.82)'>It begins on the date printed on the card, the date of the sale. A recent date means most of it is still ahead of you. <span style='font-style:italic;color:#cdb07a'>Check it before you pay.</span></div>
 <div class='tiny' style='top:1578px;color:rgba(242,234,219,.4)'>__D__</div>""".replace("__D__", DISC_R)
     return page("knowledge_3_five_years", "background:radial-gradient(1000px 1000px at 50% 36%,#1b1913,#08080a 72%)", body)
 
