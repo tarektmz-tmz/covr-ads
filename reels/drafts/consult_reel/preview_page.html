@@ -1,0 +1,70 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:'OswaldX';src:url('oswald.ttf');font-weight:200 700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#000}
+#st{position:absolute;inset:0;overflow:hidden;font-family:'OswaldX',sans-serif;color:#fff}
+.bgb{position:absolute;inset:0;background:url(bg.jpg) center/cover;filter:brightness(.8) saturate(1.1)}
+.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.6),rgba(0,0,0,.1) 35%,rgba(0,0,0,.1) 65%,rgba(0,0,0,.65))}
+#content{position:absolute;inset:0;transform:scale(.88);transform-origin:50% 50%}
+#me{position:absolute;right:40px;bottom:0;width:460px;height:541px;background:url(avatar.jpg) center/cover;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 46px),linear-gradient(to bottom,transparent 0,#000 46px);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent 0,#000 46px),linear-gradient(to bottom,transparent 0,#000 46px);mask-composite:intersect}
+.abs{position:absolute}
+.blk{position:absolute;left:0;right:0;text-align:center}
+.blk span{display:inline-block;background:#000;color:#fff;font-weight:600;padding:6px 26px 10px;border-radius:6px;line-height:1.1}
+.num{position:absolute;left:56px;top:150px;width:80px;height:80px;border-radius:50%;border:4px solid #f2b632;background:rgba(0,0,0,.65);color:#f2b632;font-size:52px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.ttl{position:absolute;left:156px;top:140px;font-size:78px;font-weight:700;line-height:.95;color:#fff;text-shadow:0 4px 16px #000;width:850px}
+.ttl i{font-style:normal;color:#f2b632}
+#cap{position:absolute;left:20px;width:590px;top:1385px;text-align:center;white-space:nowrap}
+#cap span{display:inline-block;margin:0 7px;font-weight:700;font-size:54px;text-transform:uppercase;color:#fff;-webkit-text-stroke:1.2px rgba(0,0,0,.9);text-shadow:0 4px 16px rgba(0,0,0,.9)}
+#cap span.on{color:#f2b632}
+.tri{position:absolute;width:250px;height:220px;background:#e01f1f;clip-path:polygon(50% 0,100% 100%,0 100%);display:flex;align-items:flex-end;justify-content:center;filter:drop-shadow(0 0 24px rgba(255,40,40,.8))}
+.tri b{font-size:130px;color:#fff;line-height:1;margin-bottom:8px}
+.stamp{position:absolute;border:7px solid #e01f1f;color:#ff4a4a;font-weight:700;font-size:62px;padding:2px 22px 8px;background:rgba(0,0,0,.55);border-radius:10px;letter-spacing:2px;white-space:nowrap;text-shadow:0 0 12px rgba(255,40,40,.5)}
+.card{position:absolute;width:290px;height:350px;border-radius:16px;background:rgba(0,0,0,.78);border:3px solid #b8923a;text-align:center}
+.card .lb{position:absolute;left:0;right:0;bottom:20px;font-size:38px;font-weight:600;letter-spacing:2px;color:#e6c27a}
+.cross{position:absolute;left:30px;top:20px;width:230px;height:230px}
+.cross:before,.cross:after{content:'';position:absolute;left:50%;top:-10px;width:22px;height:250px;background:#e01f1f;border-radius:10px;box-shadow:0 0 18px rgba(255,40,40,.8)}
+.cross:before{transform:translateX(-50%) rotate(45deg)}.cross:after{transform:translateX(-50%) rotate(-45deg)}
+</style></head><body><div id="st"><div class="bgb"></div><div class="shade"></div><div id="content"></div><div id="me"></div></div>
+<script>
+const watch=`<svg width="190" height="250" viewBox="0 0 190 250"><rect x="55" y="0" width="80" height="70" rx="12" fill="#8c8c8c"/><rect x="55" y="180" width="80" height="70" rx="12" fill="#8c8c8c"/><circle cx="95" cy="125" r="78" fill="#cfcfcf"/><circle cx="95" cy="125" r="62" fill="#222"/><line x1="95" y1="125" x2="95" y2="82" stroke="#fff" stroke-width="7"/><line x1="95" y1="125" x2="125" y2="140" stroke="#fff" stroke-width="7"/></svg>`;
+const mag=`<svg width="300" height="300" viewBox="0 0 300 300"><circle cx="125" cy="125" r="95" fill="rgba(47,224,106,.12)" stroke="#2fe06a" stroke-width="22"/><line x1="195" y1="195" x2="285" y2="285" stroke="#2fe06a" stroke-width="30" stroke-linecap="round"/></svg>`;
+function cap(words,on){return `<div id="cap">${words.map((w,i)=>`<span class="${i==on?'on':''}">${w}</span>`).join('')}</div>`}
+const S={
+hook:()=>`<div class="blk" style="top:190px"><span style="font-size:46px;letter-spacing:6px;color:#e6c27a;background:rgba(0,0,0,.7)">FORMER ROLEX EMPLOYEE</span></div>
+<div class="blk" style="top:290px;padding:0 50px"><span style="font-size:92px;white-space:normal">3 MISTAKES THAT COST WATCH BUYERS THOUSANDS</span></div>
+<div class="blk" style="top:720px"><span style="font-size:80px;background:#e01f1f">AVOID THEM</span></div>
+<div class="tri" style="left:70px;top:930px"><b>!</b></div><div class="tri" style="left:415px;top:880px"><b>!</b></div><div class="tri" style="left:760px;top:930px"><b>!</b></div>`+cap(['THREE','MISTAKES','THAT','COST'],0),
+m1:()=>`<div class="num">1</div><div class="ttl">BUYING WITHOUT AN <i>EXPERT</i></div>
+<div class="abs" style="left:150px;top:420px;width:330px;height:760px">
+ <div class="abs" style="left:0;right:0;top:60px;bottom:0;background:linear-gradient(180deg,#ff6a6a,#b01212);border-radius:10px 10px 0 0;box-shadow:0 0 40px rgba(255,50,50,.5)"></div>
+ <div class="abs" style="left:-80px;right:-80px;top:-62px;text-align:center;font-size:66px;font-weight:700;color:#ff5a5a;white-space:nowrap">-25% TO -50%</div></div>
+<div class="abs" style="left:600px;top:1070px;width:300px;height:110px;background:linear-gradient(180deg,#8dffa6,#1fbf3a);border-radius:10px 10px 0 0;box-shadow:0 0 40px rgba(60,230,110,.5)"></div>
+<div class="abs" style="left:560px;top:930px;width:380px;text-align:center;font-size:66px;font-weight:700;color:#5fe36b;line-height:1">$100 TO $200</div>
+<div class="abs" style="left:560px;top:1195px;width:380px;text-align:center;font-size:36px;letter-spacing:3px;color:#a6f5ac;font-weight:500">CONSULTATION</div>
+<div class="abs" style="left:100px;top:1195px;width:420px;text-align:center;font-size:36px;letter-spacing:3px;color:#ffb0b0;font-weight:500">LOSS OF VALUE</div>
+<div class="abs" style="left:100px;right:100px;top:1180px;height:4px;background:#b8923a"></div>`+cap(['BUYING','WITHOUT','AN','EXPERT'],3),
+m2:()=>`<div class="num">2</div><div class="ttl">TRUSTING THE <i>ROLEX SALESPERSON</i></div>
+<div class="abs" style="left:230px;top:430px;width:620px;height:300px;background:linear-gradient(180deg,#f7dc8e,#c99a2c);border-radius:26px;border:5px solid #fff;transform:rotate(-5deg);box-shadow:0 18px 40px rgba(0,0,0,.7);text-align:center">
+ <div class="abs" style="left:40px;top:40px;width:46px;height:46px;border-radius:50%;background:#2a2112;border:4px solid #fff"></div>
+ <div class="abs" style="left:0;right:0;top:80px;font-size:100px;font-weight:700;color:#7a0d0d;letter-spacing:3px">COMMISSION</div>
+ <div class="abs" style="left:0;right:0;top:205px;font-size:44px;font-weight:600;color:#3a2a06;letter-spacing:3px">ON EVERY WATCH THEY SELL</div></div>
+<div class="card" style="left:55px;top:830px"><div class="abs" style="left:50px;top:35px">${watch}</div><div class="cross"></div><div class="lb">DISPLAY WATCH</div></div>
+<div class="card" style="left:395px;top:830px"><div class="abs" style="left:50px;top:35px">${watch}</div><div class="cross"></div><div class="lb">DISPLAY WATCH</div></div>
+<div class="card" style="left:735px;top:830px"><div class="abs" style="left:50px;top:35px">${watch}</div><div class="cross"></div><div class="lb">DISPLAY WATCH</div></div>`+cap(['DISPLAY','WATCHES','NO','ONE','WANTS'],1),
+m3:()=>`<div class="num">3</div><div class="ttl">LOOKING FOR THE <i>CHEAPEST DEAL</i></div>
+<img class="abs" src="djmint.png" style="left:300px;top:340px;height:900px;filter:drop-shadow(0 20px 28px rgba(0,0,0,.8))">
+<div class="stamp" style="left:60px;top:420px;transform:rotate(-12deg)">POLISHED</div>
+<div class="stamp" style="left:600px;top:560px;transform:rotate(9deg)">DATE CHANGED</div>
+<div class="stamp" style="left:70px;top:780px;transform:rotate(-8deg)">DIAL CHANGED</div>
+<div class="stamp" style="left:610px;top:1010px;transform:rotate(11deg)">FAKE BOX</div>`+cap(['POLISHED','WATCH','DATE','CHANGED'],0),
+m3b:()=>`<div class="num">3</div><div class="ttl">FIND A TRUSTED <i>COMPANY</i></div>
+<img class="abs" src="djmint.png" style="left:300px;top:340px;height:900px;filter:drop-shadow(0 20px 28px rgba(0,0,0,.8))">
+<div class="abs" style="left:250px;top:560px">${mag}</div>
+<div class="abs" style="left:120px;top:1010px;width:840px;text-align:center;font-size:92px;font-weight:700;color:#5fe36b;border:9px solid #5fe36b;border-radius:16px;background:rgba(0,0,0,.65);transform:rotate(-6deg);letter-spacing:3px;white-space:nowrap;text-shadow:0 0 18px rgba(60,230,110,.6)">AUTHENTICATED</div>`+cap(['AUTHENTICATE','YOUR','WATCH'],0),
+end:()=>`<div class="blk" style="top:230px"><span style="font-size:48px;letter-spacing:6px;color:#e6c27a;background:rgba(0,0,0,.7)">REACH OUT TODAY</span></div>
+<div class="card" style="left:70px;top:420px;width:440px;height:520px;border-color:#e6c27a"><div class="abs" style="left:70px;top:30px">${mag.replace(/#2fe06a/g,'#f2b632').replace('rgba(47,224,106,.12)','rgba(242,182,50,.12)')}</div><div class="lb" style="font-size:54px;line-height:1.05;bottom:30px;color:#fff">CONSULTATION</div></div>
+<div class="card" style="left:570px;top:420px;width:440px;height:520px;border-color:#2fe06a"><div class="abs" style="left:70px;top:30px">${mag}</div><div class="lb" style="font-size:54px;line-height:1.05;bottom:30px;color:#5fe36b">WATCH AUTHENTICATION</div></div>
+<div class="blk" style="top:1040px"><span style="font-size:60px;letter-spacing:4px;color:#fff;background:rgba(0,0,0,.8)">WHATSAPP LINK IN BIO</span></div>`+cap(['REACH','OUT','TODAY'],0)
+};
+const k=location.hash.slice(1)||'hook';document.getElementById('content').innerHTML=S[k]();
+</script></body></html>
