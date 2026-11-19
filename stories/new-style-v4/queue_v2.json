@@ -338,9 +338,9 @@
   "file": "queue/2026-12-03_1.jpg",
   "watches": [
    {
-    "title": "Rolex GMT-Master II \"Root Beer\" 126711CHNR – Steel & Everose Gold, Oyster",
-    "ref": "126711CHNR",
-    "price": "AED 85,000"
+    "title": "Rolex GMT-Master II \"Bruce Wayne\" 126710GRNR – Steel, Jubilee",
+    "ref": "126710GRNR",
+    "price": "AED 84,000"
    }
   ]
  },
@@ -488,9 +488,9 @@
   "file": "queue/2026-12-09_1.jpg",
   "watches": [
    {
-    "title": "Rolex GMT-Master II 126713GRNR – Steel & Yellow Gold, Black Dial, Jubilee",
-    "ref": "126713GRNR",
-    "price": "AED 86,000"
+    "title": "Rolex GMT-Master II \"Pepsi\" 126710BLRO – Steel, Jubilee",
+    "ref": "126710BLRO",
+    "price": "AED 115,000"
    }
   ]
  },
@@ -623,9 +623,9 @@
   "file": "queue/2026-12-15_1.jpg",
   "watches": [
    {
-    "title": "Rolex Daytona 126506 – Platinum, Ice Blue Arabic Dial",
-    "ref": "126506",
-    "price": "AED 635,000"
+    "title": "Rolex GMT-Master II \"Sprite\" 126720VTNR – Steel, Jubilee",
+    "ref": "126720VTNR",
+    "price": "AED 69,000"
    }
   ]
  },
@@ -668,14 +668,14 @@
   "file": "queue/2026-12-17_1.jpg",
   "watches": [
    {
+    "title": "Rolex Daytona 126506 – Platinum, Ice Blue Arabic Dial",
+    "ref": "126506",
+    "price": "AED 635,000"
+   },
+   {
     "title": "Rolex Daytona 126506 – Platinum, Ice Blue Dial",
     "ref": "126506",
     "price": "AED 450,000"
-   },
-   {
-    "title": "Rolex Daytona 126506 – Platinum, Ice Blue Diamond Dial",
-    "ref": "126506",
-    "price": "AED 500,000"
    }
   ]
  },

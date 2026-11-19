@@ -14,7 +14,7 @@ Q = ROOT / "queue"
 Q.mkdir(exist_ok=True)
 START = datetime.date(2026, 11, 19)
 DAYS = 30
-EXCLUDE_REFS = {"126710BLRO", "126710GRNR", "126720VTNR"}  # Pepsi, Bruce Wayne, Sprite: duplicate listings with different prices
+EXCLUDE_REFS = set()  # listing 2 duplicates deleted from the store; listing 1 (brand new) kept
 pool = json.load(open(ROOT.parent / "new-style" / "pool.json"))
 
 
