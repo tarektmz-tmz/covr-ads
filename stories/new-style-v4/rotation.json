@@ -1,0 +1,2329 @@
+{
+ "rules": {
+  "repeat_gap_days": 14,
+  "styles": [
+   "hero",
+   "cream",
+   "pair",
+   "set",
+   "editorial",
+   "plaque"
+  ],
+  "only_one_handles": []
+ },
+ "days": [
+  {
+   "day": 1,
+   "style": "hero",
+   "stories": [
+    [
+     {
+      "handle": "rolex-daytona-panda-126500ln-steel-white-dial",
+      "title": "Rolex Daytona \"Panda\" 126500LN – Steel, White Dial",
+      "vendor": "Rolex",
+      "family": "Daytona",
+      "rank": 1,
+      "score": 106,
+      "name": "DAYTONA PANDA",
+      "ref": "126500LN",
+      "spec": "Steel · White Dial",
+      "price": "AED 145,000",
+      "price_aed": 145000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126500ln-0001.webp?v=1759421227",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-gmt-master-ii-batgirl-126710blnr-steel-jubilee",
+      "title": "Rolex GMT-Master II \"Batgirl\" 126710BLNR – Steel, Jubilee",
+      "vendor": "Rolex",
+      "family": "GMT-Master II",
+      "rank": 3,
+      "score": 100,
+      "name": "GMT-MASTER II BATGIRL",
+      "ref": "126710BLNR",
+      "spec": "Steel · Jubilee",
+      "price": "AED 75,000",
+      "price_aed": 75000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126710blnr-0002.webp?v=1759252251",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-submariner-date-starbucks-126610lv-steel-green-bezel-black-dial",
+      "title": "Rolex Submariner Date \"Starbucks\" 126610LV – Steel, Green Bezel, Black Dial",
+      "vendor": "Rolex",
+      "family": "Submariner Date",
+      "rank": 11,
+      "score": 100,
+      "name": "SUBMARINER DATE STARBUCKS",
+      "ref": "126610LV",
+      "spec": "Steel · Green Bezel · Black Dial",
+      "price": "AED 60,000",
+      "price_aed": 60000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126610lv-0002.webp?v=1759408108",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {},
+   "knowledge": {
+    "id": "seconds_hand",
+    "topic": "The seconds hand myth",
+    "layout": "myth_fact",
+    "needs_confirmation": false,
+    "source": "script-bank 02"
+   }
+  },
+  {
+   "day": 2,
+   "style": "cream",
+   "stories": [
+    [
+     {
+      "handle": "rolex-gmt-master-ii-bruce-wayne-126710grnr-steel-jubilee",
+      "title": "Rolex GMT-Master II \"Bruce Wayne\" 126710GRNR – Steel, Jubilee",
+      "vendor": "Rolex",
+      "family": "GMT-Master II",
+      "rank": 5,
+      "score": 100,
+      "name": "GMT-MASTER II BRUCE WAYNE",
+      "ref": "126710GRNR",
+      "spec": "Steel · Jubilee",
+      "price": "AED 84,000",
+      "price_aed": 84000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126710grnr-0003_1.webp?v=1759250447",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-submariner-date-126610ln-steel-black-dial",
+      "title": "Rolex Submariner Date 126610LN – Steel, Black Dial",
+      "vendor": "Rolex",
+      "family": "Submariner Date",
+      "rank": 12,
+      "score": 100,
+      "name": "SUBMARINER DATE",
+      "ref": "126610LN",
+      "spec": "Steel · Black Dial",
+      "price": "AED 59,000",
+      "price_aed": 59000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126610ln-0001.webp?v=1759407872",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-submariner-no-date-124060-steel-black-dial",
+      "title": "Rolex Submariner No-Date 124060 – Steel, Black Dial",
+      "vendor": "Rolex",
+      "family": "Submariner No-Date",
+      "rank": 13,
+      "score": 100,
+      "name": "SUBMARINER NO-DATE",
+      "ref": "124060",
+      "spec": "Steel · Black Dial",
+      "price": "AED 51,500",
+      "price_aed": 51500,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m124060-0001.webp?v=1759407495",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {
+    "0": "demand"
+   },
+   "knowledge": {
+    "id": "walk_in_daytona",
+    "topic": "Why can't I just walk in and buy a Daytona?",
+    "layout": "qa_card",
+    "needs_confirmation": false,
+    "source": "script-bank 04"
+   }
+  },
+  {
+   "day": 3,
+   "style": "pair",
+   "stories": [
+    [
+     {
+      "handle": "rolex-gmt-master-ii-pepsi-126710blro-steel-jubilee",
+      "title": "Rolex GMT-Master II \"Pepsi\" 126710BLRO – Steel, Jubilee",
+      "vendor": "Rolex",
+      "family": "GMT-Master II",
+      "rank": 7,
+      "score": 100,
+      "name": "GMT-MASTER II PEPSI",
+      "ref": "126710BLRO",
+      "spec": "Steel · Jubilee",
+      "price": "AED 115,000",
+      "price_aed": 115000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126710blro-0001.webp?v=1759250022",
+      "only_one": false
+     },
+     {
+      "handle": "rolex-gmt-master-ii-sprite-126720vtnr-steel-jubilee",
+      "title": "Rolex GMT-Master II \"Sprite\" 126720VTNR – Steel, Jubilee",
+      "vendor": "Rolex",
+      "family": "GMT-Master II",
+      "rank": 9,
+      "score": 100,
+      "name": "GMT-MASTER II SPRITE",
+      "ref": "126720VTNR",
+      "spec": "Steel · Jubilee",
+      "price": "AED 69,000",
+      "price_aed": 69000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126720vtnr-0002.webp?v=1759250801",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-day-date-40-228235-everose-gold-olive-green-dial-president",
+      "title": "Rolex Day-Date 40 228235 – Everose Gold, Olive Green Dial, President",
+      "vendor": "Rolex",
+      "family": "Day-Date",
+      "rank": 14,
+      "score": 94,
+      "name": "DAY-DATE 40",
+      "ref": "228235",
+      "spec": "Everose Gold · Olive Green Dial · President",
+      "price": "AED 229,000",
+      "price_aed": 229000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m228235-0025.webp?v=1759249622",
+      "only_one": false
+     },
+     {
+      "handle": "rolex-day-date-40-228238-yellow-gold-green-dial-president",
+      "title": "Rolex Day-Date 40 228238 – Yellow Gold, Green Dial, President",
+      "vendor": "Rolex",
+      "family": "Day-Date",
+      "rank": 16,
+      "score": 94,
+      "name": "DAY-DATE 40",
+      "ref": "228238",
+      "spec": "Yellow Gold · Green Dial · President",
+      "price": "AED 242,000",
+      "price_aed": 242000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m228238-0061.webp?v=1782209690",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-datejust-41-wimbledon-126300-steel-jubilee",
+      "title": "Rolex Datejust 41 \"Wimbledon\" 126300 – Steel, Jubilee",
+      "vendor": "Rolex",
+      "family": "Datejust",
+      "rank": 18,
+      "score": 92,
+      "name": "DATEJUST 41 WIMBLEDON",
+      "ref": "126300",
+      "spec": "Steel · Jubilee",
+      "price": "AED 49,500",
+      "price_aed": 49500,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126300-0014.webp?v=1759597605",
+      "only_one": false
+     },
+     {
+      "handle": "rolex-datejust-41-wimbledon-126333-steel-and-yellow-gold-jubilee",
+      "title": "Rolex Datejust 41 \"Wimbledon\" 126333 – Steel & Yellow Gold, Jubilee",
+      "vendor": "Rolex",
+      "family": "Datejust",
+      "rank": 19,
+      "score": 92,
+      "name": "DATEJUST 41 WIMBLEDON",
+      "ref": "126333",
+      "spec": "Steel & Yellow Gold · Jubilee",
+      "price": "AED 76,000",
+      "price_aed": 76000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126333-0020.webp?v=1759598890",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {},
+   "knowledge": {
+    "id": "three_checks",
+    "topic": "3 checks before you pay",
+    "layout": "checklist",
+    "needs_confirmation": false,
+    "source": "script-bank 01"
+   }
+  },
+  {
+   "day": 4,
+   "style": "set",
+   "stories": [
+    [
+     {
+      "handle": "rolex-datejust-41-wimbledon-126334-steel-and-white-gold-jubilee",
+      "title": "Rolex Datejust 41 \"Wimbledon\" 126334 – Steel & White Gold, Jubilee",
+      "vendor": "Rolex",
+      "family": "Datejust",
+      "rank": 20,
+      "score": 92,
+      "name": "DATEJUST 41 WIMBLEDON",
+      "ref": "126334",
+      "spec": "Steel & White Gold · Jubilee",
+      "price": "AED 65,000",
+      "price_aed": 65000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126334-0022.webp?v=1759594488",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-daytona-paul-newman-126518ln-yellow-gold-black-dial",
+      "title": "Rolex Daytona \"Paul Newman\" 126518LN – Yellow Gold, Black Dial",
+      "vendor": "Rolex",
+      "family": "Daytona",
+      "rank": 34,
+      "score": 92,
+      "name": "DAYTONA PAUL NEWMAN",
+      "ref": "126518LN",
+      "spec": "Yellow Gold · Black Dial",
+      "price": "AED 200,000",
+      "price_aed": 200000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/65653a1167f1d35ec11eebc5_126518LN-0004.avif?v=1762083505",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-sky-dweller-336933-steel-and-yellow-gold-black-dial-jubilee",
+      "title": "Rolex Sky-Dweller 336933 – Steel & Yellow Gold, Black Dial, Jubilee",
+      "vendor": "Rolex",
+      "family": "Sky-Dweller",
+      "rank": 36,
+      "score": 88,
+      "name": "SKY-DWELLER",
+      "ref": "336933",
+      "spec": "Steel & Yellow Gold · Black Dial · Jubilee",
+      "price": "AED 103,000",
+      "price_aed": 103000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m336933-0004.webp?v=1759834790",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {
+    "0": "demand"
+   },
+   "knowledge": {
+    "id": "new_release_path",
+    "topic": "From Switzerland to the wishlist",
+    "layout": "timeline",
+    "needs_confirmation": true,
+    "source": "course Q23"
+   }
+  },
+  {
+   "day": 5,
+   "style": "editorial",
+   "stories": [
+    [
+     {
+      "handle": "rolex-datejust-41-126331-steel-and-everose-gold-slate-dial-jubilee",
+      "title": "Rolex Datejust 41 126331 – Steel & Everose Gold, Slate Dial, Jubilee",
+      "vendor": "Rolex",
+      "family": "Datejust",
+      "rank": 25,
+      "score": 92,
+      "name": "DATEJUST 41",
+      "ref": "126331",
+      "spec": "Steel & Everose Gold · Slate Dial · Jubilee",
+      "price": "AED 78,000",
+      "price_aed": 78000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126331-0016.webp?v=1759747603",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-sky-dweller-336934-steel-and-white-gold-black-dial-jubilee",
+      "title": "Rolex Sky-Dweller 336934 – Steel & White Gold, Black Dial, Jubilee",
+      "vendor": "Rolex",
+      "family": "Sky-Dweller",
+      "rank": 39,
+      "score": 88,
+      "name": "SKY-DWELLER",
+      "ref": "336934",
+      "spec": "Steel & White Gold · Black Dial · Jubilee",
+      "price": "AED 93,000",
+      "price_aed": 93000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m336934-0008.webp?v=1759833361",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "patek-philippe-aquanaut-5167a-001-steel-black-dial",
+      "title": "Patek Philippe Aquanaut 5167A-001 – Steel, Black Dial",
+      "vendor": "Patek Philippe",
+      "family": "Aquanaut",
+      "rank": 47,
+      "score": 86,
+      "name": "AQUANAUT",
+      "ref": "5167A-001",
+      "spec": "Steel · Black Dial",
+      "price": null,
+      "price_aed": null,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/65597203515fd98da27eaee2_5167A-001_73eb3de4-b16f-4691-97d4-9d4fccc923aa.avif?v=1761396408",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {},
+   "knowledge": {
+    "id": "papers_not_proof",
+    "topic": "Papers help",
+    "layout": "quote_card",
+    "needs_confirmation": false,
+    "source": "script-bank 03"
+   }
+  },
+  {
+   "day": 6,
+   "style": "plaque",
+   "stories": [
+    [
+     {
+      "handle": "patek-philippe-aquanaut-5167r-001-rose-gold-brown-dial",
+      "title": "Patek Philippe Aquanaut 5167R-001 – Rose Gold, Brown Dial",
+      "vendor": "Patek Philippe",
+      "family": "Aquanaut",
+      "rank": 48,
+      "score": 86,
+      "name": "AQUANAUT",
+      "ref": "5167R-001",
+      "spec": "Rose Gold · Brown Dial",
+      "price": null,
+      "price_aed": null,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/6559725bfc22b71a29180678_5167R-001.avif?v=1761396028",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-daytona-126503-steel-and-yellow-gold-black-dial",
+      "title": "Rolex Daytona 126503 – Steel & Yellow Gold, Black Dial",
+      "vendor": "Rolex",
+      "family": "Daytona",
+      "rank": 56,
+      "score": 86,
+      "name": "DAYTONA",
+      "ref": "126503",
+      "spec": "Steel & Yellow Gold · Black Dial",
+      "price": "AED 105,000",
+      "price_aed": 105000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126503-0003.webp?v=1759421765",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-land-dweller-36-127234-steel-and-white-gold-white-honeycomb-dial",
+      "title": "Rolex Land-Dweller 36 127234 – Steel & White Gold, White Honeycomb Dial",
+      "vendor": "Rolex",
+      "family": "Land-Dweller",
+      "rank": 84,
+      "score": 86,
+      "name": "LAND-DWELLER 36",
+      "ref": "127234",
+      "spec": "Steel & White Gold · White Honeycomb Dial",
+      "price": "AED 73,500",
+      "price_aed": 73500,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m127234-0001_1.webp?v=1759769911",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {
+    "0": "demand"
+   },
+   "knowledge": {
+    "id": "how_we_work",
+    "topic": "5 steps, no surprises",
+    "layout": "steps",
+    "needs_confirmation": false,
+    "source": "script-bank 06"
+   }
+  },
+  {
+   "day": 7,
+   "style": "hero",
+   "stories": [
+    [
+     {
+      "handle": "patek-philippe-aquanaut-5168g-001-white-gold-blue-dial",
+      "title": "Patek Philippe Aquanaut 5168G-001 – White Gold, Blue Dial",
+      "vendor": "Patek Philippe",
+      "family": "Aquanaut",
+      "rank": 49,
+      "score": 86,
+      "name": "AQUANAUT",
+      "ref": "5168G-001",
+      "spec": "White Gold · Blue Dial",
+      "price": null,
+      "price_aed": null,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/65597284e362ec9b6201da7a_5168G-001.avif?v=1761396834",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-daytona-126505-everose-gold-black-and-sundust-dial",
+      "title": "Rolex Daytona 126505 – Everose Gold, Black & Sundust Dial",
+      "vendor": "Rolex",
+      "family": "Daytona",
+      "rank": 59,
+      "score": 86,
+      "name": "DAYTONA",
+      "ref": "126505",
+      "spec": "Everose Gold · Black & Sundust Dial",
+      "price": "AED 220,000",
+      "price_aed": 220000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126505-0001_1.webp?v=1759474619",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-land-dweller-36-127235-everose-gold-white-honeycomb-dial",
+      "title": "Rolex Land-Dweller 36 127235 – Everose Gold, White Honeycomb Dial",
+      "vendor": "Rolex",
+      "family": "Land-Dweller",
+      "rank": 85,
+      "score": 86,
+      "name": "LAND-DWELLER 36",
+      "ref": "127235",
+      "spec": "Everose Gold · White Honeycomb Dial",
+      "price": "AED 195,000",
+      "price_aed": 195000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m127235-0001_6f9861ed-4a39-415b-898d-f962ae4665ea.webp?v=1759774008",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {},
+   "knowledge": {
+    "id": "five_years",
+    "topic": "5",
+    "layout": "big_number",
+    "needs_confirmation": false,
+    "source": "script-bank 08"
+   }
+  },
+  {
+   "day": 8,
+   "style": "cream",
+   "stories": [
+    [
+     {
+      "handle": "patek-philippe-aquanaut-5168g-010-white-gold-khaki-green-dial",
+      "title": "Patek Philippe Aquanaut 5168G-010 – White Gold, Khaki Green Dial",
+      "vendor": "Patek Philippe",
+      "family": "Aquanaut",
+      "rank": 50,
+      "score": 86,
+      "name": "AQUANAUT",
+      "ref": "5168G-010",
+      "spec": "White Gold · Khaki Green Dial",
+      "price": null,
+      "price_aed": null,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/6559748b60d2cc093997890e_5168G-010.avif?v=1761397182",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-daytona-126506-platinum-ice-blue-arabic-dial",
+      "title": "Rolex Daytona 126506 – Platinum, Ice Blue Arabic Dial",
+      "vendor": "Rolex",
+      "family": "Daytona",
+      "rank": 63,
+      "score": 86,
+      "name": "DAYTONA",
+      "ref": "126506",
+      "spec": "Platinum · Ice Blue Arabic Dial",
+      "price": "AED 635,000",
+      "price_aed": 635000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/676016e59fe1a1f78a427ccd_126506.webp?v=1759484686",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-land-dweller-36-127236-platinum-ice-blue-honeycomb-dial",
+      "title": "Rolex Land-Dweller 36 127236 – Platinum, Ice Blue Honeycomb Dial",
+      "vendor": "Rolex",
+      "family": "Land-Dweller",
+      "rank": 86,
+      "score": 86,
+      "name": "LAND-DWELLER 36",
+      "ref": "127236",
+      "spec": "Platinum · Ice Blue Honeycomb Dial",
+      "price": "AED 340,000",
+      "price_aed": 340000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m127236-0001.webp?v=1759775747",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {
+    "0": "demand",
+    "2": "demand"
+   },
+   "knowledge": {
+    "id": "boutique_vs_dealer",
+    "topic": "Boutique list or dealer?",
+    "layout": "compare_table",
+    "needs_confirmation": false,
+    "source": "script-bank 05"
+   }
+  },
+  {
+   "day": 9,
+   "style": "pair",
+   "stories": [
+    [
+     {
+      "handle": "rolex-daytona-126508-yellow-gold-black-and-champagne-dial",
+      "title": "Rolex Daytona 126508 – Yellow Gold, Black & Champagne Dial",
+      "vendor": "Rolex",
+      "family": "Daytona",
+      "rank": 66,
+      "score": 86,
+      "name": "DAYTONA",
+      "ref": "126508",
+      "spec": "Yellow Gold · Black & Champagne Dial",
+      "price": "AED 230,000",
+      "price_aed": 230000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126508-0002_9abb969c-5c78-4373-92f9-ade5ced7ca35.webp?v=1759422591",
+      "only_one": false
+     },
+     {
+      "handle": "rolex-daytona-126509-white-gold-black-and-steel-dial",
+      "title": "Rolex Daytona 126509 – White Gold, Black & Steel Dial",
+      "vendor": "Rolex",
+      "family": "Daytona",
+      "rank": 71,
+      "score": 86,
+      "name": "DAYTONA",
+      "ref": "126509",
+      "spec": "White Gold · Black & Steel Dial",
+      "price": "AED 215,000",
+      "price_aed": 215000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126509-0001.webp?v=1759472752",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-land-dweller-40-127334-steel-and-white-gold-white-honeycomb-dial",
+      "title": "Rolex Land-Dweller 40 127334 – Steel & White Gold, White Honeycomb Dial",
+      "vendor": "Rolex",
+      "family": "Land-Dweller",
+      "rank": 87,
+      "score": 86,
+      "name": "LAND-DWELLER 40",
+      "ref": "127334",
+      "spec": "Steel & White Gold · White Honeycomb Dial",
+      "price": "AED 89,500",
+      "price_aed": 89500,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m127334-0001.webp?v=1759769990",
+      "only_one": false
+     },
+     {
+      "handle": "rolex-land-dweller-40-127335-everose-gold-white-honeycomb-dial",
+      "title": "Rolex Land-Dweller 40 127335 – Everose Gold, White Honeycomb Dial",
+      "vendor": "Rolex",
+      "family": "Land-Dweller",
+      "rank": 88,
+      "score": 86,
+      "name": "LAND-DWELLER 40",
+      "ref": "127335",
+      "spec": "Everose Gold · White Honeycomb Dial",
+      "price": "AED 230,000",
+      "price_aed": 230000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m127335-0001.webp?v=1759774229",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-oyster-perpetual-31-277200-steel-pistachio-dial",
+      "title": "Rolex Oyster Perpetual 31 277200 – Steel, Pistachio Dial",
+      "vendor": "Rolex",
+      "family": "Oyster Perpetual",
+      "rank": 98,
+      "score": 86,
+      "name": "OYSTER PERPETUAL 31",
+      "ref": "277200",
+      "spec": "Steel · Pistachio Dial",
+      "price": "AED 40,000",
+      "price_aed": 40000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m277200-0012.webp?v=1760887495",
+      "only_one": false
+     },
+     {
+      "handle": "rolex-oyster-perpetual-36-126000-steel-pistachio-dial",
+      "title": "Rolex Oyster Perpetual 36 126000 – Steel, Pistachio Dial",
+      "vendor": "Rolex",
+      "family": "Oyster Perpetual",
+      "rank": 100,
+      "score": 86,
+      "name": "OYSTER PERPETUAL 36",
+      "ref": "126000",
+      "spec": "Steel · Pistachio Dial",
+      "price": "AED 50,000",
+      "price_aed": 50000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126000-0011.webp?v=1760886538",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {},
+   "knowledge": {
+    "id": "boutique_phrases",
+    "topic": "What to say and not say",
+    "layout": "do_dont",
+    "needs_confirmation": false,
+    "source": "course L4"
+   }
+  },
+  {
+   "day": 10,
+   "style": "set",
+   "stories": [
+    [
+     {
+      "handle": "rolex-daytona-126515ln-everose-gold-black-and-sundust-dial-oysterflex",
+      "title": "Rolex Daytona 126515LN – Everose Gold, Black & Sundust Dial, Oysterflex",
+      "vendor": "Rolex",
+      "family": "Daytona",
+      "rank": 74,
+      "score": 86,
+      "name": "DAYTONA",
+      "ref": "126515LN",
+      "spec": "Everose Gold · Black & Sundust Dial · Oysterflex",
+      "price": "AED 186,000",
+      "price_aed": 186000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126515ln-0002_1.webp?v=1759475708",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-land-dweller-40-127336-platinum-ice-blue-honeycomb-dial",
+      "title": "Rolex Land-Dweller 40 127336 – Platinum, Ice Blue Honeycomb Dial",
+      "vendor": "Rolex",
+      "family": "Land-Dweller",
+      "rank": 89,
+      "score": 86,
+      "name": "LAND-DWELLER 40",
+      "ref": "127336",
+      "spec": "Platinum · Ice Blue Honeycomb Dial",
+      "price": "AED 550,000",
+      "price_aed": 550000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m127336-0001.webp?v=1759775530",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-oyster-perpetual-41-134300-steel-green-dial",
+      "title": "Rolex Oyster Perpetual 41 134300 – Steel, Green Dial",
+      "vendor": "Rolex",
+      "family": "Oyster Perpetual",
+      "rank": 102,
+      "score": 86,
+      "name": "OYSTER PERPETUAL 41",
+      "ref": "134300",
+      "spec": "Steel · Green Dial",
+      "price": "AED 45,000",
+      "price_aed": 45000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m134300-0004.webp?v=1759840766",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {
+    "0": "demand"
+   },
+   "knowledge": {
+    "id": "wait_tiers",
+    "topic": "Waiting time by tier",
+    "layout": "ladder",
+    "needs_confirmation": true,
+    "source": "KB tiers (approximate)"
+   }
+  },
+  {
+   "day": 11,
+   "style": "editorial",
+   "stories": [
+    [
+     {
+      "handle": "patek-philippe-aquanaut-chronograph-5968a-001-steel-black-dial-orange-accents",
+      "title": "Patek Philippe Aquanaut Chronograph 5968A-001 – Steel, Black Dial, Orange Accents",
+      "vendor": "Patek Philippe",
+      "family": "Aquanaut",
+      "rank": 51,
+      "score": 86,
+      "name": "AQUANAUT CHRONOGRAPH",
+      "ref": "5968A-001",
+      "spec": "Steel · Black Dial · Orange Accents",
+      "price": null,
+      "price_aed": null,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/685e475af942f9d4c53b7cf1_5968A-001.avif?v=1761397457",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-daytona-126519ln-white-gold-black-and-steel-dial-oysterflex",
+      "title": "Rolex Daytona 126519LN – White Gold, Black & Steel Dial, Oysterflex",
+      "vendor": "Rolex",
+      "family": "Daytona",
+      "rank": 81,
+      "score": 86,
+      "name": "DAYTONA",
+      "ref": "126519LN",
+      "spec": "White Gold · Black & Steel Dial · Oysterflex",
+      "price": "AED 200,000",
+      "price_aed": 200000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126519ln-0002.webp?v=1759473566",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "patek-philippe-nautilus-5711-1a-001-steel-blue-dial",
+      "title": "Patek Philippe Nautilus 5711/1A-001 – Steel, Blue Dial",
+      "vendor": "Patek Philippe",
+      "family": "Nautilus",
+      "rank": 90,
+      "score": 86,
+      "name": "NAUTILUS",
+      "ref": "5711/1A-001",
+      "spec": "Steel · Blue Dial",
+      "price": null,
+      "price_aed": null,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/685e46b9b4304bd8427f5255_57111A-010.avif?v=1761401906",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {},
+   "knowledge": {
+    "id": "first_come",
+    "topic": "The waiting list",
+    "layout": "myth_fact",
+    "needs_confirmation": false,
+    "source": "course L10"
+   }
+  },
+  {
+   "day": 12,
+   "style": "plaque",
+   "stories": [
+    [
+     {
+      "handle": "patek-philippe-aquanaut-chronograph-5968g-001-white-gold-blue-dial",
+      "title": "Patek Philippe Aquanaut Chronograph 5968G-001 – White Gold, Blue Dial",
+      "vendor": "Patek Philippe",
+      "family": "Aquanaut",
+      "rank": 52,
+      "score": 86,
+      "name": "AQUANAUT CHRONOGRAPH",
+      "ref": "5968G-001",
+      "spec": "White Gold · Blue Dial",
+      "price": null,
+      "price_aed": null,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/6559765b43350305b92dbec4_5968G-001.avif?v=1761397661",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "patek-philippe-nautilus-5711-1r-001-rose-gold-chocolate-dial",
+      "title": "Patek Philippe Nautilus 5711/1R-001 – Rose Gold, Chocolate Dial",
+      "vendor": "Patek Philippe",
+      "family": "Nautilus",
+      "rank": 91,
+      "score": 86,
+      "name": "NAUTILUS",
+      "ref": "5711/1R-001",
+      "spec": "Rose Gold · Chocolate Dial",
+      "price": null,
+      "price_aed": null,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/656a90d84798563658f69553_5711-1R-001.avif?v=1771754084",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-gmt-master-ii-root-beer-126711chnr-steel-and-everose-gold-oyster",
+      "title": "Rolex GMT-Master II \"Root Beer\" 126711CHNR – Steel & Everose Gold, Oyster",
+      "vendor": "Rolex",
+      "family": "GMT-Master II",
+      "rank": 123,
+      "score": 84,
+      "name": "GMT-MASTER II ROOT BEER",
+      "ref": "126711CHNR",
+      "spec": "Steel & Everose Gold · Oyster",
+      "price": "AED 85,000",
+      "price_aed": 85000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126711chnr-0002.webp?v=1759407031",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {
+    "0": "demand"
+   },
+   "knowledge": {
+    "id": "display_not_sale",
+    "topic": "Why are the watches on display not for sale?",
+    "layout": "qa_card",
+    "needs_confirmation": false,
+    "source": "course Q20"
+   }
+  },
+  {
+   "day": 13,
+   "style": "hero",
+   "stories": [
+    [
+     {
+      "handle": "patek-philippe-aquanaut-chronograph-5968g-010-white-gold-green-dial",
+      "title": "Patek Philippe Aquanaut Chronograph 5968G-010 – White Gold, Green Dial",
+      "vendor": "Patek Philippe",
+      "family": "Aquanaut",
+      "rank": 53,
+      "score": 86,
+      "name": "AQUANAUT CHRONOGRAPH",
+      "ref": "5968G-010",
+      "spec": "White Gold · Green Dial",
+      "price": null,
+      "price_aed": null,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/655976863bc1231f65fee05f_5968G-010.avif?v=1761397837",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "patek-philippe-nautilus-5712-1a-001-steel-blue-dial-moon-phase",
+      "title": "Patek Philippe Nautilus 5712/1A-001 – Steel, Blue Dial, Moon Phase",
+      "vendor": "Patek Philippe",
+      "family": "Nautilus",
+      "rank": 92,
+      "score": 86,
+      "name": "NAUTILUS",
+      "ref": "5712/1A-001",
+      "spec": "Steel · Blue Dial · Moon Phase",
+      "price": null,
+      "price_aed": null,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/66e95dbc190b8af399bdb329_57121A-001.avif?v=1754371988",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-gmt-master-ii-126713grnr-steel-and-yellow-gold-black-dial-jubilee",
+      "title": "Rolex GMT-Master II 126713GRNR – Steel & Yellow Gold, Black Dial, Jubilee",
+      "vendor": "Rolex",
+      "family": "GMT-Master II",
+      "rank": 124,
+      "score": 84,
+      "name": "GMT-MASTER II",
+      "ref": "126713GRNR",
+      "spec": "Steel & Yellow Gold · Black Dial · Jubilee",
+      "price": "AED 86,000",
+      "price_aed": 86000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126713grnr-0001.webp?v=1759254670",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {},
+   "knowledge": {
+    "id": "red_flags",
+    "topic": "5 red flags",
+    "layout": "checklist",
+    "needs_confirmation": false,
+    "source": "script-bank 07"
+   }
+  },
+  {
+   "day": 14,
+   "style": "cream",
+   "stories": [
+    [
+     {
+      "handle": "patek-philippe-aquanaut-travel-time-5164g-001-white-gold-blue-grey-dial",
+      "title": "Patek Philippe Aquanaut Travel Time 5164G-001 – White Gold, Blue-Grey Dial",
+      "vendor": "Patek Philippe",
+      "family": "Aquanaut",
+      "rank": 54,
+      "score": 86,
+      "name": "AQUANAUT TRAVEL TIME",
+      "ref": "5164G-001",
+      "spec": "White Gold · Blue-Grey Dial",
+      "price": null,
+      "price_aed": null,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/6622ace8d001f6f7251eebc7_5164G-001.avif?v=1761396606",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "patek-philippe-nautilus-5712-1r-001-rose-gold-chocolate-dial-moon-phase",
+      "title": "Patek Philippe Nautilus 5712/1R-001 – Rose Gold, Chocolate Dial, Moon Phase",
+      "vendor": "Patek Philippe",
+      "family": "Nautilus",
+      "rank": 93,
+      "score": 86,
+      "name": "NAUTILUS",
+      "ref": "5712/1R-001",
+      "spec": "Rose Gold · Chocolate Dial · Moon Phase",
+      "price": null,
+      "price_aed": null,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/656a91caefe04df69bf3947a_5712-1R-001.avif?v=1771751602",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-submariner-date-bluesy-126613lb-steel-and-yellow-gold-blue-dial",
+      "title": "Rolex Submariner Date \"Bluesy\" 126613LB – Steel & Yellow Gold, Blue Dial",
+      "vendor": "Rolex",
+      "family": "Submariner Date",
+      "rank": 125,
+      "score": 84,
+      "name": "SUBMARINER DATE BLUESY",
+      "ref": "126613LB",
+      "spec": "Steel & Yellow Gold · Blue Dial",
+      "price": "AED 78,000",
+      "price_aed": 78000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126613lb-0002.webp?v=1759408553",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {
+    "0": "demand"
+   },
+   "knowledge": {
+    "id": "demand_story",
+    "topic": "From walk-in to waiting list",
+    "layout": "timeline",
+    "needs_confirmation": false,
+    "source": "course L2"
+   }
+  },
+  {
+   "day": 15,
+   "style": "pair",
+   "stories": [
+    [
+     {
+      "handle": "rolex-submariner-date-126613ln-steel-and-yellow-gold-black-dial",
+      "title": "Rolex Submariner Date 126613LN – Steel & Yellow Gold, Black Dial",
+      "vendor": "Rolex",
+      "family": "Submariner Date",
+      "rank": 126,
+      "score": 84,
+      "name": "SUBMARINER DATE",
+      "ref": "126613LN",
+      "spec": "Steel & Yellow Gold · Black Dial",
+      "price": "AED 78,000",
+      "price_aed": 78000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126613ln-0002.webp?v=1759408797",
+      "only_one": false
+     },
+     {
+      "handle": "rolex-submariner-date-starbucks-126610lv-steel-green-bezel-black-dial",
+      "title": "Rolex Submariner Date \"Starbucks\" 126610LV – Steel, Green Bezel, Black Dial",
+      "vendor": "Rolex",
+      "family": "Submariner Date",
+      "rank": 11,
+      "score": 100,
+      "name": "SUBMARINER DATE STARBUCKS",
+      "ref": "126610LV",
+      "spec": "Steel · Green Bezel · Black Dial",
+      "price": "AED 60,000",
+      "price_aed": 60000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126610lv-0002.webp?v=1759408108",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-day-date-40-228236-platinum-ice-blue-dial-president",
+      "title": "Rolex Day-Date 40 228236 – Platinum, Ice Blue Dial, President",
+      "vendor": "Rolex",
+      "family": "Day-Date",
+      "rank": 166,
+      "score": 76,
+      "name": "DAY-DATE 40",
+      "ref": "228236",
+      "spec": "Platinum · Ice Blue Dial · President",
+      "price": "AED 302,000",
+      "price_aed": 302000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m228236-0012.webp?v=1759587847",
+      "only_one": false
+     },
+     {
+      "handle": "rolex-day-date-40-228239-white-gold-blue-ombre-dial-president",
+      "title": "Rolex Day-Date 40 228239 – White Gold, Blue Ombré Dial, President",
+      "vendor": "Rolex",
+      "family": "Day-Date",
+      "rank": 175,
+      "score": 76,
+      "name": "DAY-DATE 40",
+      "ref": "228239",
+      "spec": "White Gold · Blue Ombré Dial · President",
+      "price": "AED 212,000",
+      "price_aed": 212000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m228239-0076_2c194b88-a94c-45fe-b49c-aa45c08d6467.webp?v=1759588064",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-deepsea-136660-steel-black-dial",
+      "title": "Rolex Deepsea 136660 – Steel, Black Dial",
+      "vendor": "Rolex",
+      "family": "Deepsea",
+      "rank": 179,
+      "score": 62,
+      "name": "DEEPSEA",
+      "ref": "136660",
+      "spec": "Steel · Black Dial",
+      "price": "AED 70,000",
+      "price_aed": 70000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m136660-0005.webp?v=1759776385",
+      "only_one": false
+     },
+     {
+      "handle": "rolex-explorer-ii-226570-steel-black-dial",
+      "title": "Rolex Explorer II 226570 – Steel, Black Dial",
+      "vendor": "Rolex",
+      "family": "Explorer II",
+      "rank": 180,
+      "score": 62,
+      "name": "EXPLORER II",
+      "ref": "226570",
+      "spec": "Steel · Black Dial",
+      "price": "AED 45,000",
+      "price_aed": 45000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m226570-0002.webp?v=1759768851",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {},
+   "knowledge": {
+    "id": "lose_deal",
+    "topic": "Lose a deal",
+    "layout": "quote_card",
+    "needs_confirmation": false,
+    "source": "script-bank 12 + carousel 09"
+   }
+  },
+  {
+   "day": 16,
+   "style": "set",
+   "stories": [
+    [
+     {
+      "handle": "rolex-sea-dweller-126600-steel-black-dial",
+      "title": "Rolex Sea-Dweller 126600 – Steel, Black Dial",
+      "vendor": "Rolex",
+      "family": "Sea-Dweller",
+      "rank": 182,
+      "score": 62,
+      "name": "SEA-DWELLER",
+      "ref": "126600",
+      "spec": "Steel · Black Dial",
+      "price": "AED 58,000",
+      "price_aed": 58000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126600-0002.webp?v=1759776007",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-yacht-master-40-126655-everose-gold-oysterflex",
+      "title": "Rolex Yacht-Master 40 126655 – Everose Gold, Oysterflex",
+      "vendor": "Rolex",
+      "family": "Yacht-Master",
+      "rank": 184,
+      "score": 62,
+      "name": "YACHT-MASTER 40",
+      "ref": "126655",
+      "spec": "Everose Gold · Oysterflex",
+      "price": "AED 140,000",
+      "price_aed": 140000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126655-0002.webp?v=1759839228",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-datejust-31-278271-steel-and-everose-gold-aubergine-diamond-dial-jubilee",
+      "title": "Rolex Datejust 31 278271 – Steel & Everose Gold, Aubergine Diamond Dial, Jubilee",
+      "vendor": "Rolex",
+      "family": "Datejust",
+      "rank": 186,
+      "score": 60,
+      "name": "DATEJUST 31",
+      "ref": "278271",
+      "spec": "Steel & Everose Gold · Aubergine Diamond Dial · Jubilee",
+      "price": "AED 77,000",
+      "price_aed": 77000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m278271-0020.webp?v=1759767819",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {
+    "0": "demand",
+    "2": "demand"
+   },
+   "knowledge": {
+    "id": "build_profile",
+    "topic": "Build your Rolex profile",
+    "layout": "steps",
+    "needs_confirmation": false,
+    "source": "batch2 C5"
+   }
+  },
+  {
+   "day": 17,
+   "style": "editorial",
+   "stories": [
+    [
+     {
+      "handle": "patek-philippe-aquanaut-travel-time-5164r-001-rose-gold-brown-dial",
+      "title": "Patek Philippe Aquanaut Travel Time 5164R-001 – Rose Gold, Brown Dial",
+      "vendor": "Patek Philippe",
+      "family": "Aquanaut",
+      "rank": 55,
+      "score": 86,
+      "name": "AQUANAUT TRAVEL TIME",
+      "ref": "5164R-001",
+      "spec": "Rose Gold · Brown Dial",
+      "price": null,
+      "price_aed": null,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/655971c6d8ddb3f69109dac4_5164R-001.avif?v=1761396088",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "patek-philippe-nautilus-5811-1g-001-white-gold-blue-dial",
+      "title": "Patek Philippe Nautilus 5811/1G-001 – White Gold, Blue Dial",
+      "vendor": "Patek Philippe",
+      "family": "Nautilus",
+      "rank": 94,
+      "score": 86,
+      "name": "NAUTILUS",
+      "ref": "5811/1G-001",
+      "spec": "White Gold · Blue Dial",
+      "price": null,
+      "price_aed": null,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/656a93c0339ab8d22bbe1d88_5811-1G-001.avif?v=1761399786",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "audemars-piguet-royal-oak-37-15550sr-oo-1356sr-02-steel-and-pink-gold-silver-dial",
+      "title": "Audemars Piguet Royal Oak 37 15550SR.OO.1356SR.02 – Steel & Pink Gold, Silver Dial",
+      "vendor": "Audemars Piguet",
+      "family": "Royal Oak",
+      "rank": 127,
+      "score": 82,
+      "name": "ROYAL OAK 37",
+      "ref": "15550SR.OO.1356SR.02",
+      "spec": "Steel & Pink Gold · Silver Dial",
+      "price": "AED 185,000",
+      "price_aed": 185000,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/6558cf350ef35b5c921eddee_15550SR.OO.1356SR.02.avif?v=1763317981",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {},
+   "knowledge": {
+    "id": "next_watch_timing",
+    "topic": "1",
+    "layout": "big_number",
+    "needs_confirmation": true,
+    "source": "course L12"
+   }
+  },
+  {
+   "day": 18,
+   "style": "plaque",
+   "stories": [
+    [
+     {
+      "handle": "patek-philippe-nautilus-annual-calendar-5726-1a-014-steel-blue-gradient-dial",
+      "title": "Patek Philippe Nautilus Annual Calendar 5726/1A-014 – Steel, Blue Gradient Dial",
+      "vendor": "Patek Philippe",
+      "family": "Nautilus",
+      "rank": 95,
+      "score": 86,
+      "name": "NAUTILUS ANNUAL CALENDAR",
+      "ref": "5726/1A-014",
+      "spec": "Steel · Blue Gradient Dial",
+      "price": null,
+      "price_aed": null,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/202222-51892.webp?v=1761398604",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "audemars-piguet-royal-oak-37-15550st-oo-1356st-01-steel-white-dial",
+      "title": "Audemars Piguet Royal Oak 37 15550ST.OO.1356ST.01 – Steel, White Dial",
+      "vendor": "Audemars Piguet",
+      "family": "Royal Oak",
+      "rank": 128,
+      "score": 82,
+      "name": "ROYAL OAK 37",
+      "ref": "15550ST.OO.1356ST.01",
+      "spec": "Steel · White Dial",
+      "price": "AED 180,000",
+      "price_aed": 180000,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/6558cf4d9e9653f7d6306790_15550ST.OO.1356ST.01.avif?v=1763319449",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "patek-philippe-grand-complications-5261r-001-rose-gold-white-dial",
+      "title": "Patek Philippe Grand Complications 5261R-001 – Rose Gold, White Dial",
+      "vendor": "Patek Philippe",
+      "family": "Other",
+      "rank": 178,
+      "score": 70,
+      "name": "GRAND COMPLICATIONS",
+      "ref": "5261R-001",
+      "spec": "Rose Gold · White Dial",
+      "price": null,
+      "price_aed": null,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/6559758f38b3eda237d7f323_5261R-001.png?v=1761398054",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {
+    "0": "demand"
+   },
+   "knowledge": {
+    "id": "new_client_first",
+    "topic": "Datejust or Daytona first?",
+    "layout": "compare_table",
+    "needs_confirmation": false,
+    "source": "course L4 + L13"
+   }
+  },
+  {
+   "day": 19,
+   "style": "hero",
+   "stories": [
+    [
+     {
+      "handle": "patek-philippe-nautilus-perpetual-calendar-5740-1g-001-white-gold-blue-dial",
+      "title": "Patek Philippe Nautilus Perpetual Calendar 5740/1G-001 – White Gold, Blue Dial",
+      "vendor": "Patek Philippe",
+      "family": "Nautilus",
+      "rank": 96,
+      "score": 86,
+      "name": "NAUTILUS PERPETUAL CALENDAR",
+      "ref": "5740/1G-001",
+      "spec": "White Gold · Blue Dial",
+      "price": null,
+      "price_aed": null,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/656a9396d401e86c0c57df82_5740-1G-001.avif?v=1761399917",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "audemars-piguet-royal-oak-37-15550st-oo-1356st-06-steel-blue-dial",
+      "title": "Audemars Piguet Royal Oak 37 15550ST.OO.1356ST.06 – Steel, Blue Dial",
+      "vendor": "Audemars Piguet",
+      "family": "Royal Oak",
+      "rank": 129,
+      "score": 82,
+      "name": "ROYAL OAK 37",
+      "ref": "15550ST.OO.1356ST.06",
+      "spec": "Steel · Blue Dial",
+      "price": "AED 200,000",
+      "price_aed": 200000,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/656a9b16e76a4d316f6a3207_15550ST.OO.1356ST.06_1.avif?v=1763318741",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-sea-dweller-126603-steel-and-yellow-gold-black-dial",
+      "title": "Rolex Sea-Dweller 126603 – Steel & Yellow Gold, Black Dial",
+      "vendor": "Rolex",
+      "family": "Sea-Dweller",
+      "rank": 183,
+      "score": 62,
+      "name": "SEA-DWELLER",
+      "ref": "126603",
+      "spec": "Steel & Yellow Gold · Black Dial",
+      "price": "AED 85,000",
+      "price_aed": 85000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126603-0001.webp?v=1759776201",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {},
+   "knowledge": {
+    "id": "dress_code",
+    "topic": "How you show up",
+    "layout": "do_dont",
+    "needs_confirmation": false,
+    "source": "course L5-L6"
+   }
+  },
+  {
+   "day": 20,
+   "style": "cream",
+   "stories": [
+    [
+     {
+      "handle": "patek-philippe-nautilus-travel-time-chronograph-5990-1a-011-steel-blue-dial",
+      "title": "Patek Philippe Nautilus Travel Time Chronograph 5990/1A-011 – Steel, Blue Dial",
+      "vendor": "Patek Philippe",
+      "family": "Nautilus",
+      "rank": 97,
+      "score": 86,
+      "name": "NAUTILUS TRAVEL TIME CHRONOGRAPH",
+      "ref": "5990/1A-011",
+      "spec": "Steel · Blue Dial",
+      "price": null,
+      "price_aed": null,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/4858-51892.webp?v=1761400121",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "audemars-piguet-royal-oak-37-15550st-oo-1356st-07-steel-grey-dial",
+      "title": "Audemars Piguet Royal Oak 37 15550ST.OO.1356ST.07 – Steel, Grey Dial",
+      "vendor": "Audemars Piguet",
+      "family": "Royal Oak",
+      "rank": 130,
+      "score": 82,
+      "name": "ROYAL OAK 37",
+      "ref": "15550ST.OO.1356ST.07",
+      "spec": "Steel · Grey Dial",
+      "price": "AED 185,000",
+      "price_aed": 185000,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/655c6b23853f95a738ca2df9_15550ST.OO.1356ST.07.avif?v=1763319544",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-yacht-master-42-226627-rlx-titanium-black-dial",
+      "title": "Rolex Yacht-Master 42 226627 – RLX Titanium, Black Dial",
+      "vendor": "Rolex",
+      "family": "Yacht-Master",
+      "rank": 185,
+      "score": 62,
+      "name": "YACHT-MASTER 42",
+      "ref": "226627",
+      "spec": "RLX Titanium · Black Dial",
+      "price": "AED 93,500",
+      "price_aed": 93500,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m226627-0001.webp?v=1759839011",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {
+    "0": "demand"
+   },
+   "knowledge": {
+    "id": "dealers_resellers",
+    "topic": "Dealers and resellers",
+    "layout": "myth_fact",
+    "needs_confirmation": false,
+    "source": "course Q18"
+   }
+  },
+  {
+   "day": 21,
+   "style": "pair",
+   "stories": [
+    [
+     {
+      "handle": "rolex-datejust-31-278273-steel-and-yellow-gold-mother-of-pearl-diamond-dial-jubilee",
+      "title": "Rolex Datejust 31 278273 – Steel & Yellow Gold, Mother-of-Pearl Diamond Dial, Jubilee",
+      "vendor": "Rolex",
+      "family": "Datejust",
+      "rank": 191,
+      "score": 60,
+      "name": "DATEJUST 31",
+      "ref": "278273",
+      "spec": "Steel & Yellow Gold · Mother-of-Pearl Diamond Dial · Jubilee",
+      "price": "AED 79,000",
+      "price_aed": 79000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m278273-0028.webp?v=1759764764",
+      "only_one": false
+     },
+     {
+      "handle": "rolex-datejust-31-278274-steel-and-white-gold-mint-green-dial-jubilee",
+      "title": "Rolex Datejust 31 278274 – Steel & White Gold, Mint Green Dial, Jubilee",
+      "vendor": "Rolex",
+      "family": "Datejust",
+      "rank": 197,
+      "score": 60,
+      "name": "DATEJUST 31",
+      "ref": "278274",
+      "spec": "Steel & White Gold · Mint Green Dial · Jubilee",
+      "price": "AED 52,000",
+      "price_aed": 52000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m278274-0018.webp?v=1759763520",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-1908-52506-platinum-alligator-strap",
+      "title": "Rolex 1908 52506 – Platinum, Alligator Strap",
+      "vendor": "Rolex",
+      "family": "1908",
+      "rank": 243,
+      "score": 40,
+      "name": "1908",
+      "ref": "52506",
+      "spec": "Platinum · Alligator Strap",
+      "price": "AED 210,000",
+      "price_aed": 210000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m52506-0002.webp?v=1759839497",
+      "only_one": false
+     },
+     {
+      "handle": "rolex-air-king-126900-steel-black-dial",
+      "title": "Rolex Air-King 126900 – Steel, Black Dial",
+      "vendor": "Rolex",
+      "family": "Air-King",
+      "rank": 244,
+      "score": 40,
+      "name": "AIR-KING",
+      "ref": "126900",
+      "spec": "Steel · Black Dial",
+      "price": "AED 36,000",
+      "price_aed": 36000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126900-0001.webp?v=1759409241",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-daytona-panda-126500ln-steel-white-dial",
+      "title": "Rolex Daytona \"Panda\" 126500LN – Steel, White Dial",
+      "vendor": "Rolex",
+      "family": "Daytona",
+      "rank": 1,
+      "score": 106,
+      "name": "DAYTONA PANDA",
+      "ref": "126500LN",
+      "spec": "Steel · White Dial",
+      "price": "AED 145,000",
+      "price_aed": 145000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126500ln-0001.webp?v=1759421227",
+      "only_one": false
+     },
+     {
+      "handle": "rolex-daytona-paul-newman-126518ln-yellow-gold-black-dial",
+      "title": "Rolex Daytona \"Paul Newman\" 126518LN – Yellow Gold, Black Dial",
+      "vendor": "Rolex",
+      "family": "Daytona",
+      "rank": 34,
+      "score": 92,
+      "name": "DAYTONA PAUL NEWMAN",
+      "ref": "126518LN",
+      "spec": "Yellow Gold · Black Dial",
+      "price": "AED 200,000",
+      "price_aed": 200000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/65653a1167f1d35ec11eebc5_126518LN-0004.avif?v=1762083505",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {},
+   "knowledge": {
+    "id": "card_changed",
+    "topic": "Did the Rolex card change?",
+    "layout": "qa_card",
+    "needs_confirmation": false,
+    "source": "KB confirmed"
+   }
+  },
+  {
+   "day": 22,
+   "style": "set",
+   "stories": [
+    [
+     {
+      "handle": "rolex-datejust-36-wimbledon-126231-steel-and-everose-gold-jubilee",
+      "title": "Rolex Datejust 36 \"Wimbledon\" 126231 – Steel & Everose Gold, Jubilee",
+      "vendor": "Rolex",
+      "family": "Datejust",
+      "rank": 199,
+      "score": 60,
+      "name": "DATEJUST 36 WIMBLEDON",
+      "ref": "126231",
+      "spec": "Steel & Everose Gold · Jubilee",
+      "price": "AED 74,000",
+      "price_aed": 74000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126231-0029.webp?v=1759762806",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-gmt-master-ii-batgirl-126710blnr-steel-jubilee",
+      "title": "Rolex GMT-Master II \"Batgirl\" 126710BLNR – Steel, Jubilee",
+      "vendor": "Rolex",
+      "family": "GMT-Master II",
+      "rank": 3,
+      "score": 100,
+      "name": "GMT-MASTER II BATGIRL",
+      "ref": "126710BLNR",
+      "spec": "Steel · Jubilee",
+      "price": "AED 75,000",
+      "price_aed": 75000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126710blnr-0002.webp?v=1759252251",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-submariner-date-126610ln-steel-black-dial",
+      "title": "Rolex Submariner Date 126610LN – Steel, Black Dial",
+      "vendor": "Rolex",
+      "family": "Submariner Date",
+      "rank": 12,
+      "score": 100,
+      "name": "SUBMARINER DATE",
+      "ref": "126610LN",
+      "spec": "Steel · Black Dial",
+      "price": "AED 59,000",
+      "price_aed": 59000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126610ln-0001.webp?v=1759407872",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {
+    "0": "demand"
+   },
+   "knowledge": {
+    "id": "full_set",
+    "topic": "Box, card and papers",
+    "layout": "checklist",
+    "needs_confirmation": false,
+    "source": "carousel 12 + script-bank 03"
+   }
+  },
+  {
+   "day": 23,
+   "style": "editorial",
+   "stories": [
+    [
+     {
+      "handle": "audemars-piguet-royal-oak-37-15550st-oo-1356st-08-steel-ice-blue-dial",
+      "title": "Audemars Piguet Royal Oak 37 15550ST.OO.1356ST.08 – Steel, Ice Blue Dial",
+      "vendor": "Audemars Piguet",
+      "family": "Royal Oak",
+      "rank": 131,
+      "score": 82,
+      "name": "ROYAL OAK 37",
+      "ref": "15550ST.OO.1356ST.08",
+      "spec": "Steel · Ice Blue Dial",
+      "price": "AED 225,000",
+      "price_aed": 225000,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/655c6b48e5a4b3325d6cd09b_15550ST.OO.1356ST.08.avif?v=1763320272",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-datejust-36-wimbledon-126233-steel-and-yellow-gold-jubilee",
+      "title": "Rolex Datejust 36 \"Wimbledon\" 126233 – Steel & Yellow Gold, Jubilee",
+      "vendor": "Rolex",
+      "family": "Datejust",
+      "rank": 200,
+      "score": 60,
+      "name": "DATEJUST 36 WIMBLEDON",
+      "ref": "126233",
+      "spec": "Steel & Yellow Gold · Jubilee",
+      "price": "AED 66,000",
+      "price_aed": 66000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126233-0035.webp?v=1759752085",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "audemars-piguet-royal-oak-offshore-chronograph-26238ti-oo-a056ca-01-titanium-green-dial",
+      "title": "Audemars Piguet Royal Oak Offshore Chronograph 26238TI.OO.A056CA.01 – Titanium, Green Dial",
+      "vendor": "Audemars Piguet",
+      "family": "Royal Oak Offshore",
+      "rank": 219,
+      "score": 60,
+      "name": "ROYAL OAK OFFSHORE CHRONOGRAPH",
+      "ref": "26238TI.OO.A056CA.01",
+      "spec": "Titanium · Green Dial",
+      "price": "AED 153,000",
+      "price_aed": 153000,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/65597cb22a6784f38aa5b51a_26238TI.OO.A056CA.01.avif?v=1771766064",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {},
+   "knowledge": {
+    "id": "followup_first",
+    "topic": "The follow-up schedule",
+    "layout": "timeline",
+    "needs_confirmation": true,
+    "source": "course L14"
+   }
+  },
+  {
+   "day": 24,
+   "style": "plaque",
+   "stories": [
+    [
+     {
+      "handle": "audemars-piguet-royal-oak-37-15551or-zz-1356or-04-pink-gold-diamond-bezel-white-dial",
+      "title": "Audemars Piguet Royal Oak 37 15551OR.ZZ.1356OR.04 – Pink Gold, Diamond Bezel, White Dial",
+      "vendor": "Audemars Piguet",
+      "family": "Royal Oak",
+      "rank": 132,
+      "score": 82,
+      "name": "ROYAL OAK 37",
+      "ref": "15551OR.ZZ.1356OR.04",
+      "spec": "Pink Gold · Diamond Bezel · White Dial",
+      "price": "AED 390,000",
+      "price_aed": 390000,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/656a9b9f5296bcb7914a735e_15551OR.ZZ.1356OR.04.avif?v=1763465887",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-datejust-36-wimbledon-126234-steel-and-white-gold-jubilee",
+      "title": "Rolex Datejust 36 \"Wimbledon\" 126234 – Steel & White Gold, Jubilee",
+      "vendor": "Rolex",
+      "family": "Datejust",
+      "rank": 201,
+      "score": 60,
+      "name": "DATEJUST 36 WIMBLEDON",
+      "ref": "126234",
+      "spec": "Steel & White Gold · Jubilee",
+      "price": "AED 53,000",
+      "price_aed": 53000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126234-0045.webp?v=1759748621",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "audemars-piguet-royal-oak-offshore-chronograph-26420ce-oo-a063ve-01-black-ceramic-green-dial",
+      "title": "Audemars Piguet Royal Oak Offshore Chronograph 26420CE.OO.A063VE.01 – Black Ceramic, Green Dial",
+      "vendor": "Audemars Piguet",
+      "family": "Royal Oak Offshore",
+      "rank": 220,
+      "score": 60,
+      "name": "ROYAL OAK OFFSHORE CHRONOGRAPH",
+      "ref": "26420CE.OO.A063VE.01",
+      "spec": "Black Ceramic · Green Dial",
+      "price": "AED 203,000",
+      "price_aed": 203000,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/67fd1a734dc5024f2b4b7dcc_26420CE.OO.A063VE.01.avif?v=1771767446",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {
+    "0": "demand",
+    "2": "demand"
+   },
+   "knowledge": {
+    "id": "unrealistic_promises",
+    "topic": "Big promises",
+    "layout": "quote_card",
+    "needs_confirmation": true,
+    "source": "course Q21"
+   }
+  },
+  {
+   "day": 25,
+   "style": "hero",
+   "stories": [
+    [
+     {
+      "handle": "audemars-piguet-royal-oak-37-15551or-zz-1356or-05-pink-gold-diamond-bezel-blue-dial",
+      "title": "Audemars Piguet Royal Oak 37 15551OR.ZZ.1356OR.05 – Pink Gold, Diamond Bezel, Blue Dial",
+      "vendor": "Audemars Piguet",
+      "family": "Royal Oak",
+      "rank": 133,
+      "score": 82,
+      "name": "ROYAL OAK 37",
+      "ref": "15551OR.ZZ.1356OR.05",
+      "spec": "Pink Gold · Diamond Bezel · Blue Dial",
+      "price": "AED 390,000",
+      "price_aed": 390000,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/6558cf984c8387a637362581_15551OR.ZZ.1356OR.05_1.avif?v=1763465891",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "audemars-piguet-royal-oak-offshore-chronograph-26420io-oo-a009ca-01-titanium-grey-dial",
+      "title": "Audemars Piguet Royal Oak Offshore Chronograph 26420IO.OO.A009CA.01 – Titanium, Grey Dial",
+      "vendor": "Audemars Piguet",
+      "family": "Royal Oak Offshore",
+      "rank": 221,
+      "score": 60,
+      "name": "ROYAL OAK OFFSHORE CHRONOGRAPH",
+      "ref": "26420IO.OO.A009CA.01",
+      "spec": "Titanium · Grey Dial",
+      "price": "AED 175,000",
+      "price_aed": 175000,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/655c6fa019bb7487fb2ad84b_26420IO.OO.A009CA.01.avif?v=1771765573",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-gmt-master-ii-bruce-wayne-126710grnr-steel-jubilee",
+      "title": "Rolex GMT-Master II \"Bruce Wayne\" 126710GRNR – Steel, Jubilee",
+      "vendor": "Rolex",
+      "family": "GMT-Master II",
+      "rank": 5,
+      "score": 100,
+      "name": "GMT-MASTER II BRUCE WAYNE",
+      "ref": "126710GRNR",
+      "spec": "Steel · Jubilee",
+      "price": "AED 84,000",
+      "price_aed": 84000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126710grnr-0003_1.webp?v=1759250447",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {},
+   "knowledge": {
+    "id": "relationship",
+    "topic": "Build the relationship",
+    "layout": "steps",
+    "needs_confirmation": false,
+    "source": "course L6-L8"
+   }
+  },
+  {
+   "day": 26,
+   "style": "cream",
+   "stories": [
+    [
+     {
+      "handle": "audemars-piguet-royal-oak-37-15551or-zz-1356or-06-pink-gold-diamond-bezel-green-dial",
+      "title": "Audemars Piguet Royal Oak 37 15551OR.ZZ.1356OR.06 – Pink Gold, Diamond Bezel, Green Dial",
+      "vendor": "Audemars Piguet",
+      "family": "Royal Oak",
+      "rank": 134,
+      "score": 82,
+      "name": "ROYAL OAK 37",
+      "ref": "15551OR.ZZ.1356OR.06",
+      "spec": "Pink Gold · Diamond Bezel · Green Dial",
+      "price": "AED 390,000",
+      "price_aed": 390000,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/6558cfac5dae3bf028732879_15551OR.ZZ.1356OR.06.avif?v=1763391432",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "audemars-piguet-royal-oak-offshore-chronograph-26420so-oo-a600ca-01-steel-army-green-dial",
+      "title": "Audemars Piguet Royal Oak Offshore Chronograph 26420SO.OO.A600CA.01 – Steel, Army Green Dial",
+      "vendor": "Audemars Piguet",
+      "family": "Royal Oak Offshore",
+      "rank": 222,
+      "score": 60,
+      "name": "ROYAL OAK OFFSHORE CHRONOGRAPH",
+      "ref": "26420SO.OO.A600CA.01",
+      "spec": "Steel · Army Green Dial",
+      "price": "AED 155,000",
+      "price_aed": 155000,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/655c6fefc327ad6a1831f44f_26420SO.OO.A600CA.01.avif?v=1771765155",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-submariner-no-date-124060-steel-black-dial",
+      "title": "Rolex Submariner No-Date 124060 – Steel, Black Dial",
+      "vendor": "Rolex",
+      "family": "Submariner No-Date",
+      "rank": 13,
+      "score": 100,
+      "name": "SUBMARINER NO-DATE",
+      "ref": "124060",
+      "spec": "Steel · Black Dial",
+      "price": "AED 51,500",
+      "price_aed": 51500,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m124060-0001.webp?v=1759407495",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {
+    "0": "demand"
+   },
+   "knowledge": {
+    "id": "new_models_wait",
+    "topic": "5",
+    "layout": "big_number",
+    "needs_confirmation": true,
+    "source": "course Q23"
+   }
+  },
+  {
+   "day": 27,
+   "style": "pair",
+   "stories": [
+    [
+     {
+      "handle": "rolex-gmt-master-ii-pepsi-126710blro-steel-jubilee",
+      "title": "Rolex GMT-Master II \"Pepsi\" 126710BLRO – Steel, Jubilee",
+      "vendor": "Rolex",
+      "family": "GMT-Master II",
+      "rank": 7,
+      "score": 100,
+      "name": "GMT-MASTER II PEPSI",
+      "ref": "126710BLRO",
+      "spec": "Steel · Jubilee",
+      "price": "AED 115,000",
+      "price_aed": 115000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126710blro-0001.webp?v=1759250022",
+      "only_one": false
+     },
+     {
+      "handle": "rolex-gmt-master-ii-sprite-126720vtnr-steel-jubilee",
+      "title": "Rolex GMT-Master II \"Sprite\" 126720VTNR – Steel, Jubilee",
+      "vendor": "Rolex",
+      "family": "GMT-Master II",
+      "rank": 9,
+      "score": 100,
+      "name": "GMT-MASTER II SPRITE",
+      "ref": "126720VTNR",
+      "spec": "Steel · Jubilee",
+      "price": "AED 69,000",
+      "price_aed": 69000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126720vtnr-0002.webp?v=1759250801",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-day-date-40-228235-everose-gold-olive-green-dial-president",
+      "title": "Rolex Day-Date 40 228235 – Everose Gold, Olive Green Dial, President",
+      "vendor": "Rolex",
+      "family": "Day-Date",
+      "rank": 14,
+      "score": 94,
+      "name": "DAY-DATE 40",
+      "ref": "228235",
+      "spec": "Everose Gold · Olive Green Dial · President",
+      "price": "AED 229,000",
+      "price_aed": 229000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m228235-0025.webp?v=1759249622",
+      "only_one": false
+     },
+     {
+      "handle": "rolex-day-date-40-228238-yellow-gold-green-dial-president",
+      "title": "Rolex Day-Date 40 228238 – Yellow Gold, Green Dial, President",
+      "vendor": "Rolex",
+      "family": "Day-Date",
+      "rank": 16,
+      "score": 94,
+      "name": "DAY-DATE 40",
+      "ref": "228238",
+      "spec": "Yellow Gold · Green Dial · President",
+      "price": "AED 242,000",
+      "price_aed": 242000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m228238-0061.webp?v=1782209690",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-datejust-41-wimbledon-126300-steel-jubilee",
+      "title": "Rolex Datejust 41 \"Wimbledon\" 126300 – Steel, Jubilee",
+      "vendor": "Rolex",
+      "family": "Datejust",
+      "rank": 18,
+      "score": 92,
+      "name": "DATEJUST 41 WIMBLEDON",
+      "ref": "126300",
+      "spec": "Steel · Jubilee",
+      "price": "AED 49,500",
+      "price_aed": 49500,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126300-0014.webp?v=1759597605",
+      "only_one": false
+     },
+     {
+      "handle": "rolex-datejust-41-wimbledon-126333-steel-and-yellow-gold-jubilee",
+      "title": "Rolex Datejust 41 \"Wimbledon\" 126333 – Steel & Yellow Gold, Jubilee",
+      "vendor": "Rolex",
+      "family": "Datejust",
+      "rank": 19,
+      "score": 92,
+      "name": "DATEJUST 41 WIMBLEDON",
+      "ref": "126333",
+      "spec": "Steel & Yellow Gold · Jubilee",
+      "price": "AED 76,000",
+      "price_aed": 76000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126333-0020.webp?v=1759598890",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {},
+   "knowledge": {
+    "id": "reselling",
+    "topic": "Selling your Rolex",
+    "layout": "compare_table",
+    "needs_confirmation": true,
+    "source": "course Q22"
+   }
+  },
+  {
+   "day": 28,
+   "style": "set",
+   "stories": [
+    [
+     {
+      "handle": "rolex-datejust-41-wimbledon-126334-steel-and-white-gold-jubilee",
+      "title": "Rolex Datejust 41 \"Wimbledon\" 126334 – Steel & White Gold, Jubilee",
+      "vendor": "Rolex",
+      "family": "Datejust",
+      "rank": 20,
+      "score": 92,
+      "name": "DATEJUST 41 WIMBLEDON",
+      "ref": "126334",
+      "spec": "Steel & White Gold · Jubilee",
+      "price": "AED 65,000",
+      "price_aed": 65000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126334-0022.webp?v=1759594488",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-sky-dweller-336933-steel-and-yellow-gold-black-dial-jubilee",
+      "title": "Rolex Sky-Dweller 336933 – Steel & Yellow Gold, Black Dial, Jubilee",
+      "vendor": "Rolex",
+      "family": "Sky-Dweller",
+      "rank": 36,
+      "score": 88,
+      "name": "SKY-DWELLER",
+      "ref": "336933",
+      "spec": "Steel & Yellow Gold · Black Dial · Jubilee",
+      "price": "AED 103,000",
+      "price_aed": 103000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m336933-0004.webp?v=1759834790",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-daytona-126503-steel-and-yellow-gold-black-dial",
+      "title": "Rolex Daytona 126503 – Steel & Yellow Gold, Black Dial",
+      "vendor": "Rolex",
+      "family": "Daytona",
+      "rank": 56,
+      "score": 86,
+      "name": "DAYTONA",
+      "ref": "126503",
+      "spec": "Steel & Yellow Gold · Black Dial",
+      "price": "AED 105,000",
+      "price_aed": 105000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126503-0003.webp?v=1759421765",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {
+    "0": "demand"
+   },
+   "knowledge": {
+    "id": "haggle",
+    "topic": "Chasing the cheapest deal",
+    "layout": "do_dont",
+    "needs_confirmation": false,
+    "source": "consult reel"
+   }
+  },
+  {
+   "day": 29,
+   "style": "editorial",
+   "stories": [
+    [
+     {
+      "handle": "audemars-piguet-royal-oak-37-15551st-zz-1356st-04-steel-diamond-bezel-ice-blue-dial",
+      "title": "Audemars Piguet Royal Oak 37 15551ST.ZZ.1356ST.04 – Steel, Diamond Bezel, Ice Blue Dial",
+      "vendor": "Audemars Piguet",
+      "family": "Royal Oak",
+      "rank": 135,
+      "score": 82,
+      "name": "ROYAL OAK 37",
+      "ref": "15551ST.ZZ.1356ST.04",
+      "spec": "Steel · Diamond Bezel · Ice Blue Dial",
+      "price": "AED 250,000",
+      "price_aed": 250000,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/656a9cbec3dd04cbf5b35b5e_15551ST.ZZ.1356ST.04.avif?v=1763383383",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-datejust-41-126331-steel-and-everose-gold-slate-dial-jubilee",
+      "title": "Rolex Datejust 41 126331 – Steel & Everose Gold, Slate Dial, Jubilee",
+      "vendor": "Rolex",
+      "family": "Datejust",
+      "rank": 25,
+      "score": 92,
+      "name": "DATEJUST 41",
+      "ref": "126331",
+      "spec": "Steel & Everose Gold · Slate Dial · Jubilee",
+      "price": "AED 78,000",
+      "price_aed": 78000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m126331-0016.webp?v=1759747603",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-sky-dweller-336934-steel-and-white-gold-black-dial-jubilee",
+      "title": "Rolex Sky-Dweller 336934 – Steel & White Gold, Black Dial, Jubilee",
+      "vendor": "Rolex",
+      "family": "Sky-Dweller",
+      "rank": 39,
+      "score": 88,
+      "name": "SKY-DWELLER",
+      "ref": "336934",
+      "spec": "Steel & White Gold · Black Dial · Jubilee",
+      "price": "AED 93,000",
+      "price_aed": 93000,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m336934-0008.webp?v=1759833361",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {},
+   "knowledge": {
+    "id": "limit_production",
+    "topic": "Does Rolex limit production?",
+    "layout": "myth_fact",
+    "needs_confirmation": false,
+    "source": "course Q19"
+   }
+  },
+  {
+   "day": 30,
+   "style": "plaque",
+   "stories": [
+    [
+     {
+      "handle": "audemars-piguet-royal-oak-37-15551st-zz-1356st-05-steel-diamond-bezel-blue-dial",
+      "title": "Audemars Piguet Royal Oak 37 15551ST.ZZ.1356ST.05 – Steel, Diamond Bezel, Blue Dial",
+      "vendor": "Audemars Piguet",
+      "family": "Royal Oak",
+      "rank": 136,
+      "score": 82,
+      "name": "ROYAL OAK 37",
+      "ref": "15551ST.ZZ.1356ST.05",
+      "spec": "Steel · Diamond Bezel · Blue Dial",
+      "price": "AED 225,000",
+      "price_aed": 225000,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/6558cfce0ef35b5c921f3759_15551ST.ZZ.1356ST.05.avif?v=1763384808",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "patek-philippe-aquanaut-5167a-001-steel-black-dial",
+      "title": "Patek Philippe Aquanaut 5167A-001 – Steel, Black Dial",
+      "vendor": "Patek Philippe",
+      "family": "Aquanaut",
+      "rank": 47,
+      "score": 86,
+      "name": "AQUANAUT",
+      "ref": "5167A-001",
+      "spec": "Steel · Black Dial",
+      "price": null,
+      "price_aed": null,
+      "fullset": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/65597203515fd98da27eaee2_5167A-001_73eb3de4-b16f-4691-97d4-9d4fccc923aa.avif?v=1761396408",
+      "only_one": false
+     }
+    ],
+    [
+     {
+      "handle": "rolex-land-dweller-36-127234-steel-and-white-gold-white-honeycomb-dial",
+      "title": "Rolex Land-Dweller 36 127234 – Steel & White Gold, White Honeycomb Dial",
+      "vendor": "Rolex",
+      "family": "Land-Dweller",
+      "rank": 84,
+      "score": 86,
+      "name": "LAND-DWELLER 36",
+      "ref": "127234",
+      "spec": "Steel & White Gold · White Honeycomb Dial",
+      "price": "AED 73,500",
+      "price_aed": 73500,
+      "fullset": true,
+      "image_url": "https://cdn.shopify.com/s/files/1/0622/9426/1831/files/m127234-0001_1.webp?v=1759769911",
+      "only_one": false
+     }
+    ]
+   ],
+   "urgency": {
+    "0": "demand"
+   },
+   "knowledge": {
+    "id": "found_elsewhere",
+    "topic": "Found a Rolex somewhere else?",
+    "layout": "qa_card",
+    "needs_confirmation": false,
+    "source": "script-bank 12"
+   }
+  }
+ ]
+}

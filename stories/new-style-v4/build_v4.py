@@ -112,7 +112,6 @@ def st2_cream(w, urgency=None, name="st2_cream", folder=None):
               "<div style='font-size:40px;font-weight:800;color:%s;line-height:1.15'>Full set:</div>"
               "<div style='font-size:40px;font-weight:600;color:%s;line-height:1.2;margin-top:6px'>official Rolex box, papers and tag</div></div>" % (NAVY, MUT)) if w['fullset'] else ''
     c = f"""
-<div class='a' style='left:0;top:0;width:60px;height:1920px;background:{NAVY}'></div>
 <div class='a' style='left:110px;top:262px;font-size:52px;font-weight:800;letter-spacing:.16em;color:{GOLD}'>HIGH DEMAND</div>
 <div class='a' style='left:110px;top:332px;font-size:124px;font-weight:900;line-height:.92;letter-spacing:-.05em;color:{NAVY}'>AVAILABLE<br><span style='color:{GOLD};font-size:206px;line-height:.9'>NOW</span></div>
 {fit(w['img'],585,480,400,680,f"filter:drop-shadow(0 40px 36px rgba(11,26,51,.32))")}
@@ -122,7 +121,7 @@ def st2_cream(w, urgency=None, name="st2_cream", folder=None):
 <div class='a' style='left:110px;top:1288px;font-size:88px;font-weight:900;letter-spacing:-.03em;color:{NAVY}'>{price_txt(w)}</div>
 <div class='a' style='left:110px;top:1400px'><span class='pill'>{cta(w)}</span></div>
 <div class='legal' style='top:1640px;color:{MUT}'>{legal(w)}</div>"""
-    return page(name, "cream", wrap(c, urgency), folder)
+    return page(name, "cream", f"<div class='a' style='left:0;top:0;width:60px;height:1920px;background:{NAVY}'></div>" + wrap(c, urgency), folder)
 
 
 def st3_pair(w1, w2, headline="GMT-MASTER II", urgency=None, name="st3_pair", folder=None):
