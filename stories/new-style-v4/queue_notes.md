@@ -1,0 +1,6 @@
+# Story queue v2 (2026-11-20 to 2026-12-19)
+- 30 days x 3 stories = 90 images in queue/ (1080x1920 JPG, named YYYY-MM-DD_n.jpg). Day 1 (Nov 20) is an Available Now day; Available and Knowledge days alternate: 15 + 15.
+- Available days: one style per day in the order hero, cream, pair, full set, editorial, plaque, then again (each style runs 2 to 3 times this month; replace the styles next month). 3 different watches per day (3 pairs on pair days). Full watch inside the frame; every Rolex story says "Full set: official Rolex box, papers and tag". Top-demand family (Daytona, GMT, Submariner) opens every day. Patek appears on 3 days as price on request.
+- Urgency band "HIGH DEMAND PIECE · DM TO SOURCE YOURS NOW": only 5 stories in the whole month, always story 1 on a high-demand steel sport watch. "ONLY ONE AVAILABLE" is OFF.
+- Knowledge days: 45 different new topics from 64 new stories (families guide, fake-checks, ten steps to buy safely, GMT guide, complications, materials, how we work). Never the same layout twice in one day, and the layout set changes from day to day. 17 unused new stories stay in reserve (queue_reserve.json) for next month.
+- Rebuild: `NODE_PATH=/opt/node22/lib/node_modules python3 build_queue.py` (fetches watch cutouts once from the store CDN).

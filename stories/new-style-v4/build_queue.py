@@ -22,21 +22,23 @@ def parse(x):
     t = x["title"].replace(x["vendor"] + " ", "", 1)
     left, _, right = t.partition(" – ")
     nick = re.search(r'"([^"]+)"', left)
-    ref = re.search(r"(\d{5,6}[A-Z]*)\s*$", left.replace(nick.group(0), "").strip() if nick else left)
-    base = re.sub(r'"[^"]+"|\s*\d{5,6}[A-Z]*\s*$', "", left).strip()
+    ref = re.search(r"(\d{4}[A-Z/0-9]*-\d{3}|\d{5,6}[A-Z]*)\s*$", left.replace(nick.group(0), "").strip() if nick else left)
+    base = re.sub(r'"[^"]+"|\s*(\d{4}[A-Z/0-9]*-\d{3}|\d{5,6}[A-Z]*)\s*$', "", left).strip()
     base = re.sub(r"\s+", " ", base)
     parts = [p.strip().replace(" Dial", "") for p in right.split(",") if p.strip()]
     short = {"Submariner Date": "SUBMARINER", "Submariner No-Date": "SUB NO-DATE", "Oyster Perpetual 31": "OYSTER PERP. 31", "Oyster Perpetual 36": "OYSTER PERP. 36",
              "Oyster Perpetual 41": "OYSTER PERP. 41", "GMT-Master II": "GMT-MASTER II"}
     name = nick.group(1).upper() if nick else short.get(base, base.upper())
-    if nick and x["family"] == "Daytona":
+    if nick and x["family"] == "Daytona" and len(name) <= 5:
         name = "DAYTONA " + name
     if nick and x["family"] == "GMT-Master II":
         name = name + " GMT"
-    if nick and x["family"] == "Submariner Date":
-        name = name + " SUB"
-    spec = " · ".join(([base] if nick else []) + parts)
-    while len(spec) > 40 and " · " in spec:
+    parts = [{"Steel & Yellow Gold": "Yellow Rolesor", "Steel & White Gold": "White Rolesor", "Steel & Everose Gold": "Everose Rolesor"}.get(p, p) for p in parts]
+    if x["vendor"] != "Rolex":
+        name = base.replace("Patek Philippe ", "").upper()
+        base = "Patek Philippe"
+    spec = " · ".join(([base] if (nick or x["vendor"] != "Rolex") else []) + parts)
+    while len(spec) > 28 and " · " in spec:
         spec = spec.rsplit(" · ", 1)[0]
     pretty_fam = {"Submariner Date": "SUBMARINER", "Oyster Perpetual": "OYSTER PERPETUAL"}.get(x["family"], x["family"].upper())
     return dict(name=name, ref=ref.group(1) if ref else "", spec=spec, vendor=x["vendor"], fullset=x["vendor"] == "Rolex",
@@ -109,6 +111,8 @@ def pick_stories(styles):
                 day.append([w]); continue
             if style == "pair":
                 grp = []
+                if fam == "Oyster Perpetual":
+                    fam = "Datejust"
                 for _ in range(2):
                     w = take(fam, used)
                     if w is None:
@@ -161,10 +165,8 @@ for d in range(DAYS):
     if d % 2 == 0:
         style, day = plan[ai]
         urg_idx = set()
-        if ai % 2 == 1:
+        if ai % 3 == 1:
             urg_idx.add(0)
-        if ai in (5, 11):
-            urg_idx.add(2) if day[2][0]["family"] in TOP else None
         for n, grp in enumerate(day, 1):
             for w in grp:
                 if "img" not in w:

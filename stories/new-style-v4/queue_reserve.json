@@ -1,0 +1,25 @@
+{
+ "unused_knowledge": [
+  "fam_sub",
+  "fam_gmt",
+  "fam_daytona",
+  "fam_deepsea",
+  "fam_yachtmaster",
+  "fam_r1908",
+  "fk_engraved",
+  "fk_glow",
+  "gmt_sprite",
+  "gmt_rootbeer",
+  "gmt_two",
+  "gmt_use",
+  "cx_tourb",
+  "hrs_find",
+  "dep_25",
+  "ask_card",
+  "fk_one"
+ ],
+ "needs_confirmation": [
+  "first_rolex",
+  "mat_metals"
+ ]
+}

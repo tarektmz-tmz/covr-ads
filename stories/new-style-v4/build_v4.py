@@ -87,7 +87,7 @@ def wrap(content, urgency):
         band = (f"<div class='a' style='left:0;right:0;top:250px;height:76px;background:{CREAM};border-top:5px solid {GOLD};border-bottom:5px solid {GOLD};"
                 f"display:flex;align-items:center;justify-content:center;font-size:35px;font-weight:800;letter-spacing:.07em;color:{NAVY}'>"
                 f"ONLY ONE AVAILABLE · DM TO SOURCE YOURS NOW</div>")
-    return f"<div class='a' style='inset:0;transform:translateY(84px)'>{content}</div>{band}"
+    return f"<div class='a' style='inset:0;transform:translateY(78px)'>{content}</div>{band}"
 
 
 # ================================================================= AVAILABLE NOW styles

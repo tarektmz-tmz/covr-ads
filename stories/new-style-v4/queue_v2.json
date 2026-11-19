@@ -1,0 +1,1172 @@
+[
+ {
+  "date": "2026-11-20",
+  "n": 1,
+  "kind": "available",
+  "style": "hero",
+  "urgency": null,
+  "file": "queue/2026-11-20_1.jpg",
+  "watches": [
+   {
+    "title": "Rolex Daytona \"Panda\" 126500LN – Steel, White Dial",
+    "ref": "126500LN",
+    "price": "AED 145,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-20",
+  "n": 2,
+  "kind": "available",
+  "style": "hero",
+  "urgency": null,
+  "file": "queue/2026-11-20_2.jpg",
+  "watches": [
+   {
+    "title": "Rolex Datejust 41 \"Wimbledon\" 126300 – Steel, Jubilee",
+    "ref": "126300",
+    "price": "AED 49,500"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-20",
+  "n": 3,
+  "kind": "available",
+  "style": "hero",
+  "urgency": null,
+  "file": "queue/2026-11-20_3.jpg",
+  "watches": [
+   {
+    "title": "Rolex Day-Date 40 228235 – Everose Gold, Olive Green Dial, President",
+    "ref": "228235",
+    "price": "AED 229,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-21",
+  "n": 1,
+  "kind": "knowledge",
+  "layout": "big_number",
+  "id": "fam_seadweller",
+  "title": "1967",
+  "source": "families guide part 1/2",
+  "file": "queue/2026-11-21_1.jpg"
+ },
+ {
+  "date": "2026-11-21",
+  "n": 2,
+  "kind": "knowledge",
+  "layout": "ladder",
+  "id": "built_sea",
+  "title": "Three dive watches, three depths",
+  "source": "families guide",
+  "file": "queue/2026-11-21_2.jpg"
+ },
+ {
+  "date": "2026-11-21",
+  "n": 3,
+  "kind": "knowledge",
+  "layout": "myth_fact",
+  "id": "cx_moon",
+  "title": "Moon phase",
+  "source": "v11",
+  "file": "queue/2026-11-21_3.jpg"
+ },
+ {
+  "date": "2026-11-22",
+  "n": 1,
+  "kind": "available",
+  "style": "cream",
+  "urgency": "demand",
+  "file": "queue/2026-11-22_1.jpg",
+  "watches": [
+   {
+    "title": "Rolex GMT-Master II \"Batgirl\" 126710BLNR – Steel, Jubilee",
+    "ref": "126710BLNR",
+    "price": "AED 75,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-22",
+  "n": 2,
+  "kind": "available",
+  "style": "cream",
+  "urgency": null,
+  "file": "queue/2026-11-22_2.jpg",
+  "watches": [
+   {
+    "title": "Rolex Sky-Dweller 336933 – Steel & Yellow Gold, Black Dial, Jubilee",
+    "ref": "336933",
+    "price": "AED 103,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-22",
+  "n": 3,
+  "kind": "available",
+  "style": "cream",
+  "urgency": null,
+  "file": "queue/2026-11-22_3.jpg",
+  "watches": [
+   {
+    "title": "Rolex Land-Dweller 36 127234 – Steel & White Gold, White Honeycomb Dial",
+    "ref": "127234",
+    "price": "AED 73,500"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-23",
+  "n": 1,
+  "kind": "knowledge",
+  "layout": "qa_card",
+  "id": "built_explorer",
+  "title": "Explorer and Explorer II",
+  "source": "v14",
+  "file": "queue/2026-11-23_1.jpg"
+ },
+ {
+  "date": "2026-11-23",
+  "n": 2,
+  "kind": "knowledge",
+  "layout": "steps",
+  "id": "ts_34",
+  "title": "Seller, then proof",
+  "source": "daily 08",
+  "file": "queue/2026-11-23_2.jpg"
+ },
+ {
+  "date": "2026-11-23",
+  "n": 3,
+  "kind": "knowledge",
+  "layout": "quote_card",
+  "id": "fk_serial",
+  "title": "Serial and reference",
+  "source": "daily 07 slide 3",
+  "file": "queue/2026-11-23_3.jpg"
+ },
+ {
+  "date": "2026-11-24",
+  "n": 1,
+  "kind": "available",
+  "style": "pair",
+  "urgency": null,
+  "file": "queue/2026-11-24_1.jpg",
+  "watches": [
+   {
+    "title": "Rolex Submariner Date \"Starbucks\" 126610LV – Steel, Green Bezel, Black Dial",
+    "ref": "126610LV",
+    "price": "AED 60,000"
+   },
+   {
+    "title": "Rolex Submariner Date 126610LN – Steel, Black Dial",
+    "ref": "126610LN",
+    "price": "AED 59,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-24",
+  "n": 2,
+  "kind": "available",
+  "style": "pair",
+  "urgency": null,
+  "file": "queue/2026-11-24_2.jpg",
+  "watches": [
+   {
+    "title": "Rolex Datejust 41 \"Wimbledon\" 126333 – Steel & Yellow Gold, Jubilee",
+    "ref": "126333",
+    "price": "AED 76,000"
+   },
+   {
+    "title": "Rolex Datejust 41 \"Wimbledon\" 126334 – Steel & White Gold, Jubilee",
+    "ref": "126334",
+    "price": "AED 65,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-24",
+  "n": 3,
+  "kind": "available",
+  "style": "pair",
+  "urgency": null,
+  "file": "queue/2026-11-24_3.jpg",
+  "watches": [
+   {
+    "title": "Rolex Datejust 41 126300 – Steel, Azzurro Blue Dial, Jubilee",
+    "ref": "126300",
+    "price": "AED 49,000"
+   },
+   {
+    "title": "Rolex Datejust 41 126300 – Steel, Blue Dial, Jubilee",
+    "ref": "126300",
+    "price": "AED 49,500"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-25",
+  "n": 1,
+  "kind": "knowledge",
+  "layout": "big_number",
+  "id": "fam_airking",
+  "title": "1945",
+  "source": "families guide part 1/2",
+  "file": "queue/2026-11-25_1.jpg"
+ },
+ {
+  "date": "2026-11-25",
+  "n": 2,
+  "kind": "knowledge",
+  "layout": "ladder",
+  "id": "built_for",
+  "title": "What each Rolex was made for",
+  "source": "v14",
+  "file": "queue/2026-11-25_2.jpg"
+ },
+ {
+  "date": "2026-11-25",
+  "n": 3,
+  "kind": "knowledge",
+  "layout": "checklist",
+  "id": "cx_list",
+  "title": "7 complications collectors know",
+  "source": "v11",
+  "file": "queue/2026-11-25_3.jpg"
+ },
+ {
+  "date": "2026-11-26",
+  "n": 1,
+  "kind": "available",
+  "style": "set",
+  "urgency": null,
+  "file": "queue/2026-11-26_1.jpg",
+  "watches": [
+   {
+    "title": "Rolex Daytona 126500LN – Steel, Black Dial",
+    "ref": "126500LN",
+    "price": "AED 119,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-26",
+  "n": 2,
+  "kind": "available",
+  "style": "set",
+  "urgency": null,
+  "file": "queue/2026-11-26_2.jpg",
+  "watches": [
+   {
+    "title": "Rolex Datejust 41 126300 – Steel, Mint Green Dial, Jubilee",
+    "ref": "126300",
+    "price": "AED 49,500"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-26",
+  "n": 3,
+  "kind": "available",
+  "style": "set",
+  "urgency": null,
+  "file": "queue/2026-11-26_3.jpg",
+  "watches": [
+   {
+    "title": "Rolex Day-Date 40 228235 – Everose Gold, Slate Ombré Dial, President",
+    "ref": "228235",
+    "price": "AED 240,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-27",
+  "n": 1,
+  "kind": "knowledge",
+  "layout": "qa_card",
+  "id": "cx_gmt",
+  "title": "What is a GMT?",
+  "source": "v11",
+  "file": "queue/2026-11-27_1.jpg"
+ },
+ {
+  "date": "2026-11-27",
+  "n": 2,
+  "kind": "knowledge",
+  "layout": "myth_fact",
+  "id": "built_dd",
+  "title": "Does the Day-Date come in steel?",
+  "source": "families guide",
+  "file": "queue/2026-11-27_2.jpg"
+ },
+ {
+  "date": "2026-11-27",
+  "n": 3,
+  "kind": "knowledge",
+  "layout": "steps",
+  "id": "ts_910",
+  "title": "Check, then keep everything",
+  "source": "daily 08",
+  "file": "queue/2026-11-27_3.jpg"
+ },
+ {
+  "date": "2026-11-28",
+  "n": 1,
+  "kind": "available",
+  "style": "editorial",
+  "urgency": "demand",
+  "file": "queue/2026-11-28_1.jpg",
+  "watches": [
+   {
+    "title": "Rolex GMT-Master II \"Batman\" 126710BLNR – Steel, Jubilee",
+    "ref": "126710BLNR",
+    "price": "AED 68,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-28",
+  "n": 2,
+  "kind": "available",
+  "style": "editorial",
+  "urgency": null,
+  "file": "queue/2026-11-28_2.jpg",
+  "watches": [
+   {
+    "title": "Rolex Sky-Dweller 336933 – Steel & Yellow Gold, Champagne Dial, Jubilee",
+    "ref": "336933",
+    "price": "AED 100,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-28",
+  "n": 3,
+  "kind": "available",
+  "style": "editorial",
+  "urgency": null,
+  "file": "queue/2026-11-28_3.jpg",
+  "watches": [
+   {
+    "title": "Patek Philippe Aquanaut 5167A-001 – Steel, Black Dial",
+    "ref": "5167A-001",
+    "price": null
+   }
+  ]
+ },
+ {
+  "date": "2026-11-29",
+  "n": 1,
+  "kind": "knowledge",
+  "layout": "big_number",
+  "id": "fam_daydate",
+  "title": "1956",
+  "source": "families guide part 1/2",
+  "file": "queue/2026-11-29_1.jpg"
+ },
+ {
+  "date": "2026-11-29",
+  "n": 2,
+  "kind": "knowledge",
+  "layout": "checklist",
+  "id": "why_us",
+  "title": "7 reasons",
+  "source": "special/why-buy",
+  "file": "queue/2026-11-29_2.jpg"
+ },
+ {
+  "date": "2026-11-29",
+  "n": 3,
+  "kind": "knowledge",
+  "layout": "ladder",
+  "id": "mat_bracelets",
+  "title": "Oyster, Jubilee, President",
+  "source": "families guide",
+  "file": "queue/2026-11-29_3.jpg"
+ },
+ {
+  "date": "2026-11-30",
+  "n": 1,
+  "kind": "available",
+  "style": "plaque",
+  "urgency": null,
+  "file": "queue/2026-11-30_1.jpg",
+  "watches": [
+   {
+    "title": "Rolex Submariner Date \"Bluesy\" 126613LB – Steel & Yellow Gold, Blue Dial",
+    "ref": "126613LB",
+    "price": "AED 78,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-30",
+  "n": 2,
+  "kind": "available",
+  "style": "plaque",
+  "urgency": null,
+  "file": "queue/2026-11-30_2.jpg",
+  "watches": [
+   {
+    "title": "Rolex Oyster Perpetual 31 277200 – Steel, Pistachio Dial",
+    "ref": "277200",
+    "price": "AED 40,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-30",
+  "n": 3,
+  "kind": "available",
+  "style": "plaque",
+  "urgency": null,
+  "file": "queue/2026-11-30_3.jpg",
+  "watches": [
+   {
+    "title": "Rolex Datejust 41 126300 – Steel, Slate Dial, Jubilee",
+    "ref": "126300",
+    "price": "AED 48,200"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-01",
+  "n": 1,
+  "kind": "knowledge",
+  "layout": "qa_card",
+  "id": "mat_land",
+  "title": "What is the Land-Dweller?",
+  "source": "families guide",
+  "file": "queue/2026-12-01_1.jpg"
+ },
+ {
+  "date": "2026-12-01",
+  "n": 2,
+  "kind": "knowledge",
+  "layout": "steps",
+  "id": "ts_12",
+  "title": "Decide, then get a quote",
+  "source": "daily 08",
+  "file": "queue/2026-12-01_2.jpg"
+ },
+ {
+  "date": "2026-12-01",
+  "n": 3,
+  "kind": "knowledge",
+  "layout": "myth_fact",
+  "id": "fk_caseback",
+  "title": "The see-through caseback",
+  "source": "daily 06 slide 6",
+  "file": "queue/2026-12-01_3.jpg"
+ },
+ {
+  "date": "2026-12-02",
+  "n": 1,
+  "kind": "available",
+  "style": "hero",
+  "urgency": null,
+  "file": "queue/2026-12-02_1.jpg",
+  "watches": [
+   {
+    "title": "Rolex Daytona \"Paul Newman\" 126518LN – Yellow Gold, Black Dial",
+    "ref": "126518LN",
+    "price": "AED 200,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-02",
+  "n": 2,
+  "kind": "available",
+  "style": "hero",
+  "urgency": null,
+  "file": "queue/2026-12-02_2.jpg",
+  "watches": [
+   {
+    "title": "Rolex Datejust 41 126331 – Steel & Everose Gold, Slate Dial, Jubilee",
+    "ref": "126331",
+    "price": "AED 78,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-02",
+  "n": 3,
+  "kind": "available",
+  "style": "hero",
+  "urgency": null,
+  "file": "queue/2026-12-02_3.jpg",
+  "watches": [
+   {
+    "title": "Rolex Day-Date 40 228238 – Yellow Gold, Green Dial, President",
+    "ref": "228238",
+    "price": "AED 242,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-03",
+  "n": 1,
+  "kind": "knowledge",
+  "layout": "big_number",
+  "id": "fam_landdweller",
+  "title": "2025",
+  "source": "families guide part 1/2",
+  "file": "queue/2026-12-03_1.jpg"
+ },
+ {
+  "date": "2026-12-03",
+  "n": 2,
+  "kind": "knowledge",
+  "layout": "ladder",
+  "id": "mat_size",
+  "title": "Case sizes by family",
+  "source": "families guide",
+  "file": "queue/2026-12-03_2.jpg"
+ },
+ {
+  "date": "2026-12-03",
+  "n": 3,
+  "kind": "knowledge",
+  "layout": "checklist",
+  "id": "fk_seller",
+  "title": "A real dealer is open",
+  "source": "daily 07 slide 6",
+  "file": "queue/2026-12-03_3.jpg"
+ },
+ {
+  "date": "2026-12-04",
+  "n": 1,
+  "kind": "available",
+  "style": "cream",
+  "urgency": "demand",
+  "file": "queue/2026-12-04_1.jpg",
+  "watches": [
+   {
+    "title": "Rolex GMT-Master II \"Root Beer\" 126711CHNR – Steel & Everose Gold, Oyster",
+    "ref": "126711CHNR",
+    "price": "AED 85,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-04",
+  "n": 2,
+  "kind": "available",
+  "style": "cream",
+  "urgency": null,
+  "file": "queue/2026-12-04_2.jpg",
+  "watches": [
+   {
+    "title": "Rolex Sky-Dweller 336933 – Steel & Yellow Gold, White Dial, Jubilee",
+    "ref": "336933",
+    "price": "AED 103,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-04",
+  "n": 3,
+  "kind": "available",
+  "style": "cream",
+  "urgency": null,
+  "file": "queue/2026-12-04_3.jpg",
+  "watches": [
+   {
+    "title": "Rolex Land-Dweller 36 127235 – Everose Gold, White Honeycomb Dial",
+    "ref": "127235",
+    "price": "AED 195,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-05",
+  "n": 1,
+  "kind": "knowledge",
+  "layout": "steps",
+  "id": "dj_combos",
+  "title": "The three combinations to know",
+  "source": "New 2",
+  "file": "queue/2026-12-05_1.jpg"
+ },
+ {
+  "date": "2026-12-05",
+  "n": 2,
+  "kind": "knowledge",
+  "layout": "qa_card",
+  "id": "cx_chrono",
+  "title": "What is a chronograph?",
+  "source": "v11",
+  "file": "queue/2026-12-05_2.jpg"
+ },
+ {
+  "date": "2026-12-05",
+  "n": 3,
+  "kind": "knowledge",
+  "layout": "quote_card",
+  "id": "ts_first",
+  "title": "Your reference point",
+  "source": "daily 08",
+  "file": "queue/2026-12-05_3.jpg"
+ },
+ {
+  "date": "2026-12-06",
+  "n": 1,
+  "kind": "available",
+  "style": "pair",
+  "urgency": null,
+  "file": "queue/2026-12-06_1.jpg",
+  "watches": [
+   {
+    "title": "Rolex Submariner Date 126613LN – Steel & Yellow Gold, Black Dial",
+    "ref": "126613LN",
+    "price": "AED 78,000"
+   },
+   {
+    "title": "Rolex Daytona \"Pikachu\" 126518LN – Yellow Gold, Bright Yellow Dial",
+    "ref": "126518LN",
+    "price": "AED 200,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-06",
+  "n": 2,
+  "kind": "available",
+  "style": "pair",
+  "urgency": null,
+  "file": "queue/2026-12-06_2.jpg",
+  "watches": [
+   {
+    "title": "Rolex Datejust 41 126334 – Steel & White Gold, Azzurro Blue Dial, Jubilee",
+    "ref": "126334",
+    "price": "AED 64,000"
+   },
+   {
+    "title": "Rolex Datejust 41 126334 – Steel & White Gold, Blue Dial, Jubilee",
+    "ref": "126334",
+    "price": "AED 64,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-06",
+  "n": 3,
+  "kind": "available",
+  "style": "pair",
+  "urgency": null,
+  "file": "queue/2026-12-06_3.jpg",
+  "watches": [
+   {
+    "title": "Rolex Datejust 41 126334 – Steel & White Gold, Blue Diamond Dial, Jubilee",
+    "ref": "126334",
+    "price": "AED 68,000"
+   },
+   {
+    "title": "Rolex Datejust 41 126334 – Steel & White Gold, Green Ombré Dial, Jubilee",
+    "ref": "126334",
+    "price": "AED 73,400"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-07",
+  "n": 1,
+  "kind": "knowledge",
+  "layout": "big_number",
+  "id": "fam_ym2",
+  "title": "2007",
+  "source": "families guide part 1/2",
+  "file": "queue/2026-12-07_1.jpg"
+ },
+ {
+  "date": "2026-12-07",
+  "n": 2,
+  "kind": "knowledge",
+  "layout": "myth_fact",
+  "id": "mat_oyster",
+  "title": "Rolex only makes plain dials",
+  "source": "families guide",
+  "file": "queue/2026-12-07_2.jpg"
+ },
+ {
+  "date": "2026-12-07",
+  "n": 3,
+  "kind": "knowledge",
+  "layout": "checklist",
+  "id": "fk_weight",
+  "title": "Weight, bracelet, bezel",
+  "source": "daily 06 slide 7",
+  "file": "queue/2026-12-07_3.jpg"
+ },
+ {
+  "date": "2026-12-08",
+  "n": 1,
+  "kind": "available",
+  "style": "set",
+  "urgency": null,
+  "file": "queue/2026-12-08_1.jpg",
+  "watches": [
+   {
+    "title": "Rolex Daytona 126503 – Steel & Yellow Gold, Black Dial",
+    "ref": "126503",
+    "price": "AED 105,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-08",
+  "n": 2,
+  "kind": "available",
+  "style": "set",
+  "urgency": null,
+  "file": "queue/2026-12-08_2.jpg",
+  "watches": [
+   {
+    "title": "Rolex Datejust 41 126334 – Steel & White Gold, Mint Green Dial, Jubilee",
+    "ref": "126334",
+    "price": "AED 68,500"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-08",
+  "n": 3,
+  "kind": "available",
+  "style": "set",
+  "urgency": null,
+  "file": "queue/2026-12-08_3.jpg",
+  "watches": [
+   {
+    "title": "Rolex Day-Date 40 228238 – Yellow Gold, Green Ombré Dial, President",
+    "ref": "228238",
+    "price": "AED 250,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-09",
+  "n": 1,
+  "kind": "knowledge",
+  "layout": "compare_table",
+  "id": "cx_cal",
+  "title": "Annual or perpetual calendar?",
+  "source": "v11",
+  "file": "queue/2026-12-09_1.jpg"
+ },
+ {
+  "date": "2026-12-09",
+  "n": 2,
+  "kind": "knowledge",
+  "layout": "do_dont",
+  "id": "dont_pay",
+  "title": "Before paying",
+  "source": "daily 08",
+  "file": "queue/2026-12-09_2.jpg"
+ },
+ {
+  "date": "2026-12-09",
+  "n": 3,
+  "kind": "knowledge",
+  "layout": "qa_card",
+  "id": "dd_stone",
+  "title": "What is a stone dial?",
+  "source": "v2",
+  "file": "queue/2026-12-09_3.jpg"
+ },
+ {
+  "date": "2026-12-10",
+  "n": 1,
+  "kind": "available",
+  "style": "editorial",
+  "urgency": "demand",
+  "file": "queue/2026-12-10_1.jpg",
+  "watches": [
+   {
+    "title": "Rolex GMT-Master II 126713GRNR – Steel & Yellow Gold, Black Dial, Jubilee",
+    "ref": "126713GRNR",
+    "price": "AED 86,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-10",
+  "n": 2,
+  "kind": "available",
+  "style": "editorial",
+  "urgency": null,
+  "file": "queue/2026-12-10_2.jpg",
+  "watches": [
+   {
+    "title": "Rolex Sky-Dweller 336934 – Steel & White Gold, Black Dial, Jubilee",
+    "ref": "336934",
+    "price": "AED 93,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-10",
+  "n": 3,
+  "kind": "available",
+  "style": "editorial",
+  "urgency": null,
+  "file": "queue/2026-12-10_3.jpg",
+  "watches": [
+   {
+    "title": "Patek Philippe Aquanaut 5167R-001 – Rose Gold, Brown Dial",
+    "ref": "5167R-001",
+    "price": null
+   }
+  ]
+ },
+ {
+  "date": "2026-12-11",
+  "n": 1,
+  "kind": "knowledge",
+  "layout": "big_number",
+  "id": "fam_oyster",
+  "title": "1931",
+  "source": "families guide part 1/2",
+  "file": "queue/2026-12-11_1.jpg"
+ },
+ {
+  "date": "2026-12-11",
+  "n": 2,
+  "kind": "knowledge",
+  "layout": "steps",
+  "id": "ts_78",
+  "title": "Payment order and inspection",
+  "source": "daily 08",
+  "file": "queue/2026-12-11_2.jpg"
+ },
+ {
+  "date": "2026-12-11",
+  "n": 3,
+  "kind": "knowledge",
+  "layout": "quote_card",
+  "id": "fk_price",
+  "title": "The price tells a story",
+  "source": "daily 07 slide 5",
+  "file": "queue/2026-12-11_3.jpg"
+ },
+ {
+  "date": "2026-12-12",
+  "n": 1,
+  "kind": "available",
+  "style": "plaque",
+  "urgency": null,
+  "file": "queue/2026-12-12_1.jpg",
+  "watches": [
+   {
+    "title": "Rolex Daytona 126503 – Steel & Yellow Gold, Golden Dial",
+    "ref": "126503",
+    "price": "AED 105,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-12",
+  "n": 2,
+  "kind": "available",
+  "style": "plaque",
+  "urgency": null,
+  "file": "queue/2026-12-12_2.jpg",
+  "watches": [
+   {
+    "title": "Rolex Oyster Perpetual 31 277200 – Steel, Turquoise Blue Dial",
+    "ref": "277200",
+    "price": "AED 40,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-12",
+  "n": 3,
+  "kind": "available",
+  "style": "plaque",
+  "urgency": null,
+  "file": "queue/2026-12-12_3.jpg",
+  "watches": [
+   {
+    "title": "Rolex Datejust 41 126334 – Steel & White Gold, Slate Dial, Jubilee",
+    "ref": "126334",
+    "price": "AED 60,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-13",
+  "n": 1,
+  "kind": "knowledge",
+  "layout": "qa_card",
+  "id": "cx_world",
+  "title": "What is a world timer?",
+  "source": "v11",
+  "file": "queue/2026-12-13_1.jpg"
+ },
+ {
+  "date": "2026-12-13",
+  "n": 2,
+  "kind": "knowledge",
+  "layout": "compare_table",
+  "id": "gmt_bat",
+  "title": "Batman or Batgirl?",
+  "source": "gmt guide",
+  "file": "queue/2026-12-13_2.jpg"
+ },
+ {
+  "date": "2026-12-13",
+  "n": 3,
+  "kind": "knowledge",
+  "layout": "timeline",
+  "id": "deliv",
+  "title": "How it arrives",
+  "source": "script-bank 06",
+  "file": "queue/2026-12-13_3.jpg"
+ },
+ {
+  "date": "2026-12-14",
+  "n": 1,
+  "kind": "available",
+  "style": "hero",
+  "urgency": null,
+  "file": "queue/2026-12-14_1.jpg",
+  "watches": [
+   {
+    "title": "Rolex Daytona 126503 – Steel & Yellow Gold, White Dial",
+    "ref": "126503",
+    "price": "AED 103,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-14",
+  "n": 2,
+  "kind": "available",
+  "style": "hero",
+  "urgency": null,
+  "file": "queue/2026-12-14_2.jpg",
+  "watches": [
+   {
+    "title": "Rolex Datejust 41 126334 – Steel & White Gold, Slate Diamond Dial, Jubilee",
+    "ref": "126334",
+    "price": "AED 75,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-14",
+  "n": 3,
+  "kind": "available",
+  "style": "hero",
+  "urgency": null,
+  "file": "queue/2026-12-14_3.jpg",
+  "watches": [
+   {
+    "title": "Rolex Daytona 126505 – Everose Gold, Black & Sundust Dial",
+    "ref": "126505",
+    "price": "AED 220,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-15",
+  "n": 1,
+  "kind": "knowledge",
+  "layout": "big_number",
+  "id": "fam_datejust",
+  "title": "1945",
+  "source": "families guide part 1/2",
+  "file": "queue/2026-12-15_1.jpg"
+ },
+ {
+  "date": "2026-12-15",
+  "n": 2,
+  "kind": "knowledge",
+  "layout": "myth_fact",
+  "id": "mat_dive",
+  "title": "Is every Rolex a diver?",
+  "source": "families guide",
+  "file": "queue/2026-12-15_2.jpg"
+ },
+ {
+  "date": "2026-12-15",
+  "n": 3,
+  "kind": "knowledge",
+  "layout": "steps",
+  "id": "fk_indep",
+  "title": "Get an independent check",
+  "source": "daily 07 slide 7",
+  "file": "queue/2026-12-15_3.jpg"
+ },
+ {
+  "date": "2026-12-16",
+  "n": 1,
+  "kind": "available",
+  "style": "cream",
+  "urgency": "demand",
+  "file": "queue/2026-12-16_1.jpg",
+  "watches": [
+   {
+    "title": "Rolex Daytona 126506 – Platinum, Ice Blue Arabic Dial",
+    "ref": "126506",
+    "price": "AED 635,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-16",
+  "n": 2,
+  "kind": "available",
+  "style": "cream",
+  "urgency": null,
+  "file": "queue/2026-12-16_2.jpg",
+  "watches": [
+   {
+    "title": "Rolex Sky-Dweller 336934 – Steel & White Gold, Blue Dial, Jubilee",
+    "ref": "336934",
+    "price": "AED 97,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-16",
+  "n": 3,
+  "kind": "available",
+  "style": "cream",
+  "urgency": null,
+  "file": "queue/2026-12-16_3.jpg",
+  "watches": [
+   {
+    "title": "Rolex Land-Dweller 36 127236 – Platinum, Ice Blue Honeycomb Dial",
+    "ref": "127236",
+    "price": "AED 340,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-17",
+  "n": 1,
+  "kind": "knowledge",
+  "layout": "qa_card",
+  "id": "mat_ym",
+  "title": "What is a Yacht-Master?",
+  "source": "families guide",
+  "file": "queue/2026-12-17_1.jpg"
+ },
+ {
+  "date": "2026-12-17",
+  "n": 2,
+  "kind": "knowledge",
+  "layout": "quote_card",
+  "id": "ts_rule",
+  "title": "Never pay in full first",
+  "source": "daily 08 slide 7",
+  "file": "queue/2026-12-17_2.jpg"
+ },
+ {
+  "date": "2026-12-17",
+  "n": 3,
+  "kind": "knowledge",
+  "layout": "compare_table",
+  "id": "gmt_pepsi",
+  "title": "Pepsi or Bruce Wayne?",
+  "source": "gmt guide",
+  "file": "queue/2026-12-17_3.jpg"
+ },
+ {
+  "date": "2026-12-18",
+  "n": 1,
+  "kind": "available",
+  "style": "pair",
+  "urgency": null,
+  "file": "queue/2026-12-18_1.jpg",
+  "watches": [
+   {
+    "title": "Rolex Daytona 126506 – Platinum, Ice Blue Dial",
+    "ref": "126506",
+    "price": "AED 450,000"
+   },
+   {
+    "title": "Rolex Daytona 126506 – Platinum, Ice Blue Diamond Dial",
+    "ref": "126506",
+    "price": "AED 500,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-18",
+  "n": 2,
+  "kind": "available",
+  "style": "pair",
+  "urgency": null,
+  "file": "queue/2026-12-18_2.jpg",
+  "watches": [
+   {
+    "title": "Rolex Datejust 41 126300 – Steel, Black Dial, Jubilee",
+    "ref": "126300",
+    "price": "AED 49,500"
+   },
+   {
+    "title": "Rolex Datejust 41 126300 – Steel, Silver Dial, Jubilee",
+    "ref": "126300",
+    "price": "AED 49,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-18",
+  "n": 3,
+  "kind": "available",
+  "style": "pair",
+  "urgency": null,
+  "file": "queue/2026-12-18_3.jpg",
+  "watches": [
+   {
+    "title": "Rolex Datejust 41 126300 – Steel, White Dial, Jubilee",
+    "ref": "126300",
+    "price": "AED 48,000"
+   },
+   {
+    "title": "Rolex Datejust 41 126331 – Steel & Everose Gold, Chocolate Dial, Jubilee",
+    "ref": "126331",
+    "price": "AED 78,000"
+   }
+  ]
+ },
+ {
+  "date": "2026-12-19",
+  "n": 1,
+  "kind": "knowledge",
+  "layout": "big_number",
+  "id": "fam_skydweller",
+  "title": "2012",
+  "source": "families guide part 1/2",
+  "file": "queue/2026-12-19_1.jpg"
+ },
+ {
+  "date": "2026-12-19",
+  "n": 2,
+  "kind": "knowledge",
+  "layout": "steps",
+  "id": "ts_56",
+  "title": "Full set and warranty date",
+  "source": "daily 08",
+  "file": "queue/2026-12-19_2.jpg"
+ },
+ {
+  "date": "2026-12-19",
+  "n": 3,
+  "kind": "knowledge",
+  "layout": "qa_card",
+  "id": "mat_bezel",
+  "title": "Fluted, smooth or tachymetric?",
+  "source": "families guide",
+  "file": "queue/2026-12-19_3.jpg"
+ }
+]
