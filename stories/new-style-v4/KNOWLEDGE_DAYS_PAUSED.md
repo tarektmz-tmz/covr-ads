@@ -1,0 +1,1 @@
+Knowledge-day images (15 days, 45 files) were removed on 2026-11-19 because the owner found the information stories without value. They will be rebuilt as pain-point and value stories. Until then the daily task posts nothing on those days.
