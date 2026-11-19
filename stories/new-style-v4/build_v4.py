@@ -394,13 +394,13 @@ def kn_ladder(d, folder, name):
         y = top + i * rh
         shade = ["#e3c47a", "#c9a24b", "#a8832f", "#7d5f22"][min(i, 3)]
         rows += (f"<div class='a card' style='left:70px;top:{y:.0f}px;width:940px;height:{rh-22:.0f}px;background:linear-gradient(90deg,{shade} 0,{shade} 34%,{NAVY2} 34%);display:flex;align-items:center;padding:0 36px 0 36px;gap:30px'>"
-                 f"<div style='flex:none;width:262px;font-size:52px;font-weight:900;letter-spacing:-.03em;color:{NAVY if i<2 else CREAM};line-height:1.05'>{lab}</div>"
+                 f"<div style='flex:none;width:262px;font-size:{44 if max(len(r[0]) for r in d['rungs'])>9 else 52}px;font-weight:900;letter-spacing:-.03em;color:{NAVY if i<2 else CREAM};line-height:1.05'>{lab}</div>"
                  f"<div style='font-size:42px;font-weight:600;line-height:1.2'>{txt}</div></div>")
     c = f"""
 <div class='eyebrow' style='left:80px;top:262px'>{d['eyebrow']}</div>
 <div class='a' style='left:80px;top:322px;width:920px;font-size:{sz(d['title'],[(26,100),(40,86)])}px;font-weight:700;line-height:1.02;letter-spacing:-.04em'>{d['title']}</div>
 {rows}
-<div class='a c' style='top:1462px;font-size:34px;font-weight:600;color:rgba(246,242,234,.7)'>Always approximate, it depends on the watch</div>
+<div class='a c' style='top:1462px;font-size:34px;font-weight:600;color:rgba(246,242,234,.7)'>{d.get('foot','Always approximate, it depends on the watch')}</div>
 {legal_k('rgba(246,242,234,.6)')}"""
     return page(name, "flat", c, folder)
 
