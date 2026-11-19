@@ -13,3 +13,5 @@ Pipeline per reel: download -> faster-whisper words -> minterpolate 50 fps (abou
 Pages: scratchpad/r1/page_r1.html (bar chart, loss), R2/R3 price-box stack (see five/q.html), R4 falling chart, R5 tier board (see rank/page_rank.html).
 Watch pictures: Shopify Files + reels/assets/watch-library; list on private page awc-watch-picture-library-private.
 R2 Deepsea blue = store Deepsea 136660 picture (blue gradient) unless Tarek says otherwise. R4 values: only his script values (Air-King 8,500 to 7,600; Milgauss 22,000 to under 11,000, -52%).
+
+- Consultation reel three mistakes (beige, script A, 136 words): 42219b379e1994ed441978b46c9ced88 (created Nov 19)
