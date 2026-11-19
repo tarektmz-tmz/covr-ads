@@ -20,3 +20,4 @@ R2 Deepsea blue = store Deepsea 136660 picture (blue gradient) unless Tarek says
 - HeyGen video 42219b379e1994ed441978b46c9ced88 (36.2 s) downloaded; no pause cuts needed (no pause over 0.4 s); 50 fps; visuals timed to the real speech (reels/private_drafts/consult_v2/page_v5.html); music 0.05.
 - Output (git-excluded): reels/private_drafts/consult_v2/consult_reel_FINAL.mp4. Caption: drafts/consult_reel/caption.txt; thumbnail: drafts/consult_reel/thumbnail.jpg.
 - OPEN: the proof section still shows a PLACEHOLDER note (card and system report come from different watches). Needs card + system-report photos of the SAME watch, then re-render page_v5.
+- v2 (2026-11-19): consult_reel_FINAL_v2.mp4 (37.04 s): 0.40 s breaks after One/Two/Three, pause between "store" and "salesperson" cut (0.30 s). Page: private_drafts/consult_v2/page_v7.html.
