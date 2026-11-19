@@ -147,7 +147,7 @@ add("why_us", "buy", "checklist", "Why buy with us", "7 reasons", "special/why-b
 add("hrs_find", "buy", "big_number", "Sourcing time", "1 to 48", "script-bank 06",
     big="1-48", unit="HOURS", text="Finding your watch can take from one hour up to forty-eight hours, depending on the watch. We tell you honestly which.")
 add("dep_25", "buy", "big_number", "How the deposit works", "25", "script-bank 06",
-    big="25%", unit="DEPOSIT", text="A twenty-five percent deposit confirms your order. The balance is paid when you have checked the watch, by bank transfer, cash or crypto.")
+    big="25", unit="PERCENT DEPOSIT", text="A twenty-five percent deposit confirms your order. The balance is paid when you have checked the watch, by bank transfer, cash or crypto.")
 add("deliv", "buy", "timeline", "Delivery", "How it arrives", "script-bank 06",
     items=[("Same day", "In Dubai, with a private presentation."), ("24 to 48 hours", "Across the UAE."), ("You check the watch", "An independent check can be arranged."), ("Then you pay the balance", "")])
 add("ask_card", "buy", "steps", "Before you pay", "Read your card in 3 steps", "batch2 C3",

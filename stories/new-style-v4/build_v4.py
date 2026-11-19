@@ -247,7 +247,7 @@ def kn_myth_fact(d, folder, name):
     fsz = sz(d["fact"], [(110, 56), (170, 48), (260, 42)])
     c = f"""
 <div class='eyebrow' style='left:80px;top:262px'>{d['eyebrow']}</div>
-<div class='a' style='left:80px;top:326px;width:920px;font-size:{sz(d['title'],[(18,96),(24,86),(40,74)])}px;font-weight:700;letter-spacing:-.04em;line-height:1.02'>{d['title']}</div>
+<div class='a' style='left:80px;top:326px;width:920px;font-size:{sz(d['title'],[(14,96),(18,80),(26,64),(60,54)])}px;font-weight:700;letter-spacing:-.04em;line-height:1.02'>{d['title']}</div>
 <div class='a' style='left:70px;top:480px;width:940px;display:flex;flex-direction:column;gap:36px'>
  <div class='card' style='padding:44px 50px 52px;background:{NAVY2};border:3px solid rgba(201,162,75,.55)'>
   <div style='font-size:38px;font-weight:800;letter-spacing:.2em;color:{GOLD}'>THE MYTH</div>
@@ -280,10 +280,13 @@ def kn_checklist(d, folder, name):
 
 
 def kn_big_number(d, folder, name):
+    n = len(d["big"])
+    S = {1: 700, 2: 600, 3: 470}.get(n, 380)
+    o = 700 - S
     c = f"""
-<div class='rays' style='top:800px'></div>
+<div class='rays' style='top:{800-o//2}px'></div>
 <div class='eyebrow c' style='top:262px'>{d['eyebrow']}</div>
-<div class='a c' style='top:300px;font-size:700px;font-weight:900;line-height:1;letter-spacing:-.06em;color:transparent;background:linear-gradient(180deg,{GOLDL} 10%,{GOLD} 55%,#7d5f22 100%);-webkit-background-clip:text;background-clip:text;filter:drop-shadow(0 30px 50px rgba(0,0,0,.5))'>{d['big']}</div>
+<div class='a c' style='top:{300+o}px;font-size:{S}px;font-weight:900;line-height:1;letter-spacing:-.06em;color:transparent;background:linear-gradient(180deg,{GOLDL} 10%,{GOLD} 55%,#7d5f22 100%);-webkit-background-clip:text;background-clip:text;filter:drop-shadow(0 30px 50px rgba(0,0,0,.5))'>{d['big']}</div>
 <div class='a c' style='top:1000px;font-size:150px;font-weight:800;letter-spacing:.08em'>{d['unit']}</div>
 <div class='bar' style='left:50%;top:1190px;width:200px;transform:translateX(-50%)'></div>
 <div class='a' style='left:100px;top:1230px;width:880px;text-align:center;font-size:50px;font-weight:600;line-height:1.25'>{d['text']}</div>
