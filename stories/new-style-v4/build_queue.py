@@ -12,7 +12,7 @@ import knowledge_library_v2 as K2
 ROOT = B.ROOT
 Q = ROOT / "queue"
 Q.mkdir(exist_ok=True)
-START = datetime.date(2026, 11, 20)
+START = datetime.date(2026, 11, 19)
 DAYS = 30
 EXCLUDE_REFS = {"126710BLRO", "126710GRNR", "126720VTNR"}  # Pepsi, Bruce Wayne, Sprite: duplicate listings with different prices
 pool = json.load(open(ROOT.parent / "new-style" / "pool.json"))
@@ -174,7 +174,7 @@ for d in range(DAYS):
             urgency = "demand" if (n - 1) in urg_idx and grp[0]["vendor"] == "Rolex" and grp[0]["family"] in TOP else None
             nm = f"{ds}_{n}"
             if style == "pair":
-                B.st3_pair(grp[0], grp[1], headline=grp[0]["fam_label"], urgency=urgency, name=nm)
+                B.st3_pair(grp[0], grp[1], headline=(grp[0]["fam_label"] if grp[0]["family"]==grp[1]["family"] else "ROLEX"), urgency=urgency, name=nm)
             else:
                 FN[style](grp[0], urgency=urgency, name=nm)
             jobs.append(dict(html=f"templates/{nm}.html", out=f"queue/{nm}.jpg"))

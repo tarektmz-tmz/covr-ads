@@ -67,6 +67,13 @@ def price_txt(w):
     return w["price"] if w.get("price") else "PRICE ON REQUEST"
 
 
+def usd(w, size=40, color="inherit", align=""):
+    """small USD line under the AED price (rate 3.65)"""
+    if not w.get("price"): return ""
+    n = int("".join(ch for ch in w["price"] if ch.isdigit()))
+    return f"<div style='font-size:{size}px;font-weight:600;opacity:.85;letter-spacing:0;line-height:1.2;margin-top:2px;color:{color};{align}'>≈ ${round(n/3.65):,}</div>"
+
+
 def cta(w):
     return "DM to order" if w.get("price") else "Request price on WhatsApp"
 
@@ -100,9 +107,9 @@ def st1_hero(w, urgency=None, name="st1_hero", folder=None):
 {fit(w['img'],150,520,780,610,f"-webkit-box-reflect:below 0 linear-gradient(transparent 72%,rgba(255,255,255,.2));filter:drop-shadow(0 30px 40px rgba(0,0,0,.6))")}
 <div class='a' style='left:80px;top:1150px;font-size:88px;font-weight:800;letter-spacing:-.03em;white-space:nowrap'>{w['name']}</div>
 <div class='a' style='left:80px;top:1252px;font-size:40px;font-weight:500;color:{GOLDL}'>Ref. {w['ref']} · {w['spec']}</div>
-<div class='a' style='left:80px;top:1308px;font-size:92px;font-weight:800;letter-spacing:-.02em'>{price_txt(w)}</div>
+<div class='a' style='left:80px;top:1308px;font-size:92px;font-weight:800;letter-spacing:-.02em'>{price_txt(w)}{usd(w)}</div>
 <div class='a' style='right:80px;top:1330px'><span class='pill'>{cta(w)}</span></div>
-{fs_line(80,1442,38,CREAM) if w['fullset'] else ''}
+{fs_line(80,1506,38,CREAM) if w['fullset'] else ''}
 <div class='legal' style='top:1640px;color:rgba(246,242,234,.6)'>{legal(w)}</div>"""
     return page(name, "dark", wrap(c, urgency), folder)
 
@@ -118,8 +125,8 @@ def st2_cream(w, urgency=None, name="st2_cream", folder=None):
 <div class='a' style='left:110px;top:700px;width:440px;font-size:42px;font-weight:600;line-height:1.25;color:{MUT}'>Ref. {w['ref']}<br>{w['spec']}</div>
 {FSCARD}
 <div class='a' style='left:110px;top:1170px;font-size:100px;font-weight:900;letter-spacing:-.04em;color:{NAVY};white-space:nowrap'>{w['name']}</div>
-<div class='a' style='left:110px;top:1288px;font-size:88px;font-weight:900;letter-spacing:-.03em;color:{NAVY}'>{price_txt(w)}</div>
-<div class='a' style='left:110px;top:1400px'><span class='pill'>{cta(w)}</span></div>
+<div class='a' style='left:110px;top:1288px;font-size:88px;font-weight:900;letter-spacing:-.03em;color:{NAVY}'>{price_txt(w)}{usd(w,40,MUT)}</div>
+<div class='a' style='left:110px;top:1448px'><span class='pill'>{cta(w)}</span></div>
 <div class='legal' style='top:1640px;color:{MUT}'>{legal(w)}</div>"""
     return page(name, "cream", f"<div class='a' style='left:0;top:0;width:60px;height:1920px;background:{NAVY}'></div>" + wrap(c, urgency), folder)
 
@@ -135,12 +142,12 @@ def st3_pair(w1, w2, headline="GMT-MASTER II", urgency=None, name="st3_pair", fo
 {fit(w2['img'],580,560,440,590,"filter:drop-shadow(0 30px 34px rgba(0,0,0,.6))")}
 <div class='a' style='left:0;width:540px;top:1165px;text-align:center;font-size:68px;font-weight:800;letter-spacing:-.03em'>{w1['name']}</div>
 <div class='a' style='left:540px;width:540px;top:1165px;text-align:center;font-size:68px;font-weight:800;letter-spacing:-.03em'>{w2['name']}</div>
-<div class='a' style='left:0;width:540px;top:1250px;text-align:center;font-size:60px;font-weight:800;color:{GOLDL}'>{price_txt(w1)}</div>
-<div class='a' style='left:540px;width:540px;top:1250px;text-align:center;font-size:60px;font-weight:800;color:{GOLDL}'>{price_txt(w2)}</div>
-<div class='a' style='left:0;width:540px;top:1328px;text-align:center;font-size:36px;font-weight:500;color:rgba(246,242,234,.8)'>Ref. {w1['ref']}</div>
-<div class='a' style='left:540px;width:540px;top:1328px;text-align:center;font-size:36px;font-weight:500;color:rgba(246,242,234,.8)'>Ref. {w2['ref']}</div>
-{fs_line(60,1388,36,CREAM,w=960,center=True) if both else ''}
-<div class='a c' style='top:1438px'><span class='pillo'>Reply 1 or 2 to order</span></div>
+<div class='a' style='left:0;width:540px;top:1250px;text-align:center;font-size:60px;font-weight:800;color:{GOLDL}'>{price_txt(w1)}{usd(w1,34,'rgba(246,242,234,.85)')}</div>
+<div class='a' style='left:540px;width:540px;top:1250px;text-align:center;font-size:60px;font-weight:800;color:{GOLDL}'>{price_txt(w2)}{usd(w2,34,'rgba(246,242,234,.85)')}</div>
+<div class='a' style='left:0;width:540px;top:1378px;text-align:center;font-size:36px;font-weight:500;color:rgba(246,242,234,.8)'>Ref. {w1['ref']}</div>
+<div class='a' style='left:540px;width:540px;top:1378px;text-align:center;font-size:36px;font-weight:500;color:rgba(246,242,234,.8)'>Ref. {w2['ref']}</div>
+{fs_line(60,1440,36,CREAM,w=960,center=True) if both else ''}
+<div class='a c' style='top:1504px'><span class='pillo'>Reply 1 or 2 to order</span></div>
 <div class='legal' style='top:1640px;color:rgba(246,242,234,.6)'>{legal(w1)}</div>"""
     return page(name, "dark", wrap(c, urgency), folder)
 
@@ -180,15 +187,15 @@ def st4_set(w, urgency=None, name="st4_set", folder=None):
 {card(990, icon_tag(), 'Tag', 'Comes with the watch')}
 <div class='a' style='left:80px;top:1190px;font-size:84px;font-weight:800;letter-spacing:-.03em;white-space:nowrap'>{w['name']}</div>
 <div class='a' style='left:80px;top:1290px;font-size:40px;font-weight:500;color:{GOLDL}'>Ref. {w['ref']} · {w['spec']}</div>
-<div class='a' style='left:80px;top:1345px;font-size:88px;font-weight:800;letter-spacing:-.02em'>{price_txt(w)}</div>
+<div class='a' style='left:80px;top:1345px;font-size:88px;font-weight:800;letter-spacing:-.02em'>{price_txt(w)}{usd(w)}</div>
 <div class='a' style='right:80px;top:1368px'><span class='pill'>{cta(w)}</span></div>
-{fs_line(80,1462,36,CREAM)}
+{fs_line(80,1526,36,CREAM)}
 <div class='legal' style='top:1640px;color:rgba(246,242,234,.6)'>{legal(w)}</div>"""
     return page(name, "dark", wrap(c, urgency), folder)
 
 
 def st5_editorial(w, urgency=None, name="st5_editorial", folder=None):
-    FSBOX = ("<div class='a card' style='left:110px;top:1384px;width:860px;height:112px;border:4px solid %s;display:flex;align-items:center;padding:0 30px;gap:18px'>"
+    FSBOX = ("<div class='a card' style='left:110px;top:1440px;width:860px;height:112px;border:4px solid %s;display:flex;align-items:center;padding:0 30px;gap:18px'>"
              "<span class='tick' style='width:54px;height:54px'></span><span style='font-size:38px;font-weight:600'>%s</span></div>" % (GOLD, FULLSET)) if w['fullset'] else ''
     c = f"""
 <div class='a' style='left:110px;top:262px;font-size:48px;font-weight:700;letter-spacing:.22em;color:{GOLD}'>AVAILABLE NOW</div>
@@ -197,8 +204,8 @@ def st5_editorial(w, urgency=None, name="st5_editorial", folder=None):
 <div class='a' style='left:110px;top:570px;width:18px;height:600px;background:linear-gradient(180deg,{GOLD},{GOLDL});border-radius:36px 0 0 36px'></div>
 {fit(w['img'],250,590,580,560,f"filter:drop-shadow(0 26px 28px rgba(11,26,51,.35))")}
 <div class='a' style='right:150px;top:1128px'><span class='pill' style='box-shadow:0 10px 24px rgba(0,0,0,.4)'>{cta(w)}</span></div>
-<div class='a' style='left:110px;top:1210px;font-size:88px;font-weight:900;letter-spacing:-.03em;white-space:nowrap'>{price_txt(w)}</div>
-<div class='a' style='left:110px;top:1312px;font-size:40px;font-weight:500;color:{GOLDL}'>Ref. {w['ref']} · {w['spec']}</div>
+<div class='a' style='left:110px;top:1210px;font-size:88px;font-weight:900;letter-spacing:-.03em;white-space:nowrap'>{price_txt(w)}{usd(w)}</div>
+<div class='a' style='left:110px;top:1360px;font-size:40px;font-weight:500;color:{GOLDL}'>Ref. {w['ref']} · {w['spec']}</div>
 {FSBOX}
 <div class='legal' style='top:1640px;color:rgba(246,242,234,.6)'>{legal(w)}</div>"""
     return page(name, "flat", wrap(c, urgency), folder)
@@ -212,11 +219,11 @@ def st6_plaque(w, urgency=None, name="st6_plaque", folder=None):
 <div class='rays' style='top:700px;opacity:.7'></div>
 {fit(w['img'],240,380,600,650,"filter:drop-shadow(0 30px 34px rgba(0,0,0,.6))")}
 <div class='a' style='left:170px;top:1028px;width:740px;height:62px;border-radius:14px;background:linear-gradient(180deg,#27437a,#15264a);border-top:4px solid {GOLD}'></div>
-<div class='a card' style='left:140px;top:1130px;width:800px;height:350px;background:linear-gradient(180deg,{GOLDL},{GOLD} 55%,#a8832f);color:{NAVY};text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.5)'>
- <div style='margin-top:22px;font-size:68px;font-weight:900;letter-spacing:-.03em;white-space:nowrap'>{w['name']}</div>
+<div class='a card' style='left:140px;top:1115px;width:800px;height:390px;background:linear-gradient(180deg,{GOLDL},{GOLD} 55%,#a8832f);color:{NAVY};text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.5)'>
+ <div style='margin-top:16px;font-size:68px;font-weight:900;letter-spacing:-.03em;white-space:nowrap'>{w['name']}</div>
  <div style='font-size:36px;font-weight:600;margin-top:4px'>Ref. {w['ref']} · {w['spec']}</div>
- <div style='font-size:78px;font-weight:900;letter-spacing:-.02em;margin-top:8px;line-height:1.1'>{price_txt(w)}</div>
- <div style='font-size:34px;font-weight:700;margin-top:10px'>{FULLSET if w['fullset'] else cta(w)}</div>
+ <div style='font-size:78px;font-weight:900;letter-spacing:-.02em;margin-top:4px;line-height:1.1'>{price_txt(w)}{usd(w,34,NAVY)}</div>
+ <div style='font-size:34px;font-weight:700;margin-top:6px'>{FULLSET if w['fullset'] else cta(w)}</div>
 </div>
 <div class='legal' style='top:1640px;color:rgba(246,242,234,.6)'>{legal(w)}</div>"""
     return page(name, "dark", wrap(c, urgency), folder)
