@@ -21,3 +21,4 @@ R2 Deepsea blue = store Deepsea 136660 picture (blue gradient) unless Tarek says
 - Output (git-excluded): reels/private_drafts/consult_v2/consult_reel_FINAL.mp4. Caption: drafts/consult_reel/caption.txt; thumbnail: drafts/consult_reel/thumbnail.jpg.
 - OPEN: the proof section still shows a PLACEHOLDER note (card and system report come from different watches). Needs card + system-report photos of the SAME watch, then re-render page_v5.
 - v2 (2026-11-19): consult_reel_FINAL_v2.mp4 (37.04 s): 0.40 s breaks after One/Two/Three, pause between "store" and "salesperson" cut (0.30 s). Page: private_drafts/consult_v2/page_v7.html.
+- Consultation reel REGENERATED with owner's own punctuation (his pasted script, verbatim): HeyGen 49b0c75e55ce68173dcf604bfbd2d1b5 (Nov 19). Owner said the artificially inserted breaks in v2 looked like glitches. Next: rebuild from this video with no artificial breaks.
