@@ -1,9 +1,9 @@
 #!/bin/bash
-# Usage: mix_music.sh in.mp4 out.mp4 [music_volume=0.1]
+# Usage: mix_music.sh in.mp4 out.mp4 [music_volume=0.05]
 # Mixes the standard quiet ambient track under the voice: looped with 3 s crossfades,
 # ducked by the voice (sidechain), fade in/out. Video stream is copied untouched.
 set -e
-IN="$1"; OUT="$2"; VOL="${3:-0.1}"
+IN="$1"; OUT="$2"; VOL="${3:-0.05}"
 MUS="$(dirname "$0")/../templates/music/standard_ambient.mp3"
 DUR=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$IN")
 N=$(python3 -c "import math;print(max(2,math.ceil($DUR/36)+1))")
