@@ -15,3 +15,8 @@ Watch pictures: Shopify Files + reels/assets/watch-library; list on private page
 R2 Deepsea blue = store Deepsea 136660 picture (blue gradient) unless Tarek says otherwise. R4 values: only his script values (Air-King 8,500 to 7,600; Milgauss 22,000 to under 11,000, -52%).
 
 - Consultation reel three mistakes (beige, script A, 136 words): 42219b379e1994ed441978b46c9ced88 (created Nov 19)
+
+## Consultation reel (three mistakes, script A) - built 2026-11-19
+- HeyGen video 42219b379e1994ed441978b46c9ced88 (36.2 s) downloaded; no pause cuts needed (no pause over 0.4 s); 50 fps; visuals timed to the real speech (reels/private_drafts/consult_v2/page_v5.html); music 0.05.
+- Output (git-excluded): reels/private_drafts/consult_v2/consult_reel_FINAL.mp4. Caption: drafts/consult_reel/caption.txt; thumbnail: drafts/consult_reel/thumbnail.jpg.
+- OPEN: the proof section still shows a PLACEHOLDER note (card and system report come from different watches). Needs card + system-report photos of the SAME watch, then re-render page_v5.
