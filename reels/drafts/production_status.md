@@ -33,3 +33,4 @@ R2 Deepsea blue = store Deepsea 136660 picture (blue gradient) unless Tarek says
 - Thumbnail B re-laid out to fit the Instagram 3:4 grid crop and the safe zone (Nov 19).
 - Course reel 1 v4 (owner new 192-word script, HeyGen a1051321ace33ac6840040014c79f97f): reels/private_drafts/course_reel1_v4_windows.mp4 built (private): captions all through, avatar main/corner, real IG screen recording clips, comments recording slow scroll with usernames blurred, tags. Pauses over 0.32s cut to ~0.2s.
 - Consultation reel POSTED as a normal Reel (not trial) via Windsor create_video_post on Nov 20 ~07:30 Dubai at the owner's explicit request. Media id 18347829529275320. Video/cover in reels/publish/.
+- Course reel 1 v5 (owner feedback: big green tags with ticks, different reels in windows, 5 story styles, LINK IN BIO): reels/private_drafts/course_reel1_v5_windows.mp4 (private). Crop check (red safe zone) done on 16 frames. Spoken ending still says 'comment automated'.
