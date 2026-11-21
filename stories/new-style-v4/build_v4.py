@@ -124,7 +124,7 @@ def st2_cream(w, urgency=None, name="st2_cream", folder=None):
 {fit(w['img'],585,480,400,680,f"filter:drop-shadow(0 40px 36px rgba(11,26,51,.32))")}
 <div class='a' style='left:110px;top:700px;width:440px;font-size:42px;font-weight:600;line-height:1.25;color:{MUT}'>Ref. {w['ref']}<br>{w['spec']}</div>
 {FSCARD}
-<div class='a' style='left:110px;top:1170px;font-size:100px;font-weight:900;letter-spacing:-.04em;color:{NAVY};white-space:nowrap'>{w['name']}</div>
+<div class='a' style='left:110px;top:1170px;font-size:{100 if len(w['name'])<=13 else 80}px;font-weight:900;letter-spacing:-.04em;color:{NAVY};white-space:nowrap'>{w['name']}</div>
 <div class='a' style='left:110px;top:1288px;font-size:88px;font-weight:900;letter-spacing:-.03em;color:{NAVY}'>{price_txt(w)}{usd(w,40,MUT)}</div>
 <div class='a' style='left:110px;top:1448px'><span class='pill'>{cta(w)}</span></div>
 <div class='legal' style='top:1640px;color:{MUT}'>{legal(w)}</div>"""
