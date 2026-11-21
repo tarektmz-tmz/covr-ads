@@ -140,8 +140,8 @@ def st3_pair(w1, w2, headline="GMT-MASTER II", urgency=None, name="st3_pair", fo
 <div class='a' style='left:539px;top:560px;width:3px;height:590px;background:linear-gradient(transparent,{GOLD},transparent)'></div>
 {fit(w1['img'],60,560,440,590,"filter:drop-shadow(0 30px 34px rgba(0,0,0,.6))")}
 {fit(w2['img'],580,560,440,590,"filter:drop-shadow(0 30px 34px rgba(0,0,0,.6))")}
-<div class='a' style='left:0;width:540px;top:1165px;text-align:center;font-size:68px;font-weight:800;letter-spacing:-.03em'>{w1['name']}</div>
-<div class='a' style='left:540px;width:540px;top:1165px;text-align:center;font-size:68px;font-weight:800;letter-spacing:-.03em'>{w2['name']}</div>
+<div class='a' style='left:0;width:540px;top:1165px;text-align:center;font-size:{68 if len(w1['name'])<11 else 58}px;font-weight:800;letter-spacing:-.03em'>{w1['name']}</div>
+<div class='a' style='left:540px;width:540px;top:1165px;text-align:center;font-size:{68 if len(w2['name'])<11 else 58}px;font-weight:800;letter-spacing:-.03em'>{w2['name']}</div>
 <div class='a' style='left:0;width:540px;top:1250px;text-align:center;font-size:60px;font-weight:800;color:{GOLDL}'>{price_txt(w1)}{usd(w1,34,'rgba(246,242,234,.85)')}</div>
 <div class='a' style='left:540px;width:540px;top:1250px;text-align:center;font-size:60px;font-weight:800;color:{GOLDL}'>{price_txt(w2)}{usd(w2,34,'rgba(246,242,234,.85)')}</div>
 <div class='a' style='left:0;width:540px;top:1378px;text-align:center;font-size:36px;font-weight:500;color:rgba(246,242,234,.8)'>Ref. {w1['ref']}</div>
