@@ -16,3 +16,6 @@
 ## Other
 - The store does not track stock (inventory 0), so "available" means "can be sourced". Buttons say "DM to order", never "reserve".
 - Knowledge stories flagged 'confirm' are marked in rotation.md with a warning sign; the course lessons L11 and L15 (made-up stories for salespeople), the investment lesson and the 'NEEDS CAREFUL WORDING' queue ideas were not used.
+
+## STRICT owner rule (22 Nov 2026)
+One design per day: all stories of that day use the SAME design; the design changes day to day (rotate the 6). After the month, make 7 NEW designs (one per weekday) and rotate those. Never mix designs within one day.
