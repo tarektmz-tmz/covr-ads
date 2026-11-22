@@ -1073,7 +1073,7 @@
   "date": "2026-12-17",
   "n": 4,
   "kind": "available",
-  "style": "hero",
+  "style": "pair",
   "urgency": null,
   "file": "queue/2026-12-17_4.jpg",
   "watches": [
@@ -1081,6 +1081,11 @@
     "title": "Rolex Datejust 36 126234 – Steel & White Gold, Pink Diamond Dial, Jubilee",
     "ref": "126234",
     "price": "AED 62,500"
+   },
+   {
+    "title": "Rolex Datejust 36 126234 – Steel & White Gold, Aubergine Diamond Dial, Jubilee",
+    "ref": "126234",
+    "price": "AED 63,000"
    }
   ]
  },
@@ -1088,7 +1093,7 @@
   "date": "2026-11-25",
   "n": 4,
   "kind": "available",
-  "style": "hero",
+  "style": "set",
   "urgency": null,
   "file": "queue/2026-11-25_4.jpg",
   "watches": [
