@@ -15,3 +15,7 @@ On a phone Instagram crops about 54 px off each side of the 1080x1920 video and 
 - Watches smaller, set lower, tighter to the middle. Price boxes narrower, towards the middle. No logo or text at the very top.
 - Standard way: build the layout, then wrap everything except the background and the avatar in a container scaled to 88% (see reels/tools/safe_wrap.js). Avatar corner: right edge at x 1040 or less.
 - ALWAYS check a test frame with the crop zones marked before rendering a whole reel.
+
+## STRICT: HeyGen script punctuation (owner rule, 22 Nov 2026)
+- Send the owner's script to HeyGen with HIS punctuation exactly. Do NOT add full stops or commas of your own.
+- Every extra dot or comma makes a pause in the voice. Few dots = natural flow.
