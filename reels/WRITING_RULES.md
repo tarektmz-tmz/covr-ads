@@ -19,3 +19,9 @@ On a phone Instagram crops about 54 px off each side of the 1080x1920 video and 
 ## STRICT: HeyGen script punctuation (owner rule, 22 Nov 2026)
 - Send the owner's script to HeyGen with HIS punctuation exactly. Do NOT add full stops or commas of your own.
 - Every extra dot or comma makes a pause in the voice. Few dots = natural flow.
+
+## STRICT owner rules (22 Nov 2026, after the nicknames freeze-pause mistake)
+- Before sending ANY video, watch/review it yourself as a viewer would (frames at several points, timing, pauses). Never send freeze-frame pauses or anything that looks broken.
+- Before ANY HeyGen render: tell the owner exactly what will be generated and how many credits, and wait for his approval.
+- Keep our template exactly: avatar corner bottom-right showing head, chest AND HANDS (old availability-ranking framing). Never zoom in on the face or crop the hands. Do not change the format on your own, even when copying another creator's video.
+- To slow a reel down, use the script's own punctuation (full stops) in a new recording, not frozen frames.
