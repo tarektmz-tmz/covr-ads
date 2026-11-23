@@ -18,3 +18,7 @@ Tarek sends a screenshot (or reference) and says the price. Do it without asking
 3. Set custom.hide_price = false so the price shows instead of "Request price on WhatsApp".
 4. Check the product is ACTIVE and published, then reply in one line: done, with the link.
 If the screenshot matches more than one listing (same reference, different dial), ask which one.
+
+## Datejust import (23 Nov 2026)
+- 234 Datejust / Lady-Datejust added, request price, Jubilee only.
+- Owner does NOT want: smooth or domed bezels (any size), domed diamond-set bezels (278341/3/4RBR). Only fluted and diamond bezels.
