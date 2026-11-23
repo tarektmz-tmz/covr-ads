@@ -19,15 +19,19 @@ def parse(x):
         name = name + " GMT"
     parts = [{"Steel & Yellow Gold": "Yellow Rolesor", "Steel & White Gold": "White Rolesor", "Steel & Everose Gold": "Everose Rolesor"}.get(p, p) for p in parts]
     if x["vendor"] != "Rolex":
-        name = base.replace("Patek Philippe ", "").upper()
-        base = "Patek Philippe"
+        apref = re.search(r"\b(\d{5}[A-Z]{2})(\.[A-Z0-9.]+)?\s*$", left)
+        if apref:
+            ref = apref
+            base = re.sub(r"\s*\d{5}[A-Z]{2}(\.[A-Z0-9.]+)?\s*$", "", base).strip()
+        name = base.replace(x["vendor"] + " ", "").upper()
+        base = x["vendor"]
     spec = " · ".join(([base] if (nick or x["vendor"] != "Rolex") else []) + parts)
     while len(spec) > 28 and " · " in spec:
         spec = spec.rsplit(" · ", 1)[0]
     pretty_fam = {"Submariner Date": "SUBMARINER", "Oyster Perpetual": "OYSTER PERPETUAL"}.get(x["family"], x["family"].upper())
     return dict(name=name, ref=ref.group(1) if ref else "", spec=spec, vendor=x["vendor"], fullset=x["vendor"] == "Rolex",
                 price=("AED {:,}".format(x["price_aed"]) if x["show_price"] and x["price_aed"] else None), family=x["family"], fam_label=pretty_fam,
-                score=x["score"], title=x["title"], img_url=x["image_url"], pid=re.sub(r"\W", "", x["handle"])[:40], rank=x.get("rank"))
+                score=x["score"], title=x["title"], img_url=x["image_url"], pid=re.sub(r"\W", "", x["handle"]), rank=x.get("rank"))
 
 
 def cutout(w):

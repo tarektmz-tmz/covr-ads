@@ -43,7 +43,7 @@ def parse(x):
     pretty_fam = {"Submariner Date": "SUBMARINER", "Oyster Perpetual": "OYSTER PERPETUAL"}.get(x["family"], x["family"].upper())
     return dict(name=name, ref=ref.group(1) if ref else "", spec=spec, vendor=x["vendor"], fullset=x["vendor"] == "Rolex",
                 price=("AED {:,}".format(x["price_aed"]) if x["show_price"] and x["price_aed"] else None), family=x["family"], fam_label=pretty_fam,
-                score=x["score"], title=x["title"], img_url=x["image_url"], pid=re.sub(r"\W", "", x["handle"])[:40], rank=x.get("rank"))
+                score=x["score"], title=x["title"], img_url=x["image_url"], pid=re.sub(r"\W", "", x["handle"]), rank=x.get("rank"))
 
 
 def cutout(w):
