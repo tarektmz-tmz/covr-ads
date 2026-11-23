@@ -10,3 +10,11 @@ Reference product copied from: Rolex Oyster Perpetual 41 134300 Blue Dial (gid .
 6. publishablePublish to the 3 publications: Online Store 117694201927, Point of Sale 117694234695, Google & YouTube 213112913991.
 7. Verify: product status, 16 metafields, one 1920x1920 image, onlineStoreUrl, collections.
 Facts only from the owner or Rolex's own page; never invent specs.
+
+## Standing task: set a price from a screenshot
+Tarek sends a screenshot (or reference) and says the price. Do it without asking again:
+1. Find the product in Shopify by reference / model / dial in the screenshot.
+2. Set the variant price (AED) to the number he gave.
+3. Set custom.hide_price = false so the price shows instead of "Request price on WhatsApp".
+4. Check the product is ACTIVE and published, then reply in one line: done, with the link.
+If the screenshot matches more than one listing (same reference, different dial), ask which one.
