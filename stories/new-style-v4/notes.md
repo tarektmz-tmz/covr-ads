@@ -19,3 +19,6 @@
 
 ## STRICT owner rule (22 Nov 2026)
 One design per day: all stories of that day use the SAME design; the design changes day to day (rotate the 6). After the month, make 7 NEW designs (one per weekday) and rotate those. Never mix designs within one day.
+
+## STRICT (23 Nov 2026): verify before posting
+Before posting any story day, open the day's images and check each watch photo matches its title (dial colour, bracelet) and that no pair shows the same photo twice. Bug fixed: photo cache names were cut to 40 characters, so same-model listings overwrote each other.
