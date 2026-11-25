@@ -78,3 +78,34 @@ Gotchas:
 - Liquid: no filters inside `[]` lookups. Assign the value to a variable first.
 - Canva media and export URLs are blocked locally. Export the design and let Shopify fetch the export URL.
 - Shopify MCP says "sign in again": reconnect it in claude.ai Connectors (with COVR selected in Shopify admin), then start a new chat.
+
+
+---
+# Advance Watch Co (Tarek, Dubai watches) - SEPARATE PROJECT. Everything below applies only to this section.
+
+New Rolex and luxury watches. Shopify advancewatchco.ae. Instagram @advance_watchco (Windsor account 17841447657748130). Most work files live on branch `claude/relaxed-curie-4cx06p` (stories queue, reel covers, shop/WATCH_LISTING_TEMPLATE.md, reels/MUST_DO_*.md). Private memory also in unpublished Shopify pages: awc-handoff-private, awc-reel-quality-rules-private.
+
+## His rules
+- Minimum words. Copy his examples and wording EXACTLY, add nothing of your own, grammar fixes only (say so). Soften guarantees ("100% viral").
+- Plain words before any permission box. Warn before spending HeyGen credits or starting big builds. Verify a file exists and delivery is confirmed before saying "sent".
+- Instagram crop: stay inside the safe zone (x 90-990, y 230-1700 on 1080x1920); the grid shows the centre 3:4 band. Overlay-check before sending.
+- Every video gets a swipe-style POST COVER: 4:5 (1080x1350), boutique background, round Rolex logo top right, small logo above the title, his hook title, nothing else; posted as a carousel (cover, then video).
+- Blur serial numbers; no phone numbers on images; never invent specs or prices; other dealers' posts are references only (own script, visuals, store prices).
+
+## IDs and settings
+- HeyGen: Tarek Selfie look 95af2eefceb34bee8989f7ffa642573e, beige look a638485bd6a2c700b4047403ac969ee8; voice 1802f0d2ffc84b868c07e11288abca8b, speed 1.1, starfish, 9:16 1080p. No artificial pauses; music via reels/tools/mix_music.sh VOL 0.05.
+- Teachable course "The AI Content Machine", USD 199: https://luxurywatchesguide.teachable.com/p/the-ai-content-machine-1099226
+- New watch listing: category TaxonomyCategory/aa-6-11 BEFORE shopify.* metafields; 16 metafields; image 1920x1920 transparent square (watch ~97% height); publish to Online Store 117694201927, POS 117694234695, Google 213112913991.
+
+## Done
+Authentication reel v8 posted; stories 19 and 21 Nov plus 7 custom watch stories posted; Teachable course live with licence; Oyster Perpetual 41 134300 Celebration listed (AED 75,000); swipe cover for the Top 5 first Rolex reel made.
+
+## Pending
+- Not posted: selfie reel v4, course reel v6, launch and explainer stories, Top 5 reel carousel.
+- Daily 12:17 Dubai stories routine must be created from the chat that holds the Instagram tools. Info-story days paused until he picks a series.
+- Reference reel sent on 25 Nov: recreate in our own style, skip watches we do not have (not started). Metricool timezone untested. Scripts C1-C5 await approval.
+
+## Gotchas
+- A routine that starts its own session has no Instagram/Shopify tools.
+- Shopify: use featuredMedia, productUpdate(media:), fileDelete; set category before standard metafields.
+- Git-excluded folders (course/, reels/private_drafts/, stories/auto/) vanish in a new session; HeyGen keeps renders.
