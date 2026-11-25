@@ -138,3 +138,7 @@ Gotchas:
 ## Correction 25 Nov 2026 (verified with list_triggers)
 - The daily stories routine is ACTIVE: trig_01UaPp8uczLDTX24dcuhscpJ "Daily Available Now stories (12:17 Dubai)" (stories + comment replies + spam hiding). It fires into session session_01VAmQ1XCXh4HXtem7Mfamz5. If that chat is deleted, re-point it (update_trigger can't change the session: create a new one from the new working chat with the same prompt, then disable the old one). trig_01RX2AhMuMSoyaC7y6vYUmCn is the OLD disabled one; don't restore it.
 - Month-end refresh trig_01UWbzMJLCxVA36ePE7dESQW (14 Dec) says to update trig_01RX2…: update trig_01UaPp… (or its replacement) instead.
+
+## Update 25 Nov 2026 (stories routine moved)
+- Daily stories routine is now trig_01GgghkNeUrMvtjRF6oWT1h1 "Daily Available Now stories (12:17 Dubai)", same prompt, fires into session session_01VAmQ1YekJpxMzTrdS8TCei. Old trig_01UaPp8uczLDTX24dcuhscpJ is DISABLED; trig_01RX2… stays disabled. Month-end refresh trig_01UWbzMJLCxVA36ePE7dESQW: update trig_01GgghkN… instead.
+- stories/auto/replied_comments.txt did not carry over to the new session (git-excluded); the routine also skips comments already answered by @advance_watchco.
