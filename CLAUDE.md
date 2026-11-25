@@ -134,3 +134,7 @@ Pending:
 Gotchas:
 - create_trigger cannot pass connectors here: a routine in its own session cannot post. Create routines from the working chat.
 - Git-excluded folders (course/, reels/private_drafts/, stories/auto/) and all rendered videos exist only in the old session workspace; he must save his copies, HeyGen keeps its renders.
+
+## Correction 25 Nov 2026 (verified with list_triggers)
+- The daily stories routine is ACTIVE: trig_01UaPp8uczLDTX24dcuhscpJ "Daily Available Now stories (12:17 Dubai)" (stories + comment replies + spam hiding). It fires into session session_01VAmQ1XCXh4HXtem7Mfamz5. If that chat is deleted, re-point it (update_trigger can't change the session: create a new one from the new working chat with the same prompt, then disable the old one). trig_01RX2AhMuMSoyaC7y6vYUmCn is the OLD disabled one; don't restore it.
+- Month-end refresh trig_01UWbzMJLCxVA36ePE7dESQW (14 Dec) says to update trig_01RX2…: update trig_01UaPp… (or its replacement) instead.
