@@ -119,3 +119,18 @@ Authentication reel v8 posted; stories 19 and 21 Nov plus 7 custom watch stories
 - Speed (phone, before → now): Home 193.8MB → 1.9MB, load 3.7s → 1.3–2.2s; Product 214.1MB → 2.1MB, 2.5s → 1.5s; Day-Date collection 8.8MB → 2.3MB. Re-test after the AVIF theme is published.
 - Theme tools: theme_bash / theme_commit (themeId, script, description) / theme_publish (userConfirmed:true). Windsor Instagram: execute_action reply_to_comment, create_story.
 - Pending: Tarek publishes "AWC main (AVIF)" then re-test speed; Patek import when Excel arrives (Twenty~4, Aquanaut, Nautilus, Cubitus, Golden Ellipse); faceless reels when footage arrives; optional 8th handover slot; optional delete zz-fmt-test files.
+
+## Update 25 Nov 2026 (reels, stories, AI course chat)
+New rules:
+- CLAUDE.md is edited by several sessions: fetch main first, only append under the right project, never rewrite. Push to main only when he asks.
+- Reference reels/posts from other dealers: rebuild the concept in our own script, visuals and store prices; never reuse their footage, photos, voice or prices.
+IDs/settings:
+- Routines: daily stories trig_01RX2AhMuMSoyaC7y6vYUmCn (DISABLED, holds the full instructions), weekly Instagram review trig_01B6eUCCLkVLSSPTxTzwvNKs. New listing product 9191440678983 (Oyster Perpetual 41 134300 Celebration). Private Shopify pages: awc-handoff-private, awc-reel-quality-rules-private.
+- Posting media must be public raw GitHub URLs on branch claude/relaxed-curie-4cx06p (reels/publish/, stories/new-style-v4/). Carousel = create_carousel_post (cover image, then video).
+Done:
+- Selfie reel v4 (HeyGen da79f9a884eb55d86afba5c5490ebdd6) built and sent to him; course reel v6, launch story and explainer story built (all files private, not posted). Handoff written to the private Shopify page and CLAUDE.md.
+Pending:
+- Post (when he says): selfie reel v4, course reel v6, launch/explainer stories, Top 5 first Rolex carousel (4:5 video on blurred background). Restore the daily 12:17 Dubai stories routine from the chat that holds the tools. Choose info-story series. Build the reference reel he sent 25 Nov (skip watches we do not list).
+Gotchas:
+- create_trigger cannot pass connectors here: a routine in its own session cannot post. Create routines from the working chat.
+- Git-excluded folders (course/, reels/private_drafts/, stories/auto/) and all rendered videos exist only in the old session workspace; he must save his copies, HeyGen keeps its renders.
