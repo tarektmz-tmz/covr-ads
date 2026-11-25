@@ -109,3 +109,13 @@ Authentication reel v8 posted; stories 19 and 21 Nov plus 7 custom watch stories
 - A routine that starts its own session has no Instagram/Shopify tools.
 - Shopify: use featuredMedia, productUpdate(media:), fileDelete; set category before standard metafields.
 - Git-excluded folders (course/, reels/private_drafts/, stories/auto/) vanish in a new session; HeyGen keeps renders.
+
+## Update 25 Nov 2026 (site speed + theme)
+- More rules: very short answers; don't ask him questions, decide and do; NO HeyGen credits without explicit approval; no routine automation messages; publish theme changes; comment replies natural (don't agree, disagree, argue or apologize).
+- LIVE theme 162148483143 "Advance Watch – Filters + reviews loop Nov 24": its agent workspace has stale commits that can't publish. Don't edit it.
+- NEW theme 162195505223 "AWC main (AVIF)": all latest work, NOT yet published. Tarek must publish it manually (Online Store → Themes → Publish); agent publish is refused. Edit this one from now on.
+  - Has: theme images webp→avif; product-page founder photo like home page (square, "10,000+ Clients served at Rolex" badge covers his watch): sections/awc-why-trust.liquid + assets/awc-product.css (selectors prefixed `.awc-wt__grid`, awc-home.css loads later).
+- All 751 products use AVIF media only (old webp kept in Files). AVIFs hosted in repo `a/` on branch claude/relaxed-curie-4cx06p, added via productUpdate with raw GitHub URLs. Reason: Shopify CDN serves alpha .webp to Safari as heavy PNG.
+- Speed (phone, before → now): Home 193.8MB → 1.9MB, load 3.7s → 1.3–2.2s; Product 214.1MB → 2.1MB, 2.5s → 1.5s; Day-Date collection 8.8MB → 2.3MB. Re-test after the AVIF theme is published.
+- Theme tools: theme_bash / theme_commit (themeId, script, description) / theme_publish (userConfirmed:true). Windsor Instagram: execute_action reply_to_comment, create_story.
+- Pending: Tarek publishes "AWC main (AVIF)" then re-test speed; Patek import when Excel arrives (Twenty~4, Aquanaut, Nautilus, Cubitus, Golden Ellipse); faceless reels when footage arrives; optional 8th handover slot; optional delete zz-fmt-test files.
