@@ -41,3 +41,40 @@ COVR = padel racket covers (Bali). Site: padelcovr.com. Shopify store: `znv4f0-t
 - Portfolio invite errors → open the invite in an Incognito window (browser was logged in as the wrong account).
 - Shopify connector can point at another store → always check shopDomain is `znv4f0-th.myshopify.com`, use switch-shop if not.
 - Meta "link clicks" ≫ Shopify visitors is normal-ish; compare with landing page views + Shopify sessions by landing page.
+
+## Website work (Nov 2026)
+Rules:
+- Only real facts and real colours. Don't alter the product in AI images.
+- AI photos: COVR shoot style (half body, hands or legs), one image per prompt, with real shoot photos as reference. Keep the strap off the cover front.
+- Anything I must paste goes in a code block.
+- I publish themes myself. Never edit the live theme: duplicate it (themeDuplicate) and edit the copy.
+
+Store state:
+- **Signature:** $249, collection `padel-racket-covers`, retitled "Signature".
+- **Essential:** collection `essential`, 40% launch price, template suffix `essential`, no free pouch.
+  - Colours: Vanilla Cream, Sky Denim, Ash.
+  - Product IDs: Vanilla 15491458465882, Ash 15491458334810, Sky Denim 15491458433114.
+- **Shipping:**
+  - Essential profile 104618721370: free in Indonesia, $50 international.
+  - General profile: free "International 20-30 days" plus DHL $19.99.
+- **Pop-ups** (`covr-offer-popup`, `show_on` setting):
+  - Signature: $50 scratch card, code **COVR50**, $249 minimum. /pages/offer shows the code on screen after sign-up, so no email is needed.
+  - Essential pages: "40% off, no code".
+- **Menu** `main-menu-collections`: Signature and Essential, shown as photo cards.
+- **Source copies:** `store/theme/`, `store/essential-pdp/`, `store/popup-v2/`. AI photos are in `store/essential/ai/` (branch `claude/shopify-padelcovr-ad-images-zpmwq7`).
+
+Pending:
+- Publish the theme "COVR code on offer page 2026-11-08". It holds all the changes above.
+- Optional: send COVR50 to the 28 earlier pop-up sign-ups (tag `popup-offer-20`). The automation draft is off.
+
+Gotchas:
+- Shopify API 2026-10:
+  - Use fileDelete, not productDeleteMedia.
+  - collectionUpdate takes `collection:`.
+  - Discounts take `context:{all:ALL}`.
+  - Use discountNode.
+  - fileUpdate with originalSource replaces an image and keeps its ID.
+- themeFilesUpsert: send the body as TEXT (the URL type silently does nothing). It is refused on the MAIN theme.
+- Liquid: no filters inside `[]` lookups. Assign the value to a variable first.
+- Canva media and export URLs are blocked locally. Export the design and let Shopify fetch the export URL.
+- Shopify MCP says "sign in again": reconnect it in claude.ai Connectors (with COVR selected in Shopify admin), then start a new chat.
