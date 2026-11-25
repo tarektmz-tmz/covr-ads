@@ -64,3 +64,7 @@ HeyGen render → faster-whisper timings → minterpolate to 50 fps → Playwrig
 - Selfie reel v4 (same system, different topics; HeyGen da79f9a884eb55d86afba5c5490ebdd6; phone demo uses his Bluewater Villas PDF), course reel "This isn't really me" v6, launch story, explainer story, top-5 first Rolex reel (carousel not built: 4:5 video on blurred background).
 - Daily 12:17 Dubai stories routine must be created from the chat that holds the Instagram tools (a routine that starts its own session has no tools). Stories: stories/new-style-v4/queue/<date>_1..5.jpg on Available Now days (every second day from 2026-11-21 to 2026-12-17). Info-story days paused until he picks from stories/new-style-v4/examples_info.
 - Save-reel scripts C1–C5 (reels/scripts/batch2_save_reels_v2.md) awaiting approval; Metricool timezone (Singapore) and test schedule; MyChatBot Instagram link blocked by Meta cleanup; a reference reel he sent on 25 Nov (copy the concept in our own style, skip watches we do not have) was not started.
+
+## Update 25 Nov 2026 (stories routine moved)
+- Daily stories routine is now trig_01GgghkNeUrMvtjRF6oWT1h1 "Daily Available Now stories (12:17 Dubai)", same prompt, fires into session session_01VAmQ1YekJpxMzTrdS8TCei. Old trig_01UaPp8uczLDTX24dcuhscpJ is DISABLED; trig_01RX2… stays disabled. Month-end refresh trig_01UWbzMJLCxVA36ePE7dESQW: update trig_01GgghkN… instead.
+- stories/auto/replied_comments.txt did not carry over to the new session (git-excluded); the routine also skips comments already answered by @advance_watchco.
